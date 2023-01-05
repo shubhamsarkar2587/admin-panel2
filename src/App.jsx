@@ -4,13 +4,12 @@ import Homepage from "./pages/homepage";
 
 const App = () => {
   return (
-    <div className="App h-full w-full flex">
-      <div className="w-[316px] h-screen border-black">
+    <div className="App h-full w-full">
+      <Navbar />
+      <div className="flex">
         <Sidebar />
-      </div>
-      <div className="w-full">
-        <Navbar />
-        <Homepage />
+        <div className="px-5 flex grow">
+        </div>
       </div>
     </div>
   );

@@ -1,34 +1,54 @@
+import { useState } from "react";
 import { svgAssets } from "../../assets/asset";
 
 const Sidebar = () => {
+  const [sidebarState, SetSidebarState] = useState({
+    dashboard: false,
+    startKyc: false,
+    eSignReport: false,
+    application: false,
+    downloadForms: false,
+    linkAadhar: false,
+    settings: false,
+    logout: false
+  })
+
+  const handleMouseOver = () => {
+    console.log('dfd')
+  }
+
+  const handleMouseOut = () => {
+    console.log('dfd344')
+  }
+
   return (
-    <div className="h-full py-5">
-      <div className="px-2.5 mb-5 cursor-pointer">
-        <img alt="app_logo" src={svgAssets.bigul} />
-      </div>
-      <div className="px-8">
-        <ul>
-          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] bg-black text-white">
+      <div className="w-[280px] h-max px-8 py-5">
+        <ul className="w-full grow">
+          <li
+            className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] bg-black text-white"
+            onMouseOver={() => handleMouseOver()}
+            onMouseOut={() => handleMouseOut()}
+          >
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
             <span>Dashboard</span>
           </li>
           <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black hover:text-white">
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span>Start KYC</span>
+            <span className="text-[#808080]">Start KYC</span>
           </li>
           <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black hover:text-white">
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span>E-sign Report</span>
+            <span className="text-[#808080]">E-sign Report</span>
           </li>
           <li className="flex flex-col mb-2.5">
             <div className="px-3 py-2.5 flex items-center justify-between cursor-pointer rounded-[10px] hover:bg-black hover:text-white">
               <div className="flex items-center">
                 <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-                <span>Applications</span>
+                <span className="text-[#808080]">Applications</span>
               </div>
               <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.rightArrow} />
             </div>
-            <div className="flex justify-end">
+            <div className="px-[30px] flex justify-end">
               <ul>
                 <li className="text-[#5367FC] mb-2.5 cursor-pointer hover:text-[#5367FC]">All Applications</li>
                 <li className="cursor-pointer hover:text-[#5367FC]">Verified Applications</li>
@@ -37,12 +57,10 @@ const Sidebar = () => {
           </li>
           <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black hover:text-white">
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span>Start KYC</span>
+            <span className="text-[#808080]">Start KYC</span>
           </li>
-          
         </ul>
       </div>
-    </div>
   )
 }
 
