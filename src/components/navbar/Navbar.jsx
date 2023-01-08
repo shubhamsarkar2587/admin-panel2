@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { svgAssets } from "../../assets/asset";
 import Searchbar from "./Searchbar";
 
@@ -7,13 +8,15 @@ const Navbar = () => {
       <div className="w-[300px] px-[50px] cursor-pointer">
         <img className="h-[40px]" alt="app_logo" src={svgAssets.bigul} />
       </div>
-      <div className="mx-5 flex grow items-center justify-between">
+      <div className="mx-5 pr-2.5 flex grow items-center justify-between">
         <Searchbar />
         <div className="flex items-center">
           <button className="px-4 py-2.5 mx-2.5 rounded-[10px] bg-black text-white">+ Start KYC</button>
           <img className="mx-2.5 cursor-pointer" alt="notification" src={svgAssets.navbar.notification} />
-          <img className="mx-2.5 cursor-pointer" alt="user_img" src={svgAssets.navbar.defaultUser} />
-          <span className="ml-1.5 mr-5">Alex Dam</span>
+          <Link to="/login" className="flex items-center">
+            <img className="mx-2.5 cursor-pointer" alt="user_img" src={svgAssets.navbar.defaultUser} />
+            <span className="ml-1.5">Alex Dam</span>
+          </Link>
         </div>
       </div>
     </div>

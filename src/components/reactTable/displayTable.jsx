@@ -5,8 +5,6 @@ const DisplayTable = () => {
 
   const data = [{ name: 'John Doe', age: 32, address: '123 Main St', }, { name: 'Jane Smith', age: 27, address: '456 Market St', }, { name: 'Bob Johnson', age: 45, address: '789 Maple Ave', },];
 
-
-
   return (
     <ReactTable columns={columns} data={data} />
   )

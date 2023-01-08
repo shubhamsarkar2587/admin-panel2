@@ -1,9 +1,17 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { svgAssets } from "../assets/asset"
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+
+  const handleLogin = () => {
+    navigate('/');
+  }
+
   return (
     <div className="w-full h-screen flex items-center justify-between">
       <div className="w-[45%] h-full flex items-center bg-[#5367FC]">
@@ -36,7 +44,6 @@ const Login = () => {
                   onClick={() => setShowPassword(!showPassword)}
                 />
               </div>
-              {/* <input className="p-4 text-[#989898] border border-solid border-[#DFDFDF] rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)]" placeholder="Please enter password" /> */}
             </div>
             <div>
               <div className="leading-tight flex items-center justify-between">
@@ -49,7 +56,10 @@ const Login = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="w-min px-9 py-3 flex items-center justify-center text-white rounded-[10px] bg-[#5367FC] ">
+            <button
+              className="w-min px-9 py-3 flex items-center justify-center text-white rounded-[10px] bg-[#5367FC]"
+              onClick={() => handleLogin()}
+            >
               <img className="mr-2.5" alt="login_screen_enter_img" src={svgAssets.login.login_enter}></img>
               <span className="">Login</span>
             </button>

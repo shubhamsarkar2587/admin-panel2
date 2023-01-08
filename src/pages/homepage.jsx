@@ -8,7 +8,7 @@ const Homepage = () => {
       <Navbar />
       <div className="flex">
         <Sidebar />
-        <div className="pl-5 pr-10 py-5 flex grow">
+        <div className="pl-5 pr-[30px] py-5 flex grow">
           <DisplayTable />
         </div>
       </div>
