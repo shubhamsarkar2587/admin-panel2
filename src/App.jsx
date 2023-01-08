@@ -1,6 +1,6 @@
 import Navbar from "./components/navbar/Navbar";
+import DisplayTable from "./components/reactTable/displayTable";
 import Sidebar from "./components/sidebar/Sidebar";
-import Homepage from "./pages/homepage";
 
 const App = () => {
   return (
@@ -9,6 +9,7 @@ const App = () => {
       <div className="flex">
         <Sidebar />
         <div className="px-5 flex grow">
+          <DisplayTable />
         </div>
       </div>
     </div>
