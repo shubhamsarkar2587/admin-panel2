@@ -3,9 +3,9 @@ import Searchbar from "./Searchbar";
 
 const Navbar = () => {
   return (
-    <div className="py-3 flex items-center">
-      <div className="w-[280px] px-2.5 cursor-pointer">
-        <img alt="app_logo" src={svgAssets.bigul} />
+    <div className="py-5 mb-[30px] flex items-center ">
+      <div className="w-[300px] px-[50px] cursor-pointer">
+        <img className="h-[40px]" alt="app_logo" src={svgAssets.bigul} />
       </div>
       <div className="mx-5 flex grow items-center justify-between">
         <Searchbar />

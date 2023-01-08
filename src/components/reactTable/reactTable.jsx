@@ -14,7 +14,7 @@ function ReactTable({ columns, data }) {
   });
 
   return (
-    <div className="w-full py-[20px] px-[25px] rounded-[10px] bg-white shadow-[0px_4px_15px_rgba(171,171,171,0.25)]">
+    <div className="w-full py-5 px-[25px] rounded-[10px] bg-white shadow-[0px_4px_15px_rgba(171,171,171,0.25)]">
       <table className="table-auto w-full h-full text-left" {...getTableProps()}>
         <thead>
           {headerGroups.map(headerGroup => (
