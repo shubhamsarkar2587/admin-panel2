@@ -4,7 +4,7 @@ import Login from './pages/login';
 
 const App = () => {
   return (
-    <div className="App h-full w-full">
+    <div className="App h-full w-full overflow-hidden">
       <Routes>
         <Route path="/" element={<Homepage />}></Route>
         <Route path="/login" element={<Login />}></Route>

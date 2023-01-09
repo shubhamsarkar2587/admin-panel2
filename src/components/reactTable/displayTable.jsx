@@ -1,12 +1,35 @@
 import ReactTable from './reactTable'
 
 const DisplayTable = () => {
-  const columns = [{ Header: 'Name', accessor: 'name', }, { Header: 'Age', accessor: 'age', }, { Header: 'Address', accessor: 'address', },];
+  const columns = [
+    { Header: 'Client Name', accessor: 'clientName' },
+    { Header: 'Pan', accessor: 'pan' },
+    { Header: 'Mobile Number', accessor: 'mobileNumber' },
+    { Header: 'Steps', accessor: 'steps' },
+    { Header: 'Created At', accessor: 'createdAt' },
+    { Header: 'Updated At', accessor: 'updatedAt' },
+    { Header: 'Actions', accessor: 'actions' }
+  ];
 
-  const data = [{ name: 'John Doe', age: 32, address: '123 Main St', }, { name: 'Jane Smith', age: 27, address: '456 Market St', }, { name: 'Bob Johnson', age: 45, address: '789 Maple Ave', },];
+  const data = [
+    { clientName: 'Tony Stark', pan: 3734343434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
+    { clientName: 'Tony Stark', pan: 3734343434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
+    { clientName: 'Tony Stark', pan: 3734343434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
+    { clientName: 'Tony Stark', pan: 3734343434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
+    { clientName: 'Tony Stark', pan: 3734343434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
+    { clientName: 'Tony Stark', pan: 3734343434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
+  ];
 
   return (
-    <ReactTable columns={columns} data={data} />
+    <div className="w-full flex flex-col ">
+      <div className="w-full mb-[30px]">
+        <ReactTable columns={columns} data={data} />
+      </div>
+      <div className="w-full">
+        <ReactTable columns={columns} data={data} />
+      </div>
+    </div>
+
   )
 }
 
