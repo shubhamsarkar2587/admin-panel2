@@ -1,4 +1,5 @@
 import bigul from './svg/bigul.svg'
+import bonabza from './svg/bonabza.svg'
 import login_screen_img from './svg/login_screen_img.svg'
 import login_enter from './svg/login_enter.svg'
 import show_password from './svg/show_password.svg'
@@ -16,6 +17,7 @@ export const pngAssets = {
 
 export const svgAssets = {
   bigul,
+  bonabza,
   login: {
     login_screen_img,
     login_enter,

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { svgAssets } from "../../assets/asset";
 
-const Sidebar = () => {
+const Sidebar = ({ handleKycModel }) => {
+
   const [sidebarState, SetSidebarState] = useState({
     dashboard: false,
     startKyc: false,
@@ -32,7 +33,10 @@ const Sidebar = () => {
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
             <span>Dashboard</span>
           </li>
-          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black hover:text-white">
+          <li
+            className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black hover:text-white"
+            onClick={() => handleKycModel(true)}
+          >
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
             <span className="text-[#808080]">Start KYC</span>
           </li>
