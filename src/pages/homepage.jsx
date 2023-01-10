@@ -17,14 +17,12 @@ const Homepage = () => {
     }
   }
 
-  console.log(isModelOpen)
-
   return (
     <>
       <Navbar handleKycModel={handleKycModel} />
-      <div className="flex">
+      <div className="flex h-full">
         <Sidebar handleKycModel={handleKycModel} />
-        <div className="pl-5 pr-[30px] py-5 flex flex-col grow w-full h-full">
+        <div className="pl-5 pr-[30px] py-5 ml-[300px] mt-[115px] flex flex-col grow w-full h-full">
           <div className="mb-[30px] flex">
             <Date />
             <Date />

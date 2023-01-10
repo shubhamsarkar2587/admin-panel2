@@ -1,18 +1,37 @@
-import React from 'react'
+import { useState } from 'react';
+import KycDialog from '../components/dialog/KycDialog';
 import Navbar from '../components/navbar/Navbar'
+import ProgressStep from '../components/kyc/progressStep/ProgressStep';
 import Sidebar from '../components/sidebar/Sidebar'
+import InitMobileEmail from '../components/kyc/step1/InitMobileEmail';
+import VerifyMobileEmail from '../components/kyc/step1/VerifyMobileEmail';
 
 const Kyc = () => {
+  const [isModelOpen, setIsModelOpen] = useState(false);
+
+  const handleKycModel = (condition) => {
+    if (condition) {
+      setIsModelOpen(true)
+    } else {
+      setIsModelOpen(false)
+    }
+  }
 
   return (
     <>
-      <Navbar selectedPage={'kyc'} />
-      <div className="flex">
-        <Sidebar />
-        <div className="pl-5 pr-[30px] py-5 flex flex-col grow w-full h-full">
-          Welcome to kyc Page!
+      <Navbar handleKycModel={handleKycModel} />
+      <div className="flex h-full">
+        <Sidebar handleKycModel={handleKycModel} />
+        <div className="pl-5 pr-[30px] py-5 ml-[300px] mt-[115px] flex flex-col grow w-full h-full">
+          <div className="mb-14">
+            <ProgressStep />
+          </div>
+          <div>
+            <VerifyMobileEmail />
+          </div>
         </div>
       </div>
+      <KycDialog isModalOpen={isModelOpen} handleKycModel={handleKycModel} />
     </>
   )
 }

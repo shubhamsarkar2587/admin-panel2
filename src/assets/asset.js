@@ -10,6 +10,11 @@ import defaultUser from './svg/defaultUser.svg';
 import notification from './svg/notification.svg';
 import application from './svg/application.svg'
 import graph from './svg/graph.svg'
+import sendLink from './svg/send_link.svg'
+import verify from './svg/verify.svg'
+import backIcon from './svg/back.svg';
+import continueIcon from './svg/continue.svg';
+
 
 export const pngAssets = {
   bigul
@@ -33,5 +38,11 @@ export const svgAssets = {
     rightArrow,
     application,
     graph
+  },
+  kyc: {
+    sendLink,
+    verify,
+    backIcon,
+    continueIcon
   }
 };

@@ -23,7 +23,7 @@ const Sidebar = ({ handleKycModel }) => {
   }
 
   return (
-      <div className="min-w-[300px] h-max px-[50px] py-5">
+      <div className="min-w-[300px] h-[calc(100vh-115px)] mt-[115px] px-[50px] py-5 fixed">
         <ul className="w-full grow">
           <li
             className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] bg-black text-white"
