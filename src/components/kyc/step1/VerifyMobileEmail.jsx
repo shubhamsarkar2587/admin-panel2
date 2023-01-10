@@ -101,13 +101,13 @@ const VerifyMobileEmail = () => {
         </div>
       </div>
       <div className="flex items-center justify-between">
-        <button className="px-5 py-3 flex rounded-[10px] text-white bg-[rgba(180,186,189,0.38)]">
+        <button className="px-5 py-3 flex items-center rounded-[10px] leading-6 text-white bg-[rgba(180,186,189,0.38)]">
           <img className="mr-2" alt="back_icon" src={svgAssets.kyc.backIcon}/>
           <span>Back</span>
         </button>
-        <button className="px-5 py-3 flex rounded-[10px] text-white bg-black">
-          <img className="mr-2" alt="continue_icon" src={svgAssets.kyc.continueIcon}/>
-          <span>continue</span>
+        <button className="px-5 py-3 flex items-center rounded-[10px] leading-6	 text-white bg-black">
+          <span className="mr-2">continue</span>
+          <img alt="continue_icon" src={svgAssets.kyc.continueIcon}/>
         </button>
       </div>
     </div>

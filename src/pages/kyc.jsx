@@ -5,6 +5,7 @@ import ProgressStep from '../components/kyc/progressStep/ProgressStep';
 import Sidebar from '../components/sidebar/Sidebar'
 import InitMobileEmail from '../components/kyc/step1/InitMobileEmail';
 import VerifyMobileEmail from '../components/kyc/step1/VerifyMobileEmail';
+import VerifyPan from '../components/kyc/step1/VerifyPan';
 
 const Kyc = () => {
   const [isModelOpen, setIsModelOpen] = useState(false);
@@ -27,7 +28,7 @@ const Kyc = () => {
             <ProgressStep />
           </div>
           <div>
-            <VerifyMobileEmail />
+            <VerifyPan />
           </div>
         </div>
       </div>
