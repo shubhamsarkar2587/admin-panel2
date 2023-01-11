@@ -19,6 +19,12 @@ const items = [
   {
     title: 'Step 6',
   },
+  {
+    title: 'Step 7',
+  },
+  {
+    title: 'Step 8',
+  },
 ];
 
 

@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import KycDialog from '../components/dialog/KycDialog';
-import Navbar from '../components/navbar/Navbar'
-import ProgressStep from '../components/kyc/progressStep/ProgressStep';
-import Sidebar from '../components/sidebar/Sidebar'
-import InitMobileEmail from '../components/kyc/step1/InitMobileEmail';
-import VerifyMobileEmail from '../components/kyc/step1/VerifyMobileEmail';
-import VerifyPan from '../components/kyc/step1/VerifyPan';
-import VerifyBankDetails from '../components/kyc/step1/VerifyBankDetails';
+import Navbar from '../containers/navbar/Navbar'
+import ProgressStep from '../containers/kyc/progressStep/ProgressStep';
+import Sidebar from '../containers/sidebar/Sidebar'
+import InitMobileEmail from '../containers/kyc/step1/InitMobileEmail';
+import VerifyMobileEmail from '../containers/kyc/step1/VerifyMobileEmail';
+import VerifyPan from '../containers/kyc/step2/VerifyPan';
+import VerifyBankDetails from '../containers/kyc/step3/VerifyBankDetails';
+import PersonalDetails from '../containers/kyc/step4/PersonalDetails';
+import OccuptionDetail from '../containers/kyc/step4/OccupationDetail';
 
 const Kyc = () => {
   const [isModelOpen, setIsModelOpen] = useState(false);
@@ -32,7 +34,9 @@ const Kyc = () => {
             {/* <InitMobileEmail /> */}
             {/* <VerifyMobileEmail /> */}
             {/* <VerifyPan /> */}
-            <VerifyBankDetails />
+            {/* <VerifyBankDetails /> */}
+            {/* <PersonalDetails /> */}
+            <OccuptionDetail />
           </div>
         </div>
       </div>
