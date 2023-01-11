@@ -49,10 +49,6 @@ const VerifyBankDetails = () => {
       <div className="mb-20 flex items-center justify-center">
         <VerifyBtn />
       </div>
-      <div className="flex items-center justify-between">
-        <BackBtn />
-        <ContinueBtn />
-      </div>
       <SearchIfcDialog isModalOpen={isModelOpen} handleKycModel={handleKycModel} />
     </div>
   )

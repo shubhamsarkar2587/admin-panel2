@@ -33,10 +33,6 @@ const OccupationDetail = () => {
           <CommonInput isDisable={true} placeholder="Indian" />
         </div>
       </div>
-      <div className="flex items-center justify-between">
-        <BackBtn />
-        <ContinueBtn />
-      </div>
     </div>
   )
 }

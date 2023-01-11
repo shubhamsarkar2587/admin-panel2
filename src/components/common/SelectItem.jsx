@@ -16,7 +16,6 @@ const selectOption = [
 ]
 
 const SelectItem = ({ height, placeholder }) => {
-  console.log(height)
   return (
     <Select
       placeholder={placeholder}

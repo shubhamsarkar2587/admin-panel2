@@ -27,10 +27,6 @@ const VerifyMobileEmail = () => {
           <OtpInput />
         </div>
       </div>
-      <div className="flex items-center justify-between">
-        <BackBtn />
-        <ContinueBtn />
-      </div>
     </div>
   )
 }

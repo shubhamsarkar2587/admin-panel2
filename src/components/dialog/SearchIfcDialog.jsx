@@ -21,8 +21,6 @@ const selectOption = [
 
 const SearchIfcDialog = ({ isModalOpen, handleKycModel }) => {
 
-  console.log(isModalOpen)
-
   return (
     <div>
       <Modal

@@ -39,10 +39,6 @@ const BrokerageDetails = () => {
           labelWidth="90%"
         />
       </div>
-      <div className="flex items-center justify-between">
-        <BackBtn />
-        <ContinueBtn />
-      </div>
     </div>
   )
 }

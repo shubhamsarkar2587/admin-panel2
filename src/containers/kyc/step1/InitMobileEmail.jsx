@@ -17,9 +17,6 @@ const InitMobileEmail = () => {
           <CommonInput />
         </div>
       </div>
-      <div className="flex items-center justify-end">
-        <ContinueBtn />
-      </div>
     </div>
   )
 }

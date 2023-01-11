@@ -27,10 +27,6 @@ const OccuptionDetails = () => {
           <SelectItem height={'47px'} placeholder="Please select marital status" />
         </div>
       </div>
-      <div className="flex items-center justify-between">
-        <BackBtn />
-        <ContinueBtn />
-      </div>
     </div>
   )
 }
