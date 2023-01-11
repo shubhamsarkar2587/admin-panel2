@@ -11,6 +11,13 @@ import PersonalDetails from '../containers/kyc/step4/PersonalDetails';
 import OccuptionDetail from '../containers/kyc/step4/OccupationDetail';
 import BrokerageDetails from '../containers/kyc/step5/BrokerageDetails';
 
+const kycSteps = () => [
+  {
+    name: 'Step 1',
+    isValidStep: false,
+  }
+]
+
 const Kyc = () => {
   const [isModelOpen, setIsModelOpen] = useState(false);
 
