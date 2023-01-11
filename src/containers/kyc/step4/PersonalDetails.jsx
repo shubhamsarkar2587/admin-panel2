@@ -1,6 +1,6 @@
-import BackBtn from "../../../components/common/BackBtn";
+import BackBtn from "../../../components/buttons/BackBtn";
 import CommonInput from "../../../components/common/CommonInput";
-import ContinueBtn from "../../../components/common/ContinueBtn";
+import ContinueBtn from "../../../components/buttons/ContinueBtn";
 import SelectItem from "../../../components/common/SelectItem";
 
 const OccupationDetail = () => {

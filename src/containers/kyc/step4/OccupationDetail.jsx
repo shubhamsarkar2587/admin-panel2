@@ -1,6 +1,6 @@
 import { svgAssets } from "../../../assets/asset";
-import BackBtn from "../../../components/common/BackBtn";
-import ContinueBtn from "../../../components/common/ContinueBtn";
+import BackBtn from "../../../components/buttons/BackBtn";
+import ContinueBtn from "../../../components/buttons/ContinueBtn";
 import SelectItem from "../../../components/common/SelectItem";
 
 const OccuptionDetails = () => {

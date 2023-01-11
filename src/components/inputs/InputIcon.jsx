@@ -1,5 +1,5 @@
 import React from 'react'
-import { svgAssets } from '../assets/asset'
+import { svgAssets } from '../../assets/asset'
 
 const InputIcon = ({ height, iconText }) => {
   return (

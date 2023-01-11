@@ -1,7 +1,7 @@
-import BackBtn from "../../../components/common/BackBtn";
-import ContinueBtn from "../../../components/common/ContinueBtn";
-import InputIcon from "../../../components/InputIcon";
-import OtpInput from "../../../components/OtpInput";
+import BackBtn from "../../../components/buttons/BackBtn";
+import ContinueBtn from "../../../components/buttons/ContinueBtn";
+import InputIcon from "../../../components/inputs/InputIcon";
+import OtpInput from "../../../components/inputs/OtpInput";
 
 const VerifyMobileEmail = () => {
   return (

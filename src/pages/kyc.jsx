@@ -9,6 +9,7 @@ import VerifyPan from '../containers/kyc/step2/VerifyPan';
 import VerifyBankDetails from '../containers/kyc/step3/VerifyBankDetails';
 import PersonalDetails from '../containers/kyc/step4/PersonalDetails';
 import OccuptionDetail from '../containers/kyc/step4/OccupationDetail';
+import BrokerageDetails from '../containers/kyc/step5/BrokerageDetails';
 
 const Kyc = () => {
   const [isModelOpen, setIsModelOpen] = useState(false);
@@ -36,7 +37,8 @@ const Kyc = () => {
             {/* <VerifyPan /> */}
             {/* <VerifyBankDetails /> */}
             {/* <PersonalDetails /> */}
-            <OccuptionDetail />
+            {/* <OccuptionDetail /> */}
+            <BrokerageDetails />
           </div>
         </div>
       </div>

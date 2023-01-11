@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { svgAssets } from "../../../assets/asset";
-import BackBtn from '../../../components/common/BackBtn';
+import BackBtn from '../../../components/buttons/BackBtn';
 import CommonInput from '../../../components/common/CommonInput';
-import ContinueBtn from '../../../components/common/ContinueBtn';
-import VerifyBtn from '../../../components/common/VerifyBtn';
+import ContinueBtn from '../../../components/buttons/ContinueBtn';
+import VerifyBtn from '../../../components/buttons/VerifyBtn';
 import SearchIfcDialog from "../../../components/dialog/SearchIfcDialog";
 
 const VerifyBankDetails = () => {
