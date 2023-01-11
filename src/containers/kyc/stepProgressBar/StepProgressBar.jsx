@@ -39,8 +39,9 @@ const StepProgressBar = ({ selectedStep, steps }) => {
                 </div>
               </div>
               <div
-                className={`min-w-[${statusParameter[step.status].size}] h-full rounded-full`}
+                className={`h-full rounded-full`}
                 style={{
+                  minWidth: statusParameter[step.status].size,
                   width: statusParameter[step.status].size,
                   height: statusParameter[step.status].size,
                   border: `2px solid ${statusParameter[step.status].borderColor}`,

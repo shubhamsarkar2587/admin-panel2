@@ -68,8 +68,8 @@ const Kyc = () => {
             {selectedStep === 1 && <VerifyMobileEmail />}
             {selectedStep === 2 && <VerifyBankDetails />}
             {selectedStep === 3 && <PersonalDetails />}
-            {selectedStep === 3 && <OccuptionDetail />}
-            {selectedStep === 4 && <BrokerageDetails />}
+            {selectedStep === 4 && <OccuptionDetail />}
+            {selectedStep === 5 && <BrokerageDetails />}
           </div>
           <div className="flex items-center justify-between">
             <BackBtn handleBackBtn={handleBackBtn} />
