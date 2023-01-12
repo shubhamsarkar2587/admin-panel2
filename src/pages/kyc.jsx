@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import KycDialog from '../components/dialog/KycDialog';
 import Navbar from '../containers/navbar/Navbar'
@@ -54,13 +54,15 @@ const Kyc = () => {
     }
   }
 
-  console.log(selectedStep, steps)
+  useEffect(() => {
+    handleKycModel(true)
+  }, [])
 
   return (
     <>
-      <Navbar handleKycModel={handleKycModel} />
+      <Navbar />
       <div className="flex h-full">
-        <Sidebar handleKycModel={handleKycModel} />
+        <Sidebar />
         <div className="pl-5 pr-[30px] py-5 ml-[300px] mt-[115px] flex flex-col grow w-full h-full">
           <div className="mb-14">
             <StepProgressBar selectedStep={selectedStep} steps={steps} />

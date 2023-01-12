@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { svgAssets } from "../../assets/asset";
 
-const Sidebar = ({ handleKycModel }) => {
+const Sidebar = () => {
+  const navigate = useNavigate();
+  const [isApplicationOpen, SetIsApplicationOpen] = useState(false)
+
 
   const [sidebarState, SetSidebarState] = useState({
     dashboard: false,
@@ -26,7 +30,7 @@ const Sidebar = ({ handleKycModel }) => {
       <div className="min-w-[300px] h-[calc(100vh-115px)] mt-[115px] px-[50px] py-5 fixed">
         <ul className="w-full grow">
           <li
-            className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] bg-black text-white"
+            className="px-3 py-2.5 mb-2.5 flex items-center text-[#808080] cursor-pointer rounded-[10px] bg-black"
             onMouseOver={() => handleMouseOver()}
             onMouseOut={() => handleMouseOut()}
           >
@@ -34,49 +38,55 @@ const Sidebar = ({ handleKycModel }) => {
             <span>Dashboard</span>
           </li>
           <li
-            className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black"
-            onClick={() => handleKycModel(true)}
+            className="px-3 py-2.5 mb-2.5 flex items-center text-[#808080] cursor-pointer rounded-[10px] duration-300 hover:text-white hover:bg-black"
+            onClick={() => navigate('/kyc')}
           >
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span className="text-[#808080] hover:text-white">Start KYC</span>
+            <span className="">Start KYC</span>
           </li>
-          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black">
+          <li className="px-3 py-2.5 mb-2.5 flex items-center text-[#808080] cursor-pointer rounded-[10px] duration-300 hover:text-white hover:bg-black">
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span className="text-[#808080] hover:text-white">E-sign Report</span>
+            <span className="">E-sign Report</span>
           </li>
           <li className="flex flex-col mb-2.5">
-            <div className="px-3 py-2.5 flex items-center justify-between cursor-pointer rounded-[10px] hover:bg-black">
+            <div
+              className="px-3 py-2.5 flex items-center justify-between cursor-pointer rounded-[10px] duration-300 hover:text-white hover:bg-black"
+              onClick={() => SetIsApplicationOpen(!isApplicationOpen)}
+            >
               <div className="flex items-center">
                 <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-                <span className="text-[#808080] hover:text-white">Applications</span>
+                <span className="">Applications</span>
               </div>
               <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.rightArrow} />
             </div>
-            <div className="px-3 mr-2.5 flex justify-end">
-              <ul>
-                <li className="text-[#5367FC] mb-2.5 cursor-pointer hover:text-[#5367FC]">All Applications</li>
-                <li className="cursor-pointer mb-2.5 hover:text-[#5367FC]">Verified Applications</li>
-                <li className="cursor-pointer mb-2.5 hover:text-[#5367FC]">Rejected Applications</li>
-                <li className="cursor-pointer mb-2.5 hover:text-[#5367FC]">Pending Applications</li>
-                <li className="cursor-pointer hover:text-[#5367FC]">Resubmitted</li>
-              </ul>
-            </div>
+            {
+              isApplicationOpen && (
+              <div className="px-3 mr-2.5 pt-2.5 flex justify-end">
+                <ul>
+                  <li className="text-[#5367FC] mb-2.5 cursor-pointer duration-300 hover:text-[#5367FC]">All Applications</li>
+                  <li className="cursor-pointer mb-2.5 duration-300 hover:text-[#5367FC]">Verified Applications</li>
+                  <li className="cursor-pointer mb-2.5 duration-300 hover:text-[#5367FC]">Rejected Applications</li>
+                  <li className="cursor-pointer mb-2.5 duration-300 hover:text-[#5367FC]">Pending Applications</li>
+                  <li className="cursor-pointer duration-300 hover:text-[#5367FC]">Resubmitted</li>
+                </ul>
+              </div>)
+            }
           </li>
-          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black">
+          <li className="px-3 py-2.5 mb-2.5 flex items-center text-[#808080] cursor-pointer rounded-[10px] duration-300 hover:text-white hover:bg-black">
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span className="text-[#808080] hover:text-white">Download Forms</span>
+            <span className="">Download Forms</span>
           </li>
-          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black">
+          <li className="px-3 py-2.5 mb-2.5 flex items-center text-[#808080] cursor-pointer rounded-[10px] duration-300 hover:text-white hover:bg-black">
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span className="text-[#808080] hover:text-white">Link Aadhar</span>
+            <span className="">Link Aadhar</span>
           </li>
-          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black">
+          <li className="px-3 py-2.5 mb-2.5 flex items-center text-[#808080] cursor-pointer rounded-[10px] duration-300 hover:text-white hover:bg-black">
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span className="text-[#808080] hover:text-white">Settings</span>
+            <span className="">Settings</span>
           </li>
-          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black">
+          <li className="px-3 py-2.5 mb-2.5 flex items-center text-[#808080] cursor-pointer rounded-[10px] duration-300 hover:text-white hover:bg-black">
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span className="text-[#808080] hover:text-white">Logout</span>
+            <span className="">Logout</span>
           </li>
         </ul>
       </div>
