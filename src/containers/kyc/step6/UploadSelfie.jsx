@@ -16,7 +16,7 @@ const UploadSelfie = ({ marginBottom }) => {
           <span className="text-[#A3A3A3] mb-1">Share below link with client</span>
           <InputIcon iconText="Send Link" />
         </div>
-        <div className="flex flex-col mb-10">
+        <div className="flex flex-col">
           <img
             className="w-[113px] h-[113px] rounded-[10px]"
             alt="user_image"
