@@ -7,7 +7,7 @@ import VerifyBtn from '../../../components/buttons/VerifyBtn';
 const VerifyPan = () => {
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col mb-10">
       <div className="mb-[22px] font-medium text-lg leading-[27px]">PAN Details</div>
       <div className="mb-8 grid grid-cols-2 gap-10">
         <div className="flex flex-col mb-8">
@@ -19,7 +19,7 @@ const VerifyPan = () => {
           <DatePickerInput />
         </div>
       </div>
-      <div className="mb-20 flex items-center justify-center">
+      <div className="flex items-center justify-center">
         <VerifyBtn />
       </div>
     </div>

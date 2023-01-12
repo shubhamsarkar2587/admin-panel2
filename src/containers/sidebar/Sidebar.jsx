@@ -34,34 +34,49 @@ const Sidebar = ({ handleKycModel }) => {
             <span>Dashboard</span>
           </li>
           <li
-            className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black hover:text-white"
+            className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black"
             onClick={() => handleKycModel(true)}
           >
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span className="text-[#808080]">Start KYC</span>
+            <span className="text-[#808080] hover:text-white">Start KYC</span>
           </li>
-          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black hover:text-white">
+          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black">
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span className="text-[#808080]">E-sign Report</span>
+            <span className="text-[#808080] hover:text-white">E-sign Report</span>
           </li>
           <li className="flex flex-col mb-2.5">
-            <div className="px-3 py-2.5 flex items-center justify-between cursor-pointer rounded-[10px] hover:bg-black hover:text-white">
+            <div className="px-3 py-2.5 flex items-center justify-between cursor-pointer rounded-[10px] hover:bg-black">
               <div className="flex items-center">
                 <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-                <span className="text-[#808080]">Applications</span>
+                <span className="text-[#808080] hover:text-white">Applications</span>
               </div>
               <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.rightArrow} />
             </div>
             <div className="px-3 mr-2.5 flex justify-end">
               <ul>
                 <li className="text-[#5367FC] mb-2.5 cursor-pointer hover:text-[#5367FC]">All Applications</li>
-                <li className="cursor-pointer hover:text-[#5367FC]">Verified Applications</li>
+                <li className="cursor-pointer mb-2.5 hover:text-[#5367FC]">Verified Applications</li>
+                <li className="cursor-pointer mb-2.5 hover:text-[#5367FC]">Rejected Applications</li>
+                <li className="cursor-pointer mb-2.5 hover:text-[#5367FC]">Pending Applications</li>
+                <li className="cursor-pointer hover:text-[#5367FC]">Resubmitted</li>
               </ul>
             </div>
           </li>
-          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black hover:text-white">
+          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black">
             <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
-            <span className="text-[#808080]">Start KYC</span>
+            <span className="text-[#808080] hover:text-white">Download Forms</span>
+          </li>
+          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black">
+            <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
+            <span className="text-[#808080] hover:text-white">Link Aadhar</span>
+          </li>
+          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black">
+            <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
+            <span className="text-[#808080] hover:text-white">Settings</span>
+          </li>
+          <li className="px-3 py-2.5 mb-2.5 flex items-center cursor-pointer rounded-[10px] hover:bg-black">
+            <img className="mr-2.5" alt="kyc_image" src={svgAssets.dashboard.kyc} />
+            <span className="text-[#808080] hover:text-white">Logout</span>
           </li>
         </ul>
       </div>

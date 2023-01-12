@@ -18,7 +18,7 @@ const VerifyBankDetails = () => {
   }
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col mb-10">
       <div className="mb-[22px] font-medium text-lg leading-[27px]">Bank Details</div>
       <div className="grid grid-cols-2 gap-10 items-end mb-8">
         <div className="flex flex-col">
@@ -46,7 +46,7 @@ const VerifyBankDetails = () => {
           <CommonInput />
         </div>
       </div>
-      <div className="mb-20 flex items-center justify-center">
+      <div className="flex items-center justify-center">
         <VerifyBtn />
       </div>
       <SearchIfcDialog isModalOpen={isModelOpen} handleKycModel={handleKycModel} />

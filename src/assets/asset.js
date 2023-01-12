@@ -14,7 +14,8 @@ import sendLink from './svg/send_link.svg'
 import verify from './svg/verify.svg'
 import backIcon from './svg/back.svg';
 import continueIcon from './svg/continue.svg';
-
+import profile_user from './svg/profile_user.svg';
+import signature from './svg/signature.svg';
 
 export const pngAssets = {
   bigul
@@ -43,6 +44,8 @@ export const svgAssets = {
     sendLink,
     verify,
     backIcon,
-    continueIcon
+    continueIcon,
+    profile_user,
+    signature
   }
 };

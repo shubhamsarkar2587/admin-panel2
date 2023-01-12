@@ -7,7 +7,7 @@ import Checkbox from "../../../components/common/Checkbox"
 
 const BrokerageDetails = () => {
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col mb-10">
       <div className="w-full mb-[22px] text-[#323232] leading-[27px] font-medium text-lg">Brokerage Details</div>
       <div className="w-full mb-8 grid grid-cols-5 gap-7">
         <div className="w-full col-span-3 flex flex-col">
@@ -31,7 +31,7 @@ const BrokerageDetails = () => {
           <SelectItem />
         </div>
       </div>
-      <div className="mb-20">
+      <div className="">
         <div className="mb-[17px] text-[#323232] leading-[27px] font-medium text-lg">Terms & Conditions</div>
         <Checkbox
           labelText="I have understood the information requirements of this form and hereby confirm and accept that the information provided by me on this
