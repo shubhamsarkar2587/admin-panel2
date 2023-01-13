@@ -16,19 +16,24 @@ const Sidebar = () => {
   };
 
   const handleSidebar = ({ data, nestedData }) => {
-    // navigate(data.to)
+    if (data.activeValue === 'application') {
+      if (nestedData) {
+        navigate(`${data.to}${nestedData.to}`)
+      } else {
+        setIsApplicationOpen(!isApplicationOpen)
+        navigate(`${data.to}/all`)
+      }
+    } else {
+      setIsApplicationOpen(false)
+      navigate(data.to)
+    }
+
     setActive({
       activeValue: data.activeValue,
       nestedActiveValue: nestedData?.nestedActiveValue
         ? nestedData.nestedActiveValue
         : data?.nestedRoutes ? data.nestedRoutes[0].nestedActiveValue : ''
-    })
-
-    if (data.activeValue === 'application') {
-      !nestedData && setIsApplicationOpen(!isApplicationOpen)
-    } else {
-      setIsApplicationOpen(false)
-    } 
+    }) 
   };
 
   console.log(active)
