@@ -15,6 +15,7 @@ import BackBtn from '../components/buttons/BackBtn';
 import ContinueBtn from '../components/buttons/ContinueBtn';
 import UploadSelfie from '../containers/kyc/step6/UploadSelfie';
 import UploadSignature from '../containers/kyc/step7/uploadSignature';
+import ReviewApplication from '../containers/reviewApplication/ReviewApplication';
 
 const Kyc = () => {
   const [isModelOpen, setIsModelOpen] = useState(false);
@@ -47,7 +48,7 @@ const Kyc = () => {
   }
 
   const handleContinueBtn = () => {
-    if (selectedStep < steps.length) {
+    if (selectedStep < steps.length+1) {
       setSelectedStep(selectedStep + 1)
       const updatedSteps = steps.map((step, index) => index === selectedStep ? { ...step, status: 'active' } : step)
       setSteps(updatedSteps)
@@ -61,9 +62,13 @@ const Kyc = () => {
   return (
     <>
       <div className="pl-5 pr-[30px] py-5 ml-[300px] mt-[115px] flex flex-col grow w-full h-full">
-        <div className="mb-14">
-          <StepProgressBar selectedStep={selectedStep} steps={steps} />
-        </div>
+        {
+          selectedStep !== 9 && (
+            <div className="mb-14">
+              <StepProgressBar selectedStep={selectedStep} steps={steps} />
+            </div>
+          )
+        }
         <div className="min-h-[calc(100vh-340px)]">
           {selectedStep === 0 && <InitMobileEmail />}
           {selectedStep === 1 && <VerifyMobileEmail />}
@@ -74,6 +79,7 @@ const Kyc = () => {
           {selectedStep === 6 && <BrokerageDetails />}
           {selectedStep === 7 && <UploadSelfie />}
           {selectedStep === 8 && <UploadSignature />}
+          {selectedStep === 9 && <ReviewApplication />}
         </div>
         <div className="flex items-center justify-between">
           <BackBtn handleBackBtn={handleBackBtn} />

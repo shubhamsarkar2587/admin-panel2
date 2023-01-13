@@ -16,11 +16,10 @@ import backIcon from './svg/back.svg';
 import continueIcon from './svg/continue.svg';
 import profile_user from './svg/profile_user.svg';
 import signature from './svg/signature.svg';
+import doc_view from './svg/doc_view.svg';
 
 import dashboard from './png/dashboard.png';
 import selected_dashboard from './png/selected_dashboard.png';
-
-
 
 export const pngAssets = {
   bigul,
@@ -55,6 +54,7 @@ export const svgAssets = {
     backIcon,
     continueIcon,
     profile_user,
-    signature
+    signature,
+    doc_view
   }
 };
