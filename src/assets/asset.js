@@ -17,8 +17,17 @@ import continueIcon from './svg/continue.svg';
 import profile_user from './svg/profile_user.svg';
 import signature from './svg/signature.svg';
 
+import dashboard from './png/dashboard.png';
+import selected_dashboard from './png/selected_dashboard.png';
+
+
+
 export const pngAssets = {
-  bigul
+  bigul,
+  dashboard: {
+    dashboard,
+    selected_dashboard
+  }
 };
 
 export const svgAssets = {
@@ -38,7 +47,7 @@ export const svgAssets = {
     kyc,
     rightArrow,
     application,
-    graph
+    graph,
   },
   kyc: {
     sendLink,
