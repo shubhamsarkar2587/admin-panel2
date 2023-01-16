@@ -1,4 +1,4 @@
-import ReactTable from './reactTable'
+import ReactTable from './ReactTable'
 
 const DisplayTable = () => {
   const columns = [

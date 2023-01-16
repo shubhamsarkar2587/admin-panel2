@@ -1,6 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './containers/navbar/Navbar';
 import Sidebar from './containers/sidebar/Sidebar';
+import AllApplication from './pages/application/all';
+import PendingApplication from './pages/application/pending';
+import RejectedApplication from './pages/application/rejected';
+import ResubmittedApplication from './pages/application/resubmitted';
+import VerifiedApplication from './pages/application/verified';
 import Homepage from './pages/homepage';
 import Kyc from './pages/kyc';
 import Login from './pages/login';
@@ -18,6 +23,11 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Homepage />}></Route>
             <Route path="/kyc" element={<Kyc />}></Route>
+            <Route path="/application/all" element={<AllApplication />}></Route>
+            <Route path="/application/pending" element={<PendingApplication />}></Route>
+            <Route path="/application/rejected" element={<RejectedApplication />}></Route>
+            <Route path="/application/verified" element={<VerifiedApplication />}></Route>
+            <Route path="/application/resubmitted" element={<ResubmittedApplication />}></Route>
           </Routes>
         </div>
       </div>

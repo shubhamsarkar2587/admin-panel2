@@ -14,12 +14,12 @@ export const kycSteps = () => [
     label: 'Step 1',
     value: 'step1',
     status: 'active',
+    subStepStatus: 'active',
     isSuccess: true,
     component: <InitMobileEmail />,
     subSteps: [
       {
         value: 'step1_1',
-        status: 'active',
         isSuccess: true,
         component: <VerifyMobileEmail />
       }

@@ -1,4 +1,4 @@
-import DisplayTable from "../components/reactTable/displayTable";
+import DisplayTable from "../components/reactTable/DisplayTable";
 import Applications from "../components/widgets/Applications";
 import Date from "../components/widgets/Date";
 
