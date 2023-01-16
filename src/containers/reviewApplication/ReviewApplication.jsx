@@ -1,17 +1,9 @@
 import { useState } from 'react';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 import { svgAssets } from "../../assets/asset"
 import BrokerageDetails from "../kyc/step5/BrokerageDetails"
 import pdfFile from "../../assets/sample.pdf"
 
 const ReviewApplication = () => {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-    setPageNumber(1)
-  }
 
   return (
     <div className="w-full flex flex-col mb-10">
@@ -111,6 +103,9 @@ const ReviewApplication = () => {
               </div>
             </div>
           </div>
+          <div className="my-6">
+            <iframe title="head" src={pdfFile} width="100%" height="600" />
+          </div>
         </div>
 
         <div className="mb-5 pb-2.5 border-b border-solid border-[#D9D9D9]">
@@ -199,12 +194,6 @@ const ReviewApplication = () => {
 
         <BrokerageDetails />
 
-        <Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess}>
-          <Page pageNumber={pageNumber} />
-        </Document>
-        <p>
-          Page {pageNumber} of {numPages}
-        </p>
       </div>
     </div>
   )
