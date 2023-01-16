@@ -88,5 +88,6 @@ export const kycSteps = () => [
     value: 'step8',
     status: 'inactive',
     isSuccess: true,
+    component: <ReviewApplication />
   }
 ]

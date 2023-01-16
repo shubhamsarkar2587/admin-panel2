@@ -1,8 +1,18 @@
+import { useState } from 'react';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 import { svgAssets } from "../../assets/asset"
 import BrokerageDetails from "../kyc/step5/BrokerageDetails"
-
+import pdfFile from "../../assets/sample.pdf"
 
 const ReviewApplication = () => {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+    setPageNumber(1)
+  }
+
   return (
     <div className="w-full flex flex-col mb-10">
       <div className="flex items-center justify-between">
@@ -90,11 +100,11 @@ const ReviewApplication = () => {
 
               <div className="grid grid-cols-3 gap-5 items-center">
                 <div className="">Documents Uploaded</div>
-                <div className="w-[150px] py-2.5 flex items-center justify-center rounded-[10px] border border-solid border-[#F7F7F7]">
+                <div className="w-[150px] py-2.5 flex items-center justify-center rounded-[10px] border border-solid border-[#E0E0E0]">
                   <img className="mr-2" alt="doc_view" src={svgAssets.kyc.doc_view}></img>
                   <span >Rajendra Singh</span>
                 </div>
-                <div className="w-[150px] py-2.5 flex items-center justify-center rounded-[10px] border border-solid border-[#F7F7F7]">
+                <div className="w-[150px] py-2.5 flex items-center justify-center rounded-[10px] border border-solid border-[#E0E0E0]">
                   <img className="mr-2" alt="doc_view" src={svgAssets.kyc.doc_view}></img>
                   <span >Rajendra Singh</span>
                 </div>
@@ -126,7 +136,7 @@ const ReviewApplication = () => {
 
               <div className="mb-[15px] grid grid-cols-3 gap-5 items-center">
                 <div className="">Documents Uploaded</div>
-                <div className="w-[150px] py-2.5 flex items-center justify-center rounded-[10px] border border-solid border-[#F7F7F7]">
+                <div className="w-[150px] py-2.5 flex items-center justify-center rounded-[10px] border border-solid border-[#E0E0E0]">
                   <img className="mr-2" alt="doc_view" src={svgAssets.kyc.doc_view}></img>
                   <span >Rajendra Singh</span>
                 </div>
@@ -189,6 +199,12 @@ const ReviewApplication = () => {
 
         <BrokerageDetails />
 
+        <Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess}>
+          <Page pageNumber={pageNumber} />
+        </Document>
+        <p>
+          Page {pageNumber} of {numPages}
+        </p>
       </div>
     </div>
   )
