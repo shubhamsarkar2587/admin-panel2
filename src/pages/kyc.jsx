@@ -1,35 +1,14 @@
 import { useEffect, useState } from 'react';
-
+import { kycSteps } from '../containers/kyc/kycData';
 import KycDialog from '../components/dialog/KycDialog';
-import Navbar from '../containers/navbar/Navbar'
-import Sidebar from '../containers/sidebar/Sidebar'
-import InitMobileEmail from '../containers/kyc/step1/InitMobileEmail';
-import VerifyMobileEmail from '../containers/kyc/step1/VerifyMobileEmail';
-import VerifyPan from '../containers/kyc/step2/VerifyPan';
-import VerifyBankDetails from '../containers/kyc/step3/VerifyBankDetails';
-import PersonalDetails from '../containers/kyc/step4/PersonalDetails';
-import OccuptionDetail from '../containers/kyc/step4/OccupationDetail';
-import BrokerageDetails from '../containers/kyc/step5/BrokerageDetails';
-import StepProgressBar from '../containers/kyc/stepProgressBar/StepProgressBar';
+import StepProgressBar from '../components/progressBar/ProgressBar';
 import BackBtn from '../components/buttons/BackBtn';
 import ContinueBtn from '../components/buttons/ContinueBtn';
-import UploadSelfie from '../containers/kyc/step6/UploadSelfie';
-import UploadSignature from '../containers/kyc/step7/uploadSignature';
-import ReviewApplication from '../containers/reviewApplication/ReviewApplication';
 
 const Kyc = () => {
   const [isModelOpen, setIsModelOpen] = useState(false);
-  const [selectedStep, setSelectedStep] = useState(0);
-  const [steps, setSteps] = useState([
-    { label: 'Step 1', status: 'inactive' },
-    { label: 'Step 2', status: 'inactive' },
-    { label: 'Step 3', status: 'inactive' },
-    { label: 'Step 4', status: 'inactive' },
-    { label: 'Step 5', status: 'inactive' },
-    { label: 'Step 6', status: 'inactive' },
-    { label: 'Step 7', status: 'inactive' },
-    { label: 'Step 8', status: 'inactive' },
-  ]);
+  // const [selectedStep, setSelectedStep] = useState(0);
+  const [steps, setSteps] = useState(kycSteps || []);
 
   const handleKycModel = (condition) => {
     if (condition) {
@@ -39,20 +18,42 @@ const Kyc = () => {
     }
   }
 
-  const handleBackBtn = () => {
-    if (selectedStep > 0) {
-      setSelectedStep(selectedStep - 1)
-      const updatedSteps = steps.map((step, index) => index === selectedStep ? { ...step, status: 'inactive' } : step)
-      setSteps(updatedSteps)
-    }
+  const handleBackBtn = ({ step, index }) => {
+    const updatedSteps = steps.map((el, i) => {
+      if (i === index) {
+        return ({
+          ...el,
+          status: 'inactive'
+        })
+      } else if (i === index - 1) {
+        return ({
+          ...el,
+          status: 'active'
+        })
+      } else {
+        return el
+      }
+    })
+    setSteps(updatedSteps);
   }
 
-  const handleContinueBtn = () => {
-    if (selectedStep < steps.length+1) {
-      setSelectedStep(selectedStep + 1)
-      const updatedSteps = steps.map((step, index) => index === selectedStep ? { ...step, status: 'active' } : step)
-      setSteps(updatedSteps)
-    }
+  const handleContinueBtn = ({ step, index }) => {
+    const updatedSteps = steps.map((el, i) => {
+      if (i === index) {
+        return ({
+          ...el,
+          status: 'success'
+        })
+      } else if (i === index + 1) {
+        return ({
+          ...el,
+          status: 'active'
+        })
+      } else {
+        return el
+      }
+    })
+    setSteps(updatedSteps);
   }
 
   useEffect(() => {
@@ -63,28 +64,25 @@ const Kyc = () => {
     <>
       <div className="pl-5 pr-[30px] py-5 ml-[300px] mt-[115px] flex flex-col grow w-full h-full">
         {
-          selectedStep !== 9 && (
-            <div className="mb-14">
-              <StepProgressBar selectedStep={selectedStep} steps={steps} />
-            </div>
-          )
+          steps?.length > 0 ? steps.map((step, index) => step.status === 'active' ? (
+            <div key={`kyc_step_${index}`}>
+              <div className="mb-14">
+                <StepProgressBar selectedStep={index} steps={steps} />
+              </div>
+              <div className="min-h-[calc(100vh-340px)]">
+                {
+                  step.component
+                }
+              </div>
+              <div className={`flex items-center 
+                ${index === 0 ? 'justify-end' : index === steps.length - 1 ? 'justify-start' : 'justify-between'}
+              `}>
+                {index !== 0 && (<BackBtn handleBackBtn={() => handleBackBtn({ step, index })} />)}
+                {index !== steps.length - 1 && (<ContinueBtn handleContinueBtn={() => handleContinueBtn({ step, index })} />)}
+              </div>
+            </div>) : null
+          ) : null
         }
-        <div className="min-h-[calc(100vh-340px)]">
-          {selectedStep === 0 && <InitMobileEmail />}
-          {selectedStep === 1 && <VerifyMobileEmail />}
-          {selectedStep === 2 && <VerifyPan />}
-          {selectedStep === 3 && <VerifyBankDetails />}
-          {selectedStep === 4 && <PersonalDetails />}
-          {selectedStep === 5 && <OccuptionDetail />}
-          {selectedStep === 6 && <BrokerageDetails />}
-          {selectedStep === 7 && <UploadSelfie />}
-          {selectedStep === 8 && <UploadSignature />}
-          {selectedStep === 9 && <ReviewApplication />}
-        </div>
-        <div className="flex items-center justify-between">
-          <BackBtn handleBackBtn={handleBackBtn} />
-          <ContinueBtn handleContinueBtn={handleContinueBtn} />
-        </div>
       </div>
       <KycDialog isModalOpen={isModelOpen} handleKycModel={handleKycModel} />
     </>
