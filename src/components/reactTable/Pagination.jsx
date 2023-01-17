@@ -48,7 +48,7 @@ const Pagination = () => {
   }, [totalPages, currentPage]);
 
   return (
-    <div className="flex items-center justify-between mt-8">
+    <div className="mt-8 mb-7 flex items-center justify-between">
       <div className="bg-[#808080">
         10 out of 200 entries
       </div>
