@@ -17,7 +17,7 @@ const SearchBar = ({ searchbarWidth }) => {
 
   return (
     <div className="w-[350px] relative rounded-[10px] border border-[#D6D3D3] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] focus:outline-none focus:shadow-outline-blue focus:border-blue-500 bg-white">
-      <div className="flex px-3.5 py-[14px] items-center justify-between">
+      <div className="flex px-3.5 py-3 items-center justify-between">
         <input
           className="w-full pr-5 m-0 text-sm outline-none border-none"
           type="text"
