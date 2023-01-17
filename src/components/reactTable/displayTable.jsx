@@ -1,3 +1,4 @@
+import Pagination from './Pagination';
 import ReactTable from './ReactTable'
 
 const DisplayTable = () => {
@@ -27,6 +28,7 @@ const DisplayTable = () => {
       </div>
       <div className="w-full">
         <ReactTable columns={columns} data={data} />
+        <Pagination columns={columns} data={data} />
       </div>
     </div>
 

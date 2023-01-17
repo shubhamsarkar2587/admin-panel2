@@ -104,7 +104,7 @@ const ReviewApplication = () => {
             </div>
           </div>
           <div className="my-6">
-            <iframe title="head" src={pdfFile} width="100%" height="600" />
+            <iframe title="head" src={pdfFile} width="100%" height="700px" />
           </div>
         </div>
 
