@@ -34,8 +34,8 @@ const ResubmittedApplication = () => {
             </div>
             <button className="px-3 py-[1px] rounded-md	flex items-center font-semibold bg-[#EBFFFA] shadow-[0px_3px_16px_rgba(171,171,171,0.25)]">View Resubmitted</button>
           </div>
-          <div className="mb-5 flex items-center justify-between">
-            <SearchBar />
+          <div className="mb-6 flex items-center justify-between">
+            <SearchBar border={'border'} />
             <div className="flex items-center">
               <span className="text-[#787878] mr-3">Select Date</span>
               <div className="mr-3">

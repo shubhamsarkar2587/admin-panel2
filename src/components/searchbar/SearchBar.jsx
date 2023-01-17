@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
-const SearchBar = ({ searchbarWidth }) => {
+const SearchBar = ({ searchbarWidth, border }) => {
   const [searchText, setSearchText] = useState('');
   const [options, setOptions] = useState(['Tony Stark', 'Option 1', 'Option 2', 'Option 3']);
   const [filteredOptions, setFilteredOptions] = useState(options);
@@ -16,7 +16,9 @@ const SearchBar = ({ searchbarWidth }) => {
   };
 
   return (
-    <div className="w-[350px] relative rounded-[10px] border border-[#D6D3D3] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] focus:outline-none focus:shadow-outline-blue focus:border-blue-500 bg-white">
+    <div className={`w-[350px] relative rounded-[10px] border-[#D6D3D3] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] focus:outline-none focus:shadow-outline-blue focus:border-blue-500 bg-white
+      ${border ? border : ''}
+    `}>
       <div className="flex px-3.5 py-3 items-center justify-between">
         <input
           className="w-full pr-5 m-0 text-sm outline-none border-none"
