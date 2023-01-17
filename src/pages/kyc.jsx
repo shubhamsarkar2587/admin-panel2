@@ -62,28 +62,26 @@ const Kyc = () => {
 
   return (
     <>
-      <div className="pl-5 pr-[30px] py-5 ml-[300px] mt-[115px] flex flex-col grow w-full h-full">
-        {
-          steps?.length > 0 ? steps.map((step, index) => step.status === 'active' ? (
-            <div key={`kyc_step_${index}`}>
-              <div className="mb-14">
-                <StepProgressBar selectedStep={index} steps={steps} />
-              </div>
-              <div className="min-h-[calc(100vh-340px)]">
-                {
-                  step.component
-                }
-              </div>
-              <div className={`flex items-center 
+      {
+        steps?.length > 0 ? steps.map((step, index) => step.status === 'active' ? (
+          <div key={`kyc_step_${index}`}>
+            <div className="mb-14">
+              <StepProgressBar selectedStep={index} steps={steps} />
+            </div>
+            <div className="min-h-[calc(100vh-340px)]">
+              {
+                step.component
+              }
+            </div>
+            <div className={`flex items-center 
                 ${index === 0 ? 'justify-end' : index === steps.length - 1 ? 'justify-start' : 'justify-between'}
               `}>
-                {index !== 0 && (<BackBtn handleBackBtn={() => handleBackBtn({ step, index })} />)}
-                {index !== steps.length - 1 && (<ContinueBtn handleContinueBtn={() => handleContinueBtn({ step, index })} />)}
-              </div>
-            </div>) : null
-          ) : null
-        }
-      </div>
+              {index !== 0 && (<BackBtn handleBackBtn={() => handleBackBtn({ step, index })} />)}
+              {index !== steps.length - 1 && (<ContinueBtn handleContinueBtn={() => handleContinueBtn({ step, index })} />)}
+            </div>
+          </div>) : null
+        ) : null
+      }
       <KycDialog isModalOpen={isModelOpen} handleKycModel={handleKycModel} />
     </>
   )

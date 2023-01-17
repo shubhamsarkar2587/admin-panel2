@@ -20,15 +20,17 @@ const App = () => {
         <Navbar />
         <div className="flex h-full">
           <Sidebar />
-          <Routes>
-            <Route path="/" element={<Homepage />}></Route>
-            <Route path="/kyc" element={<Kyc />}></Route>
-            <Route path="/application/all" element={<AllApplication />}></Route>
-            <Route path="/application/pending" element={<PendingApplication />}></Route>
-            <Route path="/application/rejected" element={<RejectedApplication />}></Route>
-            <Route path="/application/verified" element={<VerifiedApplication />}></Route>
-            <Route path="/application/resubmitted" element={<ResubmittedApplication />}></Route>
-          </Routes>
+          <div className="pl-5 pr-[30px] py-5 ml-[300px] mt-[115px] flex flex-col grow w-full h-full">
+            <Routes>
+              <Route path="/" element={<Homepage />}></Route>
+              <Route path="/kyc" element={<Kyc />}></Route>
+              <Route path="/application/all" element={<AllApplication />}></Route>
+              <Route path="/application/pending" element={<PendingApplication />}></Route>
+              <Route path="/application/rejected" element={<RejectedApplication />}></Route>
+              <Route path="/application/verified" element={<VerifiedApplication />}></Route>
+              <Route path="/application/resubmitted" element={<ResubmittedApplication />}></Route>
+            </Routes>
+          </div>
         </div>
       </div>
 
