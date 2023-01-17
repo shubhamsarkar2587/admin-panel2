@@ -13,7 +13,6 @@ const Pagination = () => {
       setCurrentPage(newPage);
       onPageChange(newPage);
     }
-    console.log(newPage, currentPage, 'dff')
   };
 
   const paginationRange = useMemo(() => {
@@ -48,7 +47,7 @@ const Pagination = () => {
   }, [totalPages, currentPage]);
 
   return (
-    <div className="mt-8 mb-7 flex items-center justify-between">
+    <div className="my-7 flex items-center justify-between">
       <div className="bg-[#808080">
         10 out of 200 entries
       </div>
