@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { svgAssets } from "../../assets/asset";
-import Searchbar from "./Searchbar";
+import SearchBar from "../../components/searchbar/SearchBar";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="mx-5 pr-2.5 flex grow items-center justify-between">
-        <Searchbar />
+        <SearchBar />
         <div className="flex items-center">
           <button
             className="px-4 py-2.5 mx-2.5 rounded-[10px] bg-black text-white"

@@ -1,5 +1,6 @@
 import Pagination from '../../components/reactTable/Pagination';
 import ReactTable from '../../components/reactTable/ReactTable';
+import SearchBar from '../../components/searchbar/SearchBar';
 
 const columns = [
   { Header: 'Client Name', accessor: 'clientName' },
@@ -31,6 +32,9 @@ const AllApplication = () => {
               <span className="px-3 py-[1px] rounded-md	flex items-center font-semibold bg-[#FFF1D7]">500</span>
             </div>
             <button className="px-3 py-[1px] rounded-md	flex items-center font-semibold bg-[#EBFFFA] shadow-[0px_3px_16px_rgba(171,171,171,0.25)]">View All</button>
+          </div>
+          <div className="mb-5">
+            <SearchBar />
           </div>
           <ReactTable columns={columns} data={[...data, ...data]} />
           <Pagination columns={columns} data={data} />
