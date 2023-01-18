@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import VerifyApplication from './containers/finalApplication/VerifyApplication';
 import Navbar from './containers/navbar/Navbar';
 import Sidebar from './containers/sidebar/Sidebar';
 import AllApplication from './pages/application/all';
@@ -26,6 +27,7 @@ const App = () => {
               <Route path="/kyc" element={<Kyc />}></Route>
               <Route path="/application/all" element={<AllApplication />}></Route>
               <Route path="/application/pending" element={<PendingApplication />}></Route>
+              <Route path="/application/pending/verify" element={<VerifyApplication />}></Route>
               <Route path="/application/rejected" element={<RejectedApplication />}></Route>
               <Route path="/application/verified" element={<VerifiedApplication />}></Route>
               <Route path="/application/resubmitted" element={<ResubmittedApplication />}></Route>

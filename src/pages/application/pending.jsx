@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import DatePickerInput from '../../components/common/DatePicker';
 import MyPopover from '../../components/popover/Popover';
 import Pagination from '../../components/reactTable/Pagination';
@@ -30,9 +31,11 @@ const PendingApplication = () => {
 
   const PopoverChildComp = () => (
     <div
-      className="my-component-popover-content w-32 px-3 py-2 rounded-[10px] flex flex-col border-solid border-[#ECECEC] bg-white"
+      className="my-component-popover-content w-32 px-4 py-2 rounded-[10px] flex flex-col border-solid border-[#ECECEC] bg-white"
     >
-      <span className="cursor-pointer hover:text-[#5367FC] mb-0.5">Verify</span>
+      <Link to="/application/pending/verify">
+        <span className="cursor-pointer hover:text-[#5367FC] mb-0.5">Verify</span>
+      </Link>
       <span className="cursor-pointer hover:text-[#5367FC]">View</span>
     </div>
   )

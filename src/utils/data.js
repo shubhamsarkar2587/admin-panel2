@@ -20,3 +20,31 @@ export const admin = {
     password: '123'
   }
 }
+
+export const verifyApplicationData = {
+  clientDetails : [
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},    
+  ],
+  mobileNumberAndEmailDetails: [
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},
+  ],
+  panDetails: [
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},    
+  ],
+  bankDetails: [
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"},
+    { label: "Name As On PAN", value: "Amit Singh"}, 
+  ]
+}

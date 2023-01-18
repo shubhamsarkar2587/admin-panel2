@@ -20,9 +20,6 @@ const MyPopover = ({ PopoverParentComp, PopoverChildComp }) => {
           popoverRect={popoverRect}
           arrowSize={15}
           arrowColor={"#fff"}
-          // arrowClassName="my-component-popover"
-          // className='my-component-popover'
-          // arrowClassName='popover-arrow'
         >
           <PopoverChildComp />
         </ArrowContainer>

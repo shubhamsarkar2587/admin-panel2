@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { svgAssets } from "../../assets/asset"
 import BrokerageDetails from "../kyc/step5/BrokerageDetails"
 import pdfFile from "../../assets/sample.pdf"

@@ -17,6 +17,9 @@ import continueIcon from './svg/continue.svg';
 import profile_user from './svg/profile_user.svg';
 import signature from './svg/signature.svg';
 import doc_view from './svg/doc_view.svg';
+import right_field from './svg/right_field.svg';
+import wrong_field from './svg/wrong_field.svg';
+
 
 import dashboard from './png/dashboard.png';
 import selected_dashboard from './png/selected_dashboard.png';
@@ -56,5 +59,9 @@ export const svgAssets = {
     profile_user,
     signature,
     doc_view
+  },
+  verifyApplication : {
+    right_field,
+    wrong_field
   }
 };
