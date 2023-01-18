@@ -1,0 +1,13 @@
+.my-component-popover {
+  overflow: visible !important;
+}
+
+.my-component-popover>div>div:first-child {
+  border-bottom-color: #fff !important;
+  top: 1px !important;
+  z-index: 9 !important;
+}
+
+.my-component-popover-content {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 10px 0px 15px rgba(0, 0, 0, 0.05), -10px 0px 15px rgba(0, 0, 0, 0.05), 0px -5px 40px rgba(0, 0, 0, 0.05);
+}
