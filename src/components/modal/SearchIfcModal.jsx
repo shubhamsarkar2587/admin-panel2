@@ -1,4 +1,4 @@
-import './dialog.css';
+import './modal.css';
 import { Modal } from 'antd';
 import { svgAssets } from '../../assets/asset';
 import CommonInput from '../common/CommonInput';
@@ -19,7 +19,7 @@ const selectOption = [
   },
 ]
 
-const SearchIfcDialog = ({ isModalOpen, handleKycModel }) => {
+const SearchIfcModal = ({ isModalOpen, handleKycModel }) => {
 
   return (
     <div>
@@ -72,4 +72,4 @@ const SearchIfcDialog = ({ isModalOpen, handleKycModel }) => {
   )
 }
 
-export default SearchIfcDialog
+export default SearchIfcModal

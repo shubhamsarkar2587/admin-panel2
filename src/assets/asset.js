@@ -19,6 +19,7 @@ import signature from './svg/signature.svg';
 import doc_view from './svg/doc_view.svg';
 import right_field from './svg/right_field.svg';
 import wrong_field from './svg/wrong_field.svg';
+import dropdown_icon from './svg/dropdown_icon.svg';
 
 
 import dashboard from './png/dashboard.png';
@@ -35,6 +36,7 @@ export const pngAssets = {
 export const svgAssets = {
   bigul,
   bonabza,
+  dropdown_icon,
   login: {
     login_screen_img,
     login_enter,

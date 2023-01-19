@@ -1,4 +1,5 @@
 import { Select } from 'antd';
+import { svgAssets } from '../../assets/asset';
 
 const selectOption = [
   {
@@ -18,6 +19,7 @@ const selectOption = [
 const SelectItem = ({ height, placeholder }) => {
   return (
     <Select
+      suffixIcon={<img height={24} alt="dropdown_icon" src={svgAssets.dropdown_icon} />}
       placeholder={placeholder}
       style={{
         width: '100%',

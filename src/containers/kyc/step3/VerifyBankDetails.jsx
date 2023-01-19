@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import { svgAssets } from "../../../assets/asset";
-import BackBtn from '../../../components/buttons/BackBtn';
 import CommonInput from '../../../components/common/CommonInput';
-import ContinueBtn from '../../../components/buttons/ContinueBtn';
 import VerifyBtn from '../../../components/buttons/VerifyBtn';
-import SearchIfcDialog from "../../../components/dialog/SearchIfcDialog";
+import SearchIfcModal from "../../../components/modal/SearchIfcModal";
 
 const VerifyBankDetails = () => {
   const [isModelOpen, setIsModelOpen] = useState(false);
@@ -49,7 +47,7 @@ const VerifyBankDetails = () => {
       <div className="flex items-center justify-center">
         <VerifyBtn />
       </div>
-      <SearchIfcDialog isModalOpen={isModelOpen} handleKycModel={handleKycModel} />
+      <SearchIfcModal isModalOpen={isModelOpen} handleKycModel={handleKycModel} />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { kycSteps } from '../containers/kyc/kycData';
-import KycDialog from '../components/dialog/KycDialog';
+import KycModal from '../components/modal/KycModal';
 import StepProgressBar from '../components/progressBar/ProgressBar';
 import BackBtn from '../components/buttons/BackBtn';
 import ContinueBtn from '../components/buttons/ContinueBtn';
@@ -82,7 +82,7 @@ const Kyc = () => {
           </div>) : null
         ) : null
       }
-      <KycDialog isModalOpen={isModelOpen} handleKycModel={handleKycModel} />
+      <KycModal isModalOpen={isModelOpen} handleKycModel={handleKycModel} />
     </>
   )
 }

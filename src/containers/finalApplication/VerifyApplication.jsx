@@ -1,10 +1,16 @@
+import { useState } from "react"
 import { svgAssets } from "../../assets/asset"
 import BrokerageDetails from "../kyc/step5/BrokerageDetails"
-import pdfFile from "../../assets/sample.pdf"
 import { VerifySingleDetail } from "./SingleDetail"
 import { verifyApplicationData } from "../../utils/data"
+import PdfViewer from "./PdfViewer"
 
 const VerifyApplication = () => {
+  const [isPdfOpen, setIsPdfOpen] = useState(false)
+
+  const handlePdfviewer = () => {
+    setIsPdfOpen(!isPdfOpen)
+  }
 
   return (
     <div className="w-full flex flex-col mb-10">
@@ -18,7 +24,7 @@ const VerifyApplication = () => {
           <div className="col-span-8">
             {
               verifyApplicationData.clientDetails.map((el, index) => (
-                <VerifySingleDetail index={index} label={el.label} value={el.value} isValid={index === 0 && true} />
+                <VerifySingleDetail key={index} label={el.label} value={el.value} isValid={index === 0 && true} />
               ))
             }
           </div>
@@ -40,7 +46,7 @@ const VerifyApplication = () => {
             <div className="col-span-8">
               {
                 verifyApplicationData.mobileNumberAndEmailDetails.map((el, index) => (
-                  <VerifySingleDetail index={index} label={el.label} value={el.value} isValid={index === 0 && true} />
+                  <VerifySingleDetail key={index} label={el.label} value={el.value} isValid={index === 0 && true} />
                 ))
               }
             </div>
@@ -53,11 +59,11 @@ const VerifyApplication = () => {
             <div className="col-span-8">
               {
                 verifyApplicationData.panDetails.map((el, index) => (
-                  <VerifySingleDetail index={index} label={el.label} value={el.value} isValid={index === 0 && true} />
+                  <VerifySingleDetail key={index} label={el.label} value={el.value} isValid={index === 0 && true} />
                 ))
               }
 
-              <div className="grid grid-cols-3 gap-5 items-center">
+              <div className="pt-[10px] grid grid-cols-3 gap-5 items-center">
                 <div className="">Documents Uploaded</div>
                 <div className="w-[150px] py-2.5 flex items-center justify-center rounded-[10px] border border-solid border-[#E0E0E0]">
                   <img className="mr-2" alt="doc_view" src={svgAssets.kyc.doc_view}></img>
@@ -68,10 +74,8 @@ const VerifyApplication = () => {
                   <span >Rajendra Singh</span>
                 </div>
               </div>
+
             </div>
-          </div>
-          <div className="my-6">
-            <iframe title="head" src={pdfFile} width="100%" height="600px" />
           </div>
         </div>
 
@@ -81,11 +85,23 @@ const VerifyApplication = () => {
             <div className="col-span-8">
               {
                 verifyApplicationData.bankDetails.map((el, index) => (
-                  <VerifySingleDetail index={index} label={el.label} value={el.value} isValid={index === 0 && true} />
+                  <VerifySingleDetail key={index} label={el.label} value={el.value} isValid={index === 0 && true} />
                 ))
               }
+              <div className="pt-[10px] grid grid-cols-3 gap-5 items-center">
+                <div className="">Documents Uploaded</div>
+                <div
+                  className="w-[150px] py-2.5 flex items-center justify-center rounded-[10px] border border-solid border-[#E0E0E0] cursor-pointer"
+                  onClick={() => handlePdfviewer()}
+                >
+                  <img className="mr-2" alt="doc_view" src={svgAssets.kyc.doc_view}></img>
+                  <span>Rajendra Singh</span>
+                </div>
+              </div>
+
             </div>
           </div>
+          <PdfViewer isPdfOpen={isPdfOpen} />
         </div>
 
         <BrokerageDetails />

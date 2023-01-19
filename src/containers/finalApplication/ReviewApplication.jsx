@@ -1,6 +1,5 @@
 import { svgAssets } from "../../assets/asset"
 import BrokerageDetails from "../kyc/step5/BrokerageDetails"
-import pdfFile from "../../assets/sample.pdf"
 
 const ReviewApplication = () => {
 
@@ -100,10 +99,8 @@ const ReviewApplication = () => {
                   <span >Rajendra Singh</span>
                 </div>
               </div>
+
             </div>
-          </div>
-          <div className="my-6">
-            <iframe title="head" src={pdfFile} width="100%" height="700px" />
           </div>
         </div>
 

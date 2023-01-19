@@ -1,9 +1,9 @@
-import './dialog.css';
+import './modal.css';
 import { useNavigate } from "react-router-dom";
 import { Modal } from 'antd';
 import { svgAssets } from '../../assets/asset';
 
-const KycDialog = ({ isModalOpen, handleKycModel }) => {
+const KycModal = ({ isModalOpen, handleKycModel }) => {
   const navigate = useNavigate();
 
   const handleClick = (route) => {
@@ -43,4 +43,4 @@ const KycDialog = ({ isModalOpen, handleKycModel }) => {
   )
 }
 
-export default KycDialog
+export default KycModal
