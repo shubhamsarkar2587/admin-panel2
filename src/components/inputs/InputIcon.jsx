@@ -5,7 +5,7 @@ const InputIcon = ({ height, iconText }) => {
   return (
     <div className="flex items-center">
       <input
-        className={`w-full h-[${height || '47px'}] px-4  text-[#989898] border border-solid border-[#DFDFDF] rounded-l-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)]`}
+        className={`w-full h-[${height || '47px'}] px-4  text-[#989898] rounded-l-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)]`}
         placeholder="Please enter email id"
       />
       <button

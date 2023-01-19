@@ -43,18 +43,8 @@ const SearchIfcModal = ({ isModalOpen, handleKycModel }) => {
               <CommonInput height={'45px'} />
             </div>
             <div className="flex flex-col">
-              <span className="mb-3">Bank Name</span>
-              <CommonInput height="45px" />
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-7 mb-9">
-            <div className="flex flex-col">
-              <span className="mb-3">Bank Name</span>
-              <SelectItem />
-            </div>
-            <div className="flex flex-col">
               <span className="mb-3">Branch</span>
-              
+              <SelectItem />
             </div>
           </div>
           <div className="w-full flex justify-center mb-5">
