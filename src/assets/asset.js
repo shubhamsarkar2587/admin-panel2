@@ -1,46 +1,46 @@
 import bigul from './svg/bigul.svg';
 import bonabza from './svg/bonabza.svg';
-import login_screen_img from './svg/login_screen_img.svg';
-import login_enter from './svg/login_enter.svg';
-import show_password from './svg/show_password.svg';
-import hide_password from './svg/hide_password.svg';
+import loginScreenImg from './svg/loginScreenImg.svg';
+import loginEnter from './svg/loginEnter.svg';
+import showPassword from './svg/showPassword.svg';
+import hidePassword from './svg/hidePassword.svg';
 import kyc from './svg/kyc.svg';
 import rightArrow from './svg/rightArrow.svg';
 import defaultUser from './svg/defaultUser.svg';
 import notification from './svg/notification.svg';
 import application from './svg/application.svg';
 import graph from './svg/graph.svg';
-import sendLink from './svg/send_link.svg';
+import sendLink from './svg/sendLink.svg';
 import verify from './svg/verify.svg';
 import backIcon from './svg/back.svg';
 import continueIcon from './svg/continue.svg';
-import profile_user from './svg/profile_user.svg';
+import profileUser from './svg/profileUser.svg';
 import signature from './svg/signature.svg';
-import doc_view from './svg/doc_view.svg';
-import right_field from './svg/right_field.svg';
-import wrong_field from './svg/wrong_field.svg';
-import dropdown_icon from './svg/dropdown_icon.svg';
+import docView from './svg/docView.svg';
+import rightField from './svg/rightField.svg';
+import wrongField from './svg/wrongField.svg';
+import dropdownIcon from './svg/dropdownIcon.svg';
 
 import dashboard from './png/dashboard.png';
-import selected_dashboard from './png/selected_dashboard.png';
+import selectedDashboard from './png/selectedDashboard.png';
 
 export const pngAssets = {
 	bigul,
 	dashboard: {
 		dashboard,
-		selected_dashboard
+		selectedDashboard
 	}
 };
 
 export const svgAssets = {
 	bigul,
 	bonabza,
-	dropdown_icon,
+	dropdownIcon,
 	login: {
-		login_screen_img,
-		login_enter,
-		show_password,
-		hide_password
+		loginScreenImg,
+		loginEnter,
+		showPassword,
+		hidePassword
 	},
 	navbar: {
 		defaultUser,
@@ -57,12 +57,12 @@ export const svgAssets = {
 		verify,
 		backIcon,
 		continueIcon,
-		profile_user,
+		profileUser,
 		signature,
-		doc_view
+		docView
 	},
 	verifyApplication: {
-		right_field,
-		wrong_field
+		rightField,
+		wrongField
 	}
 };

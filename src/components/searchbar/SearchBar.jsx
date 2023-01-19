@@ -15,6 +15,8 @@ const SearchBar = ({ searchbarWidth, border }) => {
 		);
 	};
 
+	console.log(setOptions);
+
 	return (
 		<div className={`w-[350px] relative rounded-[10px] border-[#D6D3D3] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] focus:outline-none focus:shadow-outline-blue focus:border-blue-500 bg-white
       ${border || ''}

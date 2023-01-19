@@ -20,7 +20,7 @@ const UploadSelfie = ({ marginBottom }) => {
 					<img
 						className="w-[113px] h-[113px] rounded-[10px]"
 						alt="user_image"
-						src={svgAssets.kyc.profile_user}
+						src={svgAssets.kyc.profileUser}
 					/>
 				</div>
 			</div>

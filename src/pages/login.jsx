@@ -15,7 +15,7 @@ const Login = () => {
 	return (
 		<div className="w-full h-screen flex items-center justify-between">
 			<div className="w-[45%] h-full flex items-center bg-[#5367FC]">
-				<img alt="login_screen_image" src={svgAssets.login.login_screen_img}></img>
+				<img alt="login_screen_image" src={svgAssets.login.loginScreenImg}></img>
 			</div>
 			<div className="w-[55%] h-full py-10 full px-20 relative">
 				<img className="absolute top-[40px] h-[40px]" alt="app_logo" src={svgAssets.bigul} />
@@ -40,7 +40,7 @@ const Login = () => {
 								<img
 									className="cursor-pointer absolute right-3 top-0 bottom-0 mt-auto mb-auto"
 									width={24} alt="hide_password"
-									src={showPassword ? svgAssets.login.show_password : svgAssets.login.hide_password}
+									src={showPassword ? svgAssets.login.showPassword : svgAssets.login.hidePassword}
 									onClick={() => setShowPassword(!showPassword)}
 								/>
 							</div>
@@ -60,7 +60,7 @@ const Login = () => {
 							className="w-min px-9 py-3 flex items-center justify-center text-white rounded-[10px] bg-[#5367FC]"
 							onClick={() => handleLogin()}
 						>
-							<img className="mr-2.5" alt="login_screen_enter_img" src={svgAssets.login.login_enter}></img>
+							<img className="mr-2.5" alt="login_screen_enter_img" src={svgAssets.login.loginEnter}></img>
 							<span className="">Login</span>
 						</button>
 					</div>

@@ -18,8 +18,8 @@ export const VerifySingleDetail = ({ label, value, isValid }) => {
 				<div className="text-[#90A5B5]">{label}</div>
 				<div className="">{value}</div>
 				<div className='flex items-center justify-end'>
-					<img className="mr-5" alt="wrong_field" src={svgAssets.verifyApplication.wrong_field} />
-					<img className="cursor-pointer" onClick={() => setIsOpen(!isOpen)} alt="right_field" src={svgAssets.verifyApplication.right_field} />
+					<img className="mr-5" alt="wrong_field" src={svgAssets.verifyApplication.wrongField} />
+					<img className="cursor-pointer" onClick={() => setIsOpen(!isOpen)} alt="right_field" src={svgAssets.verifyApplication.rightField} />
 				</div>
 			</div>
 			<MyModal

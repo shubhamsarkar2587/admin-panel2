@@ -14,7 +14,7 @@ function ReactTable ({ title, columns, data }) {
 									key={`head_group_header_${i2}`}
 									{...column.getHeaderProps()}
 									className="py-2 text-[15px] text-[#9A9A9A] font-normal"
-								>	
+								>
 									{column.render('Header')}
 								</th>
 							))}

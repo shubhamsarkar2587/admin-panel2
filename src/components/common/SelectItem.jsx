@@ -19,7 +19,7 @@ const selectOption = [
 const SelectItem = ({ height, placeholder }) => {
 	return (
 		<Select
-			suffixIcon={<img height={24} alt="dropdown_icon" src={svgAssets.dropdown_icon} />}
+			suffixIcon={<img height={24} alt="dropdown_icon" src={svgAssets.dropdownIcon} />}
 			placeholder={placeholder}
 			style={{
 				width: '100%',

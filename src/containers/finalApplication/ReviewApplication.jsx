@@ -39,7 +39,7 @@ const ReviewApplication = () => {
 					</div>
 					<div className="col-span-4 grid grid-rows-6 gap-5">
 						<div className="row-span-4 px-[70px] py-[40px] flex items-center justify-center rounded-[10px] shadow-[0px_1px_12px_rgba(185,185,185,0.25)]">
-							<img className="object-contain" alt="user_image" src={svgAssets.kyc.profile_user}></img>
+							<img className="object-contain" alt="user_image" src={svgAssets.kyc.profileUser}></img>
 						</div>
 						<div className="row-span-2 py-4 flex items-center justify-center rounded-[10px] shadow-[0px_1px_12px_rgba(185,185,185,0.25)]">
 							<img className="h-full object-contain" alt="user_image" src={svgAssets.kyc.signature}></img>
@@ -90,11 +90,11 @@ const ReviewApplication = () => {
 							<div className="grid grid-cols-3 gap-5 items-center">
 								<div className="">Documents Uploaded</div>
 								<div className="w-[150px] py-2.5 flex items-center justify-center rounded-[10px] border border-solid border-[#E0E0E0]">
-									<img className="mr-2" alt="doc_view" src={svgAssets.kyc.doc_view}></img>
+									<img className="mr-2" alt="doc_view" src={svgAssets.kyc.docView}></img>
 									<span >Rajendra Singh</span>
 								</div>
 								<div className="w-[150px] py-2.5 flex items-center justify-center rounded-[10px] border border-solid border-[#E0E0E0]">
-									<img className="mr-2" alt="doc_view" src={svgAssets.kyc.doc_view}></img>
+									<img className="mr-2" alt="doc_view" src={svgAssets.kyc.docView}></img>
 									<span >Rajendra Singh</span>
 								</div>
 							</div>
@@ -127,7 +127,7 @@ const ReviewApplication = () => {
 							<div className="mb-[15px] grid grid-cols-3 gap-5 items-center">
 								<div className="">Documents Uploaded</div>
 								<div className="w-[150px] py-2.5 flex items-center justify-center rounded-[10px] border border-solid border-[#E0E0E0]">
-									<img className="mr-2" alt="doc_view" src={svgAssets.kyc.doc_view}></img>
+									<img className="mr-2" alt="doc_view" src={svgAssets.kyc.docView}></img>
 									<span >Rajendra Singh</span>
 								</div>
 							</div>
