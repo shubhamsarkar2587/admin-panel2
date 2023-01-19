@@ -4,7 +4,6 @@ import { Popover, ArrowContainer } from 'react-tiny-popover';
 
 const MyPopover = ({ PopoverParentComp, PopoverChildComp }) => {
 	const [isPopoverOpen, setIsPopoverOpen] = useState(false);
-	console.log({ isPopoverOpen });
 
 	return (
 		<Popover

@@ -53,7 +53,9 @@ const Sidebar = () => {
 								onMouseOut={() => handleMouseHover()}
 								onClick={() => handleRoute({
 									route: data.route,
-									nestedRoute: data?.nestedRoutes ? data.nestedRoutes[0].route : null
+									nestedRoute: data?.nestedRoutes && !active.isDropDownActive
+										? data.nestedRoutes[0].route
+										: null
 								})}
 							>
 								<div className="flex items-center justify-between">
