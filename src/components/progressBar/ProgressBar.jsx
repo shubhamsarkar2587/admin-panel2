@@ -5,7 +5,7 @@ const StepProgressBar = ({ selectedStep, steps }) => {
 		<div className="w-full flex flex-col items-center justify-center">
 			<div className={'w-3/4 grid grid-cols-8 items-center mb-5'}>
 				{
-					steps.map((step, index) => (
+					steps.length > 0 && steps.map((step, index) => (
 						<div key={`step_${index}`} className="w-full flex items-center">
 							<div className="w-full flex items-center">
 								<div className={`w-full h-[5px] items-center ${index !== 0 ? selectedStep >= index ? 'bg-[#5367FC]' : 'bg-[#B4BABD]' : ''}`}>

@@ -4,9 +4,12 @@ import BrokerageDetails from '../kyc/step5/BrokerageDetails';
 import { VerifySingleDetail } from './SingleDetail';
 import { verifyApplicationData } from '../../utils/data';
 import PdfViewer from './PdfViewer';
+import StepProgressBar from '../../components/progressBar/ProgressBar';
+import { kycSteps } from '../kyc/kycData';
 
 const VerifyApplication = () => {
 	const [isPdfOpen, setIsPdfOpen] = useState(false);
+	const [steps, setSteps] = useState(kycSteps || []);
 
 	const handlePdfviewer = () => {
 		setIsPdfOpen(!isPdfOpen);
@@ -39,7 +42,11 @@ const VerifyApplication = () => {
 				</div>
 			</div>
 
-			<div className="px-7 py-8 rounded-[20px] bg-white shadow-[0px_4px_15px_rgba(171,171,171,0.25)]">
+			<div className="pt-[25px] pb-[15px] rounded-[20px_20px_0px_0px] bg-[#E9F1FF]">
+				<StepProgressBar selectedStep={7} steps={steps} setSteps={setSteps} />
+			</div>
+
+			<div className="px-7 py-8 rounded-[0px_0px_20px_20px] bg-white">
 				<div className="mb-5 pb-2.5 border-b border-solid border-[#D9D9D9]">
 					<div className="mb-5">Mobile Number & Email Id</div>
 					<div className="grid grid-cols-12 gap-10">
