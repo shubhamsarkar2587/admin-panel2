@@ -91,3 +91,86 @@ export const kycSteps = () => [
 		component: <ReviewApplication />
 	}
 ];
+
+export const verificationSteps = () => [
+	{
+		label: 'Step 1',
+		value: 'step1',
+		status: 'verifyView',
+		subStepStatus: 'active',
+		isSuccess: true,
+		component: <InitMobileEmail />,
+		subSteps: [
+			{
+				value: 'step1_1',
+				isSuccess: true,
+				component: <VerifyMobileEmail />
+			}
+		]
+	},
+	{
+		label: 'Step 2',
+		value: 'step2',
+		status: 'success',
+		isSuccess: true,
+		component: <VerifyPan />
+	},
+	{
+		label: 'Step 3',
+		value: 'step3',
+		status: 'success',
+		isSuccess: true,
+		component: <VerifyBankDetails />
+	},
+	{
+		label: 'Step 4',
+		value: 'step4',
+		status: 'success',
+		isSuccess: true,
+		component: <PersonalDetails />,
+		subSteps: [
+			{
+				value: 'step1_1',
+				status: 'success',
+				component: <OccuptionDetails />
+			}
+		]
+	},
+	{
+		label: 'Step 5',
+		value: 'step5',
+		status: 'success',
+		isSuccess: true,
+		component: <BrokerageDetails />
+	},
+	{
+		label: 'Step 6',
+		value: 'step6',
+		status: 'success',
+		isSuccess: true,
+		component: <UploadSelfie />
+	},
+	{
+		label: 'Step 7',
+		value: 'step7',
+		status: 'success',
+		isSuccess: true,
+		component: <UploadSignature />,
+		subSteps: [
+			{
+				value: 'step1_1',
+				status: 'success',
+				isSuccess: true,
+				showProgressBar: false,
+				component: <ReviewApplication />
+			}
+		]
+	},
+	{
+		label: 'Step 8',
+		value: 'step8',
+		status: 'success',
+		isSuccess: true,
+		component: <ReviewApplication />
+	}
+];

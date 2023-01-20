@@ -38,7 +38,6 @@ const Sidebar = () => {
 		});
 	}, [location.pathname]);
 
-	console.log(active);
 	return (
 		<div className="w-[300px] h-[calc(100vh-115px)] mt-[115px] px-[50px] py-5 fixed">
 			<ul className="w-full grow">

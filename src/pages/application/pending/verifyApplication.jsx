@@ -1,19 +1,34 @@
 import { useState } from 'react';
-import { svgAssets } from '../../assets/asset';
-import BrokerageDetails from '../kyc/step5/BrokerageDetails';
-import { VerifySingleDetail } from './SingleDetail';
-import { verifyApplicationData } from '../../utils/data';
-import PdfViewer from './PdfViewer';
-import StepProgressBar from '../../components/progressBar/ProgressBar';
-import { kycSteps } from '../kyc/kycData';
+import { useInView } from 'react-intersection-observer';
+import { svgAssets } from '../../../assets/asset';
+import BrokerageDetails from '../../../containers/kyc/step5/BrokerageDetails';
+import { VerifySingleDetail } from '../../../containers/finalApplication/SingleDetail';
+import { verifyApplicationData } from '../../../utils/data';
+import PdfViewer from '../../../containers/finalApplication/PdfViewer';
+import StepProgressBar from '../../../components/progressBar/ProgressBar';
+import { verificationSteps } from '../../../containers/kyc/kycData';
+
+const intersectionOption = {
+	rootMargin: '0px 0px -50% 0px',
+	threshold: 0.5
+};
 
 const VerifyApplication = () => {
+	// --- intersection init --- //
+	const { ref: mobileRef, inView: isMobileRefView } = useInView(intersectionOption);
+	const { ref: panRef, inView: isPanRefView } = useInView(intersectionOption);
+	const { ref: bankRef, inView: isBankRefView } = useInView(intersectionOption);
+	// const { ref: personalDetailRef, inView: isPersonalDetailRefView } = useInView(intersectionOption);
+	// --- intersection init --- //
+
 	const [isPdfOpen, setIsPdfOpen] = useState(false);
-	const [steps, setSteps] = useState(kycSteps || []);
+	const [steps, setSteps] = useState(verificationSteps || []);
 
 	const handlePdfviewer = () => {
 		setIsPdfOpen(!isPdfOpen);
 	};
+
+	console.log({ isMobileRefView, isPanRefView, isBankRefView });
 
 	return (
 		<div className="w-full flex flex-col mb-10">
@@ -42,12 +57,12 @@ const VerifyApplication = () => {
 				</div>
 			</div>
 
-			<div className="pt-[25px] pb-[15px] rounded-[20px_20px_0px_0px] bg-[#E9F1FF]">
+			<div className="pt-[25px] pb-[15px] rounded-[20px_20px_0px_0px] bg-[#E9F1FF] sticky top-[82px] z-50">
 				<StepProgressBar selectedStep={7} steps={steps} setSteps={setSteps} />
 			</div>
 
 			<div className="px-7 py-8 rounded-[0px_0px_20px_20px] bg-white">
-				<div className="mb-5 pb-2.5 border-b border-solid border-[#D9D9D9]">
+				<div ref={mobileRef} className="mb-5 pb-2.5 border-b border-solid border-[#D9D9D9]">
 					<div className="mb-5">Mobile Number & Email Id</div>
 					<div className="grid grid-cols-12 gap-10">
 						<div className="col-span-8">
@@ -60,7 +75,7 @@ const VerifyApplication = () => {
 					</div>
 				</div>
 
-				<div className="mb-5 pb-2.5 border-b border-solid border-[#D9D9D9]">
+				<div ref={panRef} className="mb-5 pb-2.5 border-b border-solid border-[#D9D9D9]">
 					<div className="mb-5">PAN Details</div>
 					<div className="grid grid-cols-12 gap-10">
 						<div className="col-span-8">
@@ -86,7 +101,7 @@ const VerifyApplication = () => {
 					</div>
 				</div>
 
-				<div className="mb-5 pb-2.5 border-b border-solid border-[#D9D9D9]">
+				<div ref={bankRef} className="mb-5 pb-2.5 border-b border-solid border-[#D9D9D9]">
 					<div className="mb-5">Bank Details</div>
 					<div className="grid grid-cols-12 gap-10">
 						<div className="col-span-8">

@@ -32,13 +32,13 @@ const StepProgressBar = ({ selectedStep, steps }) => {
 					))
 				}
 			</div>
-			<div className="w-3/4 grid grid-cols-8 items-center justify-items-center">
+			{/* <div className="w-3/4 grid grid-cols-8 items-center justify-items-center">
 				{
 					steps.map((step, index) => (
 						<div key={`step_label_${index}`}>{step.label}</div>
 					))
 				}
-			</div>
+			</div> */}
 		</div>
 	);
 };

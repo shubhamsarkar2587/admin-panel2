@@ -2,7 +2,7 @@ export const statusParameter = {
 	active: {
 		bgColor: '#fff',
 		borderColor: '#5367FC',
-		size: '30px'
+		size: '25px'
 	},
 	inactive: {
 		bgColor: '#fff',
@@ -22,6 +22,11 @@ export const statusParameter = {
 	activeFail: {
 		bgColor: '#F30000',
 		borderColor: '#F30000',
-		size: '30px'
+		size: '25px'
+	},
+	verifyView: {
+		bgColor: '#FF981E',
+		borderColor: '#FF981E',
+		size: '20px'
 	}
 };

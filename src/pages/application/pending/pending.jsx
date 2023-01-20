@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import DatePickerInput from '../../components/common/DatePicker';
-import MyPopover from '../../components/popover/Popover';
-import Pagination from '../../components/reactTable/Pagination';
-import ReactTable from '../../components/reactTable/ReactTable';
-import SearchBar from '../../components/searchbar/SearchBar';
+import DatePickerInput from '../../../components/common/DatePicker';
+import MyPopover from '../../../components/popover/Popover';
+import Pagination from '../../../components/reactTable/Pagination';
+import ReactTable from '../../../components/reactTable/ReactTable';
+import SearchBar from '../../../components/searchbar/SearchBar';
 
 const data = [
 	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: '' },

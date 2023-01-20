@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import VerifyApplication from './containers/finalApplication/VerifyApplication';
+import VerifyApplication from './pages/application/pending/verifyApplication';
 import Navbar from './containers/navbar/Navbar';
 import Sidebar from './containers/sidebar/Sidebar';
 import AllApplication from './pages/application/all';
-import PendingApplication from './pages/application/pending';
+import PendingApplication from './pages/application/pending/pending';
 import RejectedApplication from './pages/application/rejected';
 import ResubmittedApplication from './pages/application/resubmitted';
 import VerifiedApplication from './pages/application/verified';
@@ -13,7 +13,7 @@ import Login from './pages/login';
 
 const App = () => {
 	return (
-		<div className="App h-full w-full overflow-hidden">
+		<div className="App h-full w-full">
 			<Routes>
 				<Route path="/login" element={<Login />}></Route>
 			</Routes>
