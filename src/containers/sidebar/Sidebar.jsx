@@ -39,8 +39,8 @@ const Sidebar = () => {
 	}, [location.pathname]);
 
 	return (
-		<div className="w-[300px] h-[calc(100vh-115px)] mt-[115px] px-[40px] py-5 fixed font-poppinsRegular leading-6 font-medium">
-			<ul className="w-full grow">
+		<div className="w-[300px] h-[calc(100vh-115px)] mt-[115px]  py-5 fixed font-poppinsMedium leading-6">
+			<ul className="w-full h-full px-[30px] grow overflow-y-auto">
 				{
 					sidebarData.map((data, index) => (
 						<li key={`sidebar_${index}`} className="flex flex-col">
@@ -52,7 +52,7 @@ const Sidebar = () => {
 								onMouseOut={() => handleMouseHover()}
 								onClick={() => handleRoute({
 									route: data.route,
-									nestedRoute: data?.nestedRoutes && !active.isDropDownActive
+									nestedRoute: data?.nestedRoutes && (active.route !== data.route || !active.isDropDownActive)
 										? data.nestedRoutes[0].route
 										: null
 								})}
@@ -70,9 +70,9 @@ const Sidebar = () => {
 								}
 							</div>
 							{
-								active.isDropDownActive && data?.nestedRoutes
+								active.route === data.route && active.isDropDownActive
 									? (
-										<div className="px-3 mb-2.5 flex justify-end ">
+										<div className="px-3 mb-2.5 flex justify-center">
 											<ul>
 												{
 													data.nestedRoutes.map((nestedData, index) => (

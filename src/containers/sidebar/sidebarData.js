@@ -48,10 +48,66 @@ export const sidebarData = [
 		]
 	},
 	{
-		name: 'Download Forms',
-		route: '/download-forms',
+		name: 'Account List',
+		route: '/account-list',
 		icon: pngAssets.dashboard.dashboard,
 		selectedIcon: pngAssets.dashboard.selectedDashboard
+	},
+	{
+		name: 'User List',
+		route: '/user-list',
+		icon: pngAssets.dashboard.dashboard,
+		selectedIcon: pngAssets.dashboard.selectedDashboard
+	},
+	{
+		name: 'Reassignment Report',
+		route: '/reassignment-report',
+		icon: pngAssets.dashboard.dashboard,
+		selectedIcon: pngAssets.dashboard.selectedDashboard
+	},
+	{
+		name: 'Reports',
+		route: '/reports',
+		icon: pngAssets.dashboard.dashboard,
+		selectedIcon: pngAssets.dashboard.selectedDashboard,
+		nestedRoutes: [
+			{
+				name: 'E-Sign Report',
+				route: '/e-Sign-report'
+			},
+			{
+				name: 'Sales Report',
+				route: '/sales-report'
+			},
+			{
+				name: 'Monthly Report',
+				route: '/monthly-report'
+			},
+			{
+				name: 'Verifier Report',
+				route: '/verifier-report'
+			},
+			{
+				name: 'Ageing Report',
+				route: '/ageing-report'
+			}
+		]
+	},
+	{
+		name: 'Brokerage Master',
+		route: '/brokerage-master',
+		icon: pngAssets.dashboard.dashboard,
+		selectedIcon: pngAssets.dashboard.selectedDashboard,
+		nestedRoutes: [
+			{
+				name: 'Brokerage Plans',
+				route: '/brokerage-plans'
+			},
+			{
+				name: 'Map Brokerage',
+				route: '/map-brokerage '
+			}
+		]
 	},
 	{
 		name: 'Link Aadhar',
