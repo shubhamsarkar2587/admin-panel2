@@ -21,7 +21,7 @@ const App = () => {
 				<Navbar />
 				<div className="flex h-full">
 					<Sidebar />
-					<div className="pl-5 pr-[30px] py-5 ml-[300px] mt-[115px] flex flex-col grow w-full h-full">
+					<div className="pl-5 pr-[30px] ml-[300px] mt-[105px] flex flex-col grow w-full h-full">
 						<Routes>
 							<Route path="/" element={<Homepage />}></Route>
 							<Route path="/kyc" element={<Kyc />}></Route>
@@ -35,8 +35,7 @@ const App = () => {
 					</div>
 				</div>
 			</div>
-
-		</div>
+		</div >
 	);
 };
 

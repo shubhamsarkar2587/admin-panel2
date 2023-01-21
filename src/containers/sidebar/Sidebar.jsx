@@ -39,7 +39,7 @@ const Sidebar = () => {
 	}, [location.pathname]);
 
 	return (
-		<div className="w-[300px] h-[calc(100vh-115px)] mt-[115px]  py-5 fixed font-poppinsMedium leading-6">
+		<div className="w-[300px] h-[calc(100vh-85px)] mt-[85px] py-5 fixed font-poppinsMedium leading-6">
 			<ul className="w-full h-full px-[30px] grow overflow-y-auto">
 				{
 					sidebarData.map((data, index) => (
