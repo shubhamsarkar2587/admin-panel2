@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "poppinsRegular";
+  src: url("./assets/fonts/poppinsRegular.ttf");
+}
+@font-face {
+  font-family: "poppinsMedium";
+  src: url("./assets/fonts/poppinsMedium.ttf");
+}
 
 body {
   background-color: #F6F8F9;

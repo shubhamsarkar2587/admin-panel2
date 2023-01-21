@@ -39,7 +39,7 @@ const Sidebar = () => {
 	}, [location.pathname]);
 
 	return (
-		<div className="w-[300px] h-[calc(100vh-115px)] mt-[115px] px-[50px] py-5 fixed">
+		<div className="w-[300px] h-[calc(100vh-115px)] mt-[115px] px-[40px] py-5 fixed font-poppinsRegular leading-6 font-medium">
 			<ul className="w-full grow">
 				{
 					sidebarData.map((data, index) => (
@@ -72,7 +72,7 @@ const Sidebar = () => {
 							{
 								active.isDropDownActive && data?.nestedRoutes
 									? (
-										<div className="px-3 mr-2.5 mb-2.5 flex justify-end ">
+										<div className="px-3 mb-2.5 flex justify-end ">
 											<ul>
 												{
 													data.nestedRoutes.map((nestedData, index) => (
