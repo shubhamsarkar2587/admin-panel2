@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { svgAssets } from '../../../assets/asset';
 import BrokerageDetails from '../../../containers/kyc/step5/BrokerageDetails';
@@ -28,7 +28,34 @@ const VerifyApplication = () => {
 		setIsPdfOpen(!isPdfOpen);
 	};
 
-	console.log({ isMobileRefView, isPanRefView, isBankRefView });
+	const handleSteps = ({ index }) => {
+		const updatedSteps = steps.map((el, i) => {
+			if (i === index) {
+				return ({
+					...el,
+					status: 'verifyView'
+				});
+			} else {
+				return ({
+					...el,
+					status: 'success'
+				});
+			}
+		});
+		setSteps(updatedSteps);
+	};
+
+	useEffect(() => {
+		if (isMobileRefView) {
+			handleSteps({ index: 1 });
+		} else if (isPanRefView) {
+			handleSteps({ index: 2 });
+		} else if (isBankRefView) {
+			handleSteps({ index: 3 });
+		} else {
+			handleSteps({ index: 0 });
+		}
+	}, [isMobileRefView, isPanRefView, isBankRefView]);
 
 	return (
 		<div className="w-full flex flex-col mb-10">
