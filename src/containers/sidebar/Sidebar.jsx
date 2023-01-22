@@ -40,7 +40,7 @@ const Sidebar = () => {
 
 	return (
 		<div className="w-[300px] h-[calc(100vh-105px)] mt-[105px] pb-5 fixed font-poppinsMedium leading-6">
-			<ul className="w-full h-full px-[30px] grow overflow-y-auto">
+			<ul className="w-full h-full px-[30px] grow overflow-y-auto scroll">
 				{
 					sidebarData.map((data, index) => (
 						<li key={`sidebar_${index}`} className="flex flex-col">
