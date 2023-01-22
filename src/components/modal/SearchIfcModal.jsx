@@ -1,6 +1,6 @@
 import './modal.css';
 import { Modal } from 'antd';
-import { svgAssets } from '../../assets/asset';
+import { pngAssets, svgAssets } from '../../assets/asset';
 import CommonInput from '../inputs/CommonInput';
 import SelectItem from '../common/SelectItem';
 
@@ -22,14 +22,20 @@ const SearchIfcModal = ({ isModalOpen, handleKycModel }) => {
 			>
 				<div className="bg-white">
 					<div className="grid grid-cols-2 gap-7 mb-[30px]">
-						<div className="flex flex-col">
-							<span className="mb-3">Bank Name</span>
-							<CommonInput height={'45px'} />
-						</div>
-						<div className="flex flex-col">
-							<span className="mb-3">Branch</span>
-							<SelectItem />
-						</div>
+						<CommonInput
+							icon={pngAssets.kyc.mobileNumber}
+							label="Bank Name"
+							isImportant={true}
+							placeholder="Please enter bank name"
+							height="45px"
+						/>
+						<SelectItem
+							icon={pngAssets.kyc.mobileNumber}
+							label="Branch"
+							isImportant={true}
+							placeholder="Please select branch"
+							height="45px"
+						/>
 					</div>
 					<div className="w-full flex justify-center mb-5">
 						<button

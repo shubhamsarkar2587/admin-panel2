@@ -1,7 +1,7 @@
 import './modal.css';
 import { Modal } from 'antd';
 
-const MyModal = ({ title, width, height, isModalOpen, handleModel, children }) => {
+const MyModal = ({ title, width, isModalOpen, handleModel, children }) => {
 	// const handleClick = (route) => {
 	//   navigate(`/${route}`);
 	// }

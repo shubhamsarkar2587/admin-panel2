@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { svgAssets } from '../../../assets/asset';
+import { pngAssets, svgAssets } from '../../../assets/asset';
 import CommonInput from '../../../components/inputs/CommonInput';
 import VerifyBtn from '../../../components/buttons/VerifyBtn';
 import SearchIfcModal from '../../../components/modal/SearchIfcModal';
@@ -19,10 +19,12 @@ const VerifyBankDetails = () => {
 		<div className="w-full flex flex-col mb-10">
 			<div className="mb-[22px] font-medium text-lg leading-[27px]">Bank Details</div>
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
-				<div className="flex flex-col">
-					<span className="mb-3">IFSC *</span>
-					<CommonInput />
-				</div>
+				<CommonInput
+					icon={pngAssets.kyc.mobileNumber}
+					label="IFSC"
+					isImportant={true}
+					placeholder="Please enter ifsc"
+				/>
 				<div className="flex items-center">
 					<span className="mr-[26px]">OR</span>
 					<button
@@ -35,14 +37,18 @@ const VerifyBankDetails = () => {
 				</div>
 			</div>
 			<div className="grid grid-cols-2 gap-10 items-end mb-10">
-				<div className="flex flex-col">
-					<span className="mb-3">Bank Account Number *</span>
-					<CommonInput />
-				</div>
-				<div className="flex flex-col">
-					<span className="mb-3">Bank Account Number *</span>
-					<CommonInput />
-				</div>
+				<CommonInput
+					icon={pngAssets.kyc.mobileNumber}
+					label="Bank Account Number"
+					isImportant={true}
+					placeholder="Please enter bank a/c number"
+				/>
+				<CommonInput
+					icon={pngAssets.kyc.mobileNumber}
+					label="Bank Account Number"
+					isImportant={true}
+					placeholder="Please enter confirm bank a/c number"
+				/>
 			</div>
 			<div className="flex items-center justify-center">
 				<VerifyBtn />
