@@ -1,35 +1,48 @@
+import { pngAssets } from '../../../assets/asset';
 import CommonInput from '../../../components/inputs/CommonInput';
 import SelectItem from '../../../components/common/SelectItem';
+import MainTitle from '../../../components/common/MainTitle';
 
 const OccupationDetail = () => {
 	return (
 		<div className="w-full flex flex-col mb-10">
-			<div className="mb-[22px] font-medium text-lg leading-[27px]">Bank Details</div>
+			<MainTitle title="Personal Details" />
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
-				<div className="flex flex-col">
-					<span className="mb-3">Marital Status *</span>
-					<SelectItem height={'47px'} placeholder="Please select marital status" />
-				</div>
-				<div className="flex flex-col">
-					<span className="mb-3">Father’s/Spouse Name *</span>
-					<CommonInput placeholder="Please enter father’s/spouse name" />
-				</div>
+				<SelectItem
+					icon={pngAssets.kyc.mobileNumber}
+					label="Marital Status"
+					isImportant={true}
+					placeholder="Please select marital status"
+				/>
+				<CommonInput
+					icon={pngAssets.kyc.mobileNumber}
+					label="Father’s/Spouse Name"
+					isImportant={true}
+					placeholder="Please enter father’s/spouse name"
+				/>
 			</div>
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
-				<div className="flex flex-col">
-					<span className="mb-3">Gender *</span>
-					<SelectItem height={'47px'} placeholder="Please select marital status" />
-				</div>
-				<div className="flex flex-col">
-					<span className="mb-3">Please enter father’s/spouse name</span>
-					<CommonInput placeholder="Please enter father’s/spouse name" />
-				</div>
+				<SelectItem
+					icon={pngAssets.kyc.mobileNumber}
+					label="Gender"
+					isImportant={true}
+					placeholder="Please select your gender"
+				/>
+				<CommonInput
+					icon={pngAssets.kyc.mobileNumber}
+					label="City Of Birth"
+					isImportant={true}
+					placeholder="Please enter father’s/spouse name"
+				/>
 			</div>
 			<div className="w-full flex items-end">
-				<div className="w-full flex flex-col">
-					<span className="mb-3">Nationality</span>
-					<CommonInput isDisable={true} placeholder="Indian" />
-				</div>
+				<CommonInput
+					icon={pngAssets.kyc.mobileNumber}
+					label="Nationality"
+					isImportant={true}
+					placeholder="Indian"
+					isDisable={true}
+				/>
 			</div>
 		</div>
 	);

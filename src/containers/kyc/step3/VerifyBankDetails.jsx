@@ -3,6 +3,7 @@ import { pngAssets, svgAssets } from '../../../assets/asset';
 import CommonInput from '../../../components/inputs/CommonInput';
 import VerifyBtn from '../../../components/buttons/VerifyBtn';
 import SearchIfcModal from '../../../components/modal/SearchIfcModal';
+import MainTitle from '../../../components/common/MainTitle';
 
 const VerifyBankDetails = () => {
 	const [isModelOpen, setIsModelOpen] = useState(false);
@@ -17,7 +18,7 @@ const VerifyBankDetails = () => {
 
 	return (
 		<div className="w-full flex flex-col mb-10">
-			<div className="mb-[22px] font-medium text-lg leading-[27px]">Bank Details</div>
+			<MainTitle title="Bank Details" />
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
 				<CommonInput
 					icon={pngAssets.kyc.mobileNumber}
