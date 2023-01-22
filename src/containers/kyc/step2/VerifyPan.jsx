@@ -1,20 +1,26 @@
-import CommonInput from '../../../components/common/CommonInput';
+import { pngAssets } from '../../../assets/asset';
+import CommonInput from '../../../components/inputs/CommonInput';
 import DatePickerInput from '../../../components/inputs/DatePickerInput';
 import VerifyBtn from '../../../components/buttons/VerifyBtn';
+import MainTitle from '../../../components/common/MainTitle';
 
 const VerifyPan = () => {
 	return (
 		<div className="w-full flex flex-col mb-10">
-			<div className="mb-[22px] font-medium text-lg leading-[27px]">PAN Details</div>
-			<div className="mb-8 grid grid-cols-2 gap-10">
-				<div className="flex flex-col mb-8">
-					<span className="mb-3">PAN *</span>
-					<CommonInput placeholder="Please enter PAN" />
-				</div>
-				<div className="flex flex-col mb-8">
-					<span className="mb-3">Date Of Birth *</span>
-					<DatePickerInput />
-				</div>
+			<MainTitle title="PAN Details" />
+			<div className="mb-10 grid grid-cols-2 gap-10 items-end">
+				<CommonInput
+					icon={pngAssets.kyc.mobileNumber}
+					label="PAN"
+					isImportant={true}
+					placeholder=""
+				/>
+				<DatePickerInput
+					icon={pngAssets.kyc.mobileNumber}
+					label="Date Of Birth"
+					isImportant={true}
+					placeholder="DD-MM-YYYY"
+				/>
 			</div>
 			<div className="flex items-center justify-center">
 				<VerifyBtn />

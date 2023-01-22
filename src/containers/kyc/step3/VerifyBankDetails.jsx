@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { svgAssets } from '../../../assets/asset';
-import CommonInput from '../../../components/common/CommonInput';
+import CommonInput from '../../../components/inputs/CommonInput';
 import VerifyBtn from '../../../components/buttons/VerifyBtn';
 import SearchIfcModal from '../../../components/modal/SearchIfcModal';
 

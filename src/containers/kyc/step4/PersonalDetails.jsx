@@ -1,4 +1,4 @@
-import CommonInput from '../../../components/common/CommonInput';
+import CommonInput from '../../../components/inputs/CommonInput';
 import SelectItem from '../../../components/common/SelectItem';
 
 const OccupationDetail = () => {

@@ -1,23 +1,8 @@
 import './modal.css';
 import { Modal } from 'antd';
 import { svgAssets } from '../../assets/asset';
-import CommonInput from '../common/CommonInput';
+import CommonInput from '../inputs/CommonInput';
 import SelectItem from '../common/SelectItem';
-
-// const selectOption = [
-// 	{
-// 		value: 'jack',
-// 		label: 'Jack'
-// 	},
-// 	{
-// 		value: 'lucy',
-// 		label: 'Lucy'
-// 	},
-// 	{
-// 		value: 'Yiminghe',
-// 		label: 'yiminghe'
-// 	}
-// ];
 
 const SearchIfcModal = ({ isModalOpen, handleKycModel }) => {
 	return (

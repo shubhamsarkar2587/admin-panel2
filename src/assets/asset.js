@@ -1,3 +1,8 @@
+import mobileNumber from './png/mobileNumber.png';
+import mail from './png/mail.png';
+import dashboard from './png/dashboard.png';
+import selectedDashboard from './png/selectedDashboard.png';
+
 import bigul from './svg/bigul.svg';
 import bonabza from './svg/bonabza.svg';
 import loginScreenImg from './svg/loginScreenImg.svg';
@@ -20,15 +25,17 @@ import docView from './svg/docView.svg';
 import rightField from './svg/rightField.svg';
 import wrongField from './svg/wrongField.svg';
 import dropdownIcon from './svg/dropdownIcon.svg';
-
-import dashboard from './png/dashboard.png';
-import selectedDashboard from './png/selectedDashboard.png';
+import invalidInput from './svg/invalidInput.svg';
 
 export const pngAssets = {
 	bigul,
 	dashboard: {
 		dashboard,
 		selectedDashboard
+	},
+	kyc: {
+		mobileNumber,
+		mail
 	}
 };
 
@@ -59,7 +66,8 @@ export const svgAssets = {
 		continueIcon,
 		profileUser,
 		signature,
-		docView
+		docView,
+		invalidInput
 	},
 	verifyApplication: {
 		rightField,

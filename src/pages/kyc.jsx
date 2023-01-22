@@ -72,7 +72,7 @@ const Kyc = () => {
 								<div className="mb-10">
 									<StepProgressBar selectedStep={index} steps={steps} />
 								</div>
-								<div className="min-h-[calc(100vh-280px)]">
+								<div className="min-h-[calc(100vh-270px)]">
 									{
 										step.component
 									}
