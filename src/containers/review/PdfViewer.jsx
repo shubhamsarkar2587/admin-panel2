@@ -1,6 +1,6 @@
 import pdfFile from '../../assets/sample.pdf';
 
-const PdfViewer = ({ isPdfOpen }) => {
+export const PdfViewer = ({ isPdfOpen }) => {
 	return isPdfOpen
 		? (
 			<div className="my-6">
@@ -9,5 +9,3 @@ const PdfViewer = ({ isPdfOpen }) => {
 		)
 		: null;
 };
-
-export default PdfViewer;

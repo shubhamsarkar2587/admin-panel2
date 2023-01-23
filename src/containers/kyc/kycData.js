@@ -7,7 +7,7 @@ import OccuptionDetails from './step4/OccupationDetail';
 import BrokerageDetails from './step5/BrokerageDetails';
 import UploadSelfie from './step6/UploadSelfie';
 import UploadSignature from './step7/uploadSignature';
-import ReviewApplication from '../finalApplication/ReviewApplication';
+import { ReviewApplication } from '../review/ReviewApplication';
 
 export const kycSteps = () => [
 	{

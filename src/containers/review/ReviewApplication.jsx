@@ -1,7 +1,7 @@
 import { svgAssets } from '../../assets/asset';
 import BrokerageDetails from '../kyc/step5/BrokerageDetails';
 
-const ReviewApplication = () => {
+export const ReviewApplication = () => {
 	return (
 		<div className="w-full flex flex-col mb-10">
 			<div className="flex items-center justify-between">

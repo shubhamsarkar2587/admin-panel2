@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { svgAssets } from '../../../assets/asset';
 import BrokerageDetails from '../../../containers/kyc/step5/BrokerageDetails';
-import { VerifySingleDetail } from '../../../containers/finalApplication/SingleDetail';
+import { VerifySingleDetail } from '../../../containers/review/SingleDetail';
 import { verifyApplicationData } from '../../../utils/data';
-import PdfViewer from '../../../containers/finalApplication/PdfViewer';
+import { PdfViewer } from '../../../containers/review/PdfViewer';
 import StepProgressBar from '../../../components/progressBar/ProgressBar';
 import { verificationSteps } from '../../../containers/kyc/kycData';
 
