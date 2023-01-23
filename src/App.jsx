@@ -1,5 +1,4 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Homepage from './pages/homepage';
 import Kyc from './pages/kyc';
 import Login from './pages/login';
 import VerifyApplication from './pages/application/pending/verifyApplication';
@@ -11,6 +10,7 @@ import RejectedApplication from './pages/application/rejected';
 import ResubmittedApplication from './pages/application/resubmitted';
 import VerifiedApplication from './pages/application/verified';
 import NoMatchRoute from './components/routes/NoMatchRoute';
+import { Dashboard } from './pages/Dashboard';
 
 const App = () => {
 	const location = useLocation();
@@ -31,7 +31,7 @@ const App = () => {
 								<Sidebar />
 								<div className="pl-5 pr-[30px] pb-5 ml-[300px] mt-[105px] flex flex-col grow w-full h-full">
 									<Routes>
-										<Route path="/" element={<Homepage />}></Route>
+										<Route path="/" element={<Dashboard />}></Route>
 										<Route path="/kyc" element={<Kyc />}></Route>
 										<Route path="/application/">
 											<Route path="all" element={<AllApplication />}></Route>

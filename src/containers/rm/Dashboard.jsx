@@ -1,6 +1,6 @@
-import ReactTable from '../components/reactTable/ReactTable';
-import Applications from '../components/widgets/Applications';
-import Date from '../components/widgets/Date';
+import ReactTable from '../../components/reactTable/ReactTable';
+import Applications from '../../components/widgets/Applications';
+import Date from '../../components/widgets/Date';
 
 const columns = [
 	{ Header: 'Client Name', accessor: 'clientName' },
@@ -21,7 +21,7 @@ const data = [
 	{ clientName: 'Tony Stark', pan: 43434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' }
 ];
 
-const Homepage = () => {
+export const RMDashboard = () => {
 	return (
 		<>
 			<div className="mb-[30px] flex">
@@ -49,5 +49,3 @@ const Homepage = () => {
 		</>
 	);
 };
-
-export default Homepage;
