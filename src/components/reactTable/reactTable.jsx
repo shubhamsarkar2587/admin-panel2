@@ -13,7 +13,7 @@ function ReactTable ({ title, columns, data }) {
 								<th
 									key={`head_group_header_${i2}`}
 									{...column.getHeaderProps()}
-									className="pt-2 py-4 text-[15px] text-[#9A9A9A] tracking-wide leading-[22px] font-poppinsRegular"
+									className="pt-2 py-4 text-[15px] text-[#9A9A9A] tracking-wide leading-[22px] font-medium font-poppinsMedium"
 								>
 									{column.render('Header')}
 								</th>
@@ -35,7 +35,7 @@ function ReactTable ({ title, columns, data }) {
 										<td
 											key={`row_cell_${i2}`}
 											{...cell.getCellProps()}
-											className="py-4 text-[15px] leading-[22px] font-poppinsMedium"
+											className="py-4 text-[15px] leading-[22px] font-medium font-poppinsMedium"
 										>
 											{cell.render('Cell')}
 										</td>

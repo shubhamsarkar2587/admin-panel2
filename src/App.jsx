@@ -10,7 +10,7 @@ import RejectedApplication from './pages/application/rejected';
 import ResubmittedApplication from './pages/application/resubmitted';
 import VerifiedApplication from './pages/application/verified';
 import NoMatchRoute from './components/routes/NoMatchRoute';
-import { Dashboard } from './pages/Dashboard';
+import { Dashboard } from './pages/dashboard';
 
 const App = () => {
 	const location = useLocation();

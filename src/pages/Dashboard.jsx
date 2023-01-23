@@ -1,5 +1,5 @@
-import { RMDashboard } from '../containers/rm/Dashboard';
-import { RMSupervisorDashboard } from '../containers/rmSupervisor/Dashboard';
+import { RMDashboard } from '../containers/dashboard/RM';
+import { RMSupervisorDashboard } from '../containers/dashboard/RMSupervisor';
 
 const correspondingDashboard = {
 	rm: <RMDashboard />,

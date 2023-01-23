@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import { ViewAllBtn } from '../../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../../components/common/DatePicker';
 import MyPopover from '../../../components/popover/Popover';
 import Pagination from '../../../components/reactTable/Pagination';
 import ReactTable from '../../../components/reactTable/ReactTable';
+import { ReactTableHeader } from '../../../components/reactTable/ReactTableHeader';
 import SearchBar from '../../../components/searchbar/SearchBar';
 
 const data = [
@@ -60,11 +62,11 @@ const PendingApplication = () => {
 			<div className="w-full flex flex-col ">
 				<div className="w-full py-5 px-[25px] mb-[30px] overflow-auto rounded-[10px] bg-white shadow-[0px_4px_15px_rgba(171,171,171,0.25)] ">
 					<div className="flex items-center justify-between mb-7">
-						<div className="flex items-center">
-							<h6 className="font-semibold text-[22px] leading-[33px] mr-2.5">Pending Applications</h6>
-							<span className="px-3 py-[1px] rounded-md	flex items-center font-semibold bg-[#FFF1D7]">500</span>
-						</div>
-						<button className="px-3 py-[1px] rounded-md	flex items-center font-semibold bg-[#EBFFFA] shadow-[0px_3px_16px_rgba(171,171,171,0.25)]">View Pending</button>
+						<ReactTableHeader
+							title="Pending Verification"
+							numberOfApplications={1500}
+						/>
+						<ViewAllBtn />
 					</div>
 					<div className="mb-6 flex items-center justify-between">
 						<SearchBar border={'border'} />
