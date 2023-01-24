@@ -1,7 +1,7 @@
 import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../components/common/DatePicker';
 import Pagination from '../../components/reactTable/Pagination';
-import ReactTable from '../../components/reactTable/ReactTable';
+import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
 import SearchBar from '../../components/searchbar/SearchBar';
 

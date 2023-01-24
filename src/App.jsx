@@ -11,6 +11,9 @@ import ResubmittedApplication from './pages/application/resubmitted';
 import VerifiedApplication from './pages/application/verified';
 import NoMatchRoute from './components/routes/NoMatchRoute';
 import { Dashboard } from './pages/dashboard';
+import { UserList } from './pages/userList/userList';
+import { AssignTask } from './pages/userList/assignTask';
+import { ReassignmentReport } from './pages/reassignmentReport';
 
 const App = () => {
 	const location = useLocation();
@@ -41,6 +44,10 @@ const App = () => {
 											<Route path="verified" element={<VerifiedApplication />}></Route>
 											<Route path="resubmitted" element={<ResubmittedApplication />}></Route>
 										</Route>
+										<Route path="/user-list" element={<UserList />}>
+										</Route>
+										<Route path="/user-list/assign-task" element={<AssignTask />}></Route>
+										<Route path="/reassignment-report" element={<ReassignmentReport />}></Route>
 										<Route path="*" element={<NoMatchRoute />}></Route>
 									</Routes>
 								</div>

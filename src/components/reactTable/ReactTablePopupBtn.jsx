@@ -11,30 +11,26 @@ export const PopoverParentComp = ({ isPopoverOpen, setIsPopoverOpen }) => (
 	</button>
 );
 
-export const PopoverChildComp = ({ handleModal, ist }) => {
-	console.log(handleModal, ist);
-
-	return (
-		<div
-			className="my-component-popover-content w-32 px-4 py-2 rounded-[10px] flex flex-col border-solid border-[#ECECEC] bg-white"
+export const PopoverChildComp = ({ handleModal }) => (
+	<div
+		className="my-component-popover-content w-32 px-4 py-2 rounded-[10px] flex flex-col border-solid border-[#ECECEC] bg-white"
+	>
+		<Link
+			to="/application/pending/verify"
+			className="mb-1"
 		>
-			<Link
-				to="/application/pending/verify"
-				className="mb-1"
-			>
-				<span className="cursor-pointer hover:text-[#5367FC]">Verify</span>
-			</Link>
-			<span className="cursor-pointer hover:text-[#5367FC]">View</span>
-			{
-				handleModal && (
-					<span
-						className="cursor-pointer hover:text-[#5367FC]"
-						onClick={() => handleModal(true)}
-					>
+			<span className="cursor-pointer hover:text-[#5367FC]">Verify</span>
+		</Link>
+		<span className="cursor-pointer hover:text-[#5367FC]">View</span>
+		{
+			handleModal && (
+				<span
+					className="cursor-pointer hover:text-[#5367FC]"
+					onClick={() => handleModal(true)}
+				>
           Re-assign
-					</span>
-				)
-			}
-		</div>
-	);
-};
+				</span>
+			)
+		}
+	</div>
+);

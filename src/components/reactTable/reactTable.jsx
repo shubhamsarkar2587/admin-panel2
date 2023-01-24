@@ -1,10 +1,10 @@
 import { useTable } from 'react-table';
 
-function ReactTable ({ title, columns, data }) {
+export const ReactTable = ({ title, columns, data }) => {
 	const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns, data });
 
 	return (
-		<>
+		<div className="">
 			<table className="table-auto w-full h-full text-center" {...getTableProps()}>
 				<thead>
 					{headerGroups.map((headerGroup, i1) => (
@@ -35,7 +35,7 @@ function ReactTable ({ title, columns, data }) {
 										<td
 											key={`row_cell_${i2}`}
 											{...cell.getCellProps()}
-											className="py-4 text-[15px] leading-[22px] font-medium font-poppinsMedium"
+											className="py-4 text-[15px] whitespace-nowrap leading-[22px] font-medium font-poppinsMedium"
 										>
 											{cell.render('Cell')}
 										</td>
@@ -46,8 +46,6 @@ function ReactTable ({ title, columns, data }) {
 					})}
 				</tbody>
 			</table>
-		</>
+		</div>
 	);
-}
-
-export default ReactTable;
+};

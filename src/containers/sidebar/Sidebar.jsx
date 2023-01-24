@@ -70,7 +70,7 @@ const Sidebar = () => {
 								}
 							</div>
 							{
-								active.route === data.route && active.isDropDownActive
+								active.route === data.route && active.isDropDownActive && data.nestedRoutes
 									? (
 										<div className="px-3 mb-2.5 flex justify-center">
 											<ul>

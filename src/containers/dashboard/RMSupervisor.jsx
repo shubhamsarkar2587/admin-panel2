@@ -5,7 +5,7 @@ import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
 import { SelectItem } from '../../components/common/SelectItem';
 import { MyModal } from '../../components/modal/Modal';
 import { MyPopover } from '../../components/popover/Popover';
-import ReactTable from '../../components/reactTable/ReactTable';
+import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
 import { PopoverChildComp, PopoverParentComp } from '../../components/reactTable/ReactTablePopupBtn';
 import Applications from '../../components/widgets/Applications';
