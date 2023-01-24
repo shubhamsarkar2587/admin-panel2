@@ -1,4 +1,4 @@
-import SelectItem from '../../../components/common/SelectItem';
+import { SelectItem } from '../../../components/common/SelectItem';
 
 const OccuptionDetails = () => {
 	return (

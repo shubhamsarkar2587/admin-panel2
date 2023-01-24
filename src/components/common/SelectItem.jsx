@@ -16,7 +16,7 @@ const selectOption = [
 	}
 ];
 
-const SelectItem = ({ icon, label, isImportant, height, isDisable, placeholder }) => {
+export const SelectItem = ({ icon, label, isImportant, height, isDisable, placeholder }) => {
 	return (
 		<div>
 			<label className="mb-4 flex items-center leading-6 font-poppinsMedium">
@@ -45,5 +45,3 @@ const SelectItem = ({ icon, label, isImportant, height, isDisable, placeholder }
 		</div>
 	);
 };
-
-export default SelectItem;

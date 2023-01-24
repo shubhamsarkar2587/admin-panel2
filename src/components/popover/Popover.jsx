@@ -2,7 +2,7 @@ import './popover.css';
 import { useState } from 'react';
 import { Popover, ArrowContainer } from 'react-tiny-popover';
 
-const MyPopover = ({ PopoverParentComp, PopoverChildComp }) => {
+export const MyPopover = ({ PopoverParentComp, PopoverChildComp, handleModal }) => {
 	const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
 	return (
@@ -20,16 +20,19 @@ const MyPopover = ({ PopoverParentComp, PopoverChildComp }) => {
 					arrowSize={15}
 					arrowColor={'#fff'}
 				>
-					<PopoverChildComp />
+					<PopoverChildComp
+						handleModal={handleModal}
+						ist={handleModal}
+					/>
 				</ArrowContainer>
 			)}
 		>
 			<div onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
-
-				<PopoverParentComp />
+				<PopoverParentComp
+					isPopoverOpen={isPopoverOpen}
+					setIsPopoverOpen={setIsPopoverOpen}
+				/>
 			</div>
 		</Popover>
 	);
 };
-
-export default MyPopover;

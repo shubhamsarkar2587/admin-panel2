@@ -1,5 +1,5 @@
 import { pngAssets } from '../../../assets/asset';
-import SelectItem from '../../../components/common/SelectItem';
+import { SelectItem } from '../../../components/common/SelectItem';
 import Declaration from './Declaration';
 import Checkbox from '../../../components/common/Checkbox';
 import MainTitle from '../../../components/common/MainTitle';

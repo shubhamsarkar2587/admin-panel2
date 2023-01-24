@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { svgAssets } from '../../assets/asset';
-import SelectItem from '../../components/common/SelectItem';
-import MyModal from '../../components/modal/Modal';
+import { SelectItem } from '../../components/common/SelectItem';
+import { MyModal } from '../../components/modal/Modal';
 
 export const VerifySingleDetail = ({ label, value, isValid }) => {
 	const [isOpen, setIsOpen] = useState(false);

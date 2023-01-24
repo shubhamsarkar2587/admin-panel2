@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
 import { ViewAllBtn } from '../../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../../components/common/DatePicker';
-import MyPopover from '../../../components/popover/Popover';
+import { MyPopover } from '../../../components/popover/Popover';
 import Pagination from '../../../components/reactTable/Pagination';
 import ReactTable from '../../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../../components/reactTable/ReactTableHeader';
+import { PopoverChildComp, PopoverParentComp } from '../../../components/reactTable/ReactTablePopupBtn';
 import SearchBar from '../../../components/searchbar/SearchBar';
 
 const data = [
@@ -17,27 +17,6 @@ const data = [
 ];
 
 const PendingApplication = () => {
-	const PopoverParentComp = () => (
-		<button
-			className="w-full flex items-center justify-center"
-		>
-			<span className="w-[6px] h-[6px] bg-black rounded-full mx-0.5"></span>
-			<span className="w-[6px] h-[6px] bg-black rounded-full mx-0.5"></span>
-			<span className="w-[6px] h-[6px] bg-black rounded-full mx-0.5"></span>
-		</button>
-	);
-
-	const PopoverChildComp = () => (
-		<div
-			className="my-component-popover-content w-32 px-4 py-2 rounded-[10px] flex flex-col border-solid border-[#ECECEC] bg-white"
-		>
-			<Link to="/application/pending/verify">
-				<span className="cursor-pointer hover:text-[#5367FC] mb-0.5">Verify</span>
-			</Link>
-			<span className="cursor-pointer hover:text-[#5367FC]">View</span>
-		</div>
-	);
-
 	const columns = [
 		{ Header: 'Client Name', accessor: 'clientName' },
 		{ Header: 'Pan', accessor: 'pan' },
