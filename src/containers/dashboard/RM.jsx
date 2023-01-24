@@ -1,5 +1,5 @@
 import { ReactTable } from '../../components/reactTable/ReactTable';
-import Applications from '../../components/widgets/Applications';
+import { ApplicationWidget } from '../../components/widgets/Applications';
 import Date from '../../components/widgets/Date';
 
 const columns = [
@@ -30,9 +30,9 @@ export const RMDashboard = () => {
 				<Date />
 			</div>
 			<div className="mb-[30px] grid grid-cols-3 gap-x-9">
-				<Applications />
-				<Applications />
-				<Applications />
+				<ApplicationWidget />
+				<ApplicationWidget />
+				<ApplicationWidget />
 			</div>
 			<div>
 				<div className="w-full py-5 px-[25px] mb-[30px] overflow-auto rounded-[10px] bg-white shadow-[0px_4px_15px_rgba(171,171,171,0.25)] ">

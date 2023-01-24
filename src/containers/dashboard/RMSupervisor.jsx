@@ -8,7 +8,7 @@ import { MyPopover } from '../../components/popover/Popover';
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
 import { PopoverChildComp, PopoverParentComp } from '../../components/reactTable/ReactTablePopupBtn';
-import Applications from '../../components/widgets/Applications';
+import { ApplicationWidget } from '../../components/widgets/Applications';
 import Date from '../../components/widgets/Date';
 
 const data = [
@@ -58,9 +58,9 @@ export const RMSupervisorDashboard = () => {
 				<Date />
 			</div>
 			<div className="mb-[30px] grid grid-cols-3 gap-x-9">
-				<Applications />
-				<Applications />
-				<Applications />
+				<ApplicationWidget />
+				<ApplicationWidget />
+				<ApplicationWidget />
 			</div>
 			<div className="w-full py-5 px-[25px] mb-[30px] overflow-auto rounded-[10px] bg-white shadow-[0px_4px_15px_rgba(171,171,171,0.25)] ">
 				<div className="flex items-center justify-between mb-7">

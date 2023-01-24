@@ -1,16 +1,48 @@
 import React from 'react';
 import { svgAssets } from '../../assets/asset';
 
-const Applications = () => {
+const widgetIconBgColor = {
+	'All Applications': {
+		bgColor: '#E0E3FF',
+		icon: svgAssets.dashboard.application
+	},
+	'Verified Applications': {
+		bgColor: '#FFF4B8',
+		icon: svgAssets.dashboard.application
+	},
+	'Rejected Applications': {
+		bgColor: '#FFF1D7',
+		icon: svgAssets.dashboard.application
+	},
+	'Pending Verification': {
+		bgColor: '#FFE8FF',
+		icon: svgAssets.dashboard.application
+	},
+	Resubmitted: {
+		bgColor: '#CBFFDD',
+		icon: svgAssets.dashboard.application
+	},
+	'Re-Activation': {
+		bgColor: '#C3FFB9',
+		icon: svgAssets.dashboard.application
+	}
+};
+
+export const ApplicationWidget = ({ title, numberOfApplications }) => {
 	return (
 		<div className="w-full px-6 py-5 bg-white rounded-[20px] shadow-[0px_4px_15px_rgba(171,171,171,0.25)]">
 			<div className="flex justify-between mb-2.5">
 				<div className="">
-					<span className="text-[#868686] leading-6 font-medium font-poppinsMedium">All Applications</span>
-					<h6 className="text-[32px] leading-[48px] font-semibold font-poppinsSemiBold">5000</h6>
+					<span className="text-[#868686] leading-6 font-medium font-poppinsMedium">{title}</span>
+					<h6 className="text-[32px] leading-[48px] font-semibold font-poppinsSemiBold">{numberOfApplications}</h6>
 				</div>
-				<div className="p-5 bg-[#E0E3FF] rounded-full">
-					<img alt="application_icon" src={svgAssets.dashboard.application}></img>
+				<div
+					className="p-5 bg-[#E0E3FF] rounded-full"
+					style={{
+						backgroundColor: widgetIconBgColor[title].bgColor
+					}}
+				>
+					<img alt="application_icon" src={widgetIconBgColor[title].icon}></img>
 				</div>
 			</div>
 			<div className="flex items-end justify-between">
@@ -23,5 +55,3 @@ const Applications = () => {
 		</div>
 	);
 };
-
-export default Applications;
