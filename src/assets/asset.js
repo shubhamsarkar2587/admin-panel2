@@ -1,3 +1,5 @@
+import verifyAdmin from './png/verifyAdmin.png';
+import addUser from './png/addUser.png';
 import mobileNumber from './png/mobileNumber.png';
 import mail from './png/mail.png';
 import dashboard from './png/dashboard.png';
@@ -36,6 +38,12 @@ export const pngAssets = {
 	kyc: {
 		mobileNumber,
 		mail
+	},
+	reactTable: {
+		addUser
+	},
+	admin: {
+		verifyAdmin
 	}
 };
 

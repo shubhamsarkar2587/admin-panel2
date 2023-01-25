@@ -1,5 +1,7 @@
-import { ViewAllBtn } from '../components/buttons/ViewAllBtn';
+import { useState } from 'react';
+import { AddUser } from '../components/buttons/AddUser';
 import DatePickerInput from '../components/common/DatePicker';
+import { VerifyAdminModal } from '../components/modal/VerifyAdminModal';
 import { ReactTable } from '../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../components/reactTable/ReactTableHeader';
 import { SearchBar } from '../components/searchbar/SearchBar';
@@ -18,6 +20,12 @@ const data = [
 ];
 
 export const UserDetail = () => {
+	const [isVerifyAdminModelOpen, setIsVerifyAdminModelOpen] = useState(false);
+
+	const handleAddUser = () => {
+		setIsVerifyAdminModelOpen(true);
+	};
+
 	const columns = [
 		{ Header: 'User Name', accessor: 'userName', minWidth: 120 },
 		{ Header: 'Designation', accessor: 'designation', minWidth: 140 },
@@ -39,7 +47,7 @@ export const UserDetail = () => {
 						<ReactTableHeader
 							title="User Detail"
 						/>
-						<ViewAllBtn />
+						<AddUser handleAddBtn={handleAddUser} />
 					</div>
 					<div className="mb-6 flex items-center justify-between">
 						<SearchBar border={'border'} />
@@ -56,6 +64,10 @@ export const UserDetail = () => {
 					<ReactTable columns={columns} data={[...data]} displayBlock={true} />
 				</div>
 			</div>
+			<VerifyAdminModal
+				isModalOpen={isVerifyAdminModelOpen}
+				handleModel={() => setIsVerifyAdminModelOpen(false)}
+			/>
 		</>
 	);
 };

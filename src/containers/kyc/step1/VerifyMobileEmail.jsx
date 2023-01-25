@@ -1,4 +1,4 @@
-import { InputIcon } from '../../../components/inputs/InputIcon';
+import { InputBtnIcon } from '../../../components/inputs/InputBtnIcon';
 import { OtpInput } from '../../../components/inputs/OtpInput';
 
 const VerifyMobileEmail = () => {
@@ -8,7 +8,7 @@ const VerifyMobileEmail = () => {
 			<div className="mb-8 grid grid-cols-2 gap-10">
 				<div className="flex flex-col ">
 					<span className="mb-3">Mobile Number *</span>
-					<InputIcon iconText="Send Link" />
+					<InputBtnIcon btnText="Send Link" />
 				</div>
 				<div className="flex flex-col">
 					<span className="mb-3">Mobile OTP</span>
@@ -18,7 +18,7 @@ const VerifyMobileEmail = () => {
 			<div className="grid grid-cols-2 gap-10">
 				<div className="flex flex-col ">
 					<span className="mb-3">Mobile Number *</span>
-					<InputIcon iconText="Send Link" />
+					<InputBtnIcon btnText="Send Link" />
 				</div>
 				<div className="flex flex-col">
 					<span className="mb-3">Mobile OTP</span>

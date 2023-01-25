@@ -14,7 +14,7 @@ const messageTypeParameter = {
 export const CommonInput = ({ icon, label, isImportant, height, isDisable, placeholder, inputMessage, inputMessageType }) => {
 	return (
 		<div className="w-full flex flex-col">
-			<label className="mb-4 flex items-center leading-6 font-poppinsMedium">
+			<label className="mb-4 flex items-center leading-6 font-medium font-poppinsMedium">
 				{
 					icon && <img
 						className="max-h-[22px] mr-1.5 object-contain"

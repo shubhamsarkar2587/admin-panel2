@@ -1,5 +1,5 @@
 import { svgAssets } from '../../../assets/asset';
-import { InputIcon } from '../../../components/inputs/InputIcon';
+import { InputBtnIcon } from '../../../components/inputs/InputBtnIcon';
 
 const UploadSelfie = ({ marginBottom }) => {
 	return (
@@ -14,7 +14,7 @@ const UploadSelfie = ({ marginBottom }) => {
 				<div className="flex flex-col ">
 					<span className="mb-3">Selfie Link *</span>
 					<span className="text-[#A3A3A3] mb-1">Share below link with client</span>
-					<InputIcon iconText="Send Link" />
+					<InputBtnIcon iconText="Send Link" />
 				</div>
 				<div className="flex flex-col">
 					<img
