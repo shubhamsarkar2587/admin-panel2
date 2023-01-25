@@ -1,3 +1,7 @@
+.ant-modal-content {
+  background-color: #F6F8F9 !important;
+}
+
 .ant-modal-root .ant-modal-mask {
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
@@ -8,4 +12,5 @@
   line-height: 30px;
   font-weight: 500;
   margin-bottom: 17px !important;
+  background-color: #F6F8F9 !important;
 }

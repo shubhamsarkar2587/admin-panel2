@@ -16,11 +16,8 @@ export const SearchIfcModal = ({ isModalOpen, handleKycModel }) => {
 				closeIcon={false}
 				footer={null}
 				className="w-full p-[33px]"
-				bodyStyle={{
-					backgroundColor: 'red'
-				}}
 			>
-				<div className="bg-white">
+				<div className="">
 					<div className="grid grid-cols-2 gap-7 mb-[30px]">
 						<CommonInput
 							icon={pngAssets.kyc.mobileNumber}

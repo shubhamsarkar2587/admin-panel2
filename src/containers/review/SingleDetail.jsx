@@ -7,7 +7,7 @@ export const VerifySingleDetail = ({ label, value, isValid }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleModal = (state) => {
-		setIsOpen(state);
+		setIsOpen(false);
 	};
 
 	return (
@@ -24,7 +24,7 @@ export const VerifySingleDetail = ({ label, value, isValid }) => {
 			</div>
 			<MyModal
 				isModalOpen={isOpen}
-				handleModel={handleModal}
+				handleModal={handleModal}
 				title="Tell us rejection reason"
 				centered={false}
 				width={590}

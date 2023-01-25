@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { AddUser } from '../components/buttons/AddUser';
 import DatePickerInput from '../components/common/DatePicker';
+import { AddUserModal } from '../components/modal/admin/AddUserModel';
 import { VerifyAdminModal } from '../components/modal/admin/VerifyAdminModal';
 import { ReactTable } from '../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../components/reactTable/ReactTableHeader';
@@ -21,9 +22,17 @@ const data = [
 
 export const UserDetail = () => {
 	const [isVerifyAdminModelOpen, setIsVerifyAdminModelOpen] = useState(false);
+	const [isAddUserModelOpen, setIsAddUserModelOpen] = useState(false);
 
 	const handleAddUser = () => {
 		setIsVerifyAdminModelOpen(true);
+	};
+
+	const handleVerifyAdmin = () => {
+		setIsVerifyAdminModelOpen(false);
+		setTimeout(() => {
+			setIsAddUserModelOpen(true);
+		}, 800);
 	};
 
 	const columns = [
@@ -66,7 +75,14 @@ export const UserDetail = () => {
 			</div>
 			<VerifyAdminModal
 				isModalOpen={isVerifyAdminModelOpen}
-				handleModel={() => setIsVerifyAdminModelOpen(false)}
+				closeModal={() => setIsVerifyAdminModelOpen(false)}
+				handleModal={handleVerifyAdmin}
+			/>
+			<AddUserModal
+				title="Add User"
+				isModalOpen={isAddUserModelOpen}
+				closeModal={() => setIsAddUserModelOpen(false)}
+				handleModal={() => setIsVerifyAdminModelOpen(false)}
 			/>
 		</>
 	);
