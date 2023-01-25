@@ -1,5 +1,5 @@
 import { ApplicationWidget } from '../../components/widgets/Applications';
-import Date from '../../components/widgets/Date';
+import { Date } from '../../components/widgets/Date';
 
 export const AdminDashboard = () => {
 	return (

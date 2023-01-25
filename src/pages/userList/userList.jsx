@@ -5,7 +5,7 @@ import { MyPopover } from '../../components/popover/Popover';
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
 import { PopoverParentComp } from '../../components/reactTable/ReactTablePopupBtn';
-import SearchBar from '../../components/searchbar/SearchBar';
+import { SearchBar } from '../../components/searchbar/SearchBar';
 
 const data = [
 	{ rmName: 'V.K. Singh', employeeCode: 34342232334, branch: 'fdf3343', actions: '' },

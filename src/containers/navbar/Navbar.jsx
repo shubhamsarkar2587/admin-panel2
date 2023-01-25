@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { svgAssets } from '../../assets/asset';
-import SearchBar from '../../components/searchbar/SearchBar';
+import { SearchBar } from '../../components/searchbar/SearchBar';
 
 export const Navbar = () => {
 	const navigate = useNavigate();

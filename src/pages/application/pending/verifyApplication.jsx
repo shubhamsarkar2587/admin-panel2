@@ -5,7 +5,7 @@ import BrokerageDetails from '../../../containers/kyc/step5/BrokerageDetails';
 import { VerifySingleDetail } from '../../../containers/review/SingleDetail';
 import { verifyApplicationData } from '../../../utils/data';
 import { PdfViewer } from '../../../containers/review/PdfViewer';
-import StepProgressBar from '../../../components/progressBar/ProgressBar';
+import { StepProgressBar } from '../../../components/progressBar/ProgressBar';
 import { verificationSteps } from '../../../containers/kyc/kycData';
 
 const intersectionOption = {

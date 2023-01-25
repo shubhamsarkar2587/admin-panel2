@@ -11,7 +11,7 @@ const messageTypeParameter = {
 	}
 };
 
-const CommonInput = ({ icon, label, isImportant, height, isDisable, placeholder, inputMessage, inputMessageType }) => {
+export const CommonInput = ({ icon, label, isImportant, height, isDisable, placeholder, inputMessage, inputMessageType }) => {
 	return (
 		<div className="w-full flex flex-col">
 			<label className="mb-4 flex items-center leading-6 font-poppinsMedium">
@@ -49,5 +49,3 @@ const CommonInput = ({ icon, label, isImportant, height, isDisable, placeholder,
 		</div>
 	);
 };
-
-export default CommonInput;

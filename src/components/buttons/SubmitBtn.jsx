@@ -1,5 +1,5 @@
 
-const SubmitBtn = ({ handleSubmitBtn }) => {
+export const SubmitBtn = ({ handleSubmitBtn }) => {
 	return (
 		<button
 			className="h-[35px] px-5 flex items-center rounded-[10px] leading-6 text-white bg-black font-poppinsRegular"
@@ -9,5 +9,3 @@ const SubmitBtn = ({ handleSubmitBtn }) => {
 		</button>
 	);
 };
-
-export default SubmitBtn;

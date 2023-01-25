@@ -1,7 +1,7 @@
 import { pngAssets } from '../../../assets/asset';
-import CommonInput from '../../../components/inputs/CommonInput';
+import { CommonInput } from '../../../components/inputs/CommonInput';
 import { SelectItem } from '../../../components/common/SelectItem';
-import MainTitle from '../../../components/common/MainTitle';
+import { MainTitle } from '../../../components/common/MainTitle';
 
 const OccupationDetail = () => {
 	return (

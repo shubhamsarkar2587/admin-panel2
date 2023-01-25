@@ -1,5 +1,5 @@
 
-const Checkbox = ({ labelText, labelWidth }) => {
+export const Checkbox = ({ labelText, labelWidth }) => {
 	return (
 		<label className="mb-6 inline-flex items-start">
 			<input
@@ -14,5 +14,3 @@ const Checkbox = ({ labelText, labelWidth }) => {
 		</label>
 	);
 };
-
-export default Checkbox;

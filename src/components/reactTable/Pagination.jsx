@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 
-const Pagination = () => {
+export const Pagination = () => {
 	const totalPages = 15;
 	const onPageChange = () => {
 		console.log('dfdf');
@@ -83,5 +83,3 @@ const Pagination = () => {
 		</div>
 	);
 };
-
-export default Pagination;

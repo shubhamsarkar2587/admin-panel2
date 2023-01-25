@@ -1,5 +1,5 @@
 import { svgAssets } from '../../../assets/asset';
-import InputIcon from '../../../components/inputs/InputIcon';
+import { InputIcon } from '../../../components/inputs/InputIcon';
 
 const UploadSelfie = ({ marginBottom }) => {
 	return (

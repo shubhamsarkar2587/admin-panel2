@@ -1,6 +1,6 @@
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ApplicationWidget } from '../../components/widgets/Applications';
-import Date from '../../components/widgets/Date';
+import { Date } from '../../components/widgets/Date';
 
 const columns = [
 	{ Header: 'Client Name', accessor: 'clientName' },

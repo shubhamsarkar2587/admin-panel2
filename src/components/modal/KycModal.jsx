@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Modal } from 'antd';
 import { svgAssets } from '../../assets/asset';
 
-const KycModal = ({ isModalOpen, handleKycModel }) => {
+export const KycModal = ({ isModalOpen, handleKycModel }) => {
 	const navigate = useNavigate();
 
 	const handleClick = (route) => {
@@ -42,5 +42,3 @@ const KycModal = ({ isModalOpen, handleKycModel }) => {
 		</div>
 	);
 };
-
-export default KycModal;

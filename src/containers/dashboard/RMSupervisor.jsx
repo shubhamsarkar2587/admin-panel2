@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import SubmitBtn from '../../components/buttons/SubmitBtn';
+import { SubmitBtn } from '../../components/buttons/SubmitBtn';
 import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
 import { SelectItem } from '../../components/common/SelectItem';
 import { MyModal } from '../../components/modal/Modal';
@@ -9,7 +9,7 @@ import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
 import { PopoverChildComp, PopoverParentComp } from '../../components/reactTable/ReactTablePopupBtn';
 import { ApplicationWidget } from '../../components/widgets/Applications';
-import Date from '../../components/widgets/Date';
+import { Date } from '../../components/widgets/Date';
 
 const data = [
 	{ clientName: 'Tony Stark', pan: 43434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },

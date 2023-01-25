@@ -1,4 +1,4 @@
-import Checkbox from '../../../components/common/Checkbox';
+import { Checkbox } from '../../../components/common/Checkbox';
 
 const Declaration = () => {
 	return (

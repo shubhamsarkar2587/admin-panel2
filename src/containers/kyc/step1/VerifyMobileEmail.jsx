@@ -1,5 +1,5 @@
-import InputIcon from '../../../components/inputs/InputIcon';
-import OtpInput from '../../../components/inputs/OtpInput';
+import { InputIcon } from '../../../components/inputs/InputIcon';
+import { OtpInput } from '../../../components/inputs/OtpInput';
 
 const VerifyMobileEmail = () => {
 	return (

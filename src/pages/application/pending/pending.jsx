@@ -1,11 +1,11 @@
 import { ViewAllBtn } from '../../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../../components/common/DatePicker';
 import { MyPopover } from '../../../components/popover/Popover';
-import Pagination from '../../../components/reactTable/Pagination';
+import { Pagination } from '../../../components/reactTable/Pagination';
 import { ReactTable } from '../../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../../components/reactTable/ReactTableHeader';
 import { PopoverChildComp, PopoverParentComp } from '../../../components/reactTable/ReactTablePopupBtn';
-import SearchBar from '../../../components/searchbar/SearchBar';
+import { SearchBar } from '../../../components/searchbar/SearchBar';
 
 const data = [
 	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: '' },

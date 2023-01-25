@@ -1,6 +1,6 @@
 import { svgAssets } from '../../assets/asset';
 
-const BackBtn = ({ handleBackBtn }) => {
+export const BackBtn = ({ handleBackBtn }) => {
 	return (
 		<button
 			className="h-[47px] px-5 flex items-center rounded-[10px] leading-6 text-white bg-black"
@@ -11,5 +11,3 @@ const BackBtn = ({ handleBackBtn }) => {
 		</button>
 	);
 };
-
-export default BackBtn;

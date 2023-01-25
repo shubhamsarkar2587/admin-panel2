@@ -1,6 +1,6 @@
 import { statusParameter } from './progressBarData';
 
-const StepProgressBar = ({ selectedStep, steps }) => {
+export const StepProgressBar = ({ selectedStep, steps }) => {
 	return (
 		<div className="w-full flex flex-col items-center justify-center">
 			<div className={'w-3/4 grid grid-cols-8 items-center mb-5'}>
@@ -42,5 +42,3 @@ const StepProgressBar = ({ selectedStep, steps }) => {
 		</div>
 	);
 };
-
-export default StepProgressBar;

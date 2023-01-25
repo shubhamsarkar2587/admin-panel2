@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { pngAssets, svgAssets } from '../../../assets/asset';
-import CommonInput from '../../../components/inputs/CommonInput';
-import VerifyBtn from '../../../components/buttons/VerifyBtn';
-import SearchIfcModal from '../../../components/modal/SearchIfcModal';
-import MainTitle from '../../../components/common/MainTitle';
+import { CommonInput } from '../../../components/inputs/CommonInput';
+import { VerifyBtn } from '../../../components/buttons/VerifyBtn';
+import { SearchIfcModal } from '../../../components/modal/SearchIfcModal';
+import { MainTitle } from '../../../components/common/MainTitle';
 
 const VerifyBankDetails = () => {
 	const [isModelOpen, setIsModelOpen] = useState(false);

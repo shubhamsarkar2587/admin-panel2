@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { kycSteps } from '../containers/kyc/kycData';
-import KycModal from '../components/modal/KycModal';
-import StepProgressBar from '../components/progressBar/ProgressBar';
-import BackBtn from '../components/buttons/BackBtn';
-import ContinueBtn from '../components/buttons/ContinueBtn';
+import { KycModal } from '../components/modal/KycModal';
+import { StepProgressBar } from '../components/progressBar/ProgressBar';
+import { BackBtn } from '../components/buttons/BackBtn';
+import { ContinueBtn } from '../components/buttons/ContinueBtn';
 
 export const Kyc = () => {
 	const [isModelOpen, setIsModelOpen] = useState(false);

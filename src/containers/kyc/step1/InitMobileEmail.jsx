@@ -1,6 +1,6 @@
 import { pngAssets } from '../../../assets/asset';
-import CommonInput from '../../../components/inputs/CommonInput';
-import MainTitle from '../../../components/common/MainTitle';
+import { CommonInput } from '../../../components/inputs/CommonInput';
+import { MainTitle } from '../../../components/common/MainTitle';
 
 const InitMobileEmail = () => {
 	return (

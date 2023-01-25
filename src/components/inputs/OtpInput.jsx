@@ -1,6 +1,6 @@
 import { svgAssets } from '../../assets/asset';
 
-const OtpInput = ({ height }) => {
+export const OtpInput = ({ height }) => {
 	return (
 		<div className="flex items-center">
 			<div className="grid grid-cols-6 gap-4 mr-3.5">
@@ -36,5 +36,3 @@ const OtpInput = ({ height }) => {
 		</div>
 	);
 };
-
-export default OtpInput;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import classNames from 'classnames';
 
-const SearchBar = ({ searchbarWidth, border }) => {
+export const SearchBar = ({ searchbarWidth, border }) => {
 	const [searchText, setSearchText] = useState('');
 	const [options, setOptions] = useState(['Tony Stark', 'Option 1', 'Option 2', 'Option 3']);
 	const [filteredOptions, setFilteredOptions] = useState(options);
@@ -56,5 +56,3 @@ const SearchBar = ({ searchbarWidth, border }) => {
 		</div>
 	);
 };
-
-export default SearchBar;

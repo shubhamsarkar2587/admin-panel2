@@ -1,8 +1,8 @@
 import { pngAssets } from '../../../assets/asset';
-import CommonInput from '../../../components/inputs/CommonInput';
+import { CommonInput } from '../../../components/inputs/CommonInput';
 import DatePickerInput from '../../../components/inputs/DatePickerInput';
-import VerifyBtn from '../../../components/buttons/VerifyBtn';
-import MainTitle from '../../../components/common/MainTitle';
+import { VerifyBtn } from '../../../components/buttons/VerifyBtn';
+import { MainTitle } from '../../../components/common/MainTitle';
 
 const VerifyPan = () => {
 	return (

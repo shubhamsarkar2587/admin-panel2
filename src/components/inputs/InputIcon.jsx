@@ -1,6 +1,6 @@
 import { svgAssets } from '../../assets/asset';
 
-const InputIcon = ({ height, iconText }) => {
+export const InputIcon = ({ height, iconText }) => {
 	return (
 		<div className="flex items-center">
 			<input
@@ -22,5 +22,3 @@ const InputIcon = ({ height, iconText }) => {
 		</div>
 	);
 };
-
-export default InputIcon;

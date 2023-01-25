@@ -2,7 +2,7 @@ import { ViewAllBtn } from '../components/buttons/ViewAllBtn';
 import DatePickerInput from '../components/common/DatePicker';
 import { ReactTable } from '../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../components/reactTable/ReactTableHeader';
-import SearchBar from '../components/searchbar/SearchBar';
+import { SearchBar } from '../components/searchbar/SearchBar';
 
 const data = [
 	{ userName: 'Vikas_dy', designation: 'Branch Manager', role: 'RM', email: 'vi@bigul.co', mobileNo: '9988774455', branch: 'Janzeerwala Square', status: 'active', createdDate: '02-01-2023', lastUpdatedAt: '02-01-2023', brokerageMapped: 'Low' },

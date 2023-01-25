@@ -1,6 +1,6 @@
 import { Redirect } from 'react-router-dom';
 
-const ProtectedRoute = ({ Component }) => {
+export const ProtectedRoute = ({ Component }) => {
 	const isAuthenticated = true;
 	return isAuthenticated
 		? (
@@ -10,5 +10,3 @@ const ProtectedRoute = ({ Component }) => {
 			<Redirect to={{ pathName: '/login' }} />
 		);
 };
-
-export default ProtectedRoute;
