@@ -1,9 +1,9 @@
-import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
-import DatePickerInput from '../../components/common/DatePicker';
-import Pagination from '../../components/reactTable/Pagination';
-import { ReactTable } from '../../components/reactTable/ReactTable';
-import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
-import SearchBar from '../../components/searchbar/SearchBar';
+import { ViewAllBtn } from '../components/buttons/ViewAllBtn';
+import DatePickerInput from '../components/common/DatePicker';
+import Pagination from '../components/reactTable/Pagination';
+import { ReactTable } from '../components/reactTable/ReactTable';
+import { ReactTableHeader } from '../components/reactTable/ReactTableHeader';
+import SearchBar from '../components/searchbar/SearchBar';
 
 const columns = [
 	{ Header: 'Client Name', accessor: 'clientName' },
@@ -24,14 +24,14 @@ const data = [
 	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' }
 ];
 
-export const ESignReport = () => {
+export const AccountList = () => {
 	return (
 		<>
 			<div className="w-full flex flex-col ">
 				<div className="w-full py-5 px-[25px] mb-[30px] overflow-auto rounded-[10px] bg-white shadow-[0px_4px_15px_rgba(171,171,171,0.25)] ">
 					<div className="flex items-center justify-between mb-7">
 						<ReactTableHeader
-							title="E-Sign Report"
+							title="Account List"
 						/>
 						<ViewAllBtn />
 					</div>

@@ -4,6 +4,8 @@ import { Navbar } from './containers/navbar/Navbar';
 import { Sidebar } from './containers/sidebar/Sidebar';
 import { Dashboard } from './pages/dashboard';
 import { Kyc } from './pages/kyc';
+import { ESignReport } from './pages/eSignReport';
+import { AccountList } from './pages/accountList';
 import { AllApplication } from './pages/application/all';
 import { PendingApplication } from './pages/application/pending/pending';
 import { VerifyApplication } from './pages/application/pending/verifyApplication';
@@ -15,7 +17,6 @@ import { AssignTask } from './pages/userList/assignTask';
 import { UserDetail } from './pages/userDetail';
 import { ReassignmentReport } from './pages/reassignmentReport';
 import { NoMatchRoute } from './components/routes/NoMatchRoute';
-import { ESignReport } from './pages/reports/eSignReport';
 import { SalesReport } from './pages/reports/salesReport';
 import { MonthlyReport } from './pages/reports/monthlyReport';
 import { VerifierReport } from './pages/reports/verifierReport';
@@ -53,6 +54,8 @@ const App = () => {
 											<Route path="verified" element={<VerifiedApplication />}></Route>
 											<Route path="resubmitted" element={<ResubmittedApplication />}></Route>
 										</Route>
+										<Route path="/e-sign-report" element={<ESignReport />}></Route>
+										<Route path="/account-list" element={<AccountList />}></Route>
 										<Route path="/user-list" element={<UserList />}></Route>
 										<Route path="/user-list/assign-task" element={<AssignTask />}></Route>
 										<Route path="/user-detail" element={<UserDetail />}></Route>
