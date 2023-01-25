@@ -79,7 +79,7 @@ export const sidebarData = [
 		nestedRoutes: [
 			{
 				name: 'E-Sign Report',
-				route: '/e-Sign-report'
+				route: '/e-sign-report'
 			},
 			{
 				name: 'Sales Report',
@@ -111,7 +111,7 @@ export const sidebarData = [
 			},
 			{
 				name: 'Map Brokerage',
-				route: '/map-brokerage '
+				route: '/map-brokerage'
 			}
 		]
 	},

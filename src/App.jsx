@@ -15,6 +15,13 @@ import { AssignTask } from './pages/userList/assignTask';
 import { UserDetail } from './pages/userDetail';
 import { ReassignmentReport } from './pages/reassignmentReport';
 import { NoMatchRoute } from './components/routes/NoMatchRoute';
+import { ESignReport } from './pages/reports/eSignReport';
+import { SalesReport } from './pages/reports/salesReport';
+import { MonthlyReport } from './pages/reports/monthlyReport';
+import { VerifierReport } from './pages/reports/verifierReport';
+import { AgeingReport } from './pages/reports/ageingReport';
+import { BrokeragePlan } from './pages/brokerageMaster/brokeragePlan';
+import { MapBrokerage } from './pages/brokerageMaster/mapBrokerage';
 
 const App = () => {
 	const location = useLocation();
@@ -35,9 +42,10 @@ const App = () => {
 								<Sidebar />
 								<div className="pl-5 pr-[30px] pb-5 ml-[300px] mt-[105px] flex flex-col grow w-full h-full">
 									<Routes>
-										<Route path="/" element={<Dashboard />}></Route>
+										<Route index path="/" element={<Dashboard />}></Route>
 										<Route path="/kyc" element={<Kyc />}></Route>
-										<Route path="/application/">
+										<Route path="/application">
+											<Route index element={<AllApplication />}></Route>
 											<Route path="all" element={<AllApplication />}></Route>
 											<Route path="pending" element={<PendingApplication />}></Route>
 											<Route path="pending/verify" element={<VerifyApplication />}></Route>
@@ -49,6 +57,19 @@ const App = () => {
 										<Route path="/user-list/assign-task" element={<AssignTask />}></Route>
 										<Route path="/user-detail" element={<UserDetail />}></Route>
 										<Route path="/reassignment-report" element={<ReassignmentReport />}></Route>
+										<Route path="/reports">
+											<Route index element={<ESignReport />}></Route>
+											<Route path="e-sign-report" element={<ESignReport />}></Route>
+											<Route path="sales-report" element={<SalesReport />}></Route>
+											<Route path="monthly-report" element={<MonthlyReport />}></Route>
+											<Route path="verifier-report" element={<VerifierReport />}></Route>
+											<Route path="ageing-report" element={<AgeingReport />}></Route>
+										</Route>
+										<Route path="/brokerage-master">
+											<Route index element={<BrokeragePlan />}></Route>
+											<Route path="brokerage-plans" element={<BrokeragePlan />}></Route>
+											<Route path="map-brokerage" element={<MapBrokerage />}></Route>
+										</Route>
 										<Route path="*" element={<NoMatchRoute />}></Route>
 									</Routes>
 								</div>
