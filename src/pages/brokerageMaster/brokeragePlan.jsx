@@ -1,5 +1,7 @@
-import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
+import { useState } from 'react';
+import { AddBrokerageBtn } from '../../components/buttons/AddBrokerageBtn';
 import DatePickerInput from '../../components/common/DatePicker';
+import { AddBrokerage } from '../../components/modal/admin/addBrokerage/AddBrokerage';
 import { Pagination } from '../../components/reactTable/Pagination';
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
@@ -25,6 +27,7 @@ const data = [
 ];
 
 export const BrokeragePlan = () => {
+	const [isBrokerageModalOpen, setIsBrokerageModalOpen] = useState(false);
 	return (
 		<>
 			<div className="w-full flex flex-col ">
@@ -33,7 +36,9 @@ export const BrokeragePlan = () => {
 						<ReactTableHeader
 							title="Brokerage Plans"
 						/>
-						<ViewAllBtn />
+						<AddBrokerageBtn
+							handleAddBrokerageBtn={() => setIsBrokerageModalOpen(true)}
+						/>
 					</div>
 					<div className="mb-6 flex items-center justify-between">
 						<SearchBar border={'border'} />
@@ -51,6 +56,11 @@ export const BrokeragePlan = () => {
 					<Pagination columns={columns} data={data} />
 				</div>
 			</div>
+			<AddBrokerage
+				isModalOpen={isBrokerageModalOpen}
+				closeModal={() => setIsBrokerageModalOpen(false)}
+				title="Add brokerage"
+			/>
 		</>
 	);
 };
