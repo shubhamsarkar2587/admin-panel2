@@ -13,7 +13,7 @@ const intersectionOption = {
 	threshold: 0.5
 };
 
-const VerifyApplication = () => {
+export const VerifyApplication = () => {
 	// --- intersection init --- //
 	const { ref: mobileRef, inView: isMobileRefView } = useInView(intersectionOption);
 	const { ref: panRef, inView: isPanRefView } = useInView(intersectionOption);
@@ -159,5 +159,3 @@ const VerifyApplication = () => {
 		</div>
 	);
 };
-
-export default VerifyApplication;

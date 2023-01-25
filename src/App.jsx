@@ -1,19 +1,20 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Kyc from './pages/kyc';
-import Login from './pages/login';
-import VerifyApplication from './pages/application/pending/verifyApplication';
-import Navbar from './containers/navbar/Navbar';
-import Sidebar from './containers/sidebar/Sidebar';
-import AllApplication from './pages/application/all';
-import PendingApplication from './pages/application/pending/pending';
-import RejectedApplication from './pages/application/rejected';
-import ResubmittedApplication from './pages/application/resubmitted';
-import VerifiedApplication from './pages/application/verified';
-import NoMatchRoute from './components/routes/NoMatchRoute';
+import { Login } from './pages/login';
+import { Navbar } from './containers/navbar/Navbar';
+import { Sidebar } from './containers/sidebar/Sidebar';
 import { Dashboard } from './pages/dashboard';
+import { Kyc } from './pages/kyc';
+import { AllApplication } from './pages/application/all';
+import { PendingApplication } from './pages/application/pending/pending';
+import { VerifyApplication } from './pages/application/pending/verifyApplication';
+import { RejectedApplication } from './pages/application/rejected';
+import { ResubmittedApplication } from './pages/application/resubmitted';
+import { VerifiedApplication } from './pages/application/verified';
 import { UserList } from './pages/userList/userList';
 import { AssignTask } from './pages/userList/assignTask';
+import { UserDetail } from './pages/userDetail';
 import { ReassignmentReport } from './pages/reassignmentReport';
+import { NoMatchRoute } from './components/routes/NoMatchRoute';
 
 const App = () => {
 	const location = useLocation();
@@ -44,9 +45,9 @@ const App = () => {
 											<Route path="verified" element={<VerifiedApplication />}></Route>
 											<Route path="resubmitted" element={<ResubmittedApplication />}></Route>
 										</Route>
-										<Route path="/user-list" element={<UserList />}>
-										</Route>
+										<Route path="/user-list" element={<UserList />}></Route>
 										<Route path="/user-list/assign-task" element={<AssignTask />}></Route>
+										<Route path="/user-detail" element={<UserDetail />}></Route>
 										<Route path="/reassignment-report" element={<ReassignmentReport />}></Route>
 										<Route path="*" element={<NoMatchRoute />}></Route>
 									</Routes>

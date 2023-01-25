@@ -60,6 +60,12 @@ export const sidebarData = [
 		selectedIcon: pngAssets.dashboard.selectedDashboard
 	},
 	{
+		name: 'User Detail',
+		route: '/user-detail',
+		icon: pngAssets.dashboard.dashboard,
+		selectedIcon: pngAssets.dashboard.selectedDashboard
+	},
+	{
 		name: 'Reassignment Report',
 		route: '/reassignment-report',
 		icon: pngAssets.dashboard.dashboard,

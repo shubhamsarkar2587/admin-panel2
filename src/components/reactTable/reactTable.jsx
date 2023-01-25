@@ -1,11 +1,17 @@
 import { useTable } from 'react-table';
 
-export const ReactTable = ({ title, columns, data }) => {
+export const ReactTable = ({ columns, data, displayBlock }) => {
 	const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns, data });
 
 	return (
-		<div className="">
-			<table className="table-auto w-full h-full text-center" {...getTableProps()}>
+		<div className="w-full grid">
+			<table
+				{...getTableProps()}
+				className="table-auto text-center h-full w-full overflow-x-auto"
+				style={{
+					display: displayBlock && 'block'
+				}}
+			>
 				<thead>
 					{headerGroups.map((headerGroup, i1) => (
 						<tr key={`head_group_${i1}`} {...headerGroup.getHeaderGroupProps()}>
@@ -14,6 +20,9 @@ export const ReactTable = ({ title, columns, data }) => {
 									key={`head_group_header_${i2}`}
 									{...column.getHeaderProps()}
 									className="pt-2 py-4 text-[15px] text-[#9A9A9A] tracking-wide leading-[22px] font-medium font-poppinsMedium"
+									style={{
+										minWidth: column.minWidth
+									}}
 								>
 									{column.render('Header')}
 								</th>

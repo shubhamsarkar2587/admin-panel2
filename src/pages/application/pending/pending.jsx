@@ -16,7 +16,7 @@ const data = [
 	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: '' }
 ];
 
-const PendingApplication = () => {
+export const PendingApplication = () => {
 	const columns = [
 		{ Header: 'Client Name', accessor: 'clientName' },
 		{ Header: 'Pan', accessor: 'pan' },
@@ -66,5 +66,3 @@ const PendingApplication = () => {
 		</>
 	);
 };
-
-export default PendingApplication;

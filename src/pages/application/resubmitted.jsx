@@ -24,7 +24,7 @@ const data = [
 	{ clientName: 'Tony Stark', pan: 3434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' }
 ];
 
-const ResubmittedApplication = () => {
+export const ResubmittedApplication = () => {
 	return (
 		<>
 			<div className="w-full flex flex-col ">
@@ -55,5 +55,3 @@ const ResubmittedApplication = () => {
 		</>
 	);
 };
-
-export default ResubmittedApplication;

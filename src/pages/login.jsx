@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { svgAssets } from '../assets/asset';
 
-const Login = () => {
+export const Login = () => {
 	const navigate = useNavigate();
 
 	const [password, setPassword] = useState('');
@@ -69,5 +69,3 @@ const Login = () => {
 		</div>
 	);
 };
-
-export default Login;

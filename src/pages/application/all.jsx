@@ -24,7 +24,7 @@ const data = [
 	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' }
 ];
 
-const AllApplication = () => {
+export const AllApplication = () => {
 	return (
 		<>
 			<div className="w-full flex flex-col ">
@@ -55,5 +55,3 @@ const AllApplication = () => {
 		</>
 	);
 };
-
-export default AllApplication;

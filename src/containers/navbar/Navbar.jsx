@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { svgAssets } from '../../assets/asset';
 import SearchBar from '../../components/searchbar/SearchBar';
 
-const Navbar = () => {
+export const Navbar = () => {
 	const navigate = useNavigate();
 
 	const handleStartKyc = () => {
@@ -35,5 +35,3 @@ const Navbar = () => {
 		</div>
 	);
 };
-
-export default Navbar;

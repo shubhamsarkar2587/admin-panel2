@@ -5,7 +5,7 @@ import StepProgressBar from '../components/progressBar/ProgressBar';
 import BackBtn from '../components/buttons/BackBtn';
 import ContinueBtn from '../components/buttons/ContinueBtn';
 
-const Kyc = () => {
+export const Kyc = () => {
 	const [isModelOpen, setIsModelOpen] = useState(false);
 	// const [selectedStep, setSelectedStep] = useState(0);
 	const [steps, setSteps] = useState(kycSteps || []);
@@ -92,5 +92,3 @@ const Kyc = () => {
 		</>
 	);
 };
-
-export default Kyc;

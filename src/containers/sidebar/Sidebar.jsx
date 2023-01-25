@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { svgAssets } from '../../assets/asset';
 import { sidebarData } from './sidebarData';
 
-const Sidebar = () => {
+export const Sidebar = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
 
@@ -100,5 +100,3 @@ const Sidebar = () => {
 		</div>
 	);
 };
-
-export default Sidebar;

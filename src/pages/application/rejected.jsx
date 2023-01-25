@@ -24,7 +24,7 @@ const data = [
 	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' }
 ];
 
-const RejectedApplication = () => {
+export const RejectedApplication = () => {
 	return (
 		<>
 			<div className="w-full flex flex-col ">
@@ -55,5 +55,3 @@ const RejectedApplication = () => {
 		</>
 	);
 };
-
-export default RejectedApplication;
