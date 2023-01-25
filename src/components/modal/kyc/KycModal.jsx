@@ -1,7 +1,7 @@
-import './modal.css';
+import '../modal.css';
 import { useNavigate } from 'react-router-dom';
 import { Modal } from 'antd';
-import { svgAssets } from '../../assets/asset';
+import { svgAssets } from '../../../assets/asset';
 
 export const KycModal = ({ isModalOpen, handleKycModel }) => {
 	const navigate = useNavigate();

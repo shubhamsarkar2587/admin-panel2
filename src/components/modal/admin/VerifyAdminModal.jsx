@@ -1,10 +1,10 @@
-import './modal.css';
+import '../modal.css';
 import { Modal } from 'antd';
-import { pngAssets } from '../../assets/asset';
-import { InputBtnIcon } from '../inputs/InputBtnIcon';
-import { OtpInput } from '../inputs/OtpInput';
+import { pngAssets } from '../../../assets/asset';
+import { InputBtnIcon } from '../../inputs/InputBtnIcon';
+import { OtpInput } from '../../inputs/OtpInput';
 import { Link } from 'react-router-dom';
-import { NextBtn } from '../buttons/NextBtn';
+import { NextBtn } from '../../buttons/NextBtn';
 
 export const VerifyAdminModal = ({ isModalOpen, handleModel }) => {
 	return (

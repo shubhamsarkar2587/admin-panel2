@@ -1,8 +1,8 @@
-import './modal.css';
+import '../modal.css';
 import { Modal } from 'antd';
-import { pngAssets, svgAssets } from '../../assets/asset';
-import { CommonInput } from '../inputs/CommonInput';
-import { SelectItem } from '../common/SelectItem';
+import { pngAssets, svgAssets } from '../../../assets/asset';
+import { CommonInput } from '../../inputs/CommonInput';
+import { SelectItem } from '../../common/SelectItem';
 
 export const SearchIfcModal = ({ isModalOpen, handleKycModel }) => {
 	return (

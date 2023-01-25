@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { kycSteps } from '../containers/kyc/kycData';
-import { KycModal } from '../components/modal/KycModal';
+import { KycModal } from '../components/modal/kyc/KycModal';
 import { StepProgressBar } from '../components/progressBar/ProgressBar';
 import { BackBtn } from '../components/buttons/BackBtn';
 import { ContinueBtn } from '../components/buttons/ContinueBtn';

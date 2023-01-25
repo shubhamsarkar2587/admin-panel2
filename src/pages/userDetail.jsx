@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { AddUser } from '../components/buttons/AddUser';
 import DatePickerInput from '../components/common/DatePicker';
-import { VerifyAdminModal } from '../components/modal/VerifyAdminModal';
+import { VerifyAdminModal } from '../components/modal/admin/VerifyAdminModal';
 import { ReactTable } from '../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../components/reactTable/ReactTableHeader';
 import { SearchBar } from '../components/searchbar/SearchBar';
