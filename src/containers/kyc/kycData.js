@@ -4,7 +4,7 @@ import VerifyPan from './step2/VerifyPan';
 import VerifyBankDetails from './step3/VerifyBankDetails';
 import PersonalDetails from './step4/PersonalDetails';
 import OccuptionDetails from './step4/OccupationDetail';
-import BrokerageDetails from './step5/BrokerageDetails';
+import { BrokerageStep } from './step5/BrokerageStep';
 import UploadSelfie from './step6/UploadSelfie';
 import UploadSignature from './step7/uploadSignature';
 import { ReviewApplication } from '../review/ReviewApplication';
@@ -58,7 +58,7 @@ export const kycSteps = () => [
 		value: 'step5',
 		status: 'inactive',
 		isSuccess: true,
-		component: <BrokerageDetails />
+		component: <BrokerageStep />
 	},
 	{
 		label: 'Step 6',
@@ -141,7 +141,7 @@ export const verificationSteps = () => [
 		value: 'step5',
 		status: 'success',
 		isSuccess: true,
-		component: <BrokerageDetails />
+		component: <BrokerageStep />
 	},
 	{
 		label: 'Step 6',

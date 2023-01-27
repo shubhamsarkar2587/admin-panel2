@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { svgAssets } from '../../../assets/asset';
-import BrokerageDetails from '../../../containers/kyc/step5/BrokerageDetails';
+import { BrokerageStep } from '../../../containers/kyc/step5/BrokerageStep';
 import { VerifySingleDetail } from '../../../containers/review/SingleDetail';
 import { verifyApplicationData } from '../../../utils/data';
 import { PdfViewer } from '../../../containers/review/PdfViewer';
@@ -153,7 +153,7 @@ export const VerifyApplication = () => {
 					<PdfViewer isPdfOpen={isPdfOpen} />
 				</div>
 
-				<BrokerageDetails />
+				<BrokerageStep />
 
 			</div>
 		</div>

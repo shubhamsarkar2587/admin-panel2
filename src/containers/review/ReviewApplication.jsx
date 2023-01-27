@@ -1,5 +1,5 @@
 import { svgAssets } from '../../assets/asset';
-import BrokerageDetails from '../kyc/step5/BrokerageDetails';
+import { BrokerageStep } from '../kyc/step5/BrokerageStep';
 
 export const ReviewApplication = () => {
 	return (
@@ -187,7 +187,7 @@ export const ReviewApplication = () => {
 					</div>
 				</div>
 
-				<BrokerageDetails />
+				<BrokerageStep />
 
 			</div>
 		</div>
