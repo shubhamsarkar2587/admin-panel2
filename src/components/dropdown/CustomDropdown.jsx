@@ -1,13 +1,21 @@
-// import { svgAssets } from '../../assets/asset';
+import { useRef, useState } from 'react';
 
-import { useState } from 'react';
-
-export const CustomDropdown = ({ label, border, children }) => {
+export const CustomDropdown = ({ label, position, children }) => {
+	const wrapperRef = useRef(null);
 	const [isSelected, setIsSelected] = useState(true);
+
+	// const handleOutsideClick = () => {
+	// 	setIsSelected(false);
+	// };
+
+	// OutsideClickListner({ ref: wrapperRef, closeBox: handleOutsideClick });
+
 	return (
-		<div className="w-full rounded-[10px_10px_0px_0px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] bg-[#F6FAFF]">
+		<div ref={wrapperRef} className={`w-full h-full rounded-[10px] relative z-50 
+			${isSelected && 'bg-white shadow-[0px_2px_10px_rgba(201,201,201,0.25)]'}
+		`}>
 			<div
-				className="px-3.5 py-3 flex items-center justify-between cursor-pointer"
+				className="px-3.5 py-3 flex items-center justify-between cursor-pointer rounded-[10px_10px_0px_0px] bg-[#F6FAFF] shadow-[0px_2px_10px_rgba(201,201,201,0.25)]"
 				onClick={() => setIsSelected(!isSelected)}
 			>
 				<span className="inline-flex items-center text-lg leading-[27px] font-medium font-poppinsMedium">
@@ -25,9 +33,12 @@ export const CustomDropdown = ({ label, border, children }) => {
 					/>
 				</svg>
 			</div>
-			{
-				isSelected && children
-			}
+			<div className={`w-full transition-all duration-700 rounded-[0px_0px_10px_10px] 
+				${!isSelected && 'hidden'}
+				${position || 'absolute'}
+			`}>
+				{children}
+			</div>
 		</div>
 	);
 };

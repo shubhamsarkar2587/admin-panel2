@@ -4,12 +4,14 @@ import Declaration from './Declaration';
 import { Checkbox } from '../../../components/common/Checkbox';
 import { MainTitle } from '../../../components/common/MainTitle';
 import { Transaction } from './Transaction';
+import { Segment } from './Segment';
 
 export const BrokerageStep = () => {
 	return (
 		<div className="w-full flex flex-col mb-10">
 			<div className="w-full mb-6 grid grid-cols-2 gap-7">
 				<Transaction />
+				<Segment />
 			</div>
 			<MainTitle title="Brokerage Details" />
 			<div className="w-full mb-8 grid grid-cols-5 gap-7">
