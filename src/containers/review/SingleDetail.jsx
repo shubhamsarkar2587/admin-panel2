@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { svgAssets } from '../../assets/asset';
-import { SelectItem } from '../../components/common/SelectItem';
+import { SelectDropdown } from '../../components/dropdown/SelectDropdown';
 import { MyModal } from '../../components/modal/Modal';
 
 export const VerifySingleDetail = ({ label, value, isValid }) => {
@@ -31,7 +31,7 @@ export const VerifySingleDetail = ({ label, value, isValid }) => {
 			>
 				<div className="h-40">
 					<h6 className="mb-4 text-lg font-medium">PAN Details - PAN linked with Aadhaar</h6>
-					<SelectItem />
+					<SelectDropdown />
 				</div>
 			</MyModal >
 		</>

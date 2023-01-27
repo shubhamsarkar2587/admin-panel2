@@ -1,4 +1,4 @@
-import { SelectItem } from '../../../components/common/SelectItem';
+import { SelectDropdown } from '../../../components/dropdown/SelectDropdown';
 
 const OccuptionDetails = () => {
 	return (
@@ -7,21 +7,30 @@ const OccuptionDetails = () => {
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
 				<div className="flex flex-col">
 					<span className="mb-3">Marital Status *</span>
-					<SelectItem height={'47px'} placeholder="Please select marital status" />
+					<SelectDropdown
+						placeholder="Please select brokerage scheme"
+					/>
 				</div>
 				<div className="flex flex-col">
 					<span className="mb-3">Father’s/Spouse Name *</span>
-					<SelectItem height={'47px'} placeholder="Please select marital status" />
+					<SelectDropdown
+
+						placeholder="Please select brokerage scheme"
+					/>
 				</div>
 			</div>
 			<div className="grid grid-cols-2 gap-10 items-end">
 				<div className="flex flex-col">
 					<span className="mb-3">Gender *</span>
-					<SelectItem height={'47px'} placeholder="Please select marital status" />
+					<SelectDropdown
+						placeholder="Please select brokerage scheme"
+					/>
 				</div>
 				<div className="flex flex-col">
 					<span className="mb-3">Please enter father’s/spouse name</span>
-					<SelectItem height={'47px'} placeholder="Please select marital status" />
+					<SelectDropdown
+						placeholder="Please select brokerage scheme"
+					/>
 				</div>
 			</div>
 		</div>

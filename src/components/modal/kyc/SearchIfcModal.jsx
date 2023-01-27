@@ -2,7 +2,7 @@ import '../modal.css';
 import { Modal } from 'antd';
 import { pngAssets, svgAssets } from '../../../assets/asset';
 import { CommonInput } from '../../inputs/CommonInput';
-import { SelectItem } from '../../common/SelectItem';
+import { SelectDropdown } from '../../dropdown/SelectDropdown';
 
 export const SearchIfcModal = ({ isModalOpen, handleKycModel }) => {
 	return (
@@ -26,12 +26,11 @@ export const SearchIfcModal = ({ isModalOpen, handleKycModel }) => {
 							placeholder="Please enter bank name"
 							height="45px"
 						/>
-						<SelectItem
+						<SelectDropdown
 							icon={pngAssets.kyc.mobileNumber}
-							label="Branch"
+							label="Brokerage Scheme"
 							isImportant={true}
-							placeholder="Please select branch"
-							height="45px"
+							placeholder="Please select brokerage scheme"
 						/>
 					</div>
 					<div className="w-full flex justify-center mb-5">

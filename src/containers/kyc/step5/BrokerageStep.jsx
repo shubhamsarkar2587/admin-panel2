@@ -1,6 +1,5 @@
 import { pngAssets } from '../../../assets/asset';
-import { SelectItem } from '../../../components/common/SelectItem';
-import Declaration from './Declaration';
+import { Declaration } from './Declaration';
 import { Checkbox } from '../../../components/common/Checkbox';
 import { MainTitle } from '../../../components/common/MainTitle';
 import { Transaction } from './Transaction';
@@ -25,11 +24,11 @@ export const BrokerageStep = () => {
 					/>
 				</div>
 				<div className="w-full col-span-2 flex flex-col">
-					<SelectItem
+					<SelectDropdown
 						icon={pngAssets.kyc.mobileNumber}
-						label="DP Tariff"
+						label="Brokerage Scheme"
 						isImportant={true}
-						placeholder="Please select dp tariff"
+						placeholder="Please select brokerage scheme"
 					/>
 				</div>
 			</div>
@@ -38,11 +37,11 @@ export const BrokerageStep = () => {
 				<Declaration />
 			</div>
 			<div className="w-full mb-8 grid grid-cols-2 gap-7">
-				<SelectItem
-					placeholder="Physical"
+				<SelectDropdown
+					placeholder="Please select brokerage scheme"
 				/>
-				<SelectItem
-					placeholder="As per SEBI"
+				<SelectDropdown
+					placeholder="Please select brokerage scheme"
 				/>
 			</div>
 			<div className="">

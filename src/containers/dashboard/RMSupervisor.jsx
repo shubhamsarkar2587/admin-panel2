@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SubmitBtn } from '../../components/buttons/SubmitBtn';
 import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
-import { SelectItem } from '../../components/common/SelectItem';
+import { SelectDropdown } from '../../components/dropdown/SelectDropdown';
 import { MyModal } from '../../components/modal/Modal';
 import { MyPopover } from '../../components/popover/Popover';
 import { ReactTable } from '../../components/reactTable/ReactTable';
@@ -92,7 +92,7 @@ export const RMSupervisorDashboard = () => {
 			>
 				<div className="h-40">
 					<h6 className="mb-4 text-lg font-medium">Re-assign Tasks</h6>
-					<SelectItem />
+					<SelectDropdown/>
 					<div className="h-full flex items-center justify-center">
 						<SubmitBtn
 							handleSubmitBtn={handleSubmitBtn}

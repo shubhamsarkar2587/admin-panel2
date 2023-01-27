@@ -1,8 +1,8 @@
 import '../modal.css';
 import { Modal } from 'antd';
 import { CommonInput } from '../../inputs/CommonInput';
-import { SelectItem } from '../../common/SelectItem';
 import { SubmitBtn } from '../../buttons/SubmitBtn';
+import { SelectDropdown } from '../../dropdown/SelectDropdown';
 
 export const AddUserModal = ({ title, isModalOpen, handleModel, closeModal }) => {
 	return (
@@ -32,11 +32,10 @@ export const AddUserModal = ({ title, isModalOpen, handleModel, closeModal }) =>
 							/>
 						</div>
 						<div className="mb-8 grid grid-cols-2 gap-10">
-							<SelectItem
-								label="Employee Code"
+							<SelectDropdown
+								label="Brokerage Scheme"
 								isImportant={true}
-								placeholder="Please select marital status"
-								height={'47px'}
+								placeholder="Please select brokerage scheme"
 							/>
 							<CommonInput
 								label="Employee Code"
@@ -58,11 +57,10 @@ export const AddUserModal = ({ title, isModalOpen, handleModel, closeModal }) =>
 							/>
 						</div>
 						<div className="mb-8 grid grid-cols-2 gap-10">
-							<SelectItem
-								label="Employee Code"
+							<SelectDropdown
+								label="Brokerage Scheme"
 								isImportant={true}
-								placeholder="Please select marital status"
-								height={'47px'}
+								placeholder="Please select brokerage scheme"
 							/>
 							<CommonInput
 								label="Employee Code"
@@ -83,11 +81,10 @@ export const AddUserModal = ({ title, isModalOpen, handleModel, closeModal }) =>
 							/>
 						</div>
 						<div className="mb-8 grid grid-cols-2 gap-10">
-							<SelectItem
-								label="Employee Code"
+							<SelectDropdown
+								label="Brokerage Scheme"
 								isImportant={true}
-								placeholder="Please select marital status"
-								height={'47px'}
+								placeholder="Please select brokerage scheme"
 							/>
 							<CommonInput
 								label="Employee Code"

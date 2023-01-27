@@ -19,18 +19,22 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder }
 	OutsideClickListner({ ref: wrapperRef, closeBox: handleOutsideClick });
 
 	return (
-		<>
-			<label className="mb-4 flex items-center leading-6 font-poppinsMedium">
-				{
-					icon && <img
-						className="max-h-[22px] mr-1.5 object-contain"
-						alt="input_icon"
-						src={icon}
-					/>
-				}
-				<span className="mr-1">{label}</span>
-				{isImportant && <span className="text-[#EA0000]">*</span>}
-			</label>
+		<div className="w-full flex flex-col">
+			{
+				label && (
+					<label className="mb-4 flex items-center leading-6 font-poppinsMedium">
+						{
+							icon && <img
+								className="max-h-[22px] mr-1.5 object-contain"
+								alt="input_icon"
+								src={icon}
+							/>
+						}
+						<span className="mr-1">{label}</span>
+						{isImportant && <span className="text-[#EA0000]">*</span>}
+					</label>
+				)
+			}
 			<div
 				ref={wrapperRef}
 				className={`w-full h-full rounded-[10px] relative z-10
@@ -42,7 +46,7 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder }
 					onClick={() => setIsSelected(!isSelected)}
 				>
 					<input
-						className="w-full pr-5 m-0 text-sm outline-none border-none font-poppinsRegular bg-white"
+						className="w-full pr-5 m-0 outline-none border-none font-poppinsRegular bg-white"
 						type="text"
 						placeholder={placeholder}
 						value={selectedOption}
@@ -61,7 +65,7 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder }
 					</svg>
 				</div>
 				<div
-					className={`absolute w-full transition-all duration-700 top-[49px] rounded-[10px] border-b-lg bg-white shadow-[0px_2px_10px_rgba(201,201,201,0.25)]
+					className={`absolute w-full transition-all duration-700 top-[49px] rounded-[10px] border-b-lg font-poppinsRegular bg-white shadow-[0px_2px_10px_rgba(201,201,201,0.25)]
 					${!isSelected && 'hidden'}
 				`}
 				>
@@ -81,6 +85,6 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder }
 					</ul>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };

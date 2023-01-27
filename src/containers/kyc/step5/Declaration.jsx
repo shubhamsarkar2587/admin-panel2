@@ -1,6 +1,6 @@
 import { Checkbox } from '../../../components/common/Checkbox';
 
-const Declaration = () => {
+export const Declaration = () => {
 	return (
 		<div className="grid grid-cols-3 gap-10">
 			<div>
@@ -21,5 +21,3 @@ const Declaration = () => {
 		</div>
 	);
 };
-
-export default Declaration;

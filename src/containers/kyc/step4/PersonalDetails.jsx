@@ -1,18 +1,18 @@
 import { pngAssets } from '../../../assets/asset';
 import { CommonInput } from '../../../components/inputs/CommonInput';
-import { SelectItem } from '../../../components/common/SelectItem';
 import { MainTitle } from '../../../components/common/MainTitle';
+import { SelectDropdown } from '../../../components/dropdown/SelectDropdown';
 
 const OccupationDetail = () => {
 	return (
 		<div className="w-full flex flex-col mb-10">
 			<MainTitle title="Personal Details" />
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
-				<SelectItem
+				<SelectDropdown
 					icon={pngAssets.kyc.mobileNumber}
-					label="Marital Status"
+					label="Brokerage Scheme"
 					isImportant={true}
-					placeholder="Please select marital status"
+					placeholder="Please select brokerage scheme"
 				/>
 				<CommonInput
 					icon={pngAssets.kyc.mobileNumber}
@@ -22,11 +22,11 @@ const OccupationDetail = () => {
 				/>
 			</div>
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
-				<SelectItem
+				<SelectDropdown
 					icon={pngAssets.kyc.mobileNumber}
-					label="Gender"
+					label="Brokerage Scheme"
 					isImportant={true}
-					placeholder="Please select your gender"
+					placeholder="Please select brokerage scheme"
 				/>
 				<CommonInput
 					icon={pngAssets.kyc.mobileNumber}

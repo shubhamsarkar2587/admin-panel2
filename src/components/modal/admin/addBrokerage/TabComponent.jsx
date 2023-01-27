@@ -1,21 +1,19 @@
-import { SelectItem } from '../../../common/SelectItem';
+import { SelectDropdown } from '../../../dropdown/SelectDropdown';
 
 export const EquityTab = () => (
 	<>
 		<div className="mb-[36px]">
-			<SelectItem
-				label="Employee Code"
+			<SelectDropdown
+				label="Brokerage Scheme"
 				isImportant={true}
-				placeholder="Please select marital status"
-				height={'47px'}
+				placeholder="Please select brokerage scheme"
 			/>
 		</div>
 		<div className="mb-[50px]">
-			<SelectItem
-				label="Employee Code"
+			<SelectDropdown
+				label="Brokerage Scheme"
 				isImportant={true}
-				placeholder="Please select marital status"
-				height={'47px'}
+				placeholder="Please select brokerage scheme"
 			/>
 		</div>
 	</>
@@ -24,19 +22,17 @@ export const EquityTab = () => (
 export const FutureOptionTab = () => (
 	<>
 		<div className="mb-[36px]">
-			<SelectItem
-				label="Employee Code"
+			<SelectDropdown
+				label="Brokerage Scheme"
 				isImportant={true}
-				placeholder="Please select marital status"
-				height={'47px'}
+				placeholder="Please select brokerage scheme"
 			/>
 		</div>
 		<div className="mb-[50px]">
-			<SelectItem
-				label="Employee Code"
+			<SelectDropdown
+				label="Brokerage Scheme"
 				isImportant={true}
-				placeholder="Please select marital status"
-				height={'47px'}
+				placeholder="Please select brokerage scheme"
 			/>
 		</div>
 	</>
@@ -45,19 +41,17 @@ export const FutureOptionTab = () => (
 export const CommodityTab = () => (
 	<>
 		<div className="mb-[36px]">
-			<SelectItem
-				label="Employee Code"
+			<SelectDropdown
+				label="Brokerage Scheme"
 				isImportant={true}
-				placeholder="Please select marital status"
-				height={'47px'}
+				placeholder="Please select brokerage scheme"
 			/>
 		</div>
 		<div className="mb-[50px]">
-			<SelectItem
-				label="Employee Code"
+			<SelectDropdown
+				label="Brokerage Scheme"
 				isImportant={true}
-				placeholder="Please select marital status"
-				height={'47px'}
+				placeholder="Please select brokerage scheme"
 			/>
 		</div>
 	</>
@@ -66,19 +60,17 @@ export const CommodityTab = () => (
 export const CurrencyTab = () => (
 	<>
 		<div className="mb-[36px]">
-			<SelectItem
-				label="Employee Code"
+			<SelectDropdown
+				label="Brokerage Scheme"
 				isImportant={true}
-				placeholder="Please select marital status"
-				height={'47px'}
+				placeholder="Please select brokerage scheme"
 			/>
 		</div>
 		<div className="mb-[50px]">
-			<SelectItem
-				label="Employee Code"
+			<SelectDropdown
+				label="Brokerage Scheme"
 				isImportant={true}
-				placeholder="Please select marital status"
-				height={'47px'}
+				placeholder="Please select brokerage scheme"
 			/>
 		</div>
 	</>
