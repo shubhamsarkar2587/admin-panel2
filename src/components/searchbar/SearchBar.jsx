@@ -32,16 +32,16 @@ export const SearchBar = ({ height, placeholder, border }) => {
 		<>
 			<div
 				ref={wrapperRef}
-				className={`w-[350px] h-[47px] rounded-[10px] relative z-10 shadow-[0px_2px_10px_rgba(201,201,201,0.25)]
+				className={`w-[350px] rounded-[10px] relative z-10 shadow-[0px_2px_10px_rgba(201,201,201,0.25)]
 			  ${isSelected && 'bg-white'}
 				${border || ''}
 		  `}>
 				<div
-					className="h-full px-3.5 py-3 flex items-center justify-between cursor-pointer rounded-[10px] bg-white"
+					className="h-[45px] px-3.5 flex items-center justify-between cursor-pointer rounded-[10px] bg-white"
 					onClick={() => setIsSelected(!isSelected)}
 				>
 					<input
-						className="w-full pr-5 m-0 text-xs outline-none border-none font-poppinsRegular"
+						className="w-full pr-5 m-0 text-xs inline-flex items-center outline-none border-none font-poppinsRegular"
 						type="text"
 						placeholder="Search by Name, Mobile Number, LD code"
 						value={searchText}
