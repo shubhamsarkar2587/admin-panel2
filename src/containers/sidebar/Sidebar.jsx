@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { svgAssets } from '../../assets/asset';
 import { sidebarData } from './sidebarData';
 
 export const Sidebar = () => {
@@ -66,7 +65,24 @@ export const Sidebar = () => {
 									<span>{data.name}</span>
 								</div>
 								{
-									data?.nestedRoutes && (<img className="" alt="kyc_image" src={svgAssets.dashboard.rightArrow} />)
+									data?.nestedRoutes && (
+										<svg
+											className={`h-6 w-6 transform duration-150 ease-in-out
+											${active.route === data.route && active.isDropDownActive
+											? 'fill-white rotate-180'
+											:	active.route === data.route
+												?	'fill-white'
+												: 'fill-[#808080]'
+										}
+											`}
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 20 20"
+										>
+											<path
+												d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+											/>
+										</svg>
+									)
 								}
 							</div>
 							{
