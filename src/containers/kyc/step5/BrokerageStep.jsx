@@ -5,6 +5,7 @@ import { Checkbox } from '../../../components/common/Checkbox';
 import { MainTitle } from '../../../components/common/MainTitle';
 import { Transaction } from './Transaction';
 import { Segment } from './Segment';
+import { SelectDropdown } from '../../../components/dropdown/SelectDropdown';
 
 export const BrokerageStep = () => {
 	return (
@@ -16,7 +17,7 @@ export const BrokerageStep = () => {
 			<MainTitle title="Brokerage Details" />
 			<div className="w-full mb-8 grid grid-cols-5 gap-7">
 				<div className="w-full col-span-3 flex flex-col">
-					<SelectItem
+					<SelectDropdown
 						icon={pngAssets.kyc.mobileNumber}
 						label="Brokerage Scheme"
 						isImportant={true}

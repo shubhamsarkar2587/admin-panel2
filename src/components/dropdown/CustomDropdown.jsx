@@ -11,7 +11,7 @@ export const CustomDropdown = ({ label, position, children }) => {
 	// OutsideClickListner({ ref: wrapperRef, closeBox: handleOutsideClick });
 
 	return (
-		<div ref={wrapperRef} className={`w-full h-full rounded-[10px] relative z-50 
+		<div ref={wrapperRef} className={`w-full h-full rounded-[10px] relative z-10
 			${isSelected && 'bg-white shadow-[0px_2px_10px_rgba(201,201,201,0.25)]'}
 		`}>
 			<div
