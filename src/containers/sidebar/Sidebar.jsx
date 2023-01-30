@@ -45,7 +45,7 @@ export const Sidebar = () => {
 						<li key={`sidebar_${index}`} className="flex flex-col">
 							<div
 								className={`px-3 py-2.5 mb-2.5 flex items-center justify-between cursor-pointer rounded-[10px] duration-300
-                  ${active.route === data.route ? 'bg-black text-white' : 'text-[#808080] hover:bg-black hover:text-white'}
+                  ${active.route === data.route ? 'bg-black text-white' : 'text-[#808080] hover:bg-black'}
                 `}
 								onMouseOver={() => handleMouseHover()}
 								onMouseOut={() => handleMouseHover()}

@@ -37,8 +37,8 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder }
 			}
 			<div
 				ref={wrapperRef}
-				className={`w-full h-full rounded-[10px] relative z-10
-			  ${isSelected && 'bg-white shadow-[0px_2px_10px_rgba(201,201,201,0.25)]'}
+				className={`w-full h-full rounded-[10px]
+			  ${isSelected && 'bg-white shadow-[0px_2px_10px_rgba(201,201,201,0.25)] relative z-10'}
         ${height || 'h-[47px]'}
 		  `}>
 				<div
@@ -65,15 +65,15 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder }
 					</svg>
 				</div>
 				<div
-					className={`absolute w-full transition-all duration-700 top-[49px] rounded-[10px] border-b-lg font-poppinsRegular bg-white shadow-[0px_2px_10px_rgba(201,201,201,0.25)]
-					${!isSelected && 'hidden'}
+					className={`w-full transition-all duration-700 top-[49px] rounded-[10px] border-b-lg font-poppinsRegular bg-white shadow-[0px_2px_10px_rgba(201,201,201,0.25)]
+					${isSelected ? 'absolute z-50' : 'hidden'}
 				`}
 				>
-					<ul className="px-1 py-1">
+					<ul className="px-1.5 py-0.5">
 						{dummyOptions.map((option) => (
 							<li
 								key={option}
-								className="px-3 py-2 rounded-md hover:bg-[#F6F8F9] cursor-pointer"
+								className="px-3 py-2 my-1 rounded-md hover:bg-[#F6F8F9] cursor-pointer"
 								style={{
 									backgroundColor: selectedOption === option && '#e7e7e7'
 								}}
