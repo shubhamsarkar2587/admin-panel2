@@ -2,8 +2,6 @@ import verifyAdmin from './png/verifyAdmin.png';
 import addUser from './png/addUser.png';
 import mobileNumber from './png/mobileNumber.png';
 import mail from './png/mail.png';
-import dashboard from './png/dashboard.png';
-import selectedDashboard from './png/selectedDashboard.png';
 
 import bigul from './svg/bigul.svg';
 import bonabza from './svg/bonabza.svg';
@@ -15,7 +13,7 @@ import kyc from './svg/kyc.svg';
 import rightArrow from './svg/rightArrow.svg';
 import defaultUser from './svg/defaultUser.svg';
 import notification from './svg/notification.svg';
-import application from './svg/application.svg';
+import widgetApplication from './svg/application.svg';
 import graph from './svg/graph.svg';
 import sendLink from './svg/sendLink.svg';
 import verify from './svg/verify.svg';
@@ -28,13 +26,27 @@ import rightField from './svg/rightField.svg';
 import wrongField from './svg/wrongField.svg';
 import dropdownIcon from './svg/dropdownIcon.svg';
 import invalidInput from './svg/invalidInput.svg';
+import dashboard from './svg/sidebar/dashboard.svg';
+import selectedDashboard from './svg/sidebar/selectedDashboard.svg';
+import startKyc from './svg/sidebar/startKyc.svg';
+import selectedStartKyc from './svg/sidebar/selectedStartKyc.svg';
+import eSign from './svg/sidebar/eSign.svg';
+import selectedESign from './svg/sidebar/selectedESign.svg';
+import application from './svg/sidebar/application.svg';
+import selectedApplication from './svg/sidebar/selectedApplication.svg';
+import download from './svg/sidebar/download.svg';
+import selectedDownload from './svg/sidebar/selectedDownload.svg';
+import linkAadhar from './svg/sidebar/linkAadhar.svg';
+import selectedLinkAadhar from './svg/sidebar/selectedLinkAadhar.svg';
+import setting from './svg/sidebar/setting.svg';
+import selectedSetting from './svg/sidebar/selectedSetting.svg';
+import logout from './svg/sidebar/logout.svg';
+import selectedLogout from './svg/sidebar/selectedLogout.svg';
+import userList from './svg/sidebar/userList.svg';
+import selectedUserList from './svg/sidebar/selectedUserList.svg';
 
 export const pngAssets = {
 	bigul,
-	dashboard: {
-		dashboard,
-		selectedDashboard
-	},
 	kyc: {
 		mobileNumber,
 		mail
@@ -61,10 +73,30 @@ export const svgAssets = {
 		defaultUser,
 		notification
 	},
+	sidebar: {
+		dashboard,
+		selectedDashboard,
+		startKyc,
+		selectedStartKyc,
+		eSign,
+		selectedESign,
+		application,
+		selectedApplication,
+		download,
+		selectedDownload,
+		linkAadhar,
+		selectedLinkAadhar,
+		setting,
+		selectedSetting,
+		logout,
+		selectedLogout,
+		userList,
+		selectedUserList
+	},
 	dashboard: {
 		kyc,
 		rightArrow,
-		application,
+		widgetApplication,
 		graph
 	},
 	kyc: {

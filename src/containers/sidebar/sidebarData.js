@@ -1,29 +1,29 @@
-import { pngAssets } from '../../assets/asset';
+import { svgAssets } from '../../assets/asset';
 
 export const sidebarData = [
 	{
 		name: 'Dashboard',
 		route: '/',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard
+		icon: svgAssets.sidebar.dashboard,
+		selectedIcon: svgAssets.sidebar.selectedDashboard
 	},
 	{
 		name: 'Start KYC',
 		route: '/kyc',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard
+		icon: svgAssets.sidebar.startKyc,
+		selectedIcon: svgAssets.sidebar.selectedStartKyc
 	},
 	{
 		name: 'E-sign Report',
 		route: '/e-sign-report',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard
+		icon: svgAssets.sidebar.eSign,
+		selectedIcon: svgAssets.sidebar.selectedESign
 	},
 	{
 		name: 'Applications',
 		route: '/application',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard,
+		icon: svgAssets.sidebar.application,
+		selectedIcon: svgAssets.sidebar.selectedApplication,
 		nestedRoutes: [
 			{
 				name: 'All Applications',
@@ -50,32 +50,32 @@ export const sidebarData = [
 	{
 		name: 'Account List',
 		route: '/account-list',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard
+		icon: svgAssets.sidebar.dashboard,
+		selectedIcon: svgAssets.sidebar.selectedDashboard
 	},
 	{
 		name: 'User List',
 		route: '/user-list',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard
+		icon: svgAssets.sidebar.userList,
+		selectedIcon: svgAssets.sidebar.selectedUserList
 	},
 	{
 		name: 'User Detail',
 		route: '/user-detail',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard
+		icon: svgAssets.sidebar.dashboard,
+		selectedIcon: svgAssets.sidebar.selectedDashboard
 	},
 	{
 		name: 'Reassignment Report',
 		route: '/reassignment-report',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard
+		icon: svgAssets.sidebar.dashboard,
+		selectedIcon: svgAssets.sidebar.selectedDashboard
 	},
 	{
 		name: 'Reports',
 		route: '/reports',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard,
+		icon: svgAssets.sidebar.dashboard,
+		selectedIcon: svgAssets.sidebar.selectedDashboard,
 		nestedRoutes: [
 			{
 				name: 'E-Sign Report',
@@ -102,8 +102,8 @@ export const sidebarData = [
 	{
 		name: 'Brokerage Master',
 		route: '/brokerage-master',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard,
+		icon: svgAssets.sidebar.dashboard,
+		selectedIcon: svgAssets.sidebar.selectedDashboard,
 		nestedRoutes: [
 			{
 				name: 'Brokerage Plans',
@@ -116,21 +116,27 @@ export const sidebarData = [
 		]
 	},
 	{
+		name: 'Download Forms',
+		route: '/download-forms',
+		icon: svgAssets.sidebar.download,
+		selectedIcon: svgAssets.sidebar.selectedDownload
+	},
+	{
 		name: 'Link Aadhar',
 		route: '/link-aadhar',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard
+		icon: svgAssets.sidebar.linkAadhar,
+		selectedIcon: svgAssets.sidebar.selectedLinkAadhar
 	},
 	{
 		name: 'Settings',
 		route: '/settings',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard
+		icon: svgAssets.sidebar.setting,
+		selectedIcon: svgAssets.sidebar.selectedSetting
 	},
 	{
 		name: 'Logout',
 		route: '/logout',
-		icon: pngAssets.dashboard.dashboard,
-		selectedIcon: pngAssets.dashboard.selectedDashboard
+		icon: svgAssets.sidebar.logout,
+		selectedIcon: svgAssets.sidebar.selectedLogout
 	}
 ];

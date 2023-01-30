@@ -4,27 +4,27 @@ import { svgAssets } from '../../assets/asset';
 const widgetIconBgColor = {
 	'All Applications': {
 		bgColor: '#E0E3FF',
-		icon: svgAssets.dashboard.application
+		icon: svgAssets.dashboard.widgetApplication
 	},
 	'Verified Applications': {
 		bgColor: '#FFF4B8',
-		icon: svgAssets.dashboard.application
+		icon: svgAssets.dashboard.widgetApplication
 	},
 	'Rejected Applications': {
 		bgColor: '#FFF1D7',
-		icon: svgAssets.dashboard.application
+		icon: svgAssets.dashboard.widgetApplication
 	},
 	'Pending Verification': {
 		bgColor: '#FFE8FF',
-		icon: svgAssets.dashboard.application
+		icon: svgAssets.dashboard.widgetApplication
 	},
 	Resubmitted: {
 		bgColor: '#CBFFDD',
-		icon: svgAssets.dashboard.application
+		icon: svgAssets.dashboard.widgetApplication
 	},
 	'Re-Activation': {
 		bgColor: '#C3FFB9',
-		icon: svgAssets.dashboard.application
+		icon: svgAssets.dashboard.widgetApplication
 	}
 };
 
