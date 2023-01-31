@@ -24,7 +24,7 @@ import { AgeingReport } from './pages/reports/ageingReport';
 import { BrokeragePlan } from './pages/brokerageMaster/brokeragePlan';
 import { MapBrokerage } from './pages/brokerageMaster/mapBrokerage';
 
-const App = () => {
+export const App = () => {
 	const location = useLocation();
 
 	return (
@@ -83,5 +83,3 @@ const App = () => {
 		</div >
 	);
 };
-
-export default App;
