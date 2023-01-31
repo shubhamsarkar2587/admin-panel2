@@ -2,7 +2,7 @@ import { pngAssets } from '../../../assets/asset';
 import { CommonInput } from '../../../components/inputs/CommonInput';
 import { MainTitle } from '../../../components/common/MainTitle';
 
-const InitMobileEmail = () => {
+export const InitMobileEmail = () => {
 	return (
 		<div className="w-full flex flex-col mb-10">
 			<MainTitle title="Mobile and Email Verification" />
@@ -27,5 +27,3 @@ const InitMobileEmail = () => {
 		</div>
 	);
 };
-
-export default InitMobileEmail;

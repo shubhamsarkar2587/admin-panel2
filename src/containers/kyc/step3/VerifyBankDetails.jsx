@@ -5,7 +5,7 @@ import { VerifyBtn } from '../../../components/buttons/VerifyBtn';
 import { SearchIfcModal } from '../../../components/modal/kyc/SearchIfcModal';
 import { MainTitle } from '../../../components/common/MainTitle';
 
-const VerifyBankDetails = () => {
+export const VerifyBankDetails = () => {
 	const [isModelOpen, setIsModelOpen] = useState(false);
 
 	const handleKycModel = (condition) => {
@@ -58,5 +58,3 @@ const VerifyBankDetails = () => {
 		</div>
 	);
 };
-
-export default VerifyBankDetails;

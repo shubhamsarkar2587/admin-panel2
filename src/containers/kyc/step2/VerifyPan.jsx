@@ -4,7 +4,7 @@ import DatePickerInput from '../../../components/inputs/DatePickerInput';
 import { VerifyBtn } from '../../../components/buttons/VerifyBtn';
 import { MainTitle } from '../../../components/common/MainTitle';
 
-const VerifyPan = () => {
+export const VerifyPan = () => {
 	return (
 		<div className="w-full flex flex-col mb-10">
 			<MainTitle title="PAN Details" />
@@ -28,5 +28,3 @@ const VerifyPan = () => {
 		</div>
 	);
 };
-
-export default VerifyPan;

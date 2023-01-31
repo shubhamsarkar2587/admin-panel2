@@ -1,8 +1,8 @@
 import { svgAssets } from '../../../assets/asset';
 import { InputBtnIcon } from '../../../components/inputs/InputBtnIcon';
-import UploadSelfie from '../step7/UploadSelfie';
+import { UploadSelfie } from '../step7/UploadSelfie';
 
-const UploadSignature = () => {
+export const UploadSignature = () => {
 	return (
 		<>
 			<UploadSelfie marginBottom="0" />
@@ -28,5 +28,3 @@ const UploadSignature = () => {
 		</>
 	);
 };
-
-export default UploadSignature;

@@ -1,12 +1,12 @@
-import InitMobileEmail from './step1/InitMobileEmail';
-import VerifyMobileEmail from './step1/VerifyMobileEmail';
-import VerifyPan from './step2/VerifyPan';
-import VerifyBankDetails from './step3/VerifyBankDetails';
-import PersonalDetails from './step4/PersonalDetails';
-import OccuptionDetails from './step5/OccupationDetail';
+import { InitMobileEmail } from './step1/InitMobileEmail';
+import { VerifyMobileEmail } from './step1/VerifyMobileEmail';
+import { VerifyPan } from './step2/VerifyPan';
+import { VerifyBankDetails } from './step3/VerifyBankDetails';
+import { PersonalDetail } from './step4/PersonalDetail';
+import { OccuptionDetail } from './step5/OccupationDetail';
 import { BrokerageStep } from './step6/BrokerageStep';
-import UploadSelfie from './step7/UploadSelfie';
-import UploadSignature from './step8/UploadSignature';
+import { UploadSelfie } from './step7/UploadSelfie';
+import { UploadSignature } from './step8/UploadSignature';
 import { KycSuccess } from './success/KycSuccess';
 
 export const kycSteps = () => [
@@ -43,14 +43,14 @@ export const kycSteps = () => [
 		value: 'step4',
 		status: 'inactive',
 		isSuccess: true,
-		component: <PersonalDetails />
+		component: <PersonalDetail />
 	},
 	{
 		label: 'Step 5',
 		value: 'step5',
 		status: 'inactive',
 		isSuccess: true,
-		component: <OccuptionDetails />
+		component: <OccuptionDetail />
 	},
 	{
 		label: 'Step 6',
@@ -117,14 +117,14 @@ export const verificationSteps = () => [
 		value: 'step4',
 		status: 'success',
 		isSuccess: true,
-		component: <PersonalDetails />
+		component: <PersonalDetail />
 	},
 	{
 		label: 'Step 5',
 		value: 'step5',
 		status: 'success',
 		isSuccess: true,
-		component: <OccuptionDetails />
+		component: <OccuptionDetail />
 	},
 	{
 		label: 'Step 6',

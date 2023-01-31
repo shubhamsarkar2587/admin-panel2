@@ -2,7 +2,7 @@ import { svgAssets } from '../../../assets/asset';
 import { MainTitle } from '../../../components/common/MainTitle';
 import { InputBtnIcon } from '../../../components/inputs/InputBtnIcon';
 
-const UploadSelfie = ({ marginBottom }) => {
+export const UploadSelfie = ({ marginBottom }) => {
 	return (
 		<div
 			className="w-full flex flex-col"
@@ -33,5 +33,3 @@ const UploadSelfie = ({ marginBottom }) => {
 		</div>
 	);
 };
-
-export default UploadSelfie;

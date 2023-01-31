@@ -1,7 +1,7 @@
 import { InputBtnIcon } from '../../../components/inputs/InputBtnIcon';
 import { OtpInput } from '../../../components/inputs/OtpInput';
 
-const VerifyMobileEmail = () => {
+export const VerifyMobileEmail = () => {
 	return (
 		<div className="w-full flex flex-col mb-10">
 			<div className="mb-[22px] font-medium text-lg leading-[27px]">Mobile and Email Verification</div>
@@ -28,5 +28,3 @@ const VerifyMobileEmail = () => {
 		</div>
 	);
 };
-
-export default VerifyMobileEmail;

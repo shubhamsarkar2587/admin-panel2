@@ -3,7 +3,7 @@ import { CommonInput } from '../../../components/inputs/CommonInput';
 import { MainTitle } from '../../../components/common/MainTitle';
 import { SelectDropdown } from '../../../components/dropdown/SelectDropdown';
 
-const OccupationDetail = () => {
+export const PersonalDetail = () => {
 	return (
 		<div className="w-full flex flex-col mb-10">
 			<MainTitle title="Personal Details" />
@@ -47,5 +47,3 @@ const OccupationDetail = () => {
 		</div>
 	);
 };
-
-export default OccupationDetail;
