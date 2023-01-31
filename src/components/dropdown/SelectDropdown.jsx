@@ -69,11 +69,11 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder }
 					${isSelected ? 'absolute z-50' : 'hidden'}
 				`}
 				>
-					<ul className="px-1.5 py-0.5">
+					<ul className="px-1.5 py-1">
 						{dummyOptions.map((option) => (
 							<li
 								key={option}
-								className="px-3 py-2 my-1 rounded-md hover:bg-[#F6F8F9] cursor-pointer"
+								className="px-3 py-2 my-0.5 rounded-md hover:bg-[#F6F8F9] cursor-pointer"
 								style={{
 									backgroundColor: selectedOption === option && '#e7e7e7'
 								}}

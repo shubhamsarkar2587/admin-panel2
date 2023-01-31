@@ -4,16 +4,16 @@ export const EquityTab = () => (
 	<>
 		<div className="mb-[36px]">
 			<SelectDropdown
-				label="Brokerage Scheme"
+				label="Trading"
 				isImportant={true}
-				placeholder="Please select brokerage scheme"
+				placeholder="Select Trading Plan"
 			/>
 		</div>
 		<div className="mb-[50px]">
 			<SelectDropdown
-				label="Brokerage Scheme"
+				label="Delivery"
 				isImportant={true}
-				placeholder="Please select brokerage scheme"
+				placeholder="Select Delivery Plan"
 			/>
 		</div>
 	</>
@@ -23,16 +23,16 @@ export const FutureOptionTab = () => (
 	<>
 		<div className="mb-[36px]">
 			<SelectDropdown
-				label="Brokerage Scheme"
+				label="Future"
 				isImportant={true}
-				placeholder="Please select brokerage scheme"
+				placeholder="Select Future Plan"
 			/>
 		</div>
 		<div className="mb-[50px]">
 			<SelectDropdown
-				label="Brokerage Scheme"
+				label="Option"
 				isImportant={true}
-				placeholder="Please select brokerage scheme"
+				placeholder="Select Option Plan"
 			/>
 		</div>
 	</>
@@ -42,16 +42,16 @@ export const CommodityTab = () => (
 	<>
 		<div className="mb-[36px]">
 			<SelectDropdown
-				label="Brokerage Scheme"
+				label="MCX Future"
 				isImportant={true}
-				placeholder="Please select brokerage scheme"
+				placeholder="Select MCX Future Plan"
 			/>
 		</div>
 		<div className="mb-[50px]">
 			<SelectDropdown
-				label="Brokerage Scheme"
+				label="MCX Option"
 				isImportant={true}
-				placeholder="Please select brokerage scheme"
+				placeholder="Select MCX Option Plan"
 			/>
 		</div>
 	</>
@@ -61,16 +61,16 @@ export const CurrencyTab = () => (
 	<>
 		<div className="mb-[36px]">
 			<SelectDropdown
-				label="Brokerage Scheme"
+				label="Currency Future"
 				isImportant={true}
-				placeholder="Please select brokerage scheme"
+				placeholder="Select Currency Future Plan"
 			/>
 		</div>
 		<div className="mb-[50px]">
 			<SelectDropdown
-				label="Brokerage Scheme"
+				label="Currency Option"
 				isImportant={true}
-				placeholder="Please select brokerage scheme"
+				placeholder="Select Currency Option Plan"
 			/>
 		</div>
 	</>
