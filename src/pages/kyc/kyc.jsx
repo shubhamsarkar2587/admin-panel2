@@ -72,7 +72,7 @@ export const Kyc = () => {
 								<div className="w-full pb-4 mb-10 bg-[#F6F8F9] sticky top-[105px] z-50">
 									<StepProgressBar selectedStep={index} steps={steps} />
 								</div>
-								<div className="min-h-[calc(100vh-310px)]">
+								<div className="min-h-[calc(100vh-290px)]">
 									{
 										step.component
 									}

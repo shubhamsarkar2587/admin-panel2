@@ -84,7 +84,7 @@ export const VerifyApplication = () => {
 				</div>
 			</div>
 
-			<div className="pt-6 pb-4 rounded-[20px_20px_0px_0px] bg-[#E9F1FF] sticky top-[82px] z-50">
+			<div className="pt-5 pb-4 rounded-[20px_20px_0px_0px] bg-[#E9F1FF] sticky top-[82px] z-50">
 				<StepProgressBar selectedStep={7} steps={steps} setSteps={setSteps} />
 			</div>
 

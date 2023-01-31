@@ -2,6 +2,7 @@ import verifyAdmin from './png/verifyAdmin.png';
 import addUser from './png/addUser.png';
 import mobileNumber from './png/mobileNumber.png';
 import mail from './png/mail.png';
+import kycSuccess from './png/kycSuccess.png';
 
 import bigul from './svg/bigul.svg';
 import bonabza from './svg/bonabza.svg';
@@ -49,7 +50,8 @@ export const pngAssets = {
 	bigul,
 	kyc: {
 		mobileNumber,
-		mail
+		mail,
+		kycSuccess
 	},
 	reactTable: {
 		addUser
