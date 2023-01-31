@@ -1,4 +1,5 @@
 import { svgAssets } from '../../../assets/asset';
+import { MainTitle } from '../../../components/common/MainTitle';
 import { InputBtnIcon } from '../../../components/inputs/InputBtnIcon';
 
 const UploadSelfie = ({ marginBottom }) => {
@@ -9,12 +10,17 @@ const UploadSelfie = ({ marginBottom }) => {
 				marginBottom: marginBottom || '10px'
 			}}
 		>
-			<div className="mb-[22px] text-[#000] font-medium text-lg leading-[27px]">Upload Selfie, E-sign And Supporting Docs</div>
+			<MainTitle title="Upload Selfie, E-sign And Supporting Docs" />
 			<div className="mb-8 grid grid-cols-2 gap-10 items-end">
 				<div className="flex flex-col ">
-					<span className="mb-3">Selfie Link *</span>
-					<span className="text-[#A3A3A3] mb-1">Share below link with client</span>
-					<InputBtnIcon iconText="Send Link" />
+					<InputBtnIcon
+						label="Selfie Link"
+						subLabel="Share below link with client"
+						isImportant={true}
+						placeholder="pqK0QFWZ6lS6VP5ss5iRvx/DKYC-UI?node-id=0%3A"
+						btnWidth="67px"
+						btnIcon={svgAssets.kyc.kycMessage}
+					/>
 				</div>
 				<div className="flex flex-col">
 					<img

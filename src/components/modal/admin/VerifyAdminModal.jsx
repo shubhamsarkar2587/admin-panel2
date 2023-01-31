@@ -31,7 +31,8 @@ export const VerifyAdminModal = ({ isModalOpen, closeModal, handleModal }) => {
 							subLabel="We will send OTP in entered mobile number."
 							isImportant={true}
 							placeholder="Please enter mobile number"
-							btnText="Submittttt"
+							btnWidth="120px"
+							btnText="Submit"
 						/>
 					</div>
 					<div className="mb-6">

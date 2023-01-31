@@ -27,6 +27,7 @@ import rightField from './svg/rightField.svg';
 import wrongField from './svg/wrongField.svg';
 import dropdownIcon from './svg/dropdownIcon.svg';
 import invalidInput from './svg/invalidInput.svg';
+
 import dashboard from './svg/sidebar/dashboard.svg';
 import selectedDashboard from './svg/sidebar/selectedDashboard.svg';
 import startKyc from './svg/sidebar/startKyc.svg';
@@ -45,6 +46,8 @@ import logout from './svg/sidebar/logout.svg';
 import selectedLogout from './svg/sidebar/selectedLogout.svg';
 import userList from './svg/sidebar/userList.svg';
 import selectedUserList from './svg/sidebar/selectedUserList.svg';
+
+import kycMessage from './svg/kyc/kycMessage.svg';
 
 export const pngAssets = {
 	bigul,
@@ -109,7 +112,8 @@ export const svgAssets = {
 		profileUser,
 		signature,
 		docView,
-		invalidInput
+		invalidInput,
+		kycMessage
 	},
 	verifyApplication: {
 		rightField,

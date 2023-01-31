@@ -1,6 +1,17 @@
 import { svgAssets } from '../../assets/asset';
 
-export const InputBtnIcon = ({ icon, label, subLabel, isImportant, height, isDisable, placeholder, btnIcon, btnText }) => {
+const messageTypeParameter = {
+	success: {
+		icon: '',
+		color: '#007813'
+	},
+	error: {
+		icon: svgAssets.kyc.invalidInput,
+		color: '#FF4343'
+	}
+};
+
+export const InputBtnIcon = ({ icon, label, subLabel, isImportant, height, isDisable, placeholder, btnWidth, btnIcon, btnText, inputMessage, inputMessageType }) => {
 	return (
 		<div className="w-full flex flex-col">
 			<label className="flex items-center leading-6 font-medium font-poppinsMedium">
@@ -27,15 +38,29 @@ export const InputBtnIcon = ({ icon, label, subLabel, isImportant, height, isDis
 					disabled={isDisable}
 				/>
 				<button
-					className="min-w-max px-3.5 flex items-center whitespace-nowrap rounded-r-[10px] text-white bg-black shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-medium font-poppinsMedium"
+					className="flex items-center justify-center whitespace-nowrap rounded-r-[10px] text-white bg-black shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-medium font-poppinsMedium"
 					style={{
-						height: height || '47px'
+						height: height || '47px',
+						width: btnWidth || '100%'
 					}}
 				>
-					{ btnIcon && (<img className="mr-2.5" alt="send_link_img" src={svgAssets.kyc.sendLink} />) }
+					{ btnIcon && (<img className={ btnText && 'mr-2.5'} alt="send_link_img" src={btnIcon} />) }
 					{ btnText && (<span>{btnText}</span>) }
 				</button>
 			</div>
+			{
+				inputMessage && inputMessageType && (
+					<div
+						style={{
+							color: messageTypeParameter[inputMessageType].color
+						}}
+						className="mt-2.5 flex items-center text-sm font-poppinsRegular"
+					>
+						<img className="mr-1.5" alt="input_message_type_icon" src={messageTypeParameter[inputMessageType].icon} />
+						<span className="inline-flex items-center">{inputMessage}</span>
+					</div>
+				)
+			}
 		</div>
 	);
 };
