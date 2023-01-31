@@ -3,7 +3,7 @@ import { Login } from './pages/login';
 import { Navbar } from './containers/navbar/Navbar';
 import { Sidebar } from './containers/sidebar/Sidebar';
 import { Dashboard } from './pages/dashboard';
-import { Kyc } from './pages/kyc';
+import { Kyc } from './pages/kyc/kyc';
 import { ESignReport } from './pages/eSignReport';
 import { AccountList } from './pages/accountList';
 import { AllApplication } from './pages/application/all';

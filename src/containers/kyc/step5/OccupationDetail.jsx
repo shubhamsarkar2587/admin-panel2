@@ -14,7 +14,6 @@ const OccuptionDetails = () => {
 				<div className="flex flex-col">
 					<span className="mb-3">Father’s/Spouse Name *</span>
 					<SelectDropdown
-
 						placeholder="Please select brokerage scheme"
 					/>
 				</div>

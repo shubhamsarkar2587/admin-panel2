@@ -10,7 +10,7 @@ export const Navbar = () => {
 	};
 
 	return (
-		<div className="py-5 w-full flex items-center z-50 fixed bg-[#F6F8F9]">
+		<div className="w-full pt-5 pb-10 flex items-center z-50 fixed bg-[#F6F8F9]">
 			<div className="w-[300px] px-10 cursor-pointer">
 				<Link to="/">
 					<img className="h-[40px]" alt="app_logo" src={svgAssets.bigul} />

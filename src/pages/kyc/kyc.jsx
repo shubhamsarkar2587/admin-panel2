@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { kycSteps } from '../containers/kyc/kycData';
-import { KycModal } from '../components/modal/kyc/KycModal';
-import { StepProgressBar } from '../components/progressBar/ProgressBar';
-import { BackBtn } from '../components/buttons/BackBtn';
-import { ContinueBtn } from '../components/buttons/ContinueBtn';
+import { kycSteps } from '../../containers/kyc/kycData';
+import { KycModal } from '../../components/modal/kyc/KycModal';
+import { StepProgressBar } from '../../components/progressBar/ProgressBar';
+import { BackBtn } from '../../components/buttons/BackBtn';
+import { ContinueBtn } from '../../components/buttons/ContinueBtn';
 
 export const Kyc = () => {
 	const [isModelOpen, setIsModelOpen] = useState(false);
@@ -69,10 +69,10 @@ export const Kyc = () => {
 					? steps.map((step, index) => step.status === 'active'
 						? (
 							<div key={`kyc_step_${index}`}>
-								<div className="mb-10">
+								<div className="w-full pb-4 mb-10 bg-[#F6F8F9] sticky top-[105px] z-50">
 									<StepProgressBar selectedStep={index} steps={steps} />
 								</div>
-								<div className="min-h-[calc(100vh-270px)]">
+								<div className="min-h-[calc(100vh-310px)]">
 									{
 										step.component
 									}
