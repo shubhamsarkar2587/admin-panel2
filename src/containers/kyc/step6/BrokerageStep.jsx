@@ -49,7 +49,9 @@ export const BrokerageStep = () => {
 				<Checkbox
 					labelText="I have understood the information requirements of this form and hereby confirm and accept that the information provided by me on this
           form is true and correct and complete for the purpose of the demat debit and  pledge instruction."
-					labelWidth="90%"
+					labelWidth="w-[90%]"
+					labelSize="14px"
+					labelTextColor="text-[#7C7C7C]"
 				/>
 			</div>
 		</div>

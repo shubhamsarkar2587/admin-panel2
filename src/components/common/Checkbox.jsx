@@ -1,5 +1,5 @@
 
-export const Checkbox = ({ labelText, labelWidth, labelSize, labelWeight, labelFamily, marginBottom }) => {
+export const Checkbox = ({ labelText, labelWidth, labelTextColor, labelSize, labelWeight, labelFamily, marginBottom }) => {
 	return (
 		<label className={`inline-flex items-start
 			${marginBottom || 'mb-6'}
@@ -10,10 +10,12 @@ export const Checkbox = ({ labelText, labelWidth, labelSize, labelWeight, labelF
 			/>
 			<span
 				className={`
-					ml-3 inline-block w-[${labelWidth || '100%'} text-[#323232]
+					ml-3 inline-block
 					${labelSize || 'text-xs'}
 					${labelWeight || ''}
 					${labelFamily || 'font-poppinsRegular'}
+					${labelWidth || 'w-full'}
+					${labelTextColor || 'text-[#323232]'}
 				`}
 			>
 				{labelText}
