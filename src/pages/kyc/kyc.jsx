@@ -4,10 +4,12 @@ import { KycModal } from '../../components/modal/kyc/KycModal';
 import { StepProgressBar } from '../../components/progressBar/ProgressBar';
 import { BackBtn } from '../../components/buttons/BackBtn';
 import { ContinueBtn } from '../../components/buttons/ContinueBtn';
+import { ReviewBtn } from '../../components/buttons/ReviewBtn';
+import { useNavigate } from 'react-router-dom';
 
 export const Kyc = () => {
+	const navigate = useNavigate();
 	const [isModelOpen, setIsModelOpen] = useState(false);
-	// const [selectedStep, setSelectedStep] = useState(0);
 	const [steps, setSteps] = useState(kycSteps || []);
 
 	const handleKycModel = (condition) => {
@@ -56,6 +58,10 @@ export const Kyc = () => {
 		setSteps(updatedSteps);
 	};
 
+	const handleReviewBtn = () => {
+		navigate('/kyc/review');
+	};
+
 	useEffect(() => {
 		setTimeout(() => {
 			handleKycModel(true);
@@ -78,10 +84,13 @@ export const Kyc = () => {
 									}
 								</div>
 								<div className={`flex items-center 
-                ${index === 0 ? 'justify-end' : index === steps.length - 1 ? 'justify-start' : 'justify-between'}
+                ${index === 0 ? 'justify-end' : 'justify-between'}
               `}>
 									{index !== 0 && (<BackBtn handleBackBtn={() => handleBackBtn({ step, index })} />)}
-									{index !== steps.length - 1 && (<ContinueBtn handleContinueBtn={() => handleContinueBtn({ step, index })} />)}
+									{index !== steps.length - 1
+										? (<ContinueBtn handleContinueBtn={() => handleContinueBtn({ step, index })} />)
+										: (<ReviewBtn handleReviewBtn={handleReviewBtn} />)
+									}
 								</div>
 							</div>)
 						: null

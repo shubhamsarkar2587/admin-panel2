@@ -7,7 +7,7 @@ export const BackBtn = ({ handleBackBtn }) => {
 			onClick={() => handleBackBtn()}
 		>
 			<img className="mr-2" alt="back_icon" src={svgAssets.kyc.backIcon} />
-			<span>Back</span>
+			<span className="font-medium font-poppinsMedium">Back</span>
 		</button>
 	);
 };

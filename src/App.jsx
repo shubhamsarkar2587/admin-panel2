@@ -23,6 +23,7 @@ import { VerifierReport } from './pages/reports/verifierReport';
 import { AgeingReport } from './pages/reports/ageingReport';
 import { BrokeragePlan } from './pages/brokerageMaster/brokeragePlan';
 import { MapBrokerage } from './pages/brokerageMaster/mapBrokerage';
+import { ReviewApplication } from './pages/kyc/reviewApplication';
 
 export const App = () => {
 	const location = useLocation();
@@ -44,7 +45,10 @@ export const App = () => {
 								<div className="pl-5 pr-[30px] pb-5 ml-[300px] mt-[105px] flex flex-col grow w-full h-full">
 									<Routes>
 										<Route index path="/" element={<Dashboard />}></Route>
-										<Route path="/kyc" element={<Kyc />}></Route>
+										<Route path="/kyc" >
+											<Route index element={<Kyc />}></Route>
+											<Route path="review" element={<ReviewApplication />}></Route>
+										</Route>
 										<Route path="/application">
 											<Route index element={<AllApplication />}></Route>
 											<Route path="all" element={<AllApplication />}></Route>
