@@ -3,7 +3,9 @@ import { useInView } from 'react-intersection-observer';
 import { MainTitle } from '../../components/common/MainTitle';
 import { StepProgressBar } from '../../components/progressBar/ProgressBar';
 import { verificationSteps } from '../../containers/kyc/kycData';
+import { AddressDetail } from '../../containers/review/AddressDetail';
 import { BankDetail } from '../../containers/review/BankDetail';
+import { BrokerageStep } from '../../containers/review/brokerage/BrokerageStep';
 import { ClientDetail } from '../../containers/review/clientDetail/ClientDetail';
 import { ClientPreview } from '../../containers/review/clientDetail/ClientPreview';
 import { MobileEmailDetail } from '../../containers/review/MobileEmailDetail';
@@ -18,7 +20,7 @@ const clientIntersectionOption = {
 };
 
 const intersectionOption = {
-	rootMargin: '0px 0px 30px 0px',
+	rootMargin: '0px 0px 50% 0px',
 	threshold: 1
 };
 
@@ -26,9 +28,11 @@ export const ReviewApplication = () => {
 	const { ref: clientRef, inView: isClientRefInView } = useInView(clientIntersectionOption);
 	const { ref: mobileRef, inView: isMobileRefView } = useInView(intersectionOption);
 	const { ref: panRef, inView: isPanRefView } = useInView(intersectionOption);
+	const { ref: addressRef, inView: isAddressRefView } = useInView(intersectionOption);
 	const { ref: bankRef, inView: isBankRefView } = useInView(intersectionOption);
 	const { ref: personalRef, inView: isPersonalRefView } = useInView(intersectionOption);
 	const { ref: occupationalRef, inView: isOccupationalRefView } = useInView(intersectionOption);
+	const { ref: brokerageRef, inView: isBrokerageRefView } = useInView(intersectionOption);
 
 	const [isClientPreviewVisible, setIsClientPreviewVisible] = useState(false);
 	const [steps, setSteps] = useState(verificationSteps || []);
@@ -40,6 +44,7 @@ export const ReviewApplication = () => {
 	}, [debounceValue]);
 
 	const handleSteps = ({ index }) => {
+		// console.log({ index });
 		const updatedSteps = steps.map((el, i) => {
 			if (i === index) {
 				return ({
@@ -58,8 +63,10 @@ export const ReviewApplication = () => {
 
 	useEffect(() => {
 		if (isMobileRefView) {
-			handleSteps({ index: 1 });
+			handleSteps({ index: 0 });
 		} else if (isPanRefView) {
+			handleSteps({ index: 1 });
+		} else if (isAddressRefView) {
 			handleSteps({ index: 2 });
 		} else if (isBankRefView) {
 			handleSteps({ index: 3 });
@@ -67,10 +74,10 @@ export const ReviewApplication = () => {
 			handleSteps({ index: 4 });
 		} else if (isOccupationalRefView) {
 			handleSteps({ index: 5 });
-		} else {
-			handleSteps({ index: 0 });
+		} else if (isBrokerageRefView) {
+			handleSteps({ index: 6 });
 		}
-	}, [isMobileRefView, isPanRefView, isBankRefView, isPersonalRefView, isOccupationalRefView]);
+	}, [isMobileRefView, isPanRefView, isAddressRefView, isBankRefView, isPersonalRefView, isOccupationalRefView, isBrokerageRefView]);
 
 	return (
 		<div className="w-full flex flex-col">
@@ -109,6 +116,9 @@ export const ReviewApplication = () => {
 				<div ref={panRef}>
 					<PanDetail />
 				</div>
+				<div ref={addressRef}>
+					<AddressDetail />
+				</div>
 				<div ref={bankRef}>
 					<BankDetail />
 				</div>
@@ -117,6 +127,9 @@ export const ReviewApplication = () => {
 				</div>
 				<div ref={occupationalRef}>
 					<OccupationalDetail />
+				</div>
+				<div ref={brokerageRef}>
+					<BrokerageStep />
 				</div>
 			</div>
 		</div>

@@ -1,7 +1,9 @@
 
-export const MainTitle = ({ title }) => {
+export const MainTitle = ({ title, marginBottom }) => {
 	return (
-		<div className="mb-[22px] text-lg leading-[27px] font-medium font-poppinsMedium">
+		<div className={`text-lg leading-[27px] font-medium font-poppinsMedium
+			${marginBottom || 'mb-[22px]'}
+		`}>
 			{title}
 		</div>
 	);
