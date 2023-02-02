@@ -18,7 +18,7 @@ const clientIntersectionOption = {
 };
 
 const intersectionOption = {
-	rootMargin: '0px 0px -10% 0px',
+	rootMargin: '0px 0px 30px 0px',
 	threshold: 1
 };
 
