@@ -14,11 +14,22 @@ import { Debounce } from '../../hooks/Debounce';
 
 const clientIntersectionOption = {
 	rootMargin: '0px 0px -75% 0px',
-	threshold: 0.5
+	threshold: 0.3
+};
+
+const intersectionOption = {
+	rootMargin: '0px 0px -10% 0px',
+	threshold: 1
 };
 
 export const ReviewApplication = () => {
 	const { ref: clientRef, inView: isClientRefInView } = useInView(clientIntersectionOption);
+	const { ref: mobileRef, inView: isMobileRefView } = useInView(intersectionOption);
+	const { ref: panRef, inView: isPanRefView } = useInView(intersectionOption);
+	const { ref: bankRef, inView: isBankRefView } = useInView(intersectionOption);
+	const { ref: personalRef, inView: isPersonalRefView } = useInView(intersectionOption);
+	const { ref: occupationalRef, inView: isOccupationalRefView } = useInView(intersectionOption);
+
 	const [isClientPreviewVisible, setIsClientPreviewVisible] = useState(false);
 	const [steps, setSteps] = useState(verificationSteps || []);
 
@@ -28,7 +39,38 @@ export const ReviewApplication = () => {
 		setIsClientPreviewVisible(debounceValue);
 	}, [debounceValue]);
 
-	console.log({ isClientRefInView, debounceValue, isClientPreviewVisible });
+	const handleSteps = ({ index }) => {
+		const updatedSteps = steps.map((el, i) => {
+			if (i === index) {
+				return ({
+					...el,
+					status: 'verifyView'
+				});
+			} else {
+				return ({
+					...el,
+					status: 'success'
+				});
+			}
+		});
+		setSteps(updatedSteps);
+	};
+
+	useEffect(() => {
+		if (isMobileRefView) {
+			handleSteps({ index: 1 });
+		} else if (isPanRefView) {
+			handleSteps({ index: 2 });
+		} else if (isBankRefView) {
+			handleSteps({ index: 3 });
+		} else if (isPersonalRefView) {
+			handleSteps({ index: 4 });
+		} else if (isOccupationalRefView) {
+			handleSteps({ index: 5 });
+		} else {
+			handleSteps({ index: 0 });
+		}
+	}, [isMobileRefView, isPanRefView, isBankRefView, isPersonalRefView, isOccupationalRefView]);
 
 	return (
 		<div className="w-full flex flex-col">
@@ -55,17 +97,27 @@ export const ReviewApplication = () => {
 						)
 						: (
 							<div className="pt-5 pb-4 rounded-[20px_20px_0px_0px] bg-[#E9F1FF]">
-								<StepProgressBar selectedStep={7} steps={steps} setSteps={setSteps} />
+								<StepProgressBar selectedStep={7} steps={steps} />
 							</div>
 						)
 				}
 			</div>
-			<div className="px-7 py-8 mb-[35px] rounded-[0_0_20px_20px] bg-white shadow-[0px_4px_15px_rgba(171,171,171,0.25)]">
-				<MobileEmailDetail />
-				<PanDetail />
-				<BankDetail />
-				<PersonalDetail />
-				<OccupationalDetail />
+			<div className="px-7 py-8 rounded-[0_0_20px_20px] bg-white shadow-[0px_4px_15px_rgba(171,171,171,0.25)]">
+				<div ref={mobileRef}>
+					<MobileEmailDetail />
+				</div>
+				<div ref={panRef}>
+					<PanDetail />
+				</div>
+				<div ref={bankRef}>
+					<BankDetail />
+				</div>
+				<div ref={personalRef}>
+					<PersonalDetail />
+				</div>
+				<div ref={occupationalRef}>
+					<OccupationalDetail />
+				</div>
 			</div>
 		</div>
 	);
