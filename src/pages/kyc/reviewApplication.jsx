@@ -43,24 +43,6 @@ export const ReviewApplication = () => {
 		setIsClientPreviewVisible(debounceValue);
 	}, [debounceValue]);
 
-	const handleSteps = ({ index }) => {
-		// console.log({ index });
-		const updatedSteps = steps.map((el, i) => {
-			if (i === index) {
-				return ({
-					...el,
-					status: 'verifyView'
-				});
-			} else {
-				return ({
-					...el,
-					status: 'success'
-				});
-			}
-		});
-		setSteps(updatedSteps);
-	};
-
 	useEffect(() => {
 		if (isMobileRefView) {
 			handleSteps({ index: 0 });
@@ -78,6 +60,24 @@ export const ReviewApplication = () => {
 			handleSteps({ index: 6 });
 		}
 	}, [isMobileRefView, isPanRefView, isAddressRefView, isBankRefView, isPersonalRefView, isOccupationalRefView, isBrokerageRefView]);
+
+	const handleSteps = ({ index }) => {
+		// console.log({ index });
+		const updatedSteps = steps.map((el, i) => {
+			if (i === index) {
+				return ({
+					...el,
+					status: 'verifyView'
+				});
+			} else {
+				return ({
+					...el,
+					status: 'success'
+				});
+			}
+		});
+		setSteps(updatedSteps);
+	};
 
 	return (
 		<div className="w-full flex flex-col">
