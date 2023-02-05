@@ -46,6 +46,9 @@ import logout from './svg/sidebar/logout.svg';
 import selectedLogout from './svg/sidebar/selectedLogout.svg';
 import userList from './svg/sidebar/userList.svg';
 import selectedUserList from './svg/sidebar/selectedUserList.svg';
+import correctTick from './svg/review/correctTick.svg';
+import wrongTick from './svg/review/wrongTick.svg';
+import undo from './svg/review/undo.svg';
 
 import kycMessage from './svg/kyc/kycMessage.svg';
 
@@ -114,6 +117,11 @@ export const svgAssets = {
 		docView,
 		invalidInput,
 		kycMessage
+	},
+	review: {
+		correctTick,
+		wrongTick,
+		undo
 	},
 	verifyApplication: {
 		rightField,

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { svgAssets } from '../../assets/asset';
 import { MainTitle } from '../../components/common/MainTitle';
 import { PdfViewer } from './PdfViewer';
-import { SingleDetail } from './SingleDetail2';
+import { SingleDetail } from './SingleDetail';
 
 export const PanDetail = () => {
 	const [isPdfOpen, setIsPdfOpen] = useState(false);

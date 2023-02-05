@@ -2,7 +2,7 @@ import { MainTitle } from '../../../components/common/MainTitle';
 import { Declaration } from './Declaration';
 import { Segment } from './Segment';
 import { Transaction } from './Transaction';
-import { SingleDetail } from '../SingleDetail2';
+import { SingleDetail } from '../SingleDetail';
 import { Checkbox } from '../../../components/common/Checkbox';
 import { BrokerageScheme } from './BrokerageScheme';
 

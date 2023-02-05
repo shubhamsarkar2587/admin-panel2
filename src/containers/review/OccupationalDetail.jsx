@@ -1,5 +1,5 @@
 import { MainTitle } from '../../components/common/MainTitle';
-import { SingleDetail } from './SingleDetail2';
+import { SingleDetail } from './SingleDetail';
 
 export const OccupationalDetail = () => {
 	return (
