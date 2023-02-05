@@ -98,13 +98,13 @@ export const ReviewApplication = () => {
 									<ClientPreview/>
 								</div>
 								<div className="pt-5 pb-4 rounded-0 bg-[#E9F1FF]">
-									<StepProgressBar selectedStep={7} steps={steps} setSteps={setSteps} />
+									<StepProgressBar selectedStep={7} steps={steps} setSteps={setSteps} showStepLabel={true} />
 								</div>
 							</>
 						)
 						: (
 							<div className="pt-5 pb-4 rounded-[20px_20px_0px_0px] bg-[#E9F1FF]">
-								<StepProgressBar selectedStep={7} steps={steps} />
+								<StepProgressBar selectedStep={7} steps={steps} showStepLabel={true} />
 							</div>
 						)
 				}

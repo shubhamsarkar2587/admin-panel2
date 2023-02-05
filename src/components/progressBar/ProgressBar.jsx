@@ -1,6 +1,6 @@
 import { statusParameter } from './progressBarData';
 
-export const 	StepProgressBar = ({ selectedStep, steps, showStepLabel, width, circleDim, lineDim }) => {
+export const 	StepProgressBar = ({ selectedStep, steps, showStepLabel, width, circleDim, circleRadius, lineDim }) => {
 	return (
 		<div className="w-full flex flex-col items-center justify-center">
 			<div className={`${width || 'w-3/4'} grid grid-cols-8 items-center mb-[15px]`}>
@@ -20,7 +20,7 @@ export const 	StepProgressBar = ({ selectedStep, steps, showStepLabel, width, ci
 											minWidth: circleDim || statusParameter[step.status].size,
 											width: circleDim || statusParameter[step.status].size,
 											height: circleDim || statusParameter[step.status].size,
-											// border: `2px solid ${statusParameter[step.status].borderColor}`,
+											border: circleRadius || `2px solid ${statusParameter[step.status].borderColor}`,
 											backgroundColor: statusParameter[step.status].bgColor
 										}}
 									>

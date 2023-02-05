@@ -45,6 +45,7 @@ export const AllApplication = () => {
 					setSteps={setSteps}
 					width="w-full"
 					circleDim="10px"
+					circleRadius="1px"
 					lineDim="h-[2px]"
 				/>
 			)
