@@ -40,37 +40,22 @@ export const SingleDetail = ({ label, value, isVerify }) => {
 							{
 								isValid.triggered
 									? (
-										isValid.value
-											? (
-												<>
-													<img
-														alt="wrong_field"
-														className="mr-5"
-														src={svgAssets.review.correctTick}
-													/>
-													<img
-														alt="wrong_field"
-														className="cursor-pointer"
-														src={svgAssets.review.undo}
-														onClick={() => setIsValid({ isValid, isTrigged: false })}
-													/>
-												</>
-											)
-											: (
-												<>
-													<img
-														alt="wrong_field"
-														className="mr-5"
-														src={svgAssets.review.wrongTick}
-													/>
-													<img
-														alt="wrong_field"
-														className="cursor-pointer"
-														src={svgAssets.review.undo}
-														onClick={() => setIsValid({ isValid, isTrigged: false })}
-													/>
-												</>
-											)
+										<>
+											<img
+												alt="wrong_field"
+												className="mr-5"
+												src={ isValid.value
+													?	svgAssets.review.correctTick
+													: svgAssets.review.wrongTick
+												}
+											/>
+											<img
+												alt="wrong_field"
+												className="cursor-pointer"
+												src={svgAssets.review.undo}
+												onClick={() => setIsValid({ ...isValid, triggered: false })}
+											/>
+										</>
 									)
 									: (
 										<>
