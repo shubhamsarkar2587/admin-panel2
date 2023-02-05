@@ -7,7 +7,7 @@ export const ReactTable = ({ columns, data, displayBlock }) => {
 		<div className="w-full grid">
 			<table
 				{...getTableProps()}
-				className="table-auto text-center h-full w-full overflow-x-auto"
+				className="table-auto text-center h-full w-full overflow-x-auto scroll"
 				style={{
 					display: displayBlock && 'block'
 				}}

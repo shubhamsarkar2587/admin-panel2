@@ -29,6 +29,7 @@ body {
 
 .scroll::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
   transition: visibility 0.3s;
 }
 

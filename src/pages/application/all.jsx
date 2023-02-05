@@ -1,30 +1,70 @@
+import { useState } from 'react';
 import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../components/common/DatePicker';
+import { MyPopover } from '../../components/popover/Popover';
+import { StepProgressBar } from '../../components/progressBar/ProgressBar';
 import { Pagination } from '../../components/reactTable/Pagination';
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
+import { PopoverChildComp, PopoverParentComp } from '../../components/reactTable/ReactTablePopupBtn';
 import { SearchBar } from '../../components/searchbar/SearchBar';
+import { verificationSteps } from '../../containers/kyc/kycData';
 
-const columns = [
-	{ Header: 'Client Name', accessor: 'clientName' },
-	{ Header: 'Pan', accessor: 'pan' },
-	{ Header: 'Mobile Number', accessor: 'mobileNumber' },
-	{ Header: 'Steps', accessor: 'steps' },
-	{ Header: 'Created At', accessor: 'createdAt' },
-	{ Header: 'Updated At', accessor: 'updatedAt' },
-	{ Header: 'Actions', accessor: 'actions' }
-];
+const singleData = {
+	clientName: 'Ankit Singh',
+	mobileNumber: '7014587528',
+	createdAt: '10 Dac 2022',
+	updatedAt: '16 Dec 2022',
+	status: 'Incomplete',
+	steps: 'dfdfdf0',
+	source: '',
+	rm: 'AK Singh',
+	verifier: 'VK Bansal',
+	actions: 'dd'
+};
 
-const data = [
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' }
-];
+const data = [singleData, singleData, singleData];
 
 export const AllApplication = () => {
+	const [steps, setSteps] = useState(verificationSteps || []);
+
+	const columns = [
+		{ Header: 'Client Name', accessor: 'clientName', minWidth: 130 },
+		{ Header: 'Mobile Number', accessor: 'mobileNumber', minWidth: 130 },
+		{ Header: 'Created At', accessor: 'createdAt', minWidth: 130 },
+		{ Header: 'Updated At', accessor: 'updatedAt', minWidth: 130 },
+		{ Header: 'Status', accessor: 'status', minWidth: 130 },
+		{
+			Header: 'Steps',
+			accessor: 'steps',
+			minWidth: 150,
+			Cell: ({ row }) => (
+				<StepProgressBar
+					selectedStep={7}
+					steps={steps || []}
+					setSteps={setSteps}
+					width="w-full"
+					circleDim="10px"
+					lineDim="h-[2px]"
+				/>
+			)
+		},
+		{ Header: 'Source', accessor: 'source', minWidth: 90 },
+		{ Header: 'Source', accessor: 'rm', minWidth: 100 },
+		{ Header: 'Verifier', accessor: 'verifier', minWidth: 100 },
+		{
+			Header: 'Actions',
+			accessor: 'actions',
+			minWidth: 60,
+			Cell: ({ row }) => (
+				<MyPopover
+					PopoverParentComp={PopoverParentComp}
+					PopoverChildComp={PopoverChildComp}
+				/>
+			)
+		}
+	];
+
 	return (
 		<>
 			<div className="w-full flex flex-col ">
@@ -48,7 +88,7 @@ export const AllApplication = () => {
 							</div>
 						</div>
 					</div>
-					<ReactTable columns={columns} data={[...data, ...data]} />
+					<ReactTable columns={columns} data={[...data, ...data]} displayBlock={true} />
 					<Pagination columns={columns} data={data} />
 				</div>
 			</div>
