@@ -1,13 +1,26 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { svgAssets } from '../../assets/asset';
 import { SearchBar } from '../../components/searchbar/SearchBar';
 
 export const Navbar = () => {
+	const location = useLocation();
 	const navigate = useNavigate();
+
+	const [activeRoute, setActiveRoute] = useState();
 
 	const handleStartKyc = () => {
 		navigate('/kyc');
 	};
+
+	useEffect(() => {
+		const route = location.pathname.split('/');
+		if (route.includes('kyc')) {
+			setActiveRoute('kyc');
+		} else {
+			setActiveRoute('');
+		}
+	}, [location.pathname]);
 
 	return (
 		<div className="w-full pt-5 pb-10 flex items-center z-50 fixed bg-[#F6F8F9]">
@@ -23,7 +36,7 @@ export const Navbar = () => {
 						className="px-4 py-2.5 mx-2.5 rounded-[10px] bg-black text-white font-medium font-poppinsMedium"
 						onClick={() => handleStartKyc()}
 					>
-            + Start KYC
+						{activeRoute === 'kyc' ? 'Share My Screen' : '+ Start KYC'}
 					</button>
 					<img className="mx-2.5 cursor-pointer" alt="notification" src={svgAssets.navbar.notification} />
 					<Link to="/login" className="flex items-center">
