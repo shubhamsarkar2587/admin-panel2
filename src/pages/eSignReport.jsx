@@ -1,30 +1,62 @@
 import { ViewAllBtn } from '../components/buttons/ViewAllBtn';
 import DatePickerInput from '../components/common/DatePicker';
+import { MyPopover } from '../components/popover/Popover';
 import { Pagination } from '../components/reactTable/Pagination';
 import { ReactTable } from '../components/reactTable/ReactTable';
+import { reactTableStatusValue } from '../components/reactTable/reactTableData';
 import { ReactTableHeader } from '../components/reactTable/ReactTableHeader';
+import { PopoverChildComp, PopoverParentComp } from '../components/reactTable/ReactTablePopupBtn';
 import { SearchBar } from '../components/searchbar/SearchBar';
 
-const columns = [
-	{ Header: 'Client Name', accessor: 'clientName' },
-	{ Header: 'Pan', accessor: 'pan' },
-	{ Header: 'Mobile Number', accessor: 'mobileNumber' },
-	{ Header: 'Steps', accessor: 'steps' },
-	{ Header: 'Created At', accessor: 'createdAt' },
-	{ Header: 'Updated At', accessor: 'updatedAt' },
-	{ Header: 'Actions', accessor: 'actions' }
+const data = [
+	{ clientName: 'Ankit Singh', ldCode: 'BHK70128GT', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', eSignStatus: 'Pending', actions: '' },
+	{ clientName: 'Ankit Singh', ldCode: 'BHK70128GT', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', eSignStatus: 'Done', actions: '' },
+	{ clientName: 'Ankit Singh', ldCode: 'BHK70128GT', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', eSignStatus: 'Pending', actions: '' },
+	{ clientName: 'Ankit Singh', ldCode: 'BHK70128GT', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', eSignStatus: 'Done', actions: '' },
+	{ clientName: 'Ankit Singh', ldCode: 'BHK70128GT', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', eSignStatus: 'Pending', actions: '' },
+	{ clientName: 'Ankit Singh', ldCode: 'BHK70128GT', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', eSignStatus: 'Done', actions: '' }
 ];
 
-const data = [
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' }
-];
+// const data = [singleData, singleData, singleData];
 
 export const ESignReport = () => {
+	const columns = [
+		{ Header: 'Client Name', accessor: 'clientName', minWidth: 130 },
+		{ Header: 'LD Code', accessor: 'ldCode', minWidth: 130 },
+		{ Header: 'Mobile Number', accessor: 'mobileNumber', minWidth: 130 },
+		{ Header: 'Created At', accessor: 'createdAt', minWidth: 130 },
+		{ Header: 'Last Update At', accessor: 'updatedAt', minWidth: 130 },
+		{
+			Header: 'E-Sign Status',
+			accessor: 'eSignStatus',
+			minWidth: 130,
+			Cell: ({ row }) => {
+				console.log(row, reactTableStatusValue[row.original.eSignStatus]);
+				return (
+					<div
+						className="min-w-[95px] px-3 py-1 inline-flex justify-center rounded-[6px] text-xs font-medium font-poppinsMedium"
+						style={{
+							backgroundColor: reactTableStatusValue[row.original.eSignStatus].bgColor
+						}}
+					>
+						{row.original.eSignStatus}
+					</div>
+				);
+			}
+		},
+		{
+			Header: 'Actions',
+			accessor: 'actions',
+			minWidth: 60,
+			Cell: ({ row }) => (
+				<MyPopover
+					PopoverParentComp={PopoverParentComp}
+					PopoverChildComp={PopoverChildComp}
+				/>
+			)
+		}
+	];
+
 	return (
 		<>
 			<div className="w-full flex flex-col ">
