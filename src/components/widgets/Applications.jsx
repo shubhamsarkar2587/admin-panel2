@@ -46,9 +46,9 @@ export const ApplicationWidget = ({ title, numberOfApplications }) => {
 				</div>
 			</div>
 			<div className="flex items-end justify-between">
-				<img className="mr-10" alt="" src={svgAssets.dashboard.graph}></img>
+				<img className="mr-10 object-contain" alt="" src={svgAssets.dashboard.graph}></img>
 				<button className="px-3 py-2 flex items-center rounded-[10px] bg-[#EBFFFA] shadow-[0px_3px_16px_rgba(171,171,171,0.25)]">
-					<img alt="" src=""></img>
+					<img className="mr-1 object-contain" alt="" src={svgAssets.widget.eye}></img>
 					<span className="text-xs leading-[18px] font-medium font-poppinsMedium">View Details</span>
 				</button>
 			</div>

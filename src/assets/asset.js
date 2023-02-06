@@ -28,6 +28,8 @@ import wrongField from './svg/wrongField.svg';
 import dropdownIcon from './svg/dropdownIcon.svg';
 import invalidInput from './svg/invalidInput.svg';
 
+import eye from './svg/widget/eye.svg';
+
 import calendar from './svg/dashboard/calendar.svg';
 import todayCalendar from './svg/dashboard/todayCalendar.svg';
 import yesterdayCalendar from './svg/dashboard/yesterdayCalendar.svg';
@@ -105,6 +107,9 @@ export const svgAssets = {
 		selectedLogout,
 		userList,
 		selectedUserList
+	},
+	widget: {
+		eye
 	},
 	dashboard: {
 		kyc,
