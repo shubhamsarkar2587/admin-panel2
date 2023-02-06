@@ -20,7 +20,7 @@ export const Navbar = () => {
 				<SearchBar />
 				<div className="flex items-center">
 					<button
-						className="px-4 py-2.5 mx-2.5 rounded-[10px] bg-black text-white"
+						className="px-4 py-2.5 mx-2.5 rounded-[10px] bg-black text-white font-medium font-poppinsMedium"
 						onClick={() => handleStartKyc()}
 					>
             + Start KYC
@@ -28,7 +28,7 @@ export const Navbar = () => {
 					<img className="mx-2.5 cursor-pointer" alt="notification" src={svgAssets.navbar.notification} />
 					<Link to="/login" className="flex items-center">
 						<img className="mx-2.5 cursor-pointer" alt="user_img" src={svgAssets.navbar.defaultUser} />
-						<span className="ml-1.5">Alex Dam</span>
+						<span className="ml-1.5 text-[#383637] font-medium font-poppinsMedium">Alex Dam</span>
 					</Link>
 				</div>
 			</div>
