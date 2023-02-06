@@ -5,25 +5,19 @@ import { MyPopover } from '../../components/popover/Popover';
 import { StepProgressBar } from '../../components/progressBar/ProgressBar';
 import { Pagination } from '../../components/reactTable/Pagination';
 import { ReactTable } from '../../components/reactTable/ReactTable';
+import { reactTableStatusValue } from '../../components/reactTable/reactTableData';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
 import { PopoverChildComp, PopoverParentComp } from '../../components/reactTable/ReactTablePopupBtn';
 import { SearchBar } from '../../components/searchbar/SearchBar';
 import { verificationSteps } from '../../containers/kyc/kycData';
 
-const singleData = {
-	clientName: 'Ankit Singh',
-	mobileNumber: '7014587528',
-	createdAt: '10 Dac 2022',
-	updatedAt: '16 Dec 2022',
-	status: 'Incomplete',
-	steps: 'dfdfdf0',
-	source: '',
-	rm: 'AK Singh',
-	verifier: 'VK Bansal',
-	actions: 'dd'
-};
-
-const data = [singleData, singleData, singleData];
+const data = [
+	{ clientName: 'Ankit Singh', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', status: 'Incomplete', steps: 'dfdfdf0', source: '', rm: 'AK Singh', verifier: 'VK Bansal', actions: 'dd' },
+	{ clientName: 'Ankit Singh', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', status: 'Verified', steps: 'dfdfdf0', source: '', rm: 'AK Singh', verifier: 'VK Bansal', actions: 'dd' },
+	{ clientName: 'Ankit Singh', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', status: 'Rejected', steps: 'dfdfdf0', source: '', rm: 'AK Singh', verifier: 'VK Bansal', actions: 'dd' },
+	{ clientName: 'Ankit Singh', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', status: 'Resubmitted', steps: 'dfdfdf0', source: '', rm: 'AK Singh', verifier: 'VK Bansal', actions: 'dd' },
+	{ clientName: 'Ankit Singh', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', status: 'Final Rejected', steps: 'dfdfdf0', source: '', rm: 'AK Singh', verifier: 'VK Bansal', actions: 'dd' }
+];
 
 export const AllApplication = () => {
 	const [steps, setSteps] = useState(verificationSteps || []);
@@ -33,7 +27,21 @@ export const AllApplication = () => {
 		{ Header: 'Mobile Number', accessor: 'mobileNumber', minWidth: 130 },
 		{ Header: 'Created At', accessor: 'createdAt', minWidth: 130 },
 		{ Header: 'Updated At', accessor: 'updatedAt', minWidth: 130 },
-		{ Header: 'Status', accessor: 'status', minWidth: 130 },
+		{
+			Header: 'Status',
+			accessor: 'status',
+			minWidth: 150,
+			Cell: ({ row }) => (
+				<div
+					className="min-w-[95px] px-3 py-1 inline-flex justify-center rounded-[6px] text-xs font-medium font-poppinsMedium"
+					style={{
+						backgroundColor: reactTableStatusValue[row.original.status]?.bgColor
+					}}
+				>
+					{row.original.status}
+				</div>
+			)
+		},
 		{
 			Header: 'Steps',
 			accessor: 'steps',

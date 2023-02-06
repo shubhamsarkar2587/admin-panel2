@@ -30,19 +30,16 @@ export const ESignReport = () => {
 			Header: 'E-Sign Status',
 			accessor: 'eSignStatus',
 			minWidth: 130,
-			Cell: ({ row }) => {
-				console.log(row, reactTableStatusValue[row.original.eSignStatus]);
-				return (
-					<div
-						className="min-w-[95px] px-3 py-1 inline-flex justify-center rounded-[6px] text-xs font-medium font-poppinsMedium"
-						style={{
-							backgroundColor: reactTableStatusValue[row.original.eSignStatus].bgColor
-						}}
-					>
-						{row.original.eSignStatus}
-					</div>
-				);
-			}
+			Cell: ({ row }) => (
+				<div
+					className="min-w-[95px] px-3 py-1 inline-flex justify-center rounded-[6px] text-xs font-medium font-poppinsMedium"
+					style={{
+						backgroundColor: reactTableStatusValue[row.original.eSignStatus]?.bgColor
+					}}
+				>
+					{row.original.eSignStatus}
+				</div>
+			)
 		},
 		{
 			Header: 'Actions',
