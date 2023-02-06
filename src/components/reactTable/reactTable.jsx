@@ -3,6 +3,7 @@ import { useTable } from 'react-table';
 export const ReactTable = ({ columns, data, displayBlock }) => {
 	const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns, data });
 
+	console.log({ headerGroups, rows });
 	return (
 		<div className="w-full grid">
 			<table
@@ -21,6 +22,7 @@ export const ReactTable = ({ columns, data, displayBlock }) => {
 									{...column.getHeaderProps()}
 									className="pt-2 py-4 text-[15px] text-[#9A9A9A] tracking-wide leading-[22px] font-medium font-poppinsMedium"
 									style={{
+										width: column.width,
 										minWidth: column.minWidth
 									}}
 								>
@@ -44,7 +46,7 @@ export const ReactTable = ({ columns, data, displayBlock }) => {
 										<td
 											key={`row_cell_${i2}`}
 											{...cell.getCellProps()}
-											className="py-4 text-[15px] whitespace-nowrap leading-[22px] font-medium font-poppinsMedium"
+											className="py-4 text-[15px] leading-[22px] font-medium font-poppinsMedium"
 										>
 											{cell.render('Cell')}
 										</td>

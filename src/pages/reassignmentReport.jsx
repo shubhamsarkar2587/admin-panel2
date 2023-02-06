@@ -5,32 +5,26 @@ import { ReactTable } from '../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../components/reactTable/ReactTableHeader';
 import { SearchBar } from '../components/searchbar/SearchBar';
 
-const columns = [
-	{ Header: 'Client Name', accessor: 'clientName', width: 130 },
-	{ Header: 'Pan', accessor: 'pan', width: 130 },
-	{ Header: 'Mobile Number', accessor: 'mobileNumber', width: 130 },
-	{ Header: 'Application type', accessor: 'applicationType', width: 130 },
-	{ Header: 'Status', accessor: 'status', width: 130 },
-	{ Header: 'Created At', accessor: 'createdAt', width: 130 },
-	{ Header: 'Last updatedAt', accessor: 'lastUpdatedAt', width: 130 },
-	{ Header: 'Verifier Name', accessor: 'verifierName', width: 130 }
-];
-
 const data = [
-	{ clientName: 'Last updatedAt', pan: 'BHD2587N', mobileNumber: '9988774455', applicationType: 'New', status: 'Pending Verification', createdAt: '02-01-2023', lastUpdatedAt: '02-01-2023', verifierName: 'Verifier Name' },
-	{ clientName: 'Last updatedAt', pan: 'BHD2587N', mobileNumber: '9988774455', applicationType: 'New', status: 'Pending Verification', createdAt: '02-01-2023', lastUpdatedAt: '02-01-2023', verifierName: 'Verifier Name' },
-	{ clientName: 'Last updatedAt', pan: 'BHD2587N', mobileNumber: '9988774455', applicationType: 'New', status: 'Pending Verification', createdAt: '02-01-2023', lastUpdatedAt: '02-01-2023', verifierName: 'Verifier Name' },
-	{ clientName: 'Last updatedAt', pan: 'BHD2587N', mobileNumber: '9988774455', applicationType: 'New', status: 'Pending Verification', createdAt: '02-01-2023', lastUpdatedAt: '02-01-2023', verifierName: 'Verifier Name' },
-	{ clientName: 'Last updatedAt', pan: 'BHD2587N', mobileNumber: '9988774455', applicationType: 'New', status: 'Pending Verification', createdAt: '02-01-2023', lastUpdatedAt: '02-01-2023', verifierName: 'Verifier Name' },
-	{ clientName: 'Last updatedAt', pan: 'BHD2587N', mobileNumber: '9988774455', applicationType: 'New', status: 'Pending Verification', createdAt: '02-01-2023', lastUpdatedAt: '02-01-2023', verifierName: 'Verifier Name' },
-	{ clientName: 'Last updatedAt', pan: 'BHD2587N', mobileNumber: '9988774455', applicationType: 'New', status: 'Pending Verification', createdAt: '02-01-2023', lastUpdatedAt: '02-01-2023', verifierName: 'Verifier Name' },
-	{ clientName: 'Last updatedAt', pan: 'BHD2587N', mobileNumber: '9988774455', applicationType: 'New', status: 'Pending Verification', createdAt: '02-01-2023', lastUpdatedAt: '02-01-2023', verifierName: 'Verifier Name' },
-	{ clientName: 'Last updatedAt', pan: 'BHD2587N', mobileNumber: '9988774455', applicationType: 'New', status: 'Pending Verification', createdAt: '02-01-2023', lastUpdatedAt: '02-01-2023', verifierName: 'Verifier Name' },
-	{ clientName: 'Last updatedAt', pan: 'BHD2587N', mobileNumber: '9988774455', applicationType: 'New', status: 'Pending Verification', createdAt: '02-01-2023', lastUpdatedAt: '02-01-2023', verifierName: 'Verifier Name' },
-	{ clientName: 'Last updatedAt', pan: 'BHD2587N', mobileNumber: '9988774455', applicationType: 'New', status: 'Pending Verification', createdAt: '02-01-2023', lastUpdatedAt: '02-01-2023', verifierName: 'Verifier Name' }
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', rm: 'AK Singh', reAssignedTo: 'Puneet Gaur', reAssignedDateTime: '05-01-2023, 02:15 PM' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', rm: 'AK Singh', reAssignedTo: 'Puneet Gaur', reAssignedDateTime: '05-01-2023, 02:15 PM' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', rm: 'AK Singh', reAssignedTo: 'Puneet Gaur', reAssignedDateTime: '05-01-2023, 02:15 PM' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', rm: 'AK Singh', reAssignedTo: 'Puneet Gaur', reAssignedDateTime: '05-01-2023, 02:15 PM' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', rm: 'AK Singh', reAssignedTo: 'Puneet Gaur', reAssignedDateTime: '05-01-2023, 02:15 PM' }
 ];
 
 export const ReassignmentReport = () => {
+	const columns = [
+		{ Header: 'Client Name', accessor: 'clientName' },
+		{ Header: 'PAN', accessor: 'pan' },
+		{ Header: 'Mobile Number', accessor: 'mobileNumber' },
+		{ Header: 'Created At', accessor: 'createdAt' },
+		{ Header: 'Last Updated At', accessor: 'updatedAt' },
+		{ Header: 'RM', accessor: 'rm' },
+		{ Header: 'Re-assigned To', accessor: 'reAssignedTo' },
+		{ Header: 'Re-assigned date & time', accessor: 'reAssignedDateTime', width: 120 }
+	];
+
 	return (
 		<>
 			<div className="w-full flex flex-col ">
