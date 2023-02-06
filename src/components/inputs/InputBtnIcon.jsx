@@ -30,7 +30,7 @@ export const InputBtnIcon = ({ icon, label, subLabel, isImportant, height, isDis
 			}
 			<div className="flex mt-4">
 				<input
-					className="w-full px-4 text-[#353535] leading-6 rounded-l-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular"
+					className="w-full px-4 text-[#353535] leading-6 rounded-l-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular focus:outline-none"
 					style={{
 						height: height || '47px'
 					}}

@@ -26,7 +26,7 @@ export const CommonInput = ({ icon, label, isImportant, height, isDisable, place
 				{isImportant && <span className="text-[#EA0000]">*</span>}
 			</label>
 			<input
-				className="px-4 text-[#353535] rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular leading-6"
+				className="px-4 text-[#353535] rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular leading-6 focus:outline-none"
 				style={{
 					height: height || '47px'
 				}}

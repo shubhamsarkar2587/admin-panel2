@@ -24,7 +24,7 @@ export const OtpInput = ({ icon, label, subLabel, isImportant, height, isDisable
 							<input
 								key={`otp_input_${index}`}
 								maxLength="1"
-								className="w-full px-4 text-[#989898] text-center rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular"
+								className="w-full px-4 text-[#353535] text-center rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular focus:outline-none"
 								style={{
 									height: height || '47px'
 								}}

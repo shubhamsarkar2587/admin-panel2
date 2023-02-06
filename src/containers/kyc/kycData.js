@@ -1,4 +1,4 @@
-import { InitMobileEmail } from './step1/InitMobileEmail';
+// import { InitMobileEmail } from './step1/InitMobileEmail';
 import { VerifyMobileEmail } from './step1/VerifyMobileEmail';
 import { VerifyPan } from './step2/VerifyPan';
 import { VerifyBankDetails } from './step3/VerifyBankDetails';
@@ -15,12 +15,12 @@ export const kycSteps = () => [
 		value: 'step1',
 		status: 'active',
 		isSuccess: true,
-		component: <InitMobileEmail />,
+		component: <VerifyMobileEmail />,
 		subSteps: [
 			{
 				value: 'step1_1',
 				isSuccess: true,
-				component: <InitMobileEmail />
+				component: <VerifyMobileEmail />
 			}
 		]
 	},
