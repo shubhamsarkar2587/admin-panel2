@@ -1,3 +1,4 @@
+import { svgAssets } from '../../assets/asset';
 import { ApplicationWidget } from '../../components/widgets/Applications';
 import { Date } from '../../components/widgets/Date';
 
@@ -5,9 +6,9 @@ export const AdminDashboard = () => {
 	return (
 		<>
 			<div className="mb-[30px] flex">
-				<Date />
-				<Date />
-				<Date />
+				<Date icon={svgAssets.dashboard.todayCalendar} label="Today" />
+				<Date icon={svgAssets.dashboard.yesterdayCalendar} label="Yesterday" />
+				<Date icon={svgAssets.dashboard.calendar} label="Custom Date" />
 			</div>
 			<div className="mb-[30px] grid grid-cols-3 gap-9">
 				<ApplicationWidget title="All Applications" numberOfApplications={2000} />

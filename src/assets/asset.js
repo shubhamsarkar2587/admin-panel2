@@ -28,6 +28,10 @@ import wrongField from './svg/wrongField.svg';
 import dropdownIcon from './svg/dropdownIcon.svg';
 import invalidInput from './svg/invalidInput.svg';
 
+import calendar from './svg/dashboard/calendar.svg';
+import todayCalendar from './svg/dashboard/todayCalendar.svg';
+import yesterdayCalendar from './svg/dashboard/yesterdayCalendar.svg';
+
 import dashboard from './svg/sidebar/dashboard.svg';
 import selectedDashboard from './svg/sidebar/selectedDashboard.svg';
 import startKyc from './svg/sidebar/startKyc.svg';
@@ -46,6 +50,7 @@ import logout from './svg/sidebar/logout.svg';
 import selectedLogout from './svg/sidebar/selectedLogout.svg';
 import userList from './svg/sidebar/userList.svg';
 import selectedUserList from './svg/sidebar/selectedUserList.svg';
+
 import correctTick from './svg/review/correctTick.svg';
 import wrongTick from './svg/review/wrongTick.svg';
 import undo from './svg/review/undo.svg';
@@ -105,7 +110,10 @@ export const svgAssets = {
 		kyc,
 		rightArrow,
 		widgetApplication,
-		graph
+		graph,
+		calendar,
+		todayCalendar,
+		yesterdayCalendar
 	},
 	kyc: {
 		sendLink,
