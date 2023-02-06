@@ -1,30 +1,61 @@
+import { useState } from 'react';
 import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../components/common/DatePicker';
+import { MyPopover } from '../../components/popover/Popover';
+import { StepProgressBar } from '../../components/progressBar/ProgressBar';
 import { Pagination } from '../../components/reactTable/Pagination';
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
+import { PopoverChildComp, PopoverParentComp } from '../../components/reactTable/ReactTablePopupBtn';
 import { SearchBar } from '../../components/searchbar/SearchBar';
-
-const columns = [
-	{ Header: 'Client Name', accessor: 'clientName' },
-	{ Header: 'Pan', accessor: 'pan' },
-	{ Header: 'Mobile Number', accessor: 'mobileNumber' },
-	{ Header: 'Steps', accessor: 'steps' },
-	{ Header: 'Created At', accessor: 'createdAt' },
-	{ Header: 'Updated At', accessor: 'updatedAt' },
-	{ Header: 'Actions', accessor: 'actions' }
-];
+import { verificationSteps } from '../../containers/kyc/kycData';
 
 const data = [
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' }
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', steps: 'dfdfdf0', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', actions: 'dd' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', steps: 'dfdfdf0', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', actions: 'dd' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', steps: 'dfdfdf0', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', actions: 'dd' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', steps: 'dfdfdf0', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', actions: 'dd' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', steps: 'dfdfdf0', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', actions: 'dd' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', steps: 'dfdfdf0', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', actions: 'dd' }
 ];
 
 export const RejectedApplication = () => {
+	const [steps, setSteps] = useState(verificationSteps || []);
+
+	const columns = [
+		{ Header: 'Client Name', accessor: 'clientName', minWidth: 130 },
+		{ Header: 'PAN', accessor: 'pan', minWidth: 130 },
+		{ Header: 'Mobile Number', accessor: 'mobileNumber', minWidth: 130 },
+		{
+			Header: 'Steps',
+			accessor: 'steps',
+			minWidth: 150,
+			Cell: ({ row }) => (
+				<StepProgressBar
+					selectedStep={7}
+					steps={steps || []}
+					setSteps={setSteps}
+					width="w-full"
+					circleDim="10px"
+					circleRadius="1px"
+					lineDim="h-[2px]"
+				/>
+			)
+		},
+		{ Header: 'Created At', accessor: 'createdAt', minWidth: 130 },
+		{ Header: 'Last Updated At', accessor: 'updatedAt', minWidth: 130 },
+		{
+			Header: 'Actions',
+			accessor: 'actions',
+			minWidth: 60,
+			Cell: ({ row }) => (
+				<MyPopover
+					PopoverParentComp={PopoverParentComp}
+					PopoverChildComp={PopoverChildComp}
+				/>
+			)
+		}
+	];
 	return (
 		<>
 			<div className="w-full flex flex-col ">

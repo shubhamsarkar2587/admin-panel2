@@ -8,25 +8,26 @@ import { PopoverChildComp, PopoverParentComp } from '../../../components/reactTa
 import { SearchBar } from '../../../components/searchbar/SearchBar';
 
 const data = [
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: '' },
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: '' },
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: '' },
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: '' },
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: '' },
-	{ clientName: 'Tony Stark', pan: 434342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: '' }
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', rm: 'AK Singh', actions: 'dd' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', rm: 'AK Singh', actions: 'dd' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', rm: 'AK Singh', actions: 'dd' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', rm: 'AK Singh', actions: 'dd' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', rm: 'AK Singh', actions: 'dd' },
+	{ clientName: 'Ankit Singh', pan: 'BHD2587N', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', rm: 'AK Singh', actions: 'dd' }
 ];
 
 export const PendingApplication = () => {
 	const columns = [
-		{ Header: 'Client Name', accessor: 'clientName' },
-		{ Header: 'Pan', accessor: 'pan' },
-		{ Header: 'Mobile Number', accessor: 'mobileNumber' },
-		{ Header: 'Steps', accessor: 'steps' },
-		{ Header: 'Created At', accessor: 'createdAt' },
-		{ Header: 'Updated At', accessor: 'updatedAt' },
+		{ Header: 'Client Name', accessor: 'clientName', minWidth: 130 },
+		{ Header: 'PAN', accessor: 'pan', minWidth: 130 },
+		{ Header: 'Mobile Number', accessor: 'mobileNumber', minWidth: 130 },
+		{ Header: 'Created At', accessor: 'createdAt', minWidth: 130 },
+		{ Header: 'Last Updated At', accessor: 'updatedAt', minWidth: 130 },
+		{ Header: 'RM', accessor: 'rm', minWidth: 100 },
 		{
 			Header: 'Actions',
 			accessor: 'actions',
+			minWidth: 60,
 			Cell: ({ row }) => (
 				<MyPopover
 					PopoverParentComp={PopoverParentComp}

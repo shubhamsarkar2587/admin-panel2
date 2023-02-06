@@ -26,7 +26,7 @@ export const AllApplication = () => {
 		{ Header: 'Client Name', accessor: 'clientName', minWidth: 130 },
 		{ Header: 'Mobile Number', accessor: 'mobileNumber', minWidth: 130 },
 		{ Header: 'Created At', accessor: 'createdAt', minWidth: 130 },
-		{ Header: 'Updated At', accessor: 'updatedAt', minWidth: 130 },
+		{ Header: 'Last Updated At', accessor: 'updatedAt', minWidth: 130 },
 		{
 			Header: 'Status',
 			accessor: 'status',
@@ -59,7 +59,7 @@ export const AllApplication = () => {
 			)
 		},
 		{ Header: 'Source', accessor: 'source', minWidth: 90 },
-		{ Header: 'Source', accessor: 'rm', minWidth: 100 },
+		{ Header: 'RM', accessor: 'rm', minWidth: 100 },
 		{ Header: 'Verifier', accessor: 'verifier', minWidth: 100 },
 		{
 			Header: 'Actions',
