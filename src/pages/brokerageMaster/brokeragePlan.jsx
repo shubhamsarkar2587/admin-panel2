@@ -7,27 +7,24 @@ import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
 import { SearchBar } from '../../components/searchbar/SearchBar';
 
-const columns = [
-	{ Header: 'Client Name', accessor: 'clientName' },
-	{ Header: 'Pan', accessor: 'pan' },
-	{ Header: 'Mobile Number', accessor: 'mobileNumber' },
-	{ Header: 'Steps', accessor: 'steps' },
-	{ Header: 'Created At', accessor: 'createdAt' },
-	{ Header: 'Updated At', accessor: 'updatedAt' },
-	{ Header: 'Actions', accessor: 'actions' }
-];
-
 const data = [
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' }
+	{ sNo: '1', planName: 'Low', segment: 'Equity Cash', brokerageType: 'Intraday', brokerageName: '030303', brokerageCode: '1557' },
+	{ sNo: '2', planName: 'Low', segment: 'Equity Cash', brokerageType: 'Intraday', brokerageName: '030303', brokerageCode: '1557' },
+	{ sNo: '3', planName: 'Low', segment: 'Equity Cash', brokerageType: 'Intraday', brokerageName: '030303', brokerageCode: '1557' }
 ];
 
 export const BrokeragePlan = () => {
 	const [isBrokerageModalOpen, setIsBrokerageModalOpen] = useState(false);
+
+	const columns = [
+		{ Header: 'S. No.', accessor: 'sNo' },
+		{ Header: 'Plan Name', accessor: 'planName' },
+		{ Header: 'Segment', accessor: 'segment' },
+		{ Header: 'Brokerage Type', accessor: 'brokerageType' },
+		{ Header: 'Brokerage Name', accessor: 'brokerageName' },
+		{ Header: 'Brokerage Code', accessor: 'brokerageCode' }
+	];
+
 	return (
 		<>
 			<div className="w-full flex flex-col ">

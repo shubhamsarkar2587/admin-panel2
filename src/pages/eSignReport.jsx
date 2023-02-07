@@ -17,8 +17,6 @@ const data = [
 	{ clientName: 'Ankit Singh', ldCode: 'BHK70128GT', mobileNumber: '7014587528', createdAt: '10 Dac 2022', updatedAt: '16 Dec 2022', eSignStatus: 'Done', actions: '' }
 ];
 
-// const data = [singleData, singleData, singleData];
-
 export const ESignReport = () => {
 	const columns = [
 		{ Header: 'Client Name', accessor: 'clientName', minWidth: 130 },
