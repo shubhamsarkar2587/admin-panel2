@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Login } from './pages/login';
 import { Navbar } from './containers/navbar/Navbar';
@@ -24,9 +26,15 @@ import { AgeingReport } from './pages/reports/ageingReport';
 import { BrokeragePlan } from './pages/brokerageMaster/brokeragePlan';
 import { MapBrokerage } from './pages/brokerageMaster/mapBrokerage';
 import { ReviewApplication } from './pages/kyc/reviewApplication';
+import { generateTokenAction } from './store/actions/auth.action';
 
 export const App = () => {
 	const location = useLocation();
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(generateTokenAction());
+	}, []);
 
 	return (
 		<div className="App h-full w-full">
