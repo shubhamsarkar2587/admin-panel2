@@ -1,3 +1,4 @@
+import { svgAssets } from '../../assets/asset';
 import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../components/common/DatePicker';
 import { Pagination } from '../../components/reactTable/Pagination';
@@ -5,26 +6,45 @@ import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
 import { SearchBar } from '../../components/searchbar/SearchBar';
 
-const columns = [
-	{ Header: 'Client Name', accessor: 'clientName' },
-	{ Header: 'Pan', accessor: 'pan' },
-	{ Header: 'Mobile Number', accessor: 'mobileNumber' },
-	{ Header: 'Steps', accessor: 'steps' },
-	{ Header: 'Created At', accessor: 'createdAt' },
-	{ Header: 'Updated At', accessor: 'updatedAt' },
-	{ Header: 'Actions', accessor: 'actions' }
-];
-
 const data = [
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' },
-	{ clientName: 'Tony Stark', pan: 34342232334, mobileNumber: 'fdf3343', steps: 'dfdfdf0', createdAt: 'sdsd', updatedAt: 'ddfdf', actions: 'dd' }
+	{ ldCode: 'XYZ0145', name: 'Vikram Dubey', pan: 'MDF0145JH', equity: '', deroivatives: '', commodity: '', branch: 'Janzeerwala Square, Indore', openingDate: '02-01-2023', region: 'Mumbai' },
+	{ ldCode: 'XYZ0145', name: 'Vikram Dubey', pan: 'MDF0145JH', equity: '', deroivatives: '', commodity: '', branch: 'Janzeerwala Square, Indore', openingDate: '02-01-2023', region: 'Mumbai' },
+	{ ldCode: 'XYZ0145', name: 'Vikram Dubey', pan: 'MDF0145JH', equity: '', deroivatives: '', commodity: '', branch: 'Janzeerwala Square, Indore', openingDate: '02-01-2023', region: 'Mumbai' },
+	{ ldCode: 'XYZ0145', name: 'Vikram Dubey', pan: 'MDF0145JH', equity: '', deroivatives: '', commodity: '', branch: 'Janzeerwala Square, Indore', openingDate: '02-01-2023', region: 'Mumbai' },
+	{ ldCode: 'XYZ0145', name: 'Vikram Dubey', pan: 'MDF0145JH', equity: '', deroivatives: '', commodity: '', branch: 'Janzeerwala Square, Indore', openingDate: '02-01-2023', region: 'Mumbai' }
 ];
 
 export const SalesReport = () => {
+	const columns = [
+		{ Header: 'LD Code', accessor: 'ldCode' },
+		{ Header: 'Name', accessor: 'name' },
+		{ Header: 'PAN', accessor: 'pan' },
+		{
+			Header: 'Equity',
+			accessor: 'equity',
+			Cell: ({ row }) => (
+				<img className="inline-flex justify-center" alt='correct' src={svgAssets.verifyApplication.rightField} />
+			)
+		},
+		{
+			Header: 'Deroivatives',
+			accessor: 'deroivatives',
+			Cell: ({ row }) => (
+				<img className="inline-flex justify-center" alt='correct' src={svgAssets.verifyApplication.rightField} />
+			)
+		},
+		{
+			Header: 'Commodity',
+			accessor: 'commodity',
+			Cell: ({ row }) => (
+				<img className="inline-flex justify-center" alt='correct' src={svgAssets.verifyApplication.rightField} />
+			)
+		},
+		{ Header: 'Branch', accessor: 'branch' },
+		{ Header: 'Opening Date', accessor: 'openingDate' },
+		{ Header: 'Region', accessor: 'region' }
+	];
+
 	return (
 		<>
 			<div className="w-full flex flex-col ">
