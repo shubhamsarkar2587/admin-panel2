@@ -7,7 +7,6 @@ const initState = {
 };
 
 export const userReducer = (state = initState, action) => {
-	console.log(action);
 	switch (action.type) {
 	case setToken:
 		return {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { svgAssets } from '../assets/asset';
+import { svgAssets, pngAssets } from '../assets/asset';
 
 export const Login = () => {
 	const navigate = useNavigate();
@@ -20,17 +20,36 @@ export const Login = () => {
 			<div className="w-[55%] h-full py-10 full px-20 relative">
 				<img className="absolute top-[40px] h-[40px]" alt="app_logo" src={svgAssets.bigul} />
 				<div className="w-full h-full flex flex-col justify-center">
-					<h6 className="mb-7 text-black text-2xl font-semibold capitalize">login</h6>
+					<h6 className="mb-7 text-black text-2xl capitalize font-semibold font-poppinsSemibold">login</h6>
 					<div className="mb-16">
 						<div className="flex flex-col mb-8">
-							<span className="mb-3">Email Id*</span>
-							<input className="p-4 text-[#989898] border border-solid border-[#DFDFDF] rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)]" placeholder="Please enter email id" />
+							<label className="mb-3 flex items-center leading-6 font-medium font-poppinsMedium">
+								<img
+									className="max-h-[22px] mr-1.5 object-contain"
+									alt="input_icon"
+									src={pngAssets.kyc.mobileNumber}
+								/>
+								<span className="mr-1">Email Id</span>
+								<span className="text-[#EA0000]">*</span>
+							</label>
+							<input
+								className="h-[56px] px-4 text-[#353535] border border-solid border-[#DFDFDF] rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular leading-6 focus:outline-none"
+								placeholder="Please enter email id"
+							/>
 						</div>
 						<div className="flex flex-col mb-8">
-							<span className="mb-3">Password*</span>
+							<span className="mb-3 flex items-center leading-6 font-medium font-poppinsMedium">
+								<img
+									className="max-h-[22px] mr-1.5 object-contain"
+									alt="input_icon"
+									src={pngAssets.kyc.mobileNumber}
+								/>
+								<span className="mr-1">Password</span>
+								<span className="text-[#EA0000]">*</span>
+							</span>
 							<div className="relative rounded-md shadow-sm">
 								<input
-									className='w-full p-4 text-[#989898] border border-solid border-[#DFDFDF] rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)]'
+									className="w-full h-[56px] px-4 text-[#353535] border border-solid border-[#DFDFDF] rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular leading-6 focus:outline-none"
 									type={!showPassword ? 'password' : 'text'}
 									value={password}
 									onChange={(e) => setPassword(e.target.value)}
@@ -46,12 +65,12 @@ export const Login = () => {
 							</div>
 						</div>
 						<div>
-							<div className="leading-tight flex items-center justify-between">
+							<div className="text-[#666666] leading-tight flex items-center justify-between font-poppinsRegular">
 								<div>
 									<input className="form-checkbox mt-1" type="checkbox" />
-									<label className="ml-2 text-[#666666]">Remember me</label>
+									<label className="ml-2">Remember me</label>
 								</div>
-								<span className="text-[#666666]">Forgot Password?</span>
+								<span className="">Forgot Password?</span>
 							</div>
 						</div>
 					</div>
@@ -61,7 +80,7 @@ export const Login = () => {
 							onClick={() => handleLogin()}
 						>
 							<img className="mr-2.5" alt="login_screen_enter_img" src={svgAssets.login.loginEnter}></img>
-							<span className="">Login</span>
+							<span className="font-poppinsRegular">Login</span>
 						</button>
 					</div>
 				</div>
