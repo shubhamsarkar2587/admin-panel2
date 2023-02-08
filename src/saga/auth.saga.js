@@ -1,12 +1,13 @@
-import { all, call, takeEvery } from 'redux-saga/effects';
+import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { generateTokenService } from '../services/generateToken';
-import { generateToken } from '../store/actions/auth.action';
+import { generateToken, setTokenAction } from '../store/actions/auth.action';
 
 function * generateTokenSaga () {
 	try {
 		const token = yield call(generateTokenService);
-		console.log(token);
+		yield put(setTokenAction({ token: token.data.data || '' }));
 	} catch (err) {
+		console.log(err);
 	};
 };
 

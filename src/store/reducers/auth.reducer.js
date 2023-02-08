@@ -1,4 +1,4 @@
-import { setLoginUser } from '../actions/auth.action';
+import { setLoginUser, setToken } from '../actions/auth.action';
 
 const initState = {
 	userDetails: {},
@@ -7,7 +7,13 @@ const initState = {
 };
 
 export const userReducer = (state = initState, action) => {
+	console.log(action);
 	switch (action.type) {
+	case setToken:
+		return {
+			...initState,
+			accessToken: action.payload.token
+		};
 	case setLoginUser:
 		return {
 			userDetails: action.payload.userDetails.user,
