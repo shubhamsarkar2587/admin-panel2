@@ -1,4 +1,4 @@
-import { ReactTable } from '../../components/reactTable/ReactTable';
+import { ReactTable } from '../../components/reactTable/ReactTablee';
 import { ApplicationWidget } from '../../components/widgets/Applications';
 import { Date } from '../../components/widgets/Date';
 
