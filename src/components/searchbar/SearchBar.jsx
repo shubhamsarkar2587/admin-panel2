@@ -43,7 +43,7 @@ export const SearchBar = ({ height, placeholder, border }) => {
 					<input
 						className="w-full pr-5 m-0 text-xs inline-flex items-center outline-none border-none font-poppinsRegular"
 						type="text"
-						placeholder="Search by Name, Mobile Number, LD code"
+						placeholder="Search by Name, Mobile Number, PAN"
 						value={searchText}
 						onChange={(e) => handleSearch({ value: e.target.value })}
 					/>
@@ -60,10 +60,11 @@ export const SearchBar = ({ height, placeholder, border }) => {
 						{options.map((option) => (
 							<li
 								key={option}
-								className="px-2 py-2 text-xs font-poppinsRegular rounded-md hover:bg-[#F6F8F9] cursor-pointer"
+								className="px-2 py-2 flex flex-col text-xs rounded-md cursor-pointer font-poppinsRegular hover:bg-[#F6F8F9]"
 								onClick={() => handleSearch({ value: option, closeOption: true })}
 							>
-								{option}
+								<span className="text-black font-medium font-poppinsMedium">{option}</span>
+								<span className="text-[#ABABAB]">Ankit | BHD2587N | 7014587528</span>
 							</li>
 						))}
 					</ul>
