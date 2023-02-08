@@ -73,7 +73,7 @@ export const ResubmittedApplication = () => {
 					<div className="mb-6 flex items-center justify-between">
 						<SearchBar border={'border'} />
 						<div className="flex items-center">
-							<span className="text-[#787878] mr-3">Select Date</span>
+							<span className="text-[#787878] mr-3 font-medium font-poppinsMedium">Select Date</span>
 							<div className="mr-3">
 								<DatePickerInput placeholder="From" />
 							</div>
