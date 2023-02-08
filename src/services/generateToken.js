@@ -4,7 +4,10 @@ import { headers } from './common';
 export const generateTokenService = async (payload) => {
 	const user = await axios.post(
 		'https://dkyc.bigul.app/ekycapi/ApiToken',
-		payload,
+		{
+			email: 'dkyc@bonanzaonline.com',
+			password: 'password'
+		},
 		headers
 	);
 	return user;

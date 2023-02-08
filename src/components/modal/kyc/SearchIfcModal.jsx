@@ -28,9 +28,9 @@ export const SearchIfcModal = ({ isModalOpen, handleKycModel }) => {
 						/>
 						<SelectDropdown
 							icon={pngAssets.kyc.mobileNumber}
-							label="Brokerage Scheme"
+							label="Branch"
 							isImportant={true}
-							placeholder="Please select brokerage scheme"
+							placeholder="Please select branch"
 						/>
 					</div>
 					<div className="w-full flex justify-center mb-5">

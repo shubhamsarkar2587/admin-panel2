@@ -46,7 +46,7 @@ export const VerifyBankDetails = () => {
 				/>
 				<CommonInput
 					icon={pngAssets.kyc.mobileNumber}
-					label="Bank Account Number"
+					label="Confirm Bank Account Number"
 					isImportant={true}
 					placeholder="Please enter confirm bank a/c number"
 				/>

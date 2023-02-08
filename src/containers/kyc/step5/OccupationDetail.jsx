@@ -9,29 +9,29 @@ export const OccuptionDetail = () => {
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
 				<SelectDropdown
 					icon={pngAssets.kyc.mobileNumber}
-					label="Brokerage Scheme"
+					label="Occupation"
 					isImportant={true}
-					placeholder="Please select brokerage scheme"
+					placeholder="Please select occupation"
 				/>
 				<SelectDropdown
 					icon={pngAssets.kyc.mobileNumber}
-					label="Brokerage Scheme"
+					label="Annual Income"
 					isImportant={true}
-					placeholder="Please select brokerage scheme"
+					placeholder="Please select annual income"
 				/>
 			</div>
 			<div className="grid grid-cols-2 gap-10 items-end">
 				<SelectDropdown
 					icon={pngAssets.kyc.mobileNumber}
-					label="Brokerage Scheme"
+					label="Education"
 					isImportant={true}
-					placeholder="Please select brokerage scheme"
+					placeholder="Please select education"
 				/>
 				<SelectDropdown
 					icon={pngAssets.kyc.mobileNumber}
-					label="Brokerage Scheme"
+					label="Trading Experience"
 					isImportant={true}
-					placeholder="Please select brokerage scheme"
+					placeholder="Please select trading experience"
 				/>
 			</div>
 		</div>

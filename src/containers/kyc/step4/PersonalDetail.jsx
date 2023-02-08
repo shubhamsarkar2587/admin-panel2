@@ -10,9 +10,9 @@ export const PersonalDetail = () => {
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
 				<SelectDropdown
 					icon={pngAssets.kyc.mobileNumber}
-					label="Brokerage Scheme"
+					label="Marital Status"
 					isImportant={true}
-					placeholder="Please select brokerage scheme"
+					placeholder="Please select marital status"
 				/>
 				<CommonInput
 					icon={pngAssets.kyc.mobileNumber}
@@ -24,15 +24,15 @@ export const PersonalDetail = () => {
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
 				<SelectDropdown
 					icon={pngAssets.kyc.mobileNumber}
-					label="Brokerage Scheme"
+					label="Gender"
 					isImportant={true}
-					placeholder="Please select brokerage scheme"
+					placeholder="Please select marital status"
 				/>
 				<CommonInput
 					icon={pngAssets.kyc.mobileNumber}
 					label="City Of Birth"
 					isImportant={true}
-					placeholder="Please enter father’s/spouse name"
+					placeholder="Please enter city of birth"
 				/>
 			</div>
 			<div className="w-full flex items-end">
