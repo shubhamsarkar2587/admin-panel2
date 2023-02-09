@@ -12,10 +12,6 @@ export const Sidebar = () => {
 		isDropDownActive: false
 	});
 
-	const handleMouseHover = () => {
-		// console.log('dfd')
-	};
-
 	const handleRoute = ({ route, nestedRoute }) => {
 		if (nestedRoute) {
 			navigate(`${route}${nestedRoute}`);
@@ -47,8 +43,6 @@ export const Sidebar = () => {
 								className={`py-2.5 mb-2.5 flex items-center justify-between cursor-pointer rounded-[10px] transition-colors duration-300
                   ${active.route === data.route ? 'bg-black text-white px-[11px]' : 'text-[#808080] hover:bg-black px-3'}
                 `}
-								onMouseOver={() => handleMouseHover()}
-								onMouseOut={() => handleMouseHover()}
 								onClick={() => handleRoute({
 									route: data.route,
 									nestedRoute: data?.nestedRoutes && (active.route !== data.route || !active.isDropDownActive)

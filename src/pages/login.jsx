@@ -1,15 +1,80 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { svgAssets, pngAssets } from '../assets/asset';
+import { loginUserAction } from '../store/actions/auth.action';
+import { validateEmail, validatePassword } from '../utils/verifyInput';
 
 export const Login = () => {
+	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
-	const [password, setPassword] = useState('');
-	const [showPassword, setShowPassword] = useState(false);
+	const [loginForm, setLoginForm] = useState({
+		email: {
+			value: '',
+			isError: false,
+			errorText: ''
+		},
+		password: {
+			value: '',
+			isError: false,
+			errorText: '',
+			showPassword: false
+		}
+	});
+
+	const handleLoginInput = ({ type, value }) => {
+		setLoginForm({
+			...loginForm,
+			[type]: {
+				value,
+				isError: false,
+				errorText: ''
+			}
+		});
+	};
+
+	const loginApiCallback = ({ status }) => {
+		if (status === 200) {
+			navigate('/');
+		} else {
+			alert('invalid credentials!');
+		}
+	};
 
 	const handleLogin = () => {
-		navigate('/');
+		let loginPayload = { ...loginForm };
+		const isValidEmail = validateEmail(loginForm.email.value || '');
+		const isValidPassword = validatePassword(loginForm.password.value || '');
+
+		if (isValidEmail && isValidPassword) {
+			dispatch(loginUserAction({
+				UserName: 'B100092',
+				Password: 'password'
+			}, loginApiCallback));
+		} else {
+			if (!isValidEmail) {
+				loginPayload = {
+					...loginPayload,
+					email: {
+						...loginPayload.email,
+						isError: true,
+						errorText: 'Please enter valid email!'
+					}
+				};
+			}
+			if (!isValidPassword) {
+				loginPayload = {
+					...loginPayload,
+					password: {
+						...loginPayload.password,
+						isError: true,
+						errorText: 'Password should have atleast 8 character!'
+					}
+				};
+			}
+			setLoginForm(loginPayload);
+		}
 	};
 
 	return (
@@ -35,7 +100,15 @@ export const Login = () => {
 							<input
 								className="h-[56px] px-4 text-[#353535] border border-solid border-[#DFDFDF] rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular leading-6 focus:outline-none"
 								placeholder="Please enter email id"
+								value={loginForm.email.value}
+								onChange={(e) => handleLoginInput({ type: 'email', value: e.target.value })}
 							/>
+							{
+								loginForm.email.isError && (
+									<span className="mt-2 text-[12px] text-red-400 font-medium font-poppinsMedium">
+										{loginForm.email.errorText}
+									</span>)
+							}
 						</div>
 						<div className="flex flex-col mb-8">
 							<span className="mb-3 flex items-center leading-6 font-medium font-poppinsMedium">
@@ -47,22 +120,34 @@ export const Login = () => {
 								<span className="mr-1">Password</span>
 								<span className="text-[#EA0000]">*</span>
 							</span>
-							<div className="relative rounded-md shadow-sm">
+							<div className="relative">
 								<input
 									className="w-full h-[56px] px-4 text-[#353535] border border-solid border-[#DFDFDF] rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular leading-6 focus:outline-none"
-									type={!showPassword ? 'password' : 'text'}
-									value={password}
-									onChange={(e) => setPassword(e.target.value)}
+									type={!loginForm.password.showPassword ? 'password' : 'text'}
+									value={loginForm.password.value}
+									onChange={(e) => handleLoginInput({ type: 'password', value: e.target.value })}
 									placeholder="Please enter password"
 									required
 								/>
 								<img
 									className="cursor-pointer absolute right-3 top-0 bottom-0 mt-auto mb-auto"
 									width={24} alt="hide_password"
-									src={showPassword ? svgAssets.login.showPassword : svgAssets.login.hidePassword}
-									onClick={() => setShowPassword(!showPassword)}
+									src={loginForm.password.showPassword ? svgAssets.login.showPassword : svgAssets.login.hidePassword}
+									onClick={() => setLoginForm({
+										...loginForm,
+										password: {
+											...loginForm.password,
+											showPassword: !loginForm.password.showPassword
+										}
+									})}
 								/>
 							</div>
+							{
+								loginForm.password.isError && (
+									<span className=" mt-2 text-[12px] text-red-400 font-medium font-poppinsMedium">
+										{loginForm.password.errorText}
+									</span>)
+							}
 						</div>
 						<div>
 							<div className="text-[#666666] leading-tight flex items-center justify-between font-poppinsRegular">

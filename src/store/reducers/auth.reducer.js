@@ -10,13 +10,13 @@ export const userReducer = (state = initState, action) => {
 	switch (action.type) {
 	case setToken:
 		return {
-			...initState,
+			...state,
 			accessToken: action.payload.token
 		};
 	case setLoginUser:
 		return {
-			userDetails: action.payload.userDetails.user,
-			accessToken: action.payload.userDetails.accessToken,
+			...state,
+			userDetails: action.payload.userDetails,
 			isLogin: true
 		};
 	default:

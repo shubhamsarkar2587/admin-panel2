@@ -62,7 +62,6 @@ export const VerifyApplication = () => {
 	}, [isMobileRefView, isPanRefView, isAddressRefView, isBankRefView, isPersonalRefView, isOccupationalRefView, isBrokerageRefView]);
 
 	const handleSteps = ({ index }) => {
-		// console.log({ index });
 		const updatedSteps = steps.map((el, i) => {
 			if (i === index) {
 				return ({

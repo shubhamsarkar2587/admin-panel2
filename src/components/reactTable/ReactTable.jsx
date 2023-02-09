@@ -3,7 +3,6 @@ import { useTable } from 'react-table';
 export const ReactTable = ({ columns, data, displayBlock }) => {
 	const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns, data });
 
-	console.log({ headerGroups, rows });
 	return (
 		<div className="w-full grid">
 			<table

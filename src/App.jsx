@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Login } from './pages/login';
 import { Navbar } from './containers/navbar/Navbar';
@@ -31,10 +31,12 @@ import { generateTokenAction } from './store/actions/auth.action';
 export const App = () => {
 	const location = useLocation();
 	const dispatch = useDispatch();
-
+	const accessToken = useSelector(state => state.user.accessToken);
 	useEffect(() => {
-		dispatch(generateTokenAction());
-	}, []);
+		if (accessToken === '') {
+			dispatch(generateTokenAction());
+		}
+	}, [accessToken]);
 
 	return (
 		<div className="App h-full w-full">
