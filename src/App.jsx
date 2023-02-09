@@ -27,6 +27,7 @@ import { BrokeragePlan } from './pages/brokerageMaster/brokeragePlan';
 import { MapBrokerage } from './pages/brokerageMaster/mapBrokerage';
 import { ReviewApplication } from './pages/kyc/reviewApplication';
 import { generateTokenAction } from './redux/actions/auth.action';
+import { ProtectedRoute } from './components/routes/ProtectedRoute';
 
 export const App = () => {
 	const location = useLocation();
@@ -54,40 +55,40 @@ export const App = () => {
 								<Sidebar />
 								<div className="pl-5 pr-[30px] pb-5 ml-[300px] mt-[105px] flex flex-col grow w-full h-full">
 									<Routes>
-										<Route index path="/" element={<Dashboard />}></Route>
+										<Route index path="/" element={<ProtectedRoute component={<Dashboard />}/>}></Route>
 										<Route path="/kyc" >
-											<Route index element={<Kyc />}></Route>
-											<Route path="review" element={<ReviewApplication />}></Route>
+											<Route index element={<ProtectedRoute component={<Kyc />}/>}></Route>
+											<Route path="review" element={<ProtectedRoute component={<ReviewApplication />}/>}></Route>
 										</Route>
 										<Route path="/application">
-											<Route index element={<AllApplication />}></Route>
-											<Route path="all" element={<AllApplication />}></Route>
-											<Route path="pending" element={<PendingApplication />}></Route>
-											<Route path="pending/verify" element={<VerifyApplication />}></Route>
-											<Route path="rejected" element={<RejectedApplication />}></Route>
-											<Route path="verified" element={<VerifiedApplication />}></Route>
-											<Route path="resubmitted" element={<ResubmittedApplication />}></Route>
+											<Route index element={<ProtectedRoute component={<AllApplication />} />}></Route>
+											<Route path="all" element={<ProtectedRoute component={<AllApplication />} />}></Route>
+											<Route path="pending" element={<ProtectedRoute component={<PendingApplication />} />}></Route>
+											<Route path="pending/verify" element={<ProtectedRoute component={<VerifyApplication />} />}></Route>
+											<Route path="rejected" element={<ProtectedRoute component={<RejectedApplication />} />}></Route>
+											<Route path="verified" element={<ProtectedRoute component={<VerifiedApplication />} />}></Route>
+											<Route path="resubmitted" element={<ProtectedRoute component={<ResubmittedApplication />} />}></Route>
 										</Route>
-										<Route path="/e-sign-report" element={<ESignReport />}></Route>
-										<Route path="/account-list" element={<AccountList />}></Route>
-										<Route path="/user-list" element={<UserList />}></Route>
-										<Route path="/user-list/assign-task" element={<AssignTask />}></Route>
-										<Route path="/user-detail" element={<UserDetail />}></Route>
-										<Route path="/reassignment-report" element={<ReassignmentReport />}></Route>
+										<Route path="/e-sign-report" element={<ProtectedRoute component={<ESignReport />} />}></Route>
+										<Route path="/account-list" element={<ProtectedRoute component={<AccountList />} />}></Route>
+										<Route path="/user-list" element={<ProtectedRoute component={<UserList />} />}></Route>
+										<Route path="/user-list/assign-task" element={<ProtectedRoute component={<AssignTask />} />}></Route>
+										<Route path="/user-detail" element={<ProtectedRoute component={<UserDetail />} />}></Route>
+										<Route path="/reassignment-report" element={<ProtectedRoute component={<ReassignmentReport />} />}></Route>
 										<Route path="/reports">
-											<Route index element={<ESignReport />}></Route>
-											<Route path="e-sign-report" element={<ESignReport />}></Route>
-											<Route path="sales-report" element={<SalesReport />}></Route>
-											<Route path="monthly-report" element={<MonthlyReport />}></Route>
-											<Route path="verifier-report" element={<VerifierReport />}></Route>
-											<Route path="ageing-report" element={<AgeingReport />}></Route>
+											<Route index element={<ProtectedRoute component={<ESignReport />} />}></Route>
+											<Route path="e-sign-report" element={<ProtectedRoute component={<ESignReport />} />}></Route>
+											<Route path="sales-report" element={<ProtectedRoute component={<SalesReport />} />}></Route>
+											<Route path="monthly-report" element={<ProtectedRoute component={<MonthlyReport />} />}></Route>
+											<Route path="verifier-report" element={<ProtectedRoute component={<VerifierReport />} />}></Route>
+											<Route path="ageing-report" element={<ProtectedRoute component={<AgeingReport />} />}></Route>
 										</Route>
 										<Route path="/brokerage-master">
-											<Route index element={<BrokeragePlan />}></Route>
-											<Route path="brokerage-plans" element={<BrokeragePlan />}></Route>
-											<Route path="map-brokerage" element={<MapBrokerage />}></Route>
+											<Route index element={<ProtectedRoute component={<BrokeragePlan />} />}></Route>
+											<Route path="brokerage-plans" element={<ProtectedRoute component={<BrokeragePlan />} />}></Route>
+											<Route path="map-brokerage" element={<ProtectedRoute component={<MapBrokerage />} />}></Route>
 										</Route>
-										<Route path="*" element={<NoMatchRoute />}></Route>
+										<Route path="*" element={<ProtectedRoute component={<NoMatchRoute />} />}></Route>
 									</Routes>
 								</div>
 							</div>

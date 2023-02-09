@@ -1,13 +1,9 @@
 import { useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
-export const ProtectedRoute = ({ Component }) => {
+export const ProtectedRoute = ({ component }) => {
 	const isLogin = useSelector(state => state.user.isLogin);
 	return isLogin
-		? (
-			<Component />
-		)
-		: (
-			<Redirect to={{ pathName: '/login' }} />
-		);
+		? component
+		: <Navigate to="/login" />;
 };
