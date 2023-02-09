@@ -161,7 +161,7 @@ export const Login = () => {
 					</div>
 					<div className="flex justify-center">
 						<button
-							className="w-min px-9 py-3 flex items-center justify-center text-white rounded-[10px] bg-[#5367FC]"
+							className="w-min px-9 py-3 flex items-center justify-center rounded-[10px] text-white bg-[#5367FC] active:bg-[#3d54fc] transition duration-150 ease-in-out"
 							onClick={() => handleLogin()}
 						>
 							<img className="mr-2.5" alt="login_screen_enter_img" src={svgAssets.login.loginEnter}></img>
