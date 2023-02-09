@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { svgAssets, pngAssets } from '../assets/asset';
-import { loginUserAction } from '../store/actions/auth.action';
+import { loginUserAction } from '../redux/actions/auth.action';
 import { validateEmail, validatePassword } from '../utils/verifyInput';
 
 export const Login = () => {

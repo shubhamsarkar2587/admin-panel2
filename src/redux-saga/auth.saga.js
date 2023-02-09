@@ -1,7 +1,7 @@
 import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { loginUserService } from '../services/auth';
 import { generateTokenService } from '../services/generateToken';
-import { generateToken, loginUser, setLoginUserAction, setTokenAction } from '../store/actions/auth.action';
+import { generateToken, loginUser, setLoginUserAction, setTokenAction } from '../redux/actions/auth.action';
 
 function * generateTokenSaga () {
 	try {

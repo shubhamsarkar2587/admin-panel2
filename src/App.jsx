@@ -26,7 +26,7 @@ import { AgeingReport } from './pages/reports/ageingReport';
 import { BrokeragePlan } from './pages/brokerageMaster/brokeragePlan';
 import { MapBrokerage } from './pages/brokerageMaster/mapBrokerage';
 import { ReviewApplication } from './pages/kyc/reviewApplication';
-import { generateTokenAction } from './store/actions/auth.action';
+import { generateTokenAction } from './redux/actions/auth.action';
 
 export const App = () => {
 	const location = useLocation();
