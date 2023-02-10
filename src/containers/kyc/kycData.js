@@ -1,9 +1,9 @@
 // import { InitMobileEmail } from './step1/InitMobileEmail';
 import { VerifyMobileEmail } from './step1/VerifyMobileEmail';
 import { VerifyPan } from './step2/VerifyPan';
-import { VerifyBankDetails } from './step3/VerifyBankDetails';
-import { PersonalDetail } from './step4/PersonalDetail';
-import { OccuptionDetail } from './step5/OccupationDetail';
+import { PersonalDetail } from './step3/PersonalDetail';
+import { OccuptionDetail } from './step4/OccupationDetail';
+import { VerifyBankDetails } from './step5/VerifyBankDetails';
 import { BrokerageStep } from './step6/BrokerageStep';
 import { UploadSelfie } from './step7/UploadSelfie';
 import { UploadSignature } from './step8/UploadSignature';
@@ -36,21 +36,21 @@ export const kycSteps = () => [
 		value: 'step3',
 		status: 'inactive',
 		isSuccess: true,
-		component: <VerifyBankDetails />
+		component: <PersonalDetail />
 	},
 	{
 		label: 'Step 4',
 		value: 'step4',
 		status: 'inactive',
 		isSuccess: true,
-		component: <PersonalDetail />
+		component: <OccuptionDetail />
 	},
 	{
 		label: 'Step 5',
 		value: 'step5',
 		status: 'inactive',
 		isSuccess: true,
-		component: <OccuptionDetail />
+		component: <VerifyBankDetails />
 	},
 	{
 		label: 'Step 6',
