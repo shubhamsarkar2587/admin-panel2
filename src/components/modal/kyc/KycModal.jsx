@@ -4,13 +4,12 @@ import { useState } from 'react';
 import { svgAssets } from '../../../assets/asset';
 
 export const KycModal = ({ isModalOpen, handleKycModel }) => {
-	// const navigate = useNavigate();
 	const [selectedItem, setSelectedItem] = useState('kyc');
 
-	const handleClick = (route) => {
-		setSelectedItem(route);
+	const handleClick = (channel) => {
+		setSelectedItem(channel);
 		setTimeout(() => {
-			handleKycModel(false);
+			handleKycModel({ isOpen: false, channel });
 		}, 1000);
 	};
 
@@ -18,13 +17,12 @@ export const KycModal = ({ isModalOpen, handleKycModel }) => {
 		<div>
 			<Modal
 				title="Please Choose any one"
-				open={isModalOpen}
-				onCancel={() => {}}
-				centered={true}
-				width={390}
-				closeIcon={false}
-				footer={null}
 				className="w-full p-[33px]"
+				width={390}
+				open={isModalOpen}
+				centered={true}
+				closable={false}
+				footer={null}
 			>
 				<div className="grid grid-cols-2 gap-5">
 					<div
