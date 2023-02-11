@@ -89,14 +89,7 @@ export const verificationSteps = () => [
 		status: 'verifyView',
 		subStepStatus: 'active',
 		isSuccess: true,
-		component: <VerifyMobileEmail />,
-		subSteps: [
-			{
-				value: 'step1_1',
-				isSuccess: true,
-				component: <VerifyMobileEmail />
-			}
-		]
+		component: <VerifyMobileEmail />
 	},
 	{
 		label: 'Step 2',
@@ -110,21 +103,21 @@ export const verificationSteps = () => [
 		value: 'step3',
 		status: 'success',
 		isSuccess: true,
-		component: <VerifyBankDetails />
+		component: <PersonalDetail />
 	},
 	{
 		label: 'Step 4',
 		value: 'step4',
 		status: 'success',
 		isSuccess: true,
-		component: <PersonalDetail />
+		component: <OccuptionDetail />
 	},
 	{
 		label: 'Step 5',
 		value: 'step5',
 		status: 'success',
 		isSuccess: true,
-		component: <OccuptionDetail />
+		component: <VerifyBankDetails />
 	},
 	{
 		label: 'Step 6',
