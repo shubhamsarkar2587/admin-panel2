@@ -15,14 +15,7 @@ export const kycSteps = () => [
 		value: 'step1',
 		status: 'active',
 		isSuccess: true,
-		component: <VerifyMobileEmail />,
-		subSteps: [
-			{
-				value: 'step1_1',
-				isSuccess: true,
-				component: <VerifyMobileEmail />
-			}
-		]
+		component: <VerifyMobileEmail />
 	},
 	{
 		label: 'Step 2',
@@ -87,7 +80,6 @@ export const verificationSteps = () => [
 		label: 'Step 1',
 		value: 'step1',
 		status: 'verifyView',
-		subStepStatus: 'active',
 		isSuccess: true,
 		component: <VerifyMobileEmail />
 	},
