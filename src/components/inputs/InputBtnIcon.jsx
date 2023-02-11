@@ -11,7 +11,7 @@ const messageTypeParameter = {
 	}
 };
 
-export const InputBtnIcon = ({ icon, label, subLabel, isImportant, height, isDisable, placeholder, btnWidth, btnIcon, btnText, inputMessage, inputMessageType }) => {
+export const InputBtnIcon = ({ icon, label, subLabel, isImportant, height, isDisable, placeholder, btnWidth, btnIcon, btnText, inputMessage, inputMessageType, value, type, inputType, handleInputChange, handleSubmit }) => {
 	return (
 		<div className="w-full flex flex-col">
 			<label className="flex items-center leading-6 font-medium font-poppinsMedium">
@@ -36,6 +36,12 @@ export const InputBtnIcon = ({ icon, label, subLabel, isImportant, height, isDis
 					}}
 					placeholder={placeholder}
 					disabled={isDisable}
+					type={type}
+					value={value}
+					onChange={(e) => handleInputChange({
+						type: inputType,
+						value: e.target.value
+					})}
 				/>
 				<button
 					className="flex items-center justify-center whitespace-nowrap rounded-r-[10px] text-white bg-black shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-medium font-poppinsMedium"
@@ -43,6 +49,7 @@ export const InputBtnIcon = ({ icon, label, subLabel, isImportant, height, isDis
 						height: height || '47px',
 						width: btnWidth || '100%'
 					}}
+					onClick={() => handleSubmit({ type: inputType })}
 				>
 					{ btnIcon && (<img className={ btnText && 'mr-2.5'} alt="send_link_img" src={btnIcon} />) }
 					{ btnText && (<span>{btnText}</span>) }

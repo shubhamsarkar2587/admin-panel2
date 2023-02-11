@@ -27,6 +27,14 @@ body {
   background-color: #F6F8F9;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; 
+}
+
 .scroll::-webkit-scrollbar {
   width: 5px;
   height: 5px;

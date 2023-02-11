@@ -1,6 +1,26 @@
+import React, { useRef, useState } from 'react';
 import { svgAssets } from '../../assets/asset';
 
 export const OtpInput = ({ icon, label, subLabel, isImportant, height, isDisable }) => {
+	const [otp, setOtp] = useState(Array(6).fill(''));
+	const inputRefs = useRef([...Array(6)].map(() => React.createRef()));
+
+	const handleChange = (value, index) => {
+		const newOtp = [...otp];
+		newOtp[index] = value;
+		setOtp(newOtp);
+
+		if (value.length === 1) {
+			inputRefs.current[index + 1]?.current?.focus();
+		}
+	};
+
+	const handleKeyDown = (event, index) => {
+		if (event?.key === 'Backspace' && otp[index].length === 0) {
+			inputRefs?.current[index - 1]?.current?.focus();
+		}
+	};
+
 	return (
 		<div className="w-full flex flex-col">
 			<label className="flex items-center leading-6 font-medium font-poppinsMedium">
@@ -20,15 +40,20 @@ export const OtpInput = ({ icon, label, subLabel, isImportant, height, isDisable
 			<div className="flex items-center mt-4">
 				<div className="grid grid-cols-6 gap-4 mr-3.5 justify-between">
 					{
-						[1, 2, 3, 4, 5, 6].map((el, index) => (
+						[...Array(6)].map((value, index) => (
 							<input
 								key={`otp_input_${index}`}
-								maxLength="1"
+								maxLength={1}
 								className="w-full px-4 text-[#353535] text-center rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular focus:outline-none"
 								style={{
 									height: height || '47px'
 								}}
 								disabled={isDisable}
+								value={value}
+								onChange={(e) => handleChange(e.target.value, index)}
+								onKeyDown={(event) => handleKeyDown(event, index)}
+								ref={inputRefs.current[index]}
+								tabIndex={index + 1}
 							/>
 						))
 					}

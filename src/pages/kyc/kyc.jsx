@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import { kycSteps } from '../../containers/kyc/kycData';
 import { KycModal } from '../../components/modal/kyc/KycModal';
 import { StepProgressBar } from '../../components/progressBar/ProgressBar';
@@ -7,11 +7,11 @@ import { BackBtn } from '../../components/buttons/BackBtn';
 import { ContinueBtn } from '../../components/buttons/ContinueBtn';
 import { ReviewBtn } from '../../components/buttons/ReviewBtn';
 import { useNavigate } from 'react-router-dom';
-import { setKycJourneyAction } from '../../redux/actions/kyc.action';
+// import { setKycJourneyAction } from '../../redux/actions/kyc.action';
 
 export const Kyc = () => {
 	const navigate = useNavigate();
-	const dispatch = useDispatch();
+	// const dispatch = useDispatch();
 	const [isModelOpen, setIsModelOpen] = useState(false);
 	const [steps, setSteps] = useState(kycSteps || []);
 
@@ -61,15 +61,16 @@ export const Kyc = () => {
 		if (isOpen) {
 			setIsModelOpen(true);
 		} else {
-			dispatch(setKycJourneyAction(
-				{
-					channel,
-					mobile: '8878228302',
-					email: 'xyzankit@gmail.com',
-					user_id: 2
-				},
-				() => setIsModelOpen(false))
-			);
+			setIsModelOpen(false);
+			// dispatch(setKycJourneyAction(
+			// 	{
+			// 		channel,
+			// 		mobile: '8878228302',
+			// 		email: 'xyzankit@gmail.com',
+			// 		user_id: 2
+			// 	},
+			// 	() => setIsModelOpen(false))
+			// );
 		}
 	};
 
