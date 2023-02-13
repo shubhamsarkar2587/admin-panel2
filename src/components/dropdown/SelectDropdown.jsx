@@ -1,8 +1,14 @@
 import { OutsideClickListner } from '../../hooks/OutsideClickListner';
 import { useRef, useState } from 'react';
 
-const dummyOptions = ['Option 1', 'Option 2', 'Option 3'];
-export const SelectDropdown = ({ icon, label, isImportant, height, placeholder, inputType, handleSelect }) => {
+const dummyOptions = [
+	{ id: 0, name: 'New' },
+	{ id: 1, name: 'New' },
+	{ id: 2, name: 'New' },
+	{ id: 3, name: 'New' }
+];
+
+export const SelectDropdown = ({ icon, label, isImportant, height, placeholder, options, inputType, handleSelect }) => {
 	const wrapperRef = useRef(null);
 	const [isSelected, setIsSelected] = useState(false);
 	const [selectedOption, setSelectedOption] = useState('');
@@ -18,6 +24,8 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder, 
 	};
 
 	OutsideClickListner({ ref: wrapperRef, closeBox: handleOutsideClick });
+
+	const initOption = options || dummyOptions;
 
 	return (
 		<div className="w-full flex flex-col">
@@ -71,18 +79,20 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder, 
 				`}
 				>
 					<ul className="px-1.5 py-1">
-						{dummyOptions.map((option) => (
-							<li
-								key={option}
-								className="px-3 py-2 my-0.5 rounded-md hover:bg-[#F6F8F9] cursor-pointer"
-								style={{
-									backgroundColor: selectedOption === option && '#e7e7e7'
-								}}
-								onClick={() => handleOption({ value: option })}
-							>
-								{option}
-							</li>
-						))}
+						{initOption?.length > 0
+							? initOption.map((option) => (
+								<li
+									key={option.id}
+									className="px-3 py-2 my-0.5 rounded-md hover:bg-[#F6F8F9] cursor-pointer"
+									style={{
+										backgroundColor: selectedOption === option.name && '#e7e7e7'
+									}}
+									onClick={() => handleOption({ value: option.name })}
+								>
+									{option.name}
+								</li>
+							))
+							: null}
 					</ul>
 				</div>
 			</div>

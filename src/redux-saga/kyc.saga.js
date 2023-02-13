@@ -1,6 +1,6 @@
-import { all, call, takeEvery } from 'redux-saga/effects';
-import { sendEmailOtp, sendMobileOtp, setKycJourney, setPersonalDetail, verifyEmailOtp, verifyMobileOtp } from '../redux/actions/kyc.action';
-import { sendEmailOtpService, sendMobileOtpService, setKycJourneyService, setPersonalDetailService, verifyEmailOtpService, verifyMobileOtpService } from '../services/kyc';
+import { all, call, put, takeEvery } from 'redux-saga/effects';
+import { getAnnualIncome, getEducationDetail, getExperienceDetail, getOccuptionDetail, sendEmailOtp, sendMobileOtp, setAnnualIncomeAction, setEducationDetailAction, setExperienceDetailAction, setKycJourney, setOccuptionDetailAction, setPersonalDetail, verifyEmailOtp, verifyMobileOtp } from '../redux/actions/kyc.action';
+import { getAnnualIncomeService, getEducationDetailService, getExperienceDetailService, getOccuptionDetailService, sendEmailOtpService, sendMobileOtpService, setKycJourneyService, setPersonalDetailService, verifyEmailOtpService, verifyMobileOtpService } from '../services/kyc';
 
 function * setKycJourneySaga ({ payload, callback }) {
 	try {
@@ -58,6 +58,42 @@ function * setPersonalDetailSaga ({ payload, callback }) {
 	};
 };
 
+function * getOccuptionDetailSaga () {
+	try {
+		const data = yield call(getOccuptionDetailService);
+		yield put(setOccuptionDetailAction({ data: data?.data?.data || [] }));
+	} catch (err) {
+		console.log(err);
+	};
+};
+
+function * getAnnualIncomeSaga () {
+	try {
+		const data = yield call(getAnnualIncomeService);
+		yield put(setAnnualIncomeAction({ data: data?.data?.data || [] }));
+	} catch (err) {
+		console.log(err);
+	};
+};
+
+function * getEducationDetailSaga () {
+	try {
+		const data = yield call(getEducationDetailService);
+		yield put(setEducationDetailAction({ data: data?.data?.data || [] }));
+	} catch (err) {
+		console.log(err);
+	};
+};
+
+function * getExperienceDetailSaga () {
+	try {
+		const data = yield call(getExperienceDetailService);
+		yield put(setExperienceDetailAction({ data: data?.data?.data || [] }));
+	} catch (err) {
+		console.log(err);
+	};
+};
+
 function * kycSaga () {
 	yield all([
 		takeEvery(setKycJourney, setKycJourneySaga),
@@ -65,7 +101,11 @@ function * kycSaga () {
 		takeEvery(verifyMobileOtp, verifyMobileOtpSaga),
 		takeEvery(sendEmailOtp, sendEmailOtpSaga),
 		takeEvery(verifyEmailOtp, verifyEmailOtpSaga),
-		takeEvery(setPersonalDetail, setPersonalDetailSaga)
+		takeEvery(setPersonalDetail, setPersonalDetailSaga),
+		takeEvery(getOccuptionDetail, getOccuptionDetailSaga),
+		takeEvery(getAnnualIncome, getAnnualIncomeSaga),
+		takeEvery(getEducationDetail, getEducationDetailSaga),
+		takeEvery(getExperienceDetail, getExperienceDetailSaga)
 	]);
 }
 

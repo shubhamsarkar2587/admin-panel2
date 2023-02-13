@@ -52,3 +52,35 @@ export const setPersonalDetailService = async (payload) => {
 	);
 	return data;
 };
+
+export const getOccuptionDetailService = async () => {
+	const data = await axios.get(
+		'https://dkyc.bigul.app/ekycapi/GetOccuptionMaster',
+		headers
+	);
+	return data;
+};
+
+export const getAnnualIncomeService = async () => {
+	const data = await axios.get(
+		'https://dkyc.bigul.app/ekycapi/GetAnnualIncomeMaster',
+		headers
+	);
+	return data;
+};
+
+export const getEducationDetailService = async () => {
+	const data = await axios.get(
+		'https://dkyc.bigul.app/ekycapi/GetEducationMaster',
+		headers
+	);
+	return data;
+};
+
+export const getExperienceDetailService = async () => {
+	const data = await axios.get(
+		'https://dkyc.bigul.app/ekycapi/GetExperienceMaster',
+		headers
+	);
+	return data;
+};

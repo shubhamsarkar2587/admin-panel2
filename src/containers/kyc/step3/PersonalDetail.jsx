@@ -33,8 +33,6 @@ export const PersonalDetail = () => {
 		}));
 	};
 
-	console.log(form);
-
 	return (
 		<div className="w-full flex flex-col mb-10">
 			<MainTitle title="Personal Details" />
