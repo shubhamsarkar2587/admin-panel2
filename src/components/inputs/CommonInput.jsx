@@ -33,7 +33,7 @@ export const CommonInput = ({ icon, label, isImportant, height, isDisable, place
 				placeholder={placeholder}
 				disabled={isDisable}
 				value={value}
-				onChange={(event) => handleInput({ value: event.target.value, type: inputType })}
+				onChange={(event) => handleInput && handleInput({ value: event.target.value, type: inputType })}
 			/>
 			{
 				inputMessage && inputMessageType && (

@@ -20,7 +20,7 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder, 
 	const handleOption = ({ value }) => {
 		setSelectedOption(value);
 		setIsSelected(false);
-		handleSelect({ type: inputType, value });
+		handleSelect && handleSelect({ type: inputType, value });
 	};
 
 	OutsideClickListner({ ref: wrapperRef, closeBox: handleOutsideClick });
