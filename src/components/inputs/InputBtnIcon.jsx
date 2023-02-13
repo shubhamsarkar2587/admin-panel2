@@ -36,12 +36,10 @@ export const InputBtnIcon = ({ icon, label, subLabel, isImportant, height, isDis
 					}}
 					placeholder={placeholder}
 					disabled={isDisable}
-					type={type}
+					type={type || 'text'}
 					value={value}
-					onChange={(e) => handleInputChange({
-						type: inputType,
-						value: e.target.value
-					})}
+					onChange={(event) => handleInputChange({ value: event.target.value, type: inputType })}
+					onKeyDown={(event) => event.key === 'Enter' && handleSubmit({ type: inputType })}
 				/>
 				<button
 					className="flex items-center justify-center whitespace-nowrap rounded-r-[10px] text-white bg-black shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-medium font-poppinsMedium"

@@ -4,7 +4,7 @@ import { pngAssets, svgAssets } from '../../../assets/asset';
 import { MainTitle } from '../../../components/common/MainTitle';
 import { InputBtnIcon } from '../../../components/inputs/InputBtnIcon';
 import { OtpInput } from '../../../components/inputs/OtpInput';
-import { sendMobileOtpAction } from '../../../redux/actions/kyc.action';
+import { sendEmailOtpAction, sendMobileOtpAction, verifyMobileOtpAction } from '../../../redux/actions/kyc.action';
 
 export const VerifyMobileEmail = () => {
 	const dispatch = useDispatch();
@@ -19,12 +19,22 @@ export const VerifyMobileEmail = () => {
 			value: '',
 			isError: false,
 			errorText: ''
+		},
+		emailInput: {
+			value: '',
+			isError: false,
+			errorText: ''
+		},
+		emailOtp: {
+			value: '',
+			isError: false,
+			errorText: ''
 		}
 	});
 
-	const handleInput = ({ type, value }) => {
+	const handleInput = ({ value, type }) => {
 		setInput({
-			...value,
+			...input,
 			[type]: {
 				value,
 				isError: false,
@@ -36,6 +46,12 @@ export const VerifyMobileEmail = () => {
 	const handleStep = ({ type }) => {
 		if (type === 'mobileInput') {
 			dispatch(sendMobileOtpAction({ input: input.mobileInput.value }));
+		} else if (type === 'mobileOtp') {
+			dispatch(verifyMobileOtpAction({ input: input.emailInput.value }));
+		} else if (type === 'emailInput') {
+			dispatch(sendEmailOtpAction({ input: input.emailInput.value }));
+		} else {
+			dispatch(sendEmailOtpAction({ input: input.emailInput.value }));
 		}
 	};
 
@@ -53,7 +69,6 @@ export const VerifyMobileEmail = () => {
 						btnWidth="175px"
 						btnText="Send OTP"
 						value={input.mobileInput.value}
-						type="number"
 						inputType="mobileInput"
 						handleInputChange={handleInput}
 						handleSubmit={handleStep}
@@ -76,6 +91,10 @@ export const VerifyMobileEmail = () => {
 						btnIcon={svgAssets.kyc.send}
 						btnWidth="175px"
 						btnText="Send OTP"
+						value={input.emailInput.value}
+						inputType="emailInput"
+						handleInputChange={handleInput}
+						handleSubmit={handleStep}
 					/>
 				</div>
 				<div className="flex flex-col">
