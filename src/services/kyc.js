@@ -10,7 +10,7 @@ export const setKycJourneyService = async (payload) => {
 	return data;
 };
 
-export const sendMobileOtpService = async (payload) => {
+export const sendMobileOtpService = async () => {
 	const data = await axios.get(
 		'https://dkyc.bigul.app/ekycapi/send-mobile-otp/6',
 		headers
@@ -19,14 +19,15 @@ export const sendMobileOtpService = async (payload) => {
 };
 
 export const verifyMobileOtpService = async (payload) => {
-	const data = await axios.get(
+	const data = await axios.post(
 		'https://dkyc.bigul.app/ekycapi/verify-mobile-otp/6',
+		payload,
 		headers
 	);
 	return data;
 };
 
-export const sendEmailOtpService = async (payload) => {
+export const sendEmailOtpService = async () => {
 	const data = await axios.get(
 		'https://dkyc.bigul.app/ekycapi/send-email-otp/6',
 		headers
@@ -35,8 +36,9 @@ export const sendEmailOtpService = async (payload) => {
 };
 
 export const verifyEmailOtpService = async (payload) => {
-	const data = await axios.get(
+	const data = await axios.post(
 		'https://dkyc.bigul.app/ekycapi/verify-email-otp/6',
+		payload,
 		headers
 	);
 	return data;

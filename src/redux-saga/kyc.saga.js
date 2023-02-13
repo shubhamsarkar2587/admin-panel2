@@ -1,6 +1,6 @@
 import { all, call, takeEvery } from 'redux-saga/effects';
 import { sendEmailOtp, sendMobileOtp, setKycJourney, verifyEmailOtp, verifyMobileOtp } from '../redux/actions/kyc.action';
-import { sendEmailOtpService, sendMobileOtpService, setKycJourneyService } from '../services/kyc';
+import { sendEmailOtpService, sendMobileOtpService, setKycJourneyService, verifyEmailOtpService, verifyMobileOtpService } from '../services/kyc';
 
 function * setKycJourneySaga ({ payload, callback }) {
 	try {
@@ -13,9 +13,9 @@ function * setKycJourneySaga ({ payload, callback }) {
 	};
 };
 
-function * sendMobileOtpSaga ({ payload, callback }) {
+function * sendMobileOtpSaga ({ callback }) {
 	try {
-		const data = yield call(sendMobileOtpService, payload);
+		const data = yield call(sendMobileOtpService);
 		console.log(data);
 	} catch (err) {
 		console.log(err);
@@ -24,16 +24,16 @@ function * sendMobileOtpSaga ({ payload, callback }) {
 
 function * verifyMobileOtpSaga ({ payload, callback }) {
 	try {
-		const data = yield call(sendMobileOtpService, payload);
+		const data = yield call(verifyMobileOtpService, payload);
 		console.log(data);
 	} catch (err) {
 		console.log(err);
 	};
 };
 
-function * sendEmailOtpSaga ({ payload, callback }) {
+function * sendEmailOtpSaga ({ callback }) {
 	try {
-		const data = yield call(sendEmailOtpService, payload);
+		const data = yield call(sendEmailOtpService);
 		console.log(data);
 	} catch (err) {
 		console.log(err);
@@ -42,7 +42,7 @@ function * sendEmailOtpSaga ({ payload, callback }) {
 
 function * verifyEmailOtpSaga ({ payload, callback }) {
 	try {
-		const data = yield call(sendMobileOtpService, payload);
+		const data = yield call(verifyEmailOtpService, payload);
 		console.log(data);
 	} catch (err) {
 		console.log(err);

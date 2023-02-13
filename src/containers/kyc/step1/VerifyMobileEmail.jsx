@@ -4,7 +4,7 @@ import { pngAssets, svgAssets } from '../../../assets/asset';
 import { MainTitle } from '../../../components/common/MainTitle';
 import { InputBtnIcon } from '../../../components/inputs/InputBtnIcon';
 import { OtpInput } from '../../../components/inputs/OtpInput';
-import { sendEmailOtpAction, sendMobileOtpAction, verifyMobileOtpAction } from '../../../redux/actions/kyc.action';
+import { sendEmailOtpAction, sendMobileOtpAction, verifyEmailOtpAction, verifyMobileOtpAction } from '../../../redux/actions/kyc.action';
 
 export const VerifyMobileEmail = () => {
 	const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export const VerifyMobileEmail = () => {
 		}
 	});
 
-	const handleInput = ({ value, type }) => {
+	const handleInput = ({ type, value }) => {
 		setInput({
 			...input,
 			[type]: {
@@ -43,15 +43,17 @@ export const VerifyMobileEmail = () => {
 		});
 	};
 
-	const handleStep = ({ type }) => {
+	const handleStep = ({ type, value }) => {
 		if (type === 'mobileInput') {
-			dispatch(sendMobileOtpAction({ input: input.mobileInput.value }));
+			dispatch(sendMobileOtpAction());
 		} else if (type === 'mobileOtp') {
-			dispatch(verifyMobileOtpAction({ input: input.emailInput.value }));
+			handleInput({ type, value });
+			dispatch(verifyMobileOtpAction({ mobile_otp: value }));
 		} else if (type === 'emailInput') {
-			dispatch(sendEmailOtpAction({ input: input.emailInput.value }));
-		} else {
-			dispatch(sendEmailOtpAction({ input: input.emailInput.value }));
+			dispatch(sendEmailOtpAction());
+		} else if (type === 'emailOtp') {
+			handleInput({ type, value });
+			dispatch(verifyEmailOtpAction({ email_otp: value }));
 		}
 	};
 
@@ -78,6 +80,9 @@ export const VerifyMobileEmail = () => {
 					<OtpInput
 						label="Mobile OTP"
 						isImportant={true}
+						inputType="mobileOtp"
+						handleInputChange={handleInput}
+						handleSubmit={handleStep}
 					/>
 				</div>
 			</div>
@@ -101,6 +106,8 @@ export const VerifyMobileEmail = () => {
 					<OtpInput
 						label="Email OTP"
 						isImportant={true}
+						inputType="emailOtp"
+						handleSubmit={handleStep}
 					/>
 				</div>
 			</div>

@@ -10,9 +10,8 @@ export const setKycJourneyAction = (payload, callback) => ({
 	callback
 });
 
-export const sendMobileOtpAction = (payload, callback) => ({
+export const sendMobileOtpAction = (callback) => ({
 	type: sendMobileOtp,
-	payload,
 	callback
 });
 
@@ -24,7 +23,6 @@ export const verifyMobileOtpAction = (payload, callback) => ({
 
 export const sendEmailOtpAction = (payload, callback) => ({
 	type: sendEmailOtp,
-	payload,
 	callback
 });
 

@@ -1,14 +1,16 @@
 import React, { useRef, useState } from 'react';
 import { svgAssets } from '../../assets/asset';
 
-export const OtpInput = ({ icon, label, subLabel, isImportant, height, isDisable }) => {
+export const OtpInput = ({ icon, label, subLabel, isImportant, height, isDisable, inputType, handleSubmit }) => {
 	const [otp, setOtp] = useState(Array(6).fill(''));
+	const [concatOtp, setConcatOtp] = useState('');
 	const inputRefs = useRef([...Array(6)].map(() => React.createRef()));
 
 	const handleChange = (value, index) => {
 		const newOtp = [...otp];
 		newOtp[index] = value;
 		setOtp(newOtp);
+		setConcatOtp(newOtp.toString().replaceAll(',', ''));
 
 		if (value.length === 1) {
 			inputRefs.current[index + 1]?.current?.focus();
@@ -18,7 +20,9 @@ export const OtpInput = ({ icon, label, subLabel, isImportant, height, isDisable
 	const handleKeyDown = (event, index) => {
 		if (event?.key === 'Backspace' && otp[index].length === 0) {
 			inputRefs?.current[index - 1]?.current?.focus();
-		}
+		} else if (event?.key === 'Enter' && concatOtp.length > 5) {
+			handleSubmit({ type: inputType, value: concatOtp });
+		};
 	};
 
 	return (
@@ -59,11 +63,13 @@ export const OtpInput = ({ icon, label, subLabel, isImportant, height, isDisable
 					}
 				</div>
 				<button
-					className="min-w-max px-3.5 flex items-center whitespace-nowrap rounded-r-[10px] text-white bg-black font-medium font-poppinsMedium"
+					className={`min-w-max px-3.5 flex items-center whitespace-nowrap rounded-r-[10px] text-white  font-medium font-poppinsMedium
+						${concatOtp.length > 5 ? 'cursor-pointer bg-black' : ' cursor-default bg-[#b4babd61]'}
+					`}
 					style={{
 						height: height || '47px'
 					}}
-					disabled={isDisable}
+					onClick={() => concatOtp.length > 5 && handleSubmit({ type: inputType, value: concatOtp })}
 				>
 					<img className="mr-2.5" alt="send_link_img" src={svgAssets.kyc.verify} />
 					<span>Verify</span>
