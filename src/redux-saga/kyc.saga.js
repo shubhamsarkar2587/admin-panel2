@@ -1,6 +1,6 @@
 import { all, call, takeEvery } from 'redux-saga/effects';
-import { sendEmailOtp, sendMobileOtp, setKycJourney, verifyEmailOtp, verifyMobileOtp } from '../redux/actions/kyc.action';
-import { sendEmailOtpService, sendMobileOtpService, setKycJourneyService, verifyEmailOtpService, verifyMobileOtpService } from '../services/kyc';
+import { sendEmailOtp, sendMobileOtp, setKycJourney, setPersonalDetail, verifyEmailOtp, verifyMobileOtp } from '../redux/actions/kyc.action';
+import { sendEmailOtpService, sendMobileOtpService, setKycJourneyService, setPersonalDetailService, verifyEmailOtpService, verifyMobileOtpService } from '../services/kyc';
 
 function * setKycJourneySaga ({ payload, callback }) {
 	try {
@@ -49,13 +49,23 @@ function * verifyEmailOtpSaga ({ payload, callback }) {
 	};
 };
 
+function * setPersonalDetailSaga ({ payload, callback }) {
+	try {
+		const data = yield call(setPersonalDetailService, payload);
+		console.log(data);
+	} catch (err) {
+		console.log(err);
+	};
+};
+
 function * kycSaga () {
 	yield all([
 		takeEvery(setKycJourney, setKycJourneySaga),
 		takeEvery(sendMobileOtp, sendMobileOtpSaga),
 		takeEvery(verifyMobileOtp, verifyMobileOtpSaga),
 		takeEvery(sendEmailOtp, sendEmailOtpSaga),
-		takeEvery(verifyEmailOtp, verifyEmailOtpSaga)
+		takeEvery(verifyEmailOtp, verifyEmailOtpSaga),
+		takeEvery(setPersonalDetail, setPersonalDetailSaga)
 	]);
 }
 

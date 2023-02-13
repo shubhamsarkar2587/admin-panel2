@@ -43,3 +43,12 @@ export const verifyEmailOtpService = async (payload) => {
 	);
 	return data;
 };
+
+export const setPersonalDetailService = async (payload) => {
+	const data = await axios.post(
+		'https://dkyc.bigul.app/ekycapi/save-personal-info/6',
+		payload,
+		headers
+	);
+	return data;
+};

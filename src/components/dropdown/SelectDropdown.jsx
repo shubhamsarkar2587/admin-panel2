@@ -2,18 +2,19 @@ import { OutsideClickListner } from '../../hooks/OutsideClickListner';
 import { useRef, useState } from 'react';
 
 const dummyOptions = ['Option 1', 'Option 2', 'Option 3'];
-export const SelectDropdown = ({ icon, label, isImportant, height, placeholder }) => {
+export const SelectDropdown = ({ icon, label, isImportant, height, placeholder, inputType, handleSelect }) => {
 	const wrapperRef = useRef(null);
 	const [isSelected, setIsSelected] = useState(false);
 	const [selectedOption, setSelectedOption] = useState('');
 
-	const handleSearch = ({ value }) => {
-		setSelectedOption(value);
+	const handleOutsideClick = () => {
 		setIsSelected(false);
 	};
 
-	const handleOutsideClick = () => {
+	const handleOption = ({ value }) => {
+		setSelectedOption(value);
 		setIsSelected(false);
+		handleSelect({ type: inputType, value });
 	};
 
 	OutsideClickListner({ ref: wrapperRef, closeBox: handleOutsideClick });
@@ -77,7 +78,7 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder }
 								style={{
 									backgroundColor: selectedOption === option && '#e7e7e7'
 								}}
-								onClick={() => handleSearch({ value: option })}
+								onClick={() => handleOption({ value: option })}
 							>
 								{option}
 							</li>

@@ -3,6 +3,7 @@ export const sendMobileOtp = 'SEND_MOBILE_OTP';
 export const verifyMobileOtp = 'VERIFY_MOBILE_OTP';
 export const sendEmailOtp = 'SEND_EMAIL_OTP';
 export const verifyEmailOtp = 'VERIFY_EMAIL_OTP';
+export const setPersonalDetail = 'SET_PERSONAL_DETAIL';
 
 export const setKycJourneyAction = (payload, callback) => ({
 	type: setKycJourney,
@@ -28,6 +29,12 @@ export const sendEmailOtpAction = (payload, callback) => ({
 
 export const verifyEmailOtpAction = (payload, callback) => ({
 	type: verifyEmailOtp,
+	payload,
+	callback
+});
+
+export const setPersonalDetailAction = (payload, callback) => ({
+	type: setPersonalDetail,
 	payload,
 	callback
 });
