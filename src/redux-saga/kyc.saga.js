@@ -1,6 +1,6 @@
 import { all, call, put, takeEvery } from 'redux-saga/effects';
-import { getAnnualIncome, getEducationDetail, getExperienceDetail, getOccuptionDetail, sendEmailOtp, sendMobileOtp, setAnnualIncomeAction, setEducationDetailAction, setExperienceDetailAction, setKycJourney, setOccuptionAllInfo, setOccuptionDetailAction, setPersonalDetail, verifyEmailOtp, verifyMobileOtp } from '../redux/actions/kyc.action';
-import { getAnnualIncomeService, getEducationDetailService, getExperienceDetailService, getOccuptionDetailService, saveOccuptionService, sendEmailOtpService, sendMobileOtpService, setKycJourneyService, setPersonalDetailService, verifyEmailOtpService, verifyMobileOtpService } from '../services/kyc';
+import { getAnnualIncome, getEducationDetail, getExperienceDetail, getOccuptionDetail, sendEmailOtp, sendMobileOtp, setAnnualIncomeAction, setBankAllInfo, setEducationDetailAction, setExperienceDetailAction, setKycJourney, setOccuptionAllInfo, setOccuptionDetailAction, setPersonalDetail, verifyEmailOtp, verifyMobileOtp } from '../redux/actions/kyc.action';
+import { getAnnualIncomeService, getEducationDetailService, getExperienceDetailService, getOccuptionDetailService, saveOccuptionService, sendEmailOtpService, sendMobileOtpService, setBankAllInfoService, setKycJourneyService, setPersonalDetailService, verifyEmailOtpService, verifyMobileOtpService } from '../services/kyc';
 
 function * setKycJourneySaga ({ payload, callback }) {
 	try {
@@ -103,6 +103,15 @@ function * saveOccuptionSaga ({ payload }) {
 	};
 };
 
+function * setBankAllInfoSaga ({ payload }) {
+	try {
+		const data = yield call(setBankAllInfoService, payload);
+		console.log(data);
+	} catch (err) {
+		console.log(err);
+	};
+};
+
 function * kycSaga () {
 	yield all([
 		takeEvery(setKycJourney, setKycJourneySaga),
@@ -115,7 +124,8 @@ function * kycSaga () {
 		takeEvery(getAnnualIncome, getAnnualIncomeSaga),
 		takeEvery(getEducationDetail, getEducationDetailSaga),
 		takeEvery(getExperienceDetail, getExperienceDetailSaga),
-		takeEvery(setOccuptionAllInfo, saveOccuptionSaga)
+		takeEvery(setOccuptionAllInfo, saveOccuptionSaga),
+		takeEvery(setBankAllInfo, setBankAllInfoSaga)
 	]);
 }
 

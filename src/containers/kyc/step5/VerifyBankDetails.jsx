@@ -4,8 +4,11 @@ import { CommonInput } from '../../../components/inputs/CommonInput';
 import { VerifyBtn } from '../../../components/buttons/VerifyBtn';
 import { SearchIfcModal } from '../../../components/modal/kyc/SearchIfcModal';
 import { MainTitle } from '../../../components/common/MainTitle';
+import { useDispatch } from 'react-redux';
+import { setBankAllInfoAction } from '../../../redux/actions/kyc.action';
 
 export const VerifyBankDetails = () => {
+	const dispatch = useDispatch();
 	const [isModelOpen, setIsModelOpen] = useState(false);
 
 	const handleKycModel = (condition) => {
@@ -14,6 +17,15 @@ export const VerifyBankDetails = () => {
 		} else {
 			setIsModelOpen(false);
 		}
+	};
+
+	const handleVerifyBtn = () => {
+		dispatch(setBankAllInfoAction({
+			BankIFSC: 'ICIC0000433',
+			BankAccountNumber: '024101531444',
+			BankName: 'ICICI BANK',
+			BankAccountHolderName: 'anil prajapati'
+		}));
 	};
 
 	return (
@@ -52,7 +64,9 @@ export const VerifyBankDetails = () => {
 				/>
 			</div>
 			<div className="flex items-center justify-center">
-				<VerifyBtn />
+				<VerifyBtn
+					verifyBtn={() => handleVerifyBtn()}
+				/>
 			</div>
 			<SearchIfcModal isModalOpen={isModelOpen} handleKycModel={handleKycModel} />
 		</div>

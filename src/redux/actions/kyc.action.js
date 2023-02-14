@@ -13,6 +13,7 @@ export const setEducationDetail = 'SET_EDUCATION_DETAIL';
 export const getExperienceDetail = 'GET_EXPERIENCE_DETAIL';
 export const setExperienceDetail = 'SET_EXPERIENCE_DETAIL';
 export const setOccuptionAllInfo = 'SET_OCCUPTION_ALL_INFO';
+export const setBankAllInfo = 'SET_BANK_ALL_INFO';
 
 export const setKycJourneyAction = (payload, callback) => ({
 	type: setKycJourney,
@@ -90,5 +91,10 @@ export const setExperienceDetailAction = (payload) => ({
 
 export const setOccuptionAllInfoAction = (payload) => ({
 	type: setOccuptionAllInfo,
+	payload
+});
+
+export const setBankAllInfoAction = (payload) => ({
+	type: setBankAllInfo,
 	payload
 });

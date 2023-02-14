@@ -93,3 +93,12 @@ export const saveOccuptionService = async (payload) => {
 	);
 	return data;
 };
+
+export const setBankAllInfoService = async (payload) => {
+	const data = await axios.post(
+		'https://dkyc.bigul.app/ekycapi/save-bank-info/6',
+		payload,
+		headers
+	);
+	return data;
+};
