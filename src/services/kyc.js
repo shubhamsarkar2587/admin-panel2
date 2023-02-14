@@ -84,3 +84,12 @@ export const getExperienceDetailService = async () => {
 	);
 	return data;
 };
+
+export const saveOccuptionService = async (payload) => {
+	const data = await axios.post(
+		'https://dkyc.bigul.app/ekycapi/save-accupational-info/6',
+		payload,
+		headers
+	);
+	return data;
+};

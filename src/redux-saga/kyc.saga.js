@@ -1,6 +1,6 @@
 import { all, call, put, takeEvery } from 'redux-saga/effects';
-import { getAnnualIncome, getEducationDetail, getExperienceDetail, getOccuptionDetail, sendEmailOtp, sendMobileOtp, setAnnualIncomeAction, setEducationDetailAction, setExperienceDetailAction, setKycJourney, setOccuptionDetailAction, setPersonalDetail, verifyEmailOtp, verifyMobileOtp } from '../redux/actions/kyc.action';
-import { getAnnualIncomeService, getEducationDetailService, getExperienceDetailService, getOccuptionDetailService, sendEmailOtpService, sendMobileOtpService, setKycJourneyService, setPersonalDetailService, verifyEmailOtpService, verifyMobileOtpService } from '../services/kyc';
+import { getAnnualIncome, getEducationDetail, getExperienceDetail, getOccuptionDetail, sendEmailOtp, sendMobileOtp, setAnnualIncomeAction, setEducationDetailAction, setExperienceDetailAction, setKycJourney, setOccuptionAllInfo, setOccuptionDetailAction, setPersonalDetail, verifyEmailOtp, verifyMobileOtp } from '../redux/actions/kyc.action';
+import { getAnnualIncomeService, getEducationDetailService, getExperienceDetailService, getOccuptionDetailService, saveOccuptionService, sendEmailOtpService, sendMobileOtpService, setKycJourneyService, setPersonalDetailService, verifyEmailOtpService, verifyMobileOtpService } from '../services/kyc';
 
 function * setKycJourneySaga ({ payload, callback }) {
 	try {
@@ -94,6 +94,15 @@ function * getExperienceDetailSaga () {
 	};
 };
 
+function * saveOccuptionSaga ({ payload }) {
+	try {
+		const data = yield call(saveOccuptionService, payload);
+		console.log(data);
+	} catch (err) {
+		console.log(err);
+	};
+};
+
 function * kycSaga () {
 	yield all([
 		takeEvery(setKycJourney, setKycJourneySaga),
@@ -105,7 +114,8 @@ function * kycSaga () {
 		takeEvery(getOccuptionDetail, getOccuptionDetailSaga),
 		takeEvery(getAnnualIncome, getAnnualIncomeSaga),
 		takeEvery(getEducationDetail, getEducationDetailSaga),
-		takeEvery(getExperienceDetail, getExperienceDetailSaga)
+		takeEvery(getExperienceDetail, getExperienceDetailSaga),
+		takeEvery(setOccuptionAllInfo, saveOccuptionSaga)
 	]);
 }
 

@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { pngAssets } from '../../../assets/asset';
+import { ContinueBtn } from '../../../components/buttons/ContinueBtn';
 import { MainTitle } from '../../../components/common/MainTitle';
 import { SelectDropdown } from '../../../components/dropdown/SelectDropdown';
-import { getAnnualIncomeAction, getEducationDetailAction, getExperienceDetailAction, getOccuptionDetailAction } from '../../../redux/actions/kyc.action';
+import { getAnnualIncomeAction, getEducationDetailAction, getExperienceDetailAction, getOccuptionDetailAction, setOccuptionAllInfoAction } from '../../../redux/actions/kyc.action';
 
 export const OccuptionDetail = () => {
 	const dispatch = useDispatch();
@@ -20,6 +21,15 @@ export const OccuptionDetail = () => {
 			...form,
 			[type]: value
 		});
+	};
+
+	const handleContinueBtn = () => {
+		dispatch(setOccuptionAllInfoAction({
+			occupation_id: 1,
+			education_id: 2,
+			income_id: 3,
+			trading_experience: 1
+		}));
 	};
 
 	useEffect(() => {
@@ -71,6 +81,9 @@ export const OccuptionDetail = () => {
 					inputType="experienceDetail"
 					handleSelect={handleForm}
 				/>
+			</div>
+			<div className="max-w-max inline-flex justify-between">
+				<ContinueBtn handleContinueBtn={() => handleContinueBtn()} />
 			</div>
 		</div>
 	);
