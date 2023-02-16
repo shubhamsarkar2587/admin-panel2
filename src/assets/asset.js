@@ -4,12 +4,14 @@ import mobileNumber from './png/mobileNumber.png';
 import mail from './png/mail.png';
 import kycSuccess from './png/kycSuccess.png';
 
+import kycAssist from './svg/login/kycAssist.svg';
+import showPassword from './svg/login/showPassword.svg';
+import hidePassword from './svg/login/hidePassword.svg';
+
 import bigul from './svg/bigul.svg';
 import bonabza from './svg/bonabza.svg';
 import loginScreenImg from './svg/loginScreenImg.svg';
 import loginEnter from './svg/loginEnter.svg';
-import showPassword from './svg/showPassword.svg';
-import hidePassword from './svg/hidePassword.svg';
 import kyc from './svg/kyc.svg';
 import rightArrow from './svg/rightArrow.svg';
 import defaultUser from './svg/defaultUser.svg';
@@ -81,6 +83,7 @@ export const svgAssets = {
 	login: {
 		loginScreenImg,
 		loginEnter,
+		kycAssist,
 		showPassword,
 		hidePassword
 	},
