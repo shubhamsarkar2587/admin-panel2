@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { svgAssets, pngAssets } from '../assets/asset';
+import { svgAssets } from '../assets/asset';
 import { loginUserAction } from '../redux/actions/auth.action';
 import { validatePassword, validateUserId } from '../utils/verifyInput';
 
@@ -82,12 +82,12 @@ export const Login = () => {
 			<div className="w-[45%] h-full flex items-center bg-[#5367FC]">
 				<img alt="login_screen_image" src={svgAssets.login.loginScreenImg}></img>
 			</div>
-			<div className="w-[55%] h-full py-10 full px-20 relative">
-				<div className="flex items-center justify-between w-full">
-					<img className="h-[40px]" alt="app_logo" src={svgAssets.bigul} />
-					<img className="h-[55px]" alt="app_logo" src={svgAssets.login.kycAssist} />
+			<div className="w-[55%] h-full py-10 px-20 flex flex-col items-center">
+				<div className="w-full max-h-max flex items-center justify-between">
+					<img alt="app_logo" src={svgAssets.logo} />
+					<img className="h-[55px]" alt="kyc_assist" src={svgAssets.login.kycAssist} />
 				</div>
-				<div className="w-full h-full flex flex-col justify-center">
+				<div className="w-full max-h-max mt-[76px] flex flex-col justify-center">
 					<h6 className="mb-7 text-black text-2xl capitalize font-semibold font-poppinsSemiBold">login</h6>
 					<div className="mb-16">
 						<div className="flex flex-col mb-8">
@@ -95,7 +95,7 @@ export const Login = () => {
 								<img
 									className="max-h-[22px] mr-1.5 object-contain"
 									alt="input_icon"
-									src={pngAssets.kyc.mobileNumber}
+									src={svgAssets.login.usermail}
 								/>
 								<span className="mr-1">User Id</span>
 								<span className="text-[#FF4343]">*</span>
@@ -118,7 +118,7 @@ export const Login = () => {
 								<img
 									className="max-h-[22px] mr-1.5 object-contain"
 									alt="input_icon"
-									src={pngAssets.kyc.mobileNumber}
+									src={svgAssets.login.password}
 								/>
 								<span className="mr-1">Password</span>
 								<span className="text-[#FF4343]">*</span>

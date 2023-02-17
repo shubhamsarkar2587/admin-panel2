@@ -6,14 +6,16 @@ import kycSuccess from './png/kycSuccess.png';
 
 import logo from './svg/logo.svg';
 
+import loginScreenImg from './svg/login/loginScreenImg.svg';
 import kycAssist from './svg/login/kycAssist.svg';
+import password from './svg/login/password.svg';
+import usermail from './svg/login/usermail.svg';
 import showPassword from './svg/login/showPassword.svg';
 import hidePassword from './svg/login/hidePassword.svg';
+import loginEnter from './svg/login/loginEnter.svg';
 
 import bigul from './svg/bigul.svg';
 import bonabza from './svg/bonabza.svg';
-import loginScreenImg from './svg/loginScreenImg.svg';
-import loginEnter from './svg/loginEnter.svg';
 import kyc from './svg/kyc.svg';
 import rightArrow from './svg/rightArrow.svg';
 import defaultUser from './svg/defaultUser.svg';
@@ -85,10 +87,12 @@ export const svgAssets = {
 	dropdownIcon,
 	login: {
 		loginScreenImg,
-		loginEnter,
 		kycAssist,
+		password,
+		usermail,
 		showPassword,
-		hidePassword
+		hidePassword,
+		loginEnter
 	},
 	navbar: {
 		defaultUser,
