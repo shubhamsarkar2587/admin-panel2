@@ -4,6 +4,8 @@ import mobileNumber from './png/mobileNumber.png';
 import mail from './png/mail.png';
 import kycSuccess from './png/kycSuccess.png';
 
+import logo from './svg/logo.svg';
+
 import kycAssist from './svg/login/kycAssist.svg';
 import showPassword from './svg/login/showPassword.svg';
 import hidePassword from './svg/login/hidePassword.svg';
@@ -77,6 +79,7 @@ export const pngAssets = {
 };
 
 export const svgAssets = {
+	logo,
 	bigul,
 	bonabza,
 	dropdownIcon,

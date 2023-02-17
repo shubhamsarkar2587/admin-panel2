@@ -24,12 +24,12 @@ export const Navbar = () => {
 
 	return (
 		<div className="w-full pt-5 pb-10 flex items-center z-50 fixed bg-[#F6F8F9]">
-			<div className="w-[300px] px-10 cursor-pointer">
+			<div className="pl-10 cursor-pointer absolute">
 				<Link to="/">
-					<img className="h-[40px]" alt="app_logo" src={svgAssets.bigul} />
+					<img alt="app_logo" src={svgAssets.logo} />
 				</Link>
 			</div>
-			<div className="mx-5 pr-2.5 flex grow items-center justify-between">
+			<div className="pl-5 pr-2.5 ml-[300px] mr-5 flex grow items-center justify-between">
 				<SearchBar />
 				<div className="flex items-center">
 					<button

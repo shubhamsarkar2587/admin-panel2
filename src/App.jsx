@@ -53,7 +53,7 @@ export const App = () => {
 							<Navbar />
 							<div className="flex h-full">
 								<Sidebar />
-								<div className="pl-5 pr-[30px] pb-5 ml-[300px] mt-[105px] flex flex-col grow w-full h-full">
+								<div className="w-full h-[calc(100vh-105px)] pl-5 pr-[30px] pb-5 ml-[300px] mt-[105px] flex flex-col grow">
 									<Routes>
 										<Route index path="/" element={<ProtectedRoute component={<Dashboard />}/>}></Route>
 										<Route path="/kyc" >
