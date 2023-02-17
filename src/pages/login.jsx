@@ -3,14 +3,14 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { svgAssets, pngAssets } from '../assets/asset';
 import { loginUserAction } from '../redux/actions/auth.action';
-import { validateEmail, validatePassword } from '../utils/verifyInput';
+import { validatePassword, validateUserId } from '../utils/verifyInput';
 
 export const Login = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
 	const [loginForm, setLoginForm] = useState({
-		email: {
+		userId: {
 			value: '',
 			isError: false,
 			errorText: ''
@@ -44,22 +44,22 @@ export const Login = () => {
 
 	const handleLogin = () => {
 		let loginPayload = { ...loginForm };
-		const isValidEmail = validateEmail(loginForm.email.value || '');
+		const userId = validateUserId(loginForm.userId.value || '');
 		const isValidPassword = validatePassword(loginForm.password.value || '');
 
-		if (isValidEmail && isValidPassword) {
+		if (userId && isValidPassword) {
 			dispatch(loginUserAction({
 				UserName: 'B100092',
 				Password: 'password'
 			}, loginApiCallback));
 		} else {
-			if (!isValidEmail) {
+			if (!userId) {
 				loginPayload = {
 					...loginPayload,
-					email: {
-						...loginPayload.email,
+					userId: {
+						...loginPayload.userId,
 						isError: true,
-						errorText: 'Please enter valid email!'
+						errorText: 'Please enter valid userId'
 					}
 				};
 			}
@@ -83,9 +83,12 @@ export const Login = () => {
 				<img alt="login_screen_image" src={svgAssets.login.loginScreenImg}></img>
 			</div>
 			<div className="w-[55%] h-full py-10 full px-20 relative">
-				<img className="absolute top-[40px] h-[40px]" alt="app_logo" src={svgAssets.bigul} />
+				<div className="flex items-center justify-between w-full">
+					<img className="h-[40px]" alt="app_logo" src={svgAssets.bigul} />
+					<img className="h-[55px]" alt="app_logo" src={svgAssets.login.kycAssist} />
+				</div>
 				<div className="w-full h-full flex flex-col justify-center">
-					<h6 className="mb-7 text-black text-2xl capitalize font-semibold font-poppinsSemibold">login</h6>
+					<h6 className="mb-7 text-black text-2xl capitalize font-semibold font-poppinsSemiBold">login</h6>
 					<div className="mb-16">
 						<div className="flex flex-col mb-8">
 							<label className="mb-3 flex items-center leading-6 font-medium font-poppinsMedium">
@@ -94,19 +97,19 @@ export const Login = () => {
 									alt="input_icon"
 									src={pngAssets.kyc.mobileNumber}
 								/>
-								<span className="mr-1">Email Id</span>
-								<span className="text-[#EA0000]">*</span>
+								<span className="mr-1">User Id</span>
+								<span className="text-[#FF4343]">*</span>
 							</label>
 							<input
 								className="h-[56px] px-4 text-[#353535] border border-solid border-[#DFDFDF] rounded-[10px] shadow-[0px_2px_10px_rgba(201,201,201,0.25)] font-poppinsRegular leading-6 focus:outline-none"
-								placeholder="Please enter email id"
-								value={loginForm.email.value}
-								onChange={(e) => handleLoginInput({ type: 'email', value: e.target.value })}
+								placeholder="Please enter user id"
+								value={loginForm.userId.value}
+								onChange={(e) => handleLoginInput({ type: 'userId', value: e.target.value })}
 							/>
 							{
-								loginForm.email.isError && (
+								loginForm.userId.isError && (
 									<span className="mt-2 text-[12px] text-red-400 font-medium font-poppinsMedium">
-										{loginForm.email.errorText}
+										{loginForm.userId.errorText}
 									</span>)
 							}
 						</div>
@@ -118,7 +121,7 @@ export const Login = () => {
 									src={pngAssets.kyc.mobileNumber}
 								/>
 								<span className="mr-1">Password</span>
-								<span className="text-[#EA0000]">*</span>
+								<span className="text-[#FF4343]">*</span>
 							</span>
 							<div className="relative">
 								<input
