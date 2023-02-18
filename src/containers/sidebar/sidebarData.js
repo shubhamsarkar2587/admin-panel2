@@ -50,8 +50,8 @@ export const sidebarData = [
 	{
 		name: 'Account List',
 		route: '/account-list',
-		icon: svgAssets.sidebar.dashboard,
-		selectedIcon: svgAssets.sidebar.selectedDashboard
+		icon: svgAssets.sidebar.accountList,
+		selectedIcon: svgAssets.sidebar.selectedAccountList
 	},
 	{
 		name: 'User List',
@@ -62,20 +62,20 @@ export const sidebarData = [
 	{
 		name: 'User Detail',
 		route: '/user-detail',
-		icon: svgAssets.sidebar.dashboard,
-		selectedIcon: svgAssets.sidebar.selectedDashboard
+		icon: svgAssets.sidebar.userList,
+		selectedIcon: svgAssets.sidebar.selectedUserList
 	},
 	{
 		name: 'Reassignment Report',
 		route: '/reassignment-report',
-		icon: svgAssets.sidebar.dashboard,
-		selectedIcon: svgAssets.sidebar.selectedDashboard
+		icon: svgAssets.sidebar.report,
+		selectedIcon: svgAssets.sidebar.selectedReport
 	},
 	{
 		name: 'Reports',
 		route: '/reports',
-		icon: svgAssets.sidebar.dashboard,
-		selectedIcon: svgAssets.sidebar.selectedDashboard,
+		icon: svgAssets.sidebar.report,
+		selectedIcon: svgAssets.sidebar.selectedReport,
 		nestedRoutes: [
 			{
 				name: 'E-Sign Report',
@@ -102,8 +102,8 @@ export const sidebarData = [
 	{
 		name: 'Brokerage Master',
 		route: '/brokerage-master',
-		icon: svgAssets.sidebar.dashboard,
-		selectedIcon: svgAssets.sidebar.selectedDashboard,
+		icon: svgAssets.sidebar.master,
+		selectedIcon: svgAssets.sidebar.selectedMaster,
 		nestedRoutes: [
 			{
 				name: 'Brokerage Plans',

@@ -5,15 +5,6 @@ import mail from './png/mail.png';
 import kycSuccess from './png/kycSuccess.png';
 
 import logo from './svg/logo.svg';
-
-import loginScreenImg from './svg/login/loginScreenImg.svg';
-import kycAssist from './svg/login/kycAssist.svg';
-import password from './svg/login/password.svg';
-import usermail from './svg/login/usermail.svg';
-import showPassword from './svg/login/showPassword.svg';
-import hidePassword from './svg/login/hidePassword.svg';
-import loginEnter from './svg/login/loginEnter.svg';
-
 import bigul from './svg/bigul.svg';
 import bonabza from './svg/bonabza.svg';
 import kyc from './svg/kyc.svg';
@@ -33,6 +24,14 @@ import wrongField from './svg/wrongField.svg';
 import dropdownIcon from './svg/dropdownIcon.svg';
 import invalidInput from './svg/invalidInput.svg';
 
+import loginScreenImg from './svg/login/loginScreenImg.svg';
+import kycAssist from './svg/login/kycAssist.svg';
+import password from './svg/login/password.svg';
+import usermail from './svg/login/usermail.svg';
+import showPassword from './svg/login/showPassword.svg';
+import hidePassword from './svg/login/hidePassword.svg';
+import loginEnter from './svg/login/loginEnter.svg';
+
 import eye from './svg/widget/eye.svg';
 
 import calendar from './svg/dashboard/calendar.svg';
@@ -47,6 +46,12 @@ import eSign from './svg/sidebar/eSign.svg';
 import selectedESign from './svg/sidebar/selectedESign.svg';
 import application from './svg/sidebar/application.svg';
 import selectedApplication from './svg/sidebar/selectedApplication.svg';
+import accountList from './svg/sidebar/accountList.svg';
+import selectedAccountList from './svg/sidebar/selectedAccountList.svg';
+import report from './svg/sidebar/report.svg';
+import selectedReport from './svg/sidebar/selectedReport.svg';
+import master from './svg/sidebar/master.svg';
+import selectedMaster from './svg/sidebar/selectedMaster.svg';
 import download from './svg/sidebar/download.svg';
 import selectedDownload from './svg/sidebar/selectedDownload.svg';
 import linkAadhar from './svg/sidebar/linkAadhar.svg';
@@ -107,6 +112,12 @@ export const svgAssets = {
 		selectedESign,
 		application,
 		selectedApplication,
+		accountList,
+		selectedAccountList,
+		report,
+		selectedReport,
+		master,
+		selectedMaster,
 		download,
 		selectedDownload,
 		linkAadhar,
