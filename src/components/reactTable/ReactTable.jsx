@@ -38,7 +38,7 @@ export const ReactTable = ({ columns, data, displayBlock }) => {
 							<tr
 								key={`row_${i1}`}
 								{...row.getRowProps()}
-								className={`${row.cells.length - 1 !== i1 && 'border-b'}`}
+								className={`${row.cells.length - 1 !== i1 && 'border-b'} text-[15px]`}
 							>
 								{row.cells.map((cell, i2) => {
 									return (
