@@ -64,7 +64,10 @@ export const AddBrokerage = ({ title, isModalOpen, handleModel, closeModal }) =>
 						tabs[selectedTab].component
 					}
 					<div className="w-full mb-[30px] flex items-center justify-center">
-						<SubmitBtn height="h-10" />
+						<SubmitBtn
+							height="h-10"
+							handleSubmitBtn={closeModal}
+						/>
 					</div>
 				</div>
 			</Modal>

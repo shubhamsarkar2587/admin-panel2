@@ -48,7 +48,7 @@ export const Pagination = () => {
 
 	return (
 		<div className="my-7 flex items-center justify-between">
-			<div className="bg-[#808080">
+			<div className="text-[#808080] font-poppinsRegular">
         10 out of 200 entries
 			</div>
 			<div className="flex items-center">
@@ -65,7 +65,7 @@ export const Pagination = () => {
 						<button
 							key={index}
 							onClick={() => handlePageChange(page)}
-							className={`mx-[5px] w-10 h-10 inline-flex items-center justify-center rounded-full ${currentPage === page ? 'bg-[#5367FC] text-white' : 'hover:bg-[rgba(186,186,186,0.65)]'}`}
+							className={`mx-[5px] w-10 h-10 inline-flex items-center justify-center rounded-full font-semibold font-poppinsSemiBold ${currentPage === page ? 'bg-[#5367FC] text-white' : 'text-[#5367FC] hover:bg-[rgba(186,186,186,0.65)]'}`}
 						>
 							{page}
 						</button>
