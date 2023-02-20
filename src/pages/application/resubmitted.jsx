@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../components/common/DatePicker';
 import { MyPopover } from '../../components/popover/Popover';
 import { StepProgressBar } from '../../components/progressBar/ProgressBar';
+import { PageCount } from '../../components/reactTable/PageCount';
 import { Pagination } from '../../components/reactTable/Pagination';
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
@@ -68,7 +68,7 @@ export const ResubmittedApplication = () => {
 							title="Resubmitted"
 							numberOfApplications={1500}
 						/>
-						<ViewAllBtn />
+						<PageCount />
 					</div>
 					<div className="mb-6 flex items-center justify-between">
 						<SearchBar border={'border'} />

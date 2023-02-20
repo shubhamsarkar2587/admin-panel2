@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AddBrokerageBtn } from '../../components/buttons/AddBrokerageBtn';
 import DatePickerInput from '../../components/common/DatePicker';
 import { AddBrokerage } from '../../components/modal/admin/addBrokerage/AddBrokerage';
+import { PageCount } from '../../components/reactTable/PageCount';
 import { Pagination } from '../../components/reactTable/Pagination';
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
@@ -33,9 +34,14 @@ export const BrokeragePlan = () => {
 						<ReactTableHeader
 							title="Brokerage Plans"
 						/>
-						<AddBrokerageBtn
-							handleAddBrokerageBtn={() => setIsBrokerageModalOpen(true)}
-						/>
+						<div className="flex">
+							<div className="mr-[24px]">
+								<PageCount />
+							</div>
+							<AddBrokerageBtn
+								handleAddBrokerageBtn={() => setIsBrokerageModalOpen(true)}
+							/>
+						</div>
 					</div>
 					<div className="mb-6 flex items-center justify-between">
 						<SearchBar border={'border'} />

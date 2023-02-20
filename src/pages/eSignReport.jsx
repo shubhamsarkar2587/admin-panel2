@@ -1,6 +1,6 @@
-import { ViewAllBtn } from '../components/buttons/ViewAllBtn';
 import DatePickerInput from '../components/common/DatePicker';
 import { MyPopover } from '../components/popover/Popover';
+import { PageCount } from '../components/reactTable/PageCount';
 import { Pagination } from '../components/reactTable/Pagination';
 import { ReactTable } from '../components/reactTable/ReactTable';
 import { reactTableStatusValue } from '../components/reactTable/reactTableData';
@@ -60,7 +60,7 @@ export const ESignReport = () => {
 						<ReactTableHeader
 							title="E-Sign Report"
 						/>
-						<ViewAllBtn />
+						<PageCount />
 					</div>
 					<div className="mb-6 flex items-center justify-between">
 						<SearchBar border={'border'} />

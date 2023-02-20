@@ -8,10 +8,10 @@ const dummyOptions = [
 	{ id: 3, name: 'New' }
 ];
 
-export const SelectDropdown = ({ icon, label, isImportant, height, placeholder, options, inputType, handleSelect }) => {
+export const SelectDropdown = ({ icon, label, isImportant, height, placeholder, options, selectedValue, inputType, border, handleSelect }) => {
 	const wrapperRef = useRef(null);
 	const [isSelected, setIsSelected] = useState(false);
-	const [selectedOption, setSelectedOption] = useState('');
+	const [selectedOption, setSelectedOption] = useState(selectedValue || '');
 
 	const handleOutsideClick = () => {
 		setIsSelected(false);
@@ -51,7 +51,9 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder, 
         ${height || 'h-[47px]'}
 		  `}>
 				<div
-					className="px-3.5 py-3 flex items-center justify-between cursor-pointer rounded-[10px] bg-white shadow-[0px_2px_10px_rgba(201,201,201,0.25)]"
+					className={`px-3.5 py-3 flex items-center justify-between cursor-pointer rounded-[10px] bg-white shadow-[0px_2px_10px_rgba(201,201,201,0.25)]
+						${border || ''}
+					`}
 					onClick={() => setIsSelected(!isSelected)}
 				>
 					<input

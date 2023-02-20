@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../components/common/DatePicker';
 import { StepProgressBar } from '../../components/progressBar/ProgressBar';
+import { PageCount } from '../../components/reactTable/PageCount';
 import { Pagination } from '../../components/reactTable/Pagination';
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { reactTableStatusValue } from '../../components/reactTable/reactTableData';
@@ -70,7 +70,7 @@ export const AssignTask = () => {
 							title="Assign Tasks"
 							numberOfApplications={450}
 						/>
-						<ViewAllBtn />
+						<PageCount />
 					</div>
 					<div className="mb-6 flex items-center justify-between">
 						<SearchBar border={'border'} />

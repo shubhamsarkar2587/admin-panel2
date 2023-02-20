@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../components/common/DatePicker';
 import { MyPopover } from '../../components/popover/Popover';
+import { PageCount } from '../../components/reactTable/PageCount';
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
 import { PopoverParentComp } from '../../components/reactTable/ReactTablePopupBtn';
@@ -49,7 +49,7 @@ export const UserList = () => {
 						<ReactTableHeader
 							title="Users List"
 						/>
-						<ViewAllBtn />
+						<PageCount />
 					</div>
 					<div className="mb-6 flex items-center justify-between">
 						<SearchBar border={'border'} />

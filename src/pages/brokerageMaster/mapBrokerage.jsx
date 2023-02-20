@@ -1,5 +1,5 @@
-import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../components/common/DatePicker';
+import { PageCount } from '../../components/reactTable/PageCount';
 import { Pagination } from '../../components/reactTable/Pagination';
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { ReactTableHeader } from '../../components/reactTable/ReactTableHeader';
@@ -33,7 +33,7 @@ export const MapBrokerage = () => {
 						<ReactTableHeader
 							title="Map Brokerage"
 						/>
-						<ViewAllBtn />
+						<PageCount />
 					</div>
 					<div className="mb-6 flex items-center justify-between">
 						<SearchBar border={'border'} />

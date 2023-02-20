@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { ViewAllBtn } from '../../components/buttons/ViewAllBtn';
 import DatePickerInput from '../../components/common/DatePicker';
 import { MyPopover } from '../../components/popover/Popover';
 import { StepProgressBar } from '../../components/progressBar/ProgressBar';
+import { PageCount } from '../../components/reactTable/PageCount';
 import { Pagination } from '../../components/reactTable/Pagination';
 import { ReactTable } from '../../components/reactTable/ReactTable';
 import { reactTableStatusValue } from '../../components/reactTable/reactTableData';
@@ -83,12 +83,12 @@ export const AllApplication = () => {
 							title="All Applications"
 							numberOfApplications={1500}
 						/>
-						<ViewAllBtn />
+						<PageCount />
 					</div>
 					<div className="mb-6 flex items-center justify-between">
 						<SearchBar border={'border'} />
 						<div className="flex items-center">
-							<span className="text-[#787878] mr-3 font-medium font-poppinsMedium font-medium font-poppinsMedium">Select Date</span>
+							<span className="text-[#787878] mr-3 font-medium font-poppinsMedium">Select Date</span>
 							<div className="mr-3">
 								<DatePickerInput placeholder="From" />
 							</div>
