@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Modal } from 'antd';
 import { CommonInput } from '../../../inputs/CommonInput';
 import { CommodityTab, CurrencyTab, EquityTab, FutureOptionTab } from './TabComponent';
+import { SubmitBtn } from '../../../buttons/SubmitBtn';
 
 const tabs = [
 	{
@@ -33,7 +34,7 @@ export const AddBrokerage = ({ title, isModalOpen, handleModel, closeModal }) =>
 				open={isModalOpen}
 				onCancel={() => closeModal()}
 				centered={true}
-				width={600}
+				width={670}
 				closeIcon={false}
 				footer={null}
 				className="w-full"
@@ -51,7 +52,7 @@ export const AddBrokerage = ({ title, isModalOpen, handleModel, closeModal }) =>
 							tabs.map((tab, index) => (
 								<span
 									key={`tab_${index}`}
-									className={`pb-4 flex-grow text-center cursor-pointer transition-colors duration-300	ease-in-out	${selectedTab === index ? 'border-b-4 border-[#5367FC]' : 'border-b-2'} `}
+									className={`pb-4 flex-grow text-center text-lg font-medium font-poppinsMedium cursor-pointer transition-colors duration-300 ease-in-out	${selectedTab === index ? 'border-b-4 border-[#5367FC]' : 'border-b-2'} `}
 									onClick={() => setSelectedTab(index)}
 								>
 									{tab.label}
@@ -62,6 +63,9 @@ export const AddBrokerage = ({ title, isModalOpen, handleModel, closeModal }) =>
 					{
 						tabs[selectedTab].component
 					}
+					<div className="w-full mb-[30px] flex items-center justify-center">
+						<SubmitBtn height="h-10" />
+					</div>
 				</div>
 			</Modal>
 		</div>
