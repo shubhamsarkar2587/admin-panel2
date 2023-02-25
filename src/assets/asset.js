@@ -3,6 +3,7 @@ import addUser from './png/addUser.png';
 import mobileNumber from './png/mobileNumber.png';
 import mail from './png/mail.png';
 import kycSuccess from './png/kycSuccess.png';
+import calendar from './png/calendar.png';
 
 import logo from './svg/logo.svg';
 import bigul from './svg/bigul.svg';
@@ -34,7 +35,6 @@ import loginEnter from './svg/login/loginEnter.svg';
 
 import eye from './svg/widget/eye.svg';
 
-import calendar from './svg/dashboard/calendar.svg';
 import todayCalendar from './svg/dashboard/todayCalendar.svg';
 import yesterdayCalendar from './svg/dashboard/yesterdayCalendar.svg';
 
@@ -78,7 +78,8 @@ export const pngAssets = {
 		kycSuccess
 	},
 	reactTable: {
-		addUser
+		addUser,
+		calendar
 	},
 	admin: {
 		verifyAdmin

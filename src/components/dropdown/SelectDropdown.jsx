@@ -53,6 +53,7 @@ export const SelectDropdown = ({ icon, label, isImportant, height, placeholder, 
 				<div
 					className={`px-3.5 py-3 flex items-center justify-between cursor-pointer rounded-[10px] bg-white shadow-[0px_2px_10px_rgba(201,201,201,0.25)]
 						${border || ''}
+						${height || 'h-[47px]'}
 					`}
 					onClick={() => setIsSelected(!isSelected)}
 				>

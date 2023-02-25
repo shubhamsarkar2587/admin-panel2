@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AddUser } from '../components/buttons/AddUser';
-import DatePickerInput from '../components/common/DatePicker';
+import CustomDatePicker from '../components/inputs/CustomDatePicker';
 import { AddUserModal } from '../components/modal/admin/AddUserModel';
 import { VerifyAdminModal } from '../components/modal/admin/VerifyAdminModal';
 import { ReactTable } from '../components/reactTable/ReactTable';
@@ -73,10 +73,10 @@ export const UserDetail = () => {
 						<div className="flex items-center">
 							<span className="text-[#787878] mr-3 font-medium font-poppinsMedium">Select Date</span>
 							<div className="mr-3">
-								<DatePickerInput placeholder="From" />
+								<CustomDatePicker placeholder="From" />
 							</div>
 							<div>
-								<DatePickerInput placeholder="To" />
+								<CustomDatePicker placeholder="To" />
 							</div>
 						</div>
 					</div>

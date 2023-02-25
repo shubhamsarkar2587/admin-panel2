@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import DatePickerInput from '../../components/common/DatePicker';
+import CustomDatePicker from '../../components/inputs/CustomDatePicker';
 import { StepProgressBar } from '../../components/progressBar/ProgressBar';
 import { PageCount } from '../../components/reactTable/PageCount';
 import { Pagination } from '../../components/reactTable/Pagination';
@@ -77,10 +77,10 @@ export const AssignTask = () => {
 						<div className="flex items-center">
 							<span className="text-[#787878] mr-3 font-medium font-poppinsMedium">Select Date</span>
 							<div className="mr-3">
-								<DatePickerInput placeholder="From" />
+								<CustomDatePicker placeholder="From" />
 							</div>
 							<div>
-								<DatePickerInput placeholder="To" />
+								<CustomDatePicker placeholder="To" />
 							</div>
 						</div>
 					</div>

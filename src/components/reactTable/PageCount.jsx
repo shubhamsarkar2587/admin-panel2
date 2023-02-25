@@ -17,6 +17,7 @@ export const PageCount = () => {
 					disabled={true}
 					border="border"
 					selectedValue={'10'}
+					height="h-[44px]"
 				/>
 			</div>
 			<span>entries</span>

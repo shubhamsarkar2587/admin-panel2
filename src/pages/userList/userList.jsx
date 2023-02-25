@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import DatePickerInput from '../../components/common/DatePicker';
+import CustomDatePicker from '../../components/inputs/CustomDatePicker';
 import { MyPopover } from '../../components/popover/Popover';
 import { PageCount } from '../../components/reactTable/PageCount';
 import { ReactTable } from '../../components/reactTable/ReactTable';
@@ -56,10 +56,10 @@ export const UserList = () => {
 						<div className="flex items-center">
 							<span className="text-[#787878] mr-3 font-medium font-poppinsMedium">Select Date</span>
 							<div className="mr-3">
-								<DatePickerInput placeholder="From" />
+								<CustomDatePicker placeholder="From" />
 							</div>
 							<div>
-								<DatePickerInput placeholder="To" />
+								<CustomDatePicker placeholder="To" />
 							</div>
 						</div>
 					</div>

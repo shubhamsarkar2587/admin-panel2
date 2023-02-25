@@ -35,6 +35,15 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  width: 18px;
+  height: 18px;
+  background: url("./assets/png/calendar.png") no-repeat;
+}
+
 .scroll::-webkit-scrollbar {
   width: 5px;
   height: 5px;
