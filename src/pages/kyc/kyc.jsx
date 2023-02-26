@@ -75,9 +75,9 @@ export const Kyc = () => {
 	};
 
 	useEffect(() => {
-		setTimeout(() => {
-			handleKycModel({ isOpen: true });
-		}, 1000);
+		// setTimeout(() => {
+		// 	handleKycModel({ isOpen: true });
+		// }, 1000);
 	}, []);
 
 	return (

@@ -3,7 +3,7 @@ import { headers } from './common';
 
 export const setKycJourneyService = async (payload) => {
 	const data = await axios.post(
-		'https://dkyc.bigul.app/ekycapi/kyc-journey/step-1',
+		'https:/kyc-journey/step-1',
 		payload,
 		headers
 	);
@@ -12,7 +12,7 @@ export const setKycJourneyService = async (payload) => {
 
 export const sendMobileOtpService = async () => {
 	const data = await axios.get(
-		'https://dkyc.bigul.app/ekycapi/send-mobile-otp/6',
+		'https:/send-mobile-otp/6',
 		headers
 	);
 	return data;
@@ -20,7 +20,7 @@ export const sendMobileOtpService = async () => {
 
 export const verifyMobileOtpService = async (payload) => {
 	const data = await axios.post(
-		'https://dkyc.bigul.app/ekycapi/verify-mobile-otp/6',
+		'https:/verify-mobile-otp/6',
 		payload,
 		headers
 	);
@@ -29,7 +29,7 @@ export const verifyMobileOtpService = async (payload) => {
 
 export const sendEmailOtpService = async () => {
 	const data = await axios.get(
-		'https://dkyc.bigul.app/ekycapi/send-email-otp/6',
+		'https:/send-email-otp/6',
 		headers
 	);
 	return data;
@@ -37,7 +37,7 @@ export const sendEmailOtpService = async () => {
 
 export const verifyEmailOtpService = async (payload) => {
 	const data = await axios.post(
-		'https://dkyc.bigul.app/ekycapi/verify-email-otp/6',
+		'https:/verify-email-otp/6',
 		payload,
 		headers
 	);
@@ -46,7 +46,7 @@ export const verifyEmailOtpService = async (payload) => {
 
 export const setPersonalDetailService = async (payload) => {
 	const data = await axios.post(
-		'https://dkyc.bigul.app/ekycapi/save-personal-info/6',
+		'https:/save-personal-info/6',
 		payload,
 		headers
 	);
@@ -55,7 +55,7 @@ export const setPersonalDetailService = async (payload) => {
 
 export const getOccuptionDetailService = async () => {
 	const data = await axios.get(
-		'https://dkyc.bigul.app/ekycapi/GetOccuptionMaster',
+		'https:/GetOccuptionMaster',
 		headers
 	);
 	return data;
@@ -63,7 +63,7 @@ export const getOccuptionDetailService = async () => {
 
 export const getAnnualIncomeService = async () => {
 	const data = await axios.get(
-		'https://dkyc.bigul.app/ekycapi/GetAnnualIncomeMaster',
+		'https:/GetAnnualIncomeMaster',
 		headers
 	);
 	return data;
@@ -71,7 +71,7 @@ export const getAnnualIncomeService = async () => {
 
 export const getEducationDetailService = async () => {
 	const data = await axios.get(
-		'https://dkyc.bigul.app/ekycapi/GetEducationMaster',
+		'https:/GetEducationMaster',
 		headers
 	);
 	return data;
@@ -79,7 +79,7 @@ export const getEducationDetailService = async () => {
 
 export const getExperienceDetailService = async () => {
 	const data = await axios.get(
-		'https://dkyc.bigul.app/ekycapi/GetExperienceMaster',
+		'https:/GetExperienceMaster',
 		headers
 	);
 	return data;
@@ -87,7 +87,7 @@ export const getExperienceDetailService = async () => {
 
 export const saveOccuptionService = async (payload) => {
 	const data = await axios.post(
-		'https://dkyc.bigul.app/ekycapi/save-accupational-info/6',
+		'https:/save-accupational-info/6',
 		payload,
 		headers
 	);
@@ -96,7 +96,7 @@ export const saveOccuptionService = async (payload) => {
 
 export const setBankAllInfoService = async (payload) => {
 	const data = await axios.post(
-		'https://dkyc.bigul.app/ekycapi/save-bank-info/6',
+		'https:/save-bank-info/6',
 		payload,
 		headers
 	);

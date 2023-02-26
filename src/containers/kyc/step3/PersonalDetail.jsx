@@ -83,7 +83,7 @@ export const PersonalDetail = () => {
 					isDisable={true}
 				/>
 			</div>
-			<div className="max-w-max inline-flex justify-between">
+			<div className="max-w-max justify-between hidden">
 				<ContinueBtn handleContinueBtn={() => handleContinueBtn()} />
 			</div>
 		</div>

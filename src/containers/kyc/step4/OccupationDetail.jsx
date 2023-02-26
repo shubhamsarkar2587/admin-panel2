@@ -82,7 +82,7 @@ export const OccuptionDetail = () => {
 					handleSelect={handleForm}
 				/>
 			</div>
-			<div className="max-w-max inline-flex justify-between">
+			<div className="max-w-max hidden justify-between">
 				<ContinueBtn handleContinueBtn={() => handleContinueBtn()} />
 			</div>
 		</div>

@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { svgAssets } from '../assets/asset';
-import { loginUserAction } from '../redux/actions/auth.action';
-import { validatePassword, validateUserId } from '../utils/verifyInput';
+// import { loginUserAction } from '../redux/actions/auth.action';
+// import { validatePassword, validateUserId } from '../utils/verifyInput';
 
 export const Login = () => {
-	const dispatch = useDispatch();
+	// const dispatch = useDispatch();
 	const navigate = useNavigate();
 
 	const [loginForm, setLoginForm] = useState({
@@ -34,47 +34,17 @@ export const Login = () => {
 		});
 	};
 
-	const loginApiCallback = ({ status }) => {
-		if (status === 200) {
-			navigate('/');
-		} else {
-			alert('invalid credentials!');
-		}
-	};
+	// const loginApiCallback = ({ status }) => {
+	// 	if (status === 200) {
+	// 		navigate('/');
+	// 	} else {
+	// 		navigate('/');
+	// 		alert('invalid credentials!');
+	// 	}
+	// };
 
 	const handleLogin = () => {
-		let loginPayload = { ...loginForm };
-		const userId = validateUserId(loginForm.userId.value || '');
-		const isValidPassword = validatePassword(loginForm.password.value || '');
-
-		if (userId && isValidPassword) {
-			dispatch(loginUserAction({
-				UserName: 'B100092',
-				Password: 'password'
-			}, loginApiCallback));
-		} else {
-			if (!userId) {
-				loginPayload = {
-					...loginPayload,
-					userId: {
-						...loginPayload.userId,
-						isError: true,
-						errorText: 'Please enter valid userId'
-					}
-				};
-			}
-			if (!isValidPassword) {
-				loginPayload = {
-					...loginPayload,
-					password: {
-						...loginPayload.password,
-						isError: true,
-						errorText: 'Password should have atleast 8 character!'
-					}
-				};
-			}
-			setLoginForm(loginPayload);
-		}
+		navigate('/');
 	};
 
 	return (
@@ -84,7 +54,7 @@ export const Login = () => {
 			</div>
 			<div className="w-[55%] h-full py-10 px-20 flex flex-col items-center">
 				<div className="w-full max-h-max flex items-center justify-between">
-					<img alt="app_logo" src={svgAssets.logo} />
+					{/* <img alt="app_logo" src={svgAssets.logo} /> */}
 					<img className="h-[55px]" alt="kyc_assist" src={svgAssets.login.kycAssist} />
 				</div>
 				<div className="w-full max-h-max mt-[76px] flex flex-col justify-center">
