@@ -69,6 +69,20 @@ import undo from './svg/review/undo.svg';
 
 import kycMessage from './svg/kyc/kycMessage.svg';
 import send from './svg/kyc/send.svg';
+import panCard from './svg/kyc/panCard.svg';
+import dateOfBirth from './svg/kyc/dateOfBirth.svg';
+import weddingRing from './svg/kyc/weddingRing.svg';
+import idCard1 from './svg/kyc/idCard1.svg';
+import gender from './svg/kyc/gender.svg';
+import city from './svg/kyc/city.svg';
+import flag from './svg/kyc/flag.svg';
+import occupation from './svg/kyc/occupation.svg';
+import income from './svg/kyc/income.svg';
+import education from './svg/kyc/education.svg';
+import trading from './svg/kyc/trading.svg';
+import passbook from './svg/kyc/passbook.svg';
+import selfie from './svg/kyc/selfie.svg';
+import signatureInput from './svg/kyc/signature.svg';
 
 export const pngAssets = {
 	bigul,
@@ -151,7 +165,21 @@ export const svgAssets = {
 		signature,
 		docView,
 		invalidInput,
-		kycMessage
+		kycMessage,
+		panCard,
+		dateOfBirth,
+		weddingRing,
+		idCard1,
+		gender,
+		city,
+		flag,
+		occupation,
+		income,
+		education,
+		trading,
+		passbook,
+		selfie,
+		signatureInput
 	},
 	review: {
 		correctTick,

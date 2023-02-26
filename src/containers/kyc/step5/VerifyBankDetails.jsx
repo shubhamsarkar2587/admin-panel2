@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { pngAssets, svgAssets } from '../../../assets/asset';
+import { svgAssets } from '../../../assets/asset';
 import { CommonInput } from '../../../components/inputs/CommonInput';
 import { VerifyBtn } from '../../../components/buttons/VerifyBtn';
 import { SearchIfcModal } from '../../../components/modal/kyc/SearchIfcModal';
@@ -33,7 +33,7 @@ export const VerifyBankDetails = () => {
 			<MainTitle title="Bank Details" />
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
 				<CommonInput
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.panCard}
 					label="IFSC"
 					isImportant={true}
 					placeholder="Please enter ifsc"
@@ -51,13 +51,13 @@ export const VerifyBankDetails = () => {
 			</div>
 			<div className="grid grid-cols-2 gap-10 items-end mb-10">
 				<CommonInput
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.passbook}
 					label="Bank Account Number"
 					isImportant={true}
 					placeholder="Please enter bank a/c number"
 				/>
 				<CommonInput
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.passbook}
 					label="Confirm Bank Account Number"
 					isImportant={true}
 					placeholder="Please enter confirm bank a/c number"

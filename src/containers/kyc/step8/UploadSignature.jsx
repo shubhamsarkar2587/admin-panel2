@@ -9,6 +9,7 @@ export const UploadSignature = () => {
 			<div className="w-full flex flex-col mb-10">
 				<div className="mb-8 grid grid-cols-2 gap-10 items-end">
 					<InputBtnIcon
+						icon={svgAssets.kyc.signatureInput}
 						label="Signature Link"
 						subLabel="Share below link with client"
 						isImportant={true}

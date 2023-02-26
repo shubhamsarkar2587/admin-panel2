@@ -1,4 +1,4 @@
-import { pngAssets } from '../../../assets/asset';
+import { svgAssets } from '../../../assets/asset';
 import { CommonInput } from '../../../components/inputs/CommonInput';
 import { MainTitle } from '../../../components/common/MainTitle';
 import { SelectDropdown } from '../../../components/dropdown/SelectDropdown';
@@ -38,7 +38,7 @@ export const PersonalDetail = () => {
 			<MainTitle title="Personal Details" />
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
 				<SelectDropdown
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.weddingRing}
 					label="Marital Status"
 					isImportant={true}
 					placeholder="Please select marital status"
@@ -46,7 +46,7 @@ export const PersonalDetail = () => {
 					handleSelect={handleForm}
 				/>
 				<CommonInput
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.idCard1}
 					label="Father’s/Spouse Name"
 					isImportant={true}
 					placeholder="Please enter father’s/spouse name"
@@ -57,7 +57,7 @@ export const PersonalDetail = () => {
 			</div>
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
 				<SelectDropdown
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.gender}
 					label="Gender"
 					isImportant={true}
 					placeholder="Please select marital status"
@@ -65,7 +65,7 @@ export const PersonalDetail = () => {
 					handleSelect={handleForm}
 				/>
 				<CommonInput
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.city}
 					label="City Of Birth"
 					isImportant={true}
 					placeholder="Please enter city of birth"
@@ -76,7 +76,7 @@ export const PersonalDetail = () => {
 			</div>
 			<div className="w-full flex items-end">
 				<CommonInput
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.flag}
 					label="Nationality"
 					isImportant={true}
 					placeholder="Indian"

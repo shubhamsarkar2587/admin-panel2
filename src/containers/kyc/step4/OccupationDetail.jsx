@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { pngAssets } from '../../../assets/asset';
+import { svgAssets } from '../../../assets/asset';
 import { ContinueBtn } from '../../../components/buttons/ContinueBtn';
 import { MainTitle } from '../../../components/common/MainTitle';
 import { SelectDropdown } from '../../../components/dropdown/SelectDropdown';
@@ -44,7 +44,7 @@ export const OccuptionDetail = () => {
 			<MainTitle title="Occupational Details" />
 			<div className="grid grid-cols-2 gap-10 items-end mb-8">
 				<SelectDropdown
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.occupation}
 					label="Occupation"
 					isImportant={true}
 					placeholder="Please select occupation"
@@ -53,7 +53,7 @@ export const OccuptionDetail = () => {
 					handleSelect={handleForm}
 				/>
 				<SelectDropdown
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.income}
 					label="Annual Income"
 					isImportant={true}
 					placeholder="Please select annual income"
@@ -64,7 +64,7 @@ export const OccuptionDetail = () => {
 			</div>
 			<div className="grid grid-cols-2 gap-10 items-end">
 				<SelectDropdown
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.education}
 					label="Education"
 					isImportant={true}
 					placeholder="Please select education"
@@ -73,7 +73,7 @@ export const OccuptionDetail = () => {
 					handleSelect={handleForm}
 				/>
 				<SelectDropdown
-					icon={pngAssets.kyc.mobileNumber}
+					icon={svgAssets.kyc.trading}
 					label="Trading Experience"
 					isImportant={true}
 					placeholder="Please select trading experience"

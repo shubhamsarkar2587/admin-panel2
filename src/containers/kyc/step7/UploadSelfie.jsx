@@ -14,6 +14,7 @@ export const UploadSelfie = ({ marginBottom }) => {
 			<div className="mb-8 grid grid-cols-2 gap-10 items-end">
 				<div className="flex flex-col ">
 					<InputBtnIcon
+						icon={svgAssets.kyc.selfie}
 						label="Selfie Link"
 						subLabel="Share below link with client"
 						isImportant={true}

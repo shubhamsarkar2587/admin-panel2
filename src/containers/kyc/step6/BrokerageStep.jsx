@@ -1,4 +1,3 @@
-import { pngAssets } from '../../../assets/asset';
 import { Declaration } from './Declaration';
 import { Checkbox } from '../../../components/common/Checkbox';
 import { MainTitle } from '../../../components/common/MainTitle';
@@ -18,18 +17,14 @@ export const BrokerageStep = () => {
 			<div className="w-full mb-5 grid grid-cols-12 gap-5">
 				<div className="w-full col-span-8">
 					<SelectDropdown
-						icon={pngAssets.kyc.mobileNumber}
 						label="Brokerage Scheme"
-						isImportant={true}
 						placeholder="Please select brokerage scheme"
 					/>
 				</div>
 				<div className="w-full col-span-4">
 					<SelectDropdown
-						icon={pngAssets.kyc.mobileNumber}
-						label="Brokerage Scheme"
-						isImportant={true}
-						placeholder="Please select brokerage scheme"
+						label="DP Tariff"
+						placeholder="Please select dp tariff"
 					/>
 				</div>
 			</div>
