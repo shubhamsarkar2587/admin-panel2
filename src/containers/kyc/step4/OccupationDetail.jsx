@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { svgAssets } from '../../../assets/asset';
 import { ContinueBtn } from '../../../components/buttons/ContinueBtn';
 import { MainTitle } from '../../../components/common/MainTitle';
 import { SelectDropdown } from '../../../components/dropdown/SelectDropdown';
-import { getAnnualIncomeAction, getEducationDetailAction, getExperienceDetailAction, getOccuptionDetailAction, setOccuptionAllInfoAction } from '../../../redux/actions/kyc.action';
 
 export const OccuptionDetail = () => {
-	const dispatch = useDispatch();
 	const { occuptionDetail, annualIncome, educationDetail, experienceDetail } = useSelector(state => state.kyc);
 	const [form, setForm] = useState({
 		occuptionDetail: '',
@@ -24,19 +22,9 @@ export const OccuptionDetail = () => {
 	};
 
 	const handleContinueBtn = () => {
-		dispatch(setOccuptionAllInfoAction({
-			occupation_id: 1,
-			education_id: 2,
-			income_id: 3,
-			trading_experience: 1
-		}));
 	};
 
 	useEffect(() => {
-		occuptionDetail?.length < 1 && dispatch(getOccuptionDetailAction());
-		annualIncome?.length < 1 && dispatch(getAnnualIncomeAction());
-		educationDetail?.length < 1 && dispatch(getEducationDetailAction());
-		experienceDetail?.length < 1 && dispatch(getExperienceDetailAction());
 	}, []);
 
 	return (

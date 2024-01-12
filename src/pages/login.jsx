@@ -55,7 +55,6 @@ export const Login = () => {
 			<div className="w-[55%] h-full py-10 px-20 flex flex-col items-center">
 				<div className="w-full max-h-max flex items-center justify-between">
 					{/* <img alt="app_logo" src={svgAssets.logo} /> */}
-					<img className="h-[55px]" alt="kyc_assist" src={svgAssets.login.kycAssist} />
 				</div>
 				<div className="w-full max-h-max mt-[76px] flex flex-col justify-center">
 					<h6 className="mb-7 text-black text-2xl capitalize font-semibold font-poppinsSemiBold">login</h6>

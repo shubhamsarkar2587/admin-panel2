@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Login } from './pages/login';
 import { Navbar } from './containers/navbar/Navbar';
@@ -26,17 +26,15 @@ import { AgeingReport } from './pages/reports/ageingReport';
 import { BrokeragePlan } from './pages/brokerageMaster/brokeragePlan';
 import { MapBrokerage } from './pages/brokerageMaster/mapBrokerage';
 import { ReviewApplication } from './pages/kyc/reviewApplication';
-import { generateTokenAction } from './redux/actions/auth.action';
 import { ProtectedRoute } from './components/routes/ProtectedRoute';
 
 export const App = () => {
 	const location = useLocation();
-	const dispatch = useDispatch();
 	const accessToken = useSelector(state => state.user.accessToken);
 	useEffect(() => {
-		if (accessToken === '') {
-			dispatch(generateTokenAction());
-		}
+		// if (accessToken === '') {
+		// 	dispatch(generateTokenAction());
+		// }
 	}, [accessToken]);
 
 	return (

@@ -8,16 +8,10 @@ export const sidebarData = [
 		selectedIcon: svgAssets.sidebar.selectedDashboard
 	},
 	{
-		name: 'Start KYC',
+		name: 'Start',
 		route: '/kyc',
 		icon: svgAssets.sidebar.startKyc,
 		selectedIcon: svgAssets.sidebar.selectedStartKyc
-	},
-	{
-		name: 'E-sign Report',
-		route: '/e-sign-report',
-		icon: svgAssets.sidebar.eSign,
-		selectedIcon: svgAssets.sidebar.selectedESign
 	},
 	{
 		name: 'Applications',
@@ -66,66 +60,10 @@ export const sidebarData = [
 		selectedIcon: svgAssets.sidebar.selectedUserList
 	},
 	{
-		name: 'Reassignment Report',
-		route: '/reassignment-report',
-		icon: svgAssets.sidebar.report,
-		selectedIcon: svgAssets.sidebar.selectedReport
-	},
-	{
-		name: 'Reports',
-		route: '/reports',
-		icon: svgAssets.sidebar.report,
-		selectedIcon: svgAssets.sidebar.selectedReport,
-		nestedRoutes: [
-			{
-				name: 'E-Sign Report',
-				route: '/e-sign-report'
-			},
-			{
-				name: 'Sales Report',
-				route: '/sales-report'
-			},
-			{
-				name: 'Monthly Report',
-				route: '/monthly-report'
-			},
-			{
-				name: 'Verifier Report',
-				route: '/verifier-report'
-			},
-			{
-				name: 'Ageing Report',
-				route: '/ageing-report'
-			}
-		]
-	},
-	{
-		name: 'Brokerage Master',
-		route: '/brokerage-master',
-		icon: svgAssets.sidebar.master,
-		selectedIcon: svgAssets.sidebar.selectedMaster,
-		nestedRoutes: [
-			{
-				name: 'Brokerage Plans',
-				route: '/brokerage-plans'
-			},
-			{
-				name: 'Map Brokerage',
-				route: '/map-brokerage'
-			}
-		]
-	},
-	{
 		name: 'Download Forms',
 		route: '/download-forms',
 		icon: svgAssets.sidebar.download,
 		selectedIcon: svgAssets.sidebar.selectedDownload
-	},
-	{
-		name: 'Link Aadhar',
-		route: '/link-aadhar',
-		icon: svgAssets.sidebar.linkAadhar,
-		selectedIcon: svgAssets.sidebar.selectedLinkAadhar
 	},
 	{
 		name: 'Settings',

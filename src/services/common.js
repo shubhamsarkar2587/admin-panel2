@@ -1,10 +1,10 @@
-export const baseUrl = 'https://dkyc.bigul.app/ekycapi';
+export const baseUrl = '';
 // export const token = JSON.parse(JSON.parse(window.localStorage.getItem('persist:root'))?.user || '')?.accessToken;
 // export const token = '';
 
 export const headers = {
 	headers: {
 		'Content-Type': 'application/json',
-		Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcyYWU1Yzc1MzU2ZTZiZGEzODdhYTdkNWM4MzVhYjgzOThlNjQwNGQ5NjhiNmI5M2IxYWE2NzNjNWE5ZTIxZjIzNmM5MGEwNjk0MzIxZDJmIn0.eyJhdWQiOiI1IiwianRpIjoiNzJhZTVjNzUzNTZlNmJkYTM4N2FhN2Q1YzgzNWFiODM5OGU2NDA0ZDk2OGI2YjkzYjFhYTY3M2M1YTllMjFmMjM2YzkwYTA2OTQzMjFkMmYiLCJpYXQiOjE2NzU5NDAxMjksIm5iZiI6MTY3NTk0MDEyOSwiZXhwIjoxNzA3NDc2MTI5LCJzdWIiOiI4Iiwic2NvcGVzIjpbXX0.lDi9IurhU49iZAsw5qlZvhAVY4-pOOKbniFimscMhw9dBVhgUfQlRSA38NT-8rmYpleYtuRbujzNhNBIp7Hw_Opn0uX_muOV_HdFH3jpTv9q7iy3TuEDy2hEfQiMdkHg6aJBFAqw0VAaOBebj6BskFxoGWB9O2lfZtI2g6WmRCJSBvP58iui9ZYzssvANCfMtzvkaHeStbHhAo5to_ySbX-iFMjaYBYKPsZdUcSHSq2iRWWYcDOcoS2peJFdYU0HxWTDDb33yovISb6QYPNk5gv3HPV2JkzdU5L_U4gKxVLutBq0SO-3g7tc0Ktj_-Sb-8wNzFUkLcllUWAE-8eW4uKjxlCt9dhsTQJYJHK70JDZvNqAaMFczMnXA-nlL_6DbD7cCeF6neTKlN0dchP-r3KNUP58u0BxFxOebC4FAkdoNBbVPfJnLSiTb0LsH1o6v6wGd711_2Qs3XAuoeVJVpwdaRpNQileBTwkkEHYGvOv-J_IOEh3Dce7x0dVNr_-eTELJJFBficDFszP2g9zcUfGe-5XbzCG77O27oMeWlkl3o9wMH-w8KLmizI7217nRq3uYeWftWvyToXYAfJRECoAkUZcqqxA01zUHGF88b38TtedAKBSJxrEPY1_g5T8uqsOU1DpGOKyqsozY8UdXg6_I6ENoKpD2voxgIcFAwg'
+		Authorization: ''
 	}
 };

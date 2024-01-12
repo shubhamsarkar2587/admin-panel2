@@ -36,7 +36,7 @@ export const Navbar = () => {
 						className="px-4 py-2.5 mx-2.5 rounded-[10px] bg-black text-white font-medium font-poppinsMedium"
 						onClick={() => handleStartKyc()}
 					>
-						{activeRoute === 'kyc' ? 'Share My Screen' : '+ Start KYC'}
+						{activeRoute === 'kyc' ? 'Share My Screen' : '+ Start'}
 					</button>
 					<img className="mx-2.5 cursor-pointer" alt="notification" src={svgAssets.navbar.notification} />
 					<Link to="/login" className="flex items-center">
